@@ -1,7 +1,7 @@
 # Личный проект «Погнали» 
 
 * Студент: [Мария](https://up.htmlacademy.ru/adaptive/24/user/1522579).
-* Наставник: `Неизвестно`.
+* Наставник: [Татьяна Симоненко](https://htmlacademy.ru/profile/tatien).
 
 ---
 
