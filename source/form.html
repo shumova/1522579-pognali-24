@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Погнали | Направления</title>
+</head>
+<body class="page__body">
+  <header class="page-header">
+    <nav class="main-nav container">
+      <a class="main-nav__logo logo" href="index.html">
+        <svg class="logo__img logo__img--light" width="96" height="15" viewBox="0 0 96 15" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Погнали.">
+          <use xlink:href="img/sprite.svg#logo"></use>
+        </svg>
+        <span class="visually-hidden">Перейти на главную страницу.</span>
+      </a>
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <div class="main-nav__main-menu main-menu main-menu--hidden">
+        <ul class="main-menu__list">
+          <li class="main-menu__item">
+            <a class="main-menu__link" href="#">О&nbsp;сервисе</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link main-menu__link--current" href="form.html">Направления</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link" href="catalog.html">Попутчики</a>
+          </li>
+        </ul>
+        <a class="main-menu__login button button--primary" href="#">Авторизация</a>
+        <ul class="main-menu__contacts contacts">
+          <li class="contacts__item">
+            <a class="contacts__link button button--iconic" href="tel:+78005558628">8 800 555-86-28</a>
+          </li>
+          <li class="contacts__item">
+            <a class="contacts__link button button--iconic" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </li>
+        </ul>
+        <ul class="main-menu__social social">
+          <li class="social__item">
+            <a class="social__link button button--iconic button--social-contour button--facebook" href="https://www.facebook.com/htmlacademy" target="_blank">
+              <span class="visually-hidden">Мы в Facebook.</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link button button--iconic button--social-contour button--vk" href="https://vk.com/htmlacademy" target="_blank">
+              <span class="visually-hidden">Мы в Вконтакте.</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link button button--iconic button--social-contour button--instagram" href="https://www.instagram.com/htmlacademy/" target="_blank">
+              <span class="visually-hidden">Мы в Instagram.</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="main-nav__user-menu user-menu">
+        <ul class="user-menu__list">
+          <li class="user-menu__item">
+            <a class="user-menu__link button button--iconic" href="tel:+78005558628">
+              <span class="visually-hidden">Позвонить нам.</span>
+            </a>
+          </li>
+          <li class="user-menu__item">
+            <a class="user-menu__link button button--iconic" href="mailto:mail@htmlacademy.ru">
+              <span class="visually-hidden">Написать нам письмо.</span>
+            </a>
+          </li>
+        </ul>
+        <a class="user-menu__login button button--primary" href="#">Авторизация</a>
+      </div>
+    </nav>
+  </header>
+  <main class="page-main">
+    <div class="page-main__header">
+      <div class="container">
+        <h1 class="page-main__title">Направления</h1>
+        <section class="page-main__user-profile user-profile">
+          <h2 class="visually-hidden">Данные пользователя.</h2>
+          <picture class="user-profile__avatar avatar">
+            <source srcset="img/users/petya-demin/petya-demin-size-small@1x.webp 1x, img/users/petya-demin/petya-demin-size-small@2x.webp 2x" type="image/webp">
+            <img class="avatar__img" src="img/users/petya-demin/petya-demin-size-small@1x.jpg" srcset="img/users/petya-demin/petya-demin-size-small@2x.jpg 2x" alt="Петя Дёмин" width="100" height="100">
+          </picture>
+          <button class="user-profile__change-photo">
+            <span class="user-profile__change-photo-full-text">Сменить </span>фото
+          </button>
+          <div class="user-profile__level level">
+            <span class="level__number">80</span>
+            <span class="level__text">level</span>
+          </div>
+          <div class="user-profile__tags tags">
+            <label class="tags__title" for="tags">Тэги</label>
+            <textarea class="tags__input" name="tags" id="tags" cols="30" rows="10">#бургер #бар #футбол #концерт #крафт</textarea>
+          </div>
+          <div class="user-profile__prefer-transport prefer-transport">
+            <p class="prefer-transport__title">Транспорт</p>
+            <ul class="prefer-transport__list">
+              <li class="prefer-transport__item">
+                <button class="prefer-transport__button prefer-transport__button--on" type="button">
+                  <span class="prefer-transport__name visually-hidden">Cамолёт.</span>
+                  <svg class="prefer-transport__img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <use xlink:href="img/sprite.svg#airplane"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="prefer-transport__item">
+                <button class="prefer-transport__button prefer-transport__button--on" type="button">
+                  <span class="prefer-transport__name visually-hidden">Общественный транспорт.</span>
+                  <svg class="prefer-transport__img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <use xlink:href="img/sprite.svg#public-transport"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="prefer-transport__item">
+                <button class="prefer-transport__button prefer-transport__button--off" type="button">
+                  <span class="prefer-transport__name visually-hidden">Велосипед.</span>
+                  <svg class="prefer-transport__img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <use xlink:href="img/sprite.svg#bicycle"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="prefer-transport__item">
+                <button class="prefer-transport__button prefer-transport__button--on" type="button">
+                  <span class="prefer-transport__name visually-hidden">Пеший туризм.</span>
+                  <svg class="prefer-transport__img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <use xlink:href="img/sprite.svg#hiking"></use>
+                  </svg>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+    <section class="page-main__plans">
+      <div class="plans container">
+        <h2 class="plans__title">Мои планы:</h2>
+        <ol class="plans__list">
+          <li class="plans__item plan-card">
+            <h3 class="plan-card__title">
+              <a href="#" class="plan-card__link">Франция, Италия</a>
+            </h3>
+            <div class="plan-card__info">
+              <p class="plan-card__company">3 попутчика</p>
+              <time datetime="03-26">26 мар</time>&nbsp;&mdash;&nbsp;<time datetime="03-29">29 мар</time>
+            </div>
+            <a class="plan-card__change" href="#">Изменить</a>
+          </li>
+          <li class="plans__item plan-card">
+            <h3 class="plan-card__title">
+              <a href="#" class="plan-card__link">Таиланд, Индонезия</a>
+            </h3>
+            <div class="plan-card__info">
+              <p class="plan-card__company">1 попутчик</p>
+              <time datetime="07-01">1 июля</time>&nbsp;&mdash;&nbsp;<time datetime="07-15">15 июля</time>
+            </div>
+            <a class="plan-card__change" href="#">Изменить</a>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <section class="page-main__new-plan">
+      <div class="new-plan container">
+        <h2 class="new-plan__title">Добавить план:</h2>
+        <ol class="new-plan__steps" aria-hidden="true">
+          <li class="new-plan__step new-plan__step--current">
+            <span class="visually-hidden">Шаг 1.</span>
+          </li>
+          <li class="new-plan__step">
+            <span class="visually-hidden">Шаг 2.</span>
+          </li>
+          <li class="new-plan__step">
+            <span class="visually-hidden">Шаг 3.</span>
+          </li>
+        </ol>
+        <p class="visually-hidden">Добавление плана состоит из трёх шагов:</p>
+        <ol class="visually-hidden">
+          <li class="visually-hidden">Шаг первый: выбрать даты и продолжительности пребывания в стране.</li>
+          <li class="visually-hidden">Шаг второй: выбрать стран для составления маршрута поездки.</li>
+          <li class="visually-hidden">Шаг третий: перечислить планируемые развлечения для каждой из стран маршрута.</li>
+        </ol>
+        <form class="new-plan__form new-plan-form" action="https://echo.htmlacademy.ru/" method="post">
+          <div class="new-plan-form__steps">
+            <div class="new-plan-form__step" id="#step1">
+              <div class="new-plan-form__intro">
+                <h3 class="new-plan-form__title">
+                  <span class="new-plan-form__step-num">Шаг 1. </span>Даты пребывания
+                </h3>
+                <p class="new-plan-form__text">Укажите предпочтительное количество попутчиков, которых вы&nbsp;хотели&nbsp;бы позвать в&nbsp;поездку, и&nbsp;ее&nbsp;предполагаемую длительность.</p>
+              </div>
+              <ol class="new-plan-form__steps" aria-hidden="true">
+                <li class="new-plan-form__step new-plan-form__step--current">Даты</li>
+                <li class="new-plan-form__step">Маршрут</li>
+                <li class="new-plan-form__step">Развлечения</li>
+              </ol>
+              <fieldset class="new-plan-form__filter form-filter">
+                <label class="form-filter__label" for="company">Ищу попутчиков:
+                  <span class="form-filter__note">чел.</span>
+                </label>
+                <button class="form-filter__control form-filter__control--less">
+                  <span class="visually-hidden">Уменьшить</span>
+                </button>
+                <input class="form-filter__field" type="number" name="company" id="company" value="2">
+                <button class="form-filter__control form-filter__control--more">
+                  <span class="visually-hidden">Увеличить</span>
+                </button>
+              </fieldset>
+              <fieldset class="new-plan-form__filter form-filter">
+                <label class="form-filter__label" for="days">Длительность:
+                  <span class="form-filter__note">дн.</span>
+                </label>
+                <button class="form-filter__control form-filter__control--less">
+                  <span class="visually-hidden">Уменьшить</span>
+                </button>
+                <input class="form-filter__field" type="number" name="days" id="days" value="3">
+                <button class="form-filter__control form-filter__control--more">
+                  <span class="visually-hidden">Увеличить</span>
+                </button>
+              </fieldset>
+              <div class="new-plan-form__filter form-filter">
+                <label class="form-filter__label" for="children">Можно с&nbsp;детьми</label>
+                <input class="form-filter__field" type="checkbox" name="children" id="children" checked>
+              </div>
+              <div class="nnew-plan-form__filter form-filter">
+                <div class="form-filter__month month-filter">
+                  <button class="month-filter__control month-filter__control--prev month-control" type="button">
+                    <svg class="month-control__img" width="15" height="21" viewBox="0 0 15 21" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite.svg#control-arrow-prev"></use>
+                    </svg>
+                    <span class="visually-hidden">Предыдущий месяц</span>
+                  </button>
+                  <ol class="month-filter__months">
+                    <li class="month-filter__month">Январь 2019</li>
+                    <li class="month-filter__month month-filter__month--prev">Февраль 2019</li>
+                    <li class="month-filter__month month-filter__month--selected">Март 2019</li>
+                    <li class="month-filter__month month-filter__month--next">Апрель 2019</li>
+                    <li class="month-filter__month">Май 2019</li>
+                    <li class="month-filter__month">Июнь 2019</li>
+                    <li class="month-filter__month">Июль 2019</li>
+                    <li class="month-filter__month">Август 2019</li>
+                    <li class="month-filter__month">Сентябрь 2019</li>
+                    <li class="month-filter__month">Октябрь 2019</li>
+                    <li class="month-filter__month">Ноябрь 2019</li>
+                    <li class="month-filter__month">Декабрь 2019</li>
+                  </ol>
+                  <button class="month-filter__control month-filter__control--prev month-control" type="button">
+                    <svg class="month-control__img" width="15" height="21" viewBox="0 0 15 21" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite.svg#control-arrow-next"></use>
+                    </svg>
+                    <span class="visually-hidden">Следующий месяц</span>
+                  </button>
+                </div>
+                <div class="form-filter__calendar calendar-filter">
+                  <table class="calendar-filter__table calendar-table" aria-hidden="false">
+                    <thead class="calendar-table__header calendar-header" aria-hidden="true">
+                      <tr class="calendar-header__week">
+                        <th class="calendar-header__weekday" title="Понедельник.">
+                          П<span class="calendar-header__full-weekday-name">н</span>
+                        </th>
+                        <th class="calendar-header__weekday" title="Вторник.">
+                          В<span class="calendar-header__full-weekday-name">т</span>
+                        </th>
+                        <th class="calendar-header__weekday" title="Среда.">
+                          С<span class="calendar-header__full-weekday-name">р</span>
+                        </th>
+                        <th class="calendar-header__weekday" title="Четверг.">
+                          Ч<span class="calendar-header__full-weekday-name">т</span>
+                        </th>
+                        <th class="calendar-header__weekday" title="Пятница.">
+                          П<span class="calendar-header__full-weekday-name">т</span>
+                        </th>
+                        <th class="calendar-header__weekday calendar-header__weekday--weekend" title="Суббота.">
+                          С<span class="calendar-header__full-weekday-name">б</span>
+                        </th>
+                        <th class="calendar-header__weekday calendar-header__weekday--weekend" title="Воскресенье.">
+                          В<span class="calendar-header__full-weekday-name">с</span>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="calendar-table__week">
+                        <td class="calendar-table__date calendar-date" aria-hidden="true">
+                          <button class="calendar-date__button" type="button" aria-hidden="true" aria-label="Понедельник, 23 февраля 2019 года." disabled tabindex="-1" aria-pressed="false">
+                            <span class="calendar-date__num" aria-hidden="true">23</span>
+                          </button>
+                        </td>
+                        <td class="calendar-table__date calendar-date" aria-hidden="true">
+                          <button class="calendar-date__button" type="button" aria-hidden="true" aria-label="Вторник, 24 февраля 2019 года." disabled tabindex="-1" aria-pressed="false">
+                            <span class="calendar-date__num" aria-hidden="true">24</span>
+                          </button>
+                        </td>
+                        <td class="calendar-table__date calendar-date" aria-hidden="true">
+                          <button class="calendar-date__button" type="button" aria-hidden="true" aria-label="Среда, 25 февраля 2019 года." disabled tabindex="-1" aria-pressed="false">
+                            <span class="calendar-date__num" aria-hidden="true">25</span>
+                          </button>
+                        </td>
+                        <td class="calendar-table__date calendar-date" aria-hidden="true">
+                          <button class="calendar-date__button" type="button" aria-hidden="true" aria-label="Четверг, 26 февраля 2019 года." disabled tabindex="-1" aria-pressed="false">
+                            <span class="calendar-date__num" aria-hidden="true">26</span>
+                          </button>
+                        </td>
+                        <td class="calendar-table__date calendar-date" aria-hidden="true">
+                          <button class="calendar-date__button" type="button" aria-hidden="true" aria-label="Пятница, 27 февраля 2019 года." disabled tabindex="-1" aria-pressed="false">
+                            <span class="calendar-date__num" aria-hidden="true">27</span>
+                          </button>
+                        </td>
+                        <td class="calendar-table__date calendar-date" aria-hidden="true">
+                          <button class="calendar-date__button" type="button" aria-hidden="true" aria-label="Суббота, 28 февраля 2019 года." disabled tabindex="-1" aria-pressed="false">
+                            <span class="calendar-date__num" aria-hidden="true">28</span>
+                          </button>
+                        </td>
+                        <td class="calendar-table__date calendar-date" aria-hidden="true">
+                          <button class="calendar-date__button" type="button" aria-hidden="true" aria-label="Воскресенье, 1 марта 2019 года." disabled tabindex="-1" aria-pressed="false">
+                            <span class="calendar-date__num" aria-hidden="true">1</span>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr class="calendar-table__week">
+                        <td class="calendar-table__date calendar-date" aria-hidden="true">
+                          <button class="calendar-date__button" type="button" aria-hidden="true" aria-label="Понедельник, 2 марта 2019 года." disabled tabindex="-1" aria-pressed="false">
+                            <span class="calendar-date__num" aria-hidden="true">2</span>
+                          </button>
+                        </td>
+                        <td class="calendar-table__date calendar-date" aria-hidden="true">
+                          <button class="calendar-date__button" type="button" aria-hidden="true" aria-label="Вторник, 3 марта 2019 года." disabled tabindex="-1" aria-pressed="false">
+                            <span class="calendar-date__num" aria-hidden="true">3</span>
+                          </button>
+                        </td>
+                        <td class="calendar-table__date calendar-date" aria-hidden="true">
+                          <button class="calendar-date__button" type="button" aria-hidden="true" aria-label="Среда, 4 марта 2019 года." disabled tabindex="-1" aria-pressed="false">
+                            <span class="calendar-date__num" aria-hidden="true">4</span>
+                          </button>
+                        </td>
+                        <td class="calendar-table__date calendar-date" aria-hidden="true">
+                          <button class="calendar-date__button" type="button" aria-hidden="true" aria-label="Четверг, 5 марта 2019 года." disabled tabindex="-1" aria-pressed="false">
+                            <span class="calendar-date__num" aria-hidden="true">5</span>
+                          </button>
+                        </td>
+                        <td class="calendar-table__date calendar-date" aria-hidden="true">
+                          <button class="calendar-date__button" type="button" aria-hidden="true" aria-label="Пятница, 6 марта 2019 года." disabled tabindex="-1" aria-pressed="false">
+                            <span class="calendar-date__num" aria-hidden="true">6</span>
+                          </button>
+                        </td>
+                        <td class="calendar-table__date calendar-date" aria-hidden="true">
+                          <button class="calendar-date__button" type="button" aria-hidden="true" aria-label="Суббота, 7 марта 2019 года." disabled tabindex="-1" aria-pressed="false">
+                            <span class="calendar-date__num" aria-hidden="true">7</span>
+                          </button>
+                        </td>
+                        <td class="calendar-table__date calendar-date" aria-hidden="true">
+                          <button class="calendar-date__button" type="button" aria-hidden="true" aria-label="Воскресенье, 8 марта 2019 года." disabled tabindex="-1" aria-pressed="false">
+                            <span class="calendar-date__num" aria-hidden="true">8</span>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr class="calendar-table__week">
+                        <td class="calendar-table__date calendar-date" aria-hidden="true">
+                          <button class="calendar-date__button" type="button" aria-hidden="true" aria-label="Понедельник, 9 марта 2019 года." disabled tabindex="-1" aria-pressed="false">
+                            <span class="calendar-date__num" aria-hidden="true">9</span>
+                          </button>
+                        </td>
+                        <td class="calendar-table__date calendar-date" aria-hidden="true">
+                          <button class="calendar-date__button" type="button" aria-hidden="true" aria-label="Вторник, 10 марта 2019 года." disabled tabindex="-1" aria-pressed="false">
+                            <span class="calendar-date__num" aria-hidden="true">10</span>
+                          </button>
+                        </td>
+                        <td class="calendar-table__date calendar-date" aria-hidden="true">
+                          <button class="calendar-date__button" type="button" aria-hidden="true" aria-label="Среда, 11 марта 2019 года." disabled tabindex="-1" aria-pressed="false">
+                            <span class="calendar-date__num" aria-hidden="true">11</span>
+                          </button>
+                        </td>
+                        <td class="calendar-table__date calendar-date" aria-hidden="true">
+                          <button class="calendar-date__button" type="button" aria-hidden="true" aria-label="Четверг, 12 марта 2019 года." disabled tabindex="-1" aria-pressed="false">
+                            <span class="calendar-date__num" aria-hidden="true">12</span>
+                          </button>
+                        </td>
+                        <td class="calendar-table__date calendar-date" aria-hidden="true">
+                          <button class="calendar-date__button" type="button" aria-hidden="true" aria-label="Пятница, 13 марта 2019 года." disabled tabindex="-1" aria-pressed="false">
+                            <span class="calendar-date__num" aria-hidden="true">13</span>
+                          </button>
+                        </td>
+                        <td class="calendar-table__date calendar-date" aria-hidden="true">
+                          <button class="calendar-date__button" type="button" aria-hidden="true" aria-label="Суббота, 14 марта 2019 года." disabled tabindex="-1" aria-pressed="false">
+                            <span class="calendar-date__num" aria-hidden="true">14</span>
+                          </button>
+                        </td>
+                        <td class="calendar-table__date calendar-date" aria-hidden="true">
+                          <button class="calendar-date__button" type="button" aria-hidden="true" aria-label="Воскресенье, 15 марта 2019 года." disabled tabindex="-1" aria-pressed="false">
+                            <span class="calendar-date__num" aria-hidden="true">15</span>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr class="calendar-table__week">
+                        <td class="calendar-table__date calendar-date" aria-hidden="true">
+                          <button class="calendar-date__button" type="button" aria-hidden="true" aria-label="Понедельник, 16 марта 2019 года." disabled tabindex="-1" aria-pressed="false">
+                            <span class="calendar-date__num" aria-hidden="true">16</span>
+                          </button>
+                        </td>
+                        <td class="calendar-table__date calendar-date" aria-hidden="true">
+                          <button class="calendar-date__button" type="button" aria-hidden="true" aria-label="Вторник, 17 марта 2019 года." disabled tabindex="-1" aria-pressed="false">
+                            <span class="calendar-date__num" aria-hidden="true">17</span>
+                          </button>
+                        </td>
+                        <td class="calendar-table__date calendar-date" aria-hidden="true">
+                          <button class="calendar-date__button" type="button" aria-hidden="true" aria-label="Среда, 18 марта 2019 года." disabled tabindex="-1" aria-pressed="false">
+                            <span class="calendar-date__num" aria-hidden="true">18</span>
+                          </button>
+                        </td>
+                        <td class="calendar-table__date calendar-date" aria-hidden="true">
+                          <button class="calendar-date__button" type="button" aria-hidden="true" aria-label="Четверг, 19 марта 2019 года." disabled tabindex="-1" aria-pressed="false">
+                            <span class="calendar-date__num" aria-hidden="true">19</span>
+                          </button>
+                        </td>
+                        <td class="calendar-table__date calendar-date" aria-hidden="true">
+                          <button class="calendar-date__button" type="button" aria-hidden="true" aria-label="Пятница, 20 марта 2019 года." disabled tabindex="-1" aria-pressed="false">
+                            <span class="calendar-date__num" aria-hidden="true">20</span>
+                          </button>
+                        </td>
+                        <td class="calendar-table__date calendar-date" aria-hidden="true">
+                          <button class="calendar-date__button" type="button" aria-hidden="true" aria-label="Суббота, 21 марта 2019 года." disabled tabindex="-1" aria-pressed="false">
+                            <span class="calendar-date__num" aria-hidden="true">21</span>
+                          </button>
+                        </td>
+                        <td class="calendar-table__date calendar-date" aria-hidden="true">
+                          <button class="calendar-date__button" type="button" aria-hidden="true" aria-label="Воскресенье, 22 марта 2019 года." disabled tabindex="-1" aria-pressed="false">
+                            <span class="calendar-date__num" aria-hidden="true">22</span>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr class="calendar-table__week">
+                        <td class="calendar-table__date calendar-date" aria-hidden="true">
+                          <button class="calendar-date__button" type="button" aria-hidden="true" aria-label="Понедельник, 23 марта 2019 года." disabled tabindex="-1" aria-pressed="false">
+                            <span class="calendar-date__num" aria-hidden="true">23</span>
+                          </button>
+                        </td>
+                        <td class="calendar-table__date calendar-date" aria-hidden="true">
+                          <button class="calendar-date__button" type="button" aria-hidden="true" aria-label="Вторник, 24 марта 2019 года." disabled tabindex="-1" aria-pressed="false">
+                            <span class="calendar-date__num" aria-hidden="true">24</span>
+                          </button>
+                        </td>
+                        <td class="calendar-table__date calendar-date" aria-hidden="true">
+                          <button class="calendar-date__button" type="button" aria-hidden="true" aria-label="Среда, 25 марта 2019 года." disabled tabindex="-1" aria-pressed="false">
+                            <span class="calendar-date__num" aria-hidden="true">25</span>
+                          </button>
+                        </td>
+                        <td class="calendar-table__date calendar-date" aria-hidden="false">
+                          <button class="calendar-date__button calendar-date__button--pressed" type="button" aria-hidden="false" aria-label="Четверг, 26 марта 2019 года." tabindex="0" aria-pressed="true">
+                            <span class="calendar-date__num" aria-hidden="true">26</span>
+                          </button>
+                        </td>
+                        <td class="calendar-table__date calendar-date" aria-hidden="false">
+                          <button class="calendar-date__button calendar-date__button--pressed" type="button" aria-hidden="false" aria-label="Пятница, 27 марта 2019 года." tabindex="0" aria-pressed="true">
+                            <span class="calendar-date__num" aria-hidden="true">27</span>
+                          </button>
+                        </td>
+                        <td class="calendar-table__date calendar-date" aria-hidden="false">
+                          <button class="calendar-date__button calendar-date__button--pressed" type="button" aria-hidden="false" aria-label="Суббота, 28 марта 2019 года." tabindex="0" aria-pressed="true">
+                            <span class="calendar-date__num" aria-hidden="true">28</span>
+                          </button>
+                        </td>
+                        <td class="calendar-table__date calendar-date" aria-hidden="false">
+                          <button class="calendar-date__button" type="button" aria-hidden="false" aria-label="Воскресенье, 29 марта 2019 года." tabindex="0" aria-pressed="false">
+                            <span class="calendar-date__num" aria-hidden="true">29</span>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr class="calendar-table__week">
+                        <td class="calendar-table__date calendar-date" aria-hidden="false">
+                          <button class="calendar-date__button" type="button" aria-hidden="false" aria-label="Понедельник, 30 марта 2019 года." tabindex="0" aria-pressed="false">
+                            <span class="calendar-date__num" aria-hidden="true">30</span>
+                          </button>
+                        </td>
+                        <td class="calendar-table__date calendar-date" aria-hidden="false">
+                          <button class="calendar-date__button" type="button" aria-hidden="false" aria-label="Вторник, 31 марта 2019 года." tabindex="0" aria-pressed="false">
+                            <span class="calendar-date__num" aria-hidden="true">31</span>
+                          </button>
+                        </td>
+                        <td class="calendar-table__date calendar-date" aria-hidden="false">
+                          <button class="calendar-date__button" type="button" aria-hidden="false" aria-label="Среда, 1 апреля 2019 года." tabindex="0" aria-pressed="false">
+                            <span class="calendar-date__num" aria-hidden="true">1</span>
+                          </button>
+                        </td>
+                        <td class="calendar-table__date calendar-date" aria-hidden="false">
+                          <button class="calendar-date__button" type="button" aria-hidden="false" aria-label="Четверг, 2 апреля 2019 года." tabindex="0" aria-pressed="false">
+                            <span class="calendar-date__num" aria-hidden="true">2</span>
+                          </button>
+                        </td>
+                        <td class="calendar-table__date calendar-date" aria-hidden="false">
+                          <button class="calendar-date__button" type="button" aria-hidden="false" aria-label="Пятница, 3 апреля 2019 года." tabindex="0" aria-pressed="false">
+                            <span class="calendar-date__num" aria-hidden="true">3</span>
+                          </button>
+                        </td>
+                        <td class="calendar-table__date calendar-date" aria-hidden="false">
+                          <button class="calendar-date__button" type="button" aria-hidden="false" aria-label="Суббота, 4 апреля 2019 года." tabindex="0" aria-pressed="false">
+                            <span class="calendar-date__num" aria-hidden="true">4</span>
+                          </button>
+                        </td>
+                        <td class="calendar-table__date calendar-date" aria-hidden="false">
+                          <button class="calendar-date__button" type="button" aria-hidden="false" aria-label="Воскресенье, 5 апреля 2019 года." tabindex="0" aria-pressed="false">
+                            <span class="calendar-date__num" aria-hidden="true">5</span>
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <a class="new-plan-form__next-step" href="#step2">Следующий шаг</a>
+            </div>
+            <div class="new-plan-form__step" id="step2">
+              <div class="new-plan-form__intro">
+                <h3 class="new-plan-form__title">
+                  <span class="new-plan-form__step-num">Шаг 2. </span>Маршрут
+                </h3>
+                <p class="new-plan-form__text">Укажите страны, которые вы&nbsp;хотели&nbsp;бы посетить. Это может быть одна или сразу несколько.</p>
+              </div>
+              <ol class="new-plan-form__steps" aria-hidden="true">
+                <li class="new-plan-form__step">Даты</li>
+                <li class="new-plan-form__step new-plan-form__step--current">Маршрут</li>
+                <li class="new-plan-form__step">Развлечения</li>
+              </ol>
+              <div class="new-plan-form__route-countries route-countries">
+                <div class="route-countries__next-country next-country next-country--completed">
+                  <button class="next-country__choice next-country-choice" type="button">
+                    <span class="next-country__name">Босния и&nbsp;Герцеговина</span>
+                    <span class="next-country-choice__control choice-control choice-control--show-countries">
+                      <svg class="choice-control__img choice-control__img--dropdown" width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                        <use xlink:href="img/sprite.svg#control-dropdown"></use>
+                      </svg>
+                    </span>
+                    <span class="next-country-choice__control choice-control choice-control--hide-countries">
+                      <svg class="choice-control__img choice-control__img--close" width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                        <use xlink:href="img/sprite.svg#control-close"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <button class="next-country__delete delete-country" type="button">
+                    <span>Удалить страну</span>
+                    <svg class="delete-country__img" width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite.svg#control-delete"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="route-countries__next-country next-country next-country--completed">
+                  <button class="next-country__choice next-country-choice" type="button">
+                    <span class="next-country__name">Чехия</span>
+                    <span class="next-country-choice__control choice-control choice-control--show-countries">
+                      <svg class="choice-control__img choice-control__img--dropdown" width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                        <use xlink:href="img/sprite.svg#control-dropdown"></use>
+                      </svg>
+                    </span>
+                    <span class="next-country-choice__control choice-control choice-control--hide-countries">
+                      <svg class="choice-control__img choice-control__img--close" width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                        <use xlink:href="img/sprite.svg#control-close"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <button class="next-country__delete delete-country" type="button">
+                    <span>Удалить страну</span>
+                    <svg class="delete-country__img" width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite.svg#control-delete"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="route-countries__next-country next-country">
+                  <button class="next-country__choice next-country-choice next-country-choice--active" type="button">
+                    <span class="next-country__name">Выберите страну</span>
+                    <span class="next-country-choice__control choice-control choice-control--show-countries">
+                      <svg class="choice-control__img choice-control__img--dropdown" width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                        <use xlink:href="img/sprite.svg#control-dropdown"></use>
+                      </svg>
+                    </span>
+                    <span class="next-country-choice__control choice-control choice-control--hide-countries">
+                      <svg class="choice-control__img choice-control__img--close" width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                        <use xlink:href="img/sprite.svg#control-close"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="next-country__popup popup-next-country popup-next-country--open">
+                    <div class="popup-next-country__countries countries">
+                      <ul class="countries__first-letters first-letters">
+                        <li class="first-letters__item">
+                          <a class="first-letters__link" href="#">А</a>
+                        </li>
+                        <li class="first-letters__item">
+                          <a class="first-letters__link" href="#">Б</a>
+                        </li>
+                        <li class="first-letters__item">
+                          <a class="first-letters__link" href="#">В</a>
+                        </li>
+                        <li class="first-letters__item">
+                          <a class="first-letters__link" href="#">Г</a>
+                        </li>
+                        <li class="first-letters__item">
+                          <a class="first-letters__link" href="#">Д</a>
+                        </li>
+                        <li class="first-letters__item">
+                          <a class="first-letters__link" href="#">Е</a>
+                        </li>
+                        <li class="first-letters__item">
+                          <a class="first-letters__link" href="#">З</a>
+                        </li>
+                        <li class="first-letters__item">
+                          <a class="first-letters__link" href="#">И</a>
+                        </li>
+                        <li class="first-letters__item">
+                          <a class="first-letters__link" href="#">К</a>
+                        </li>
+                        <li class="first-letters__item">
+                          <a class="first-letters__link" href="#">Л</a>
+                        </li>
+                        <li class="first-letters__item">
+                          <a class="first-letters__link" href="#">М</a>
+                        </li>
+                        <li class="first-letters__item">
+                          <a class="first-letters__link" href="#">Н</a>
+                        </li>
+                        <li class="first-letters__item">
+                          <a class="first-letters__link" href="#">О</a>
+                        </li>
+                        <li class="first-letters__item">
+                          <a class="first-letters__link" href="#">П</a>
+                        </li>
+                        <li class="first-letters__item">
+                          <a class="first-letters__link" href="#">Р</a>
+                        </li>
+                        <li class="first-letters__item">
+                          <a class="first-letters__link" href="#">С</a>
+                        </li>
+                        <li class="first-letters__item">
+                          <a class="first-letters__link" href="#">Т</a>
+                        </li>
+                        <li class="first-letters__item">
+                          <a class="first-letters__link" href="#">У</a>
+                        </li>
+                        <li class="first-letters__item">
+                          <a class="first-letters__link" href="#">Ф</a>
+                        </li>
+                        <li class="first-letters__item">
+                          <a class="first-letters__link" href="#">Х</a>
+                        </li>
+                        <li class="first-letters__item">
+                          <a class="first-letters__link" href="#">Ч</a>
+                        </li>
+                        <li class="first-letters__item">
+                          <a class="first-letters__link" href="#">Ш</a>
+                        </li>
+                        <li class="first-letters__item">
+                          <a class="first-letters__link" href="#">Э</a>
+                        </li>
+                        <li class="first-letters__item">
+                          <a class="first-letters__link" href="#">Ю</a>
+                        </li>
+                        <li class="first-letters__item">
+                          <a class="first-letters__link" href="#">Я</a>
+                        </li>
+                      </ul>
+                      <ul class="countries__list countries-list countries-list--a countries-list--open">
+                        <li class="countries-list__item">
+                          <a class="countries-list__link" href="#">Австралия</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__link" href="#">Австрия</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__link" href="#">Азербайджан</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__link" href="#">Албания</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__link" href="#">Алжир</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__link" href="#">Ангола</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__link" href="#">Андорра</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__link" href="#">Антигуа и&nbsp;Барбуда</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__link" href="#">Аргентина</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__link" href="#">Армения</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__link" href="#">Афганистан</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a class="new-plan-form__next-step" href="#step3">Следующий шаг</a>
+              <a class="new-plan-form__prev-step" href="#step1">На&nbsp;шаг назад</a>
+            </div>
+            <div class="new-plan-form__step" id="step3">
+              <div class="new-plan-form__intro">
+                <h3 class="new-plan-form__title">
+                  <span class="new-plan-form__step-num">Шаг 3. </span>Развлечения
+                </h3>
+                <p class="new-plan-form__text">Наконец, расскажите о&nbsp;своих планах времяпровождения. Можно писать в&nbsp;свободной форме и&nbsp;ставить тэги.</p>
+              </div>
+              <ol class="new-plan-form__steps" aria-hidden="true">
+                <li class="new-plan-form__step">Даты</li>
+                <li class="new-plan-form__step">Маршрут</li>
+                <li class="new-plan-form__step new-plan-form__step--current">Развлечения</li>
+              </ol>
+              <div class="new-plan-form__leisure leisure-plan">
+                <label class="leisure-plan__country" for="leisureBosniaHerzegovina">Босния и&nbsp;Герцеговина</label>
+                <textarea class="leisure-plan__input" name="leisure-bosnia-herzegovina" id="leisureBosniaHerzegovina" cols="30" rows="10" placeholder="План действий"></textarea>
+              </div>
+              <div class="new-plan-form__leisure leisure-plan">
+                <label class="leisure-plan__country" for="leisureCzechRepublic">Чехия</label>
+                <textarea class="leisure-plan__input" name="leisure-czech-republic" id="leisureCzechRepublic" cols="30" rows="10">Пить пиво и&nbsp;лазить по&nbsp;старым замкам, наслаждаться архитектурой и&nbsp;вот это все.</textarea>
+              </div>
+            </div>
+            <button class="new-plan-form__submit" type="submit">Отправить</button>
+            <a class="new-plan-form__prev-step" href="#step2">На&nbsp;шаг назад</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <div class="container">
+      <a class="page-footer__logo logo" href="index.html">
+        <svg class="logo__img" width="96" height="15" viewBox="0 0 96 15" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Погнали.">
+          <use xlink:href="img/sprite.svg#logo"></use>
+        </svg>
+        <span class="logo__index-update visually-hidden">Перейти на главную страницу.</span>
+      </a>
+      <ul class="page-footer__social social">
+        <li class="social__item">
+          <a class="social__link button button--iconic button--social button--facebook" href="https://www.facebook.com/htmlacademy" target="_blank">
+            <span class="visually-hidden">Мы в Facebook.</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link button button--iconic button--social button--vk" href="https://vk.com/htmlacademy" target="_blank">
+            <span class="visually-hidden">Мы в Вконтакте.</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link button button--iconic button--social button--instagram" href="https://www.instagram.com/htmlacademy/" target="_blank">
+            <span class="visually-hidden">Мы в Instagram.</span>
+          </a>
+        </li>
+      </ul>
+      <small class="page-footer__partner partner">
+        <span class="partner__text">Разработано</span>
+        <a class="partner__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <svg class="partner__img" width="27" height="33" viewBox="0 0 27 33" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="HTML Academy.">
+            <use xlink:href="img/sprite.svg#partner-logo"></use>
+          </svg>
+          <span class="visually-hidden">HTML Academy: интерактивные онлайн-курсы.</span>
+        </a>
+      </small>
+    </div>
+  </footer>
+</body>
+</html>
