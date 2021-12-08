@@ -1,0 +1,48 @@
+.step-tips {
+  counter-reset: step;
+  list-style-type: none;
+}
+
+.step-tips__item {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  margin-top: -14px;
+  padding: 22px 24px;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  color: @basic-blue;
+
+  border-radius: 10px;
+}
+
+.step-tips__item:first-child {
+  margin-top: 0;
+}
+
+.step-tips__item::after {
+  grid-column: 2 / 3;
+  counter-increment: step;
+  content: counter(step);
+  color: @basic-white;
+  text-align: right;
+}
+
+.step-tips__item:nth-child(1) {
+  background-color: @special-orange;
+}
+
+.step-tips__item:nth-child(2) {
+  background-color: @medium-orange;
+}
+
+.step-tips__item:nth-child(3) {
+  background-color: @special-yellow-dark;
+}
+
+.step-tips__item:nth-child(4) {
+  background-color: @basic-yellow;
+}

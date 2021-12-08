@@ -1,0 +1,30 @@
+.month-filter {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  justify-items: center;
+
+  border-top: 1px solid @special-light-grey;
+  border-bottom: 1px solid @special-light-grey;
+}
+
+.month-filter__months {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.month-filter__month {
+  display: none;
+  padding: 11px 20px;
+
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 700;
+  color: @basic-blue-light;
+}
+
+.month-filter__month--selected {
+  display: inline-block;
+}

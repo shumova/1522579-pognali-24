@@ -1,0 +1,47 @@
+.leisure-plan__country {
+  position: relative;
+
+  display: block;
+  margin-bottom: 18px;
+  margin-left: 8px;
+
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 500;
+  color: @basic-blue-light;
+  white-space: nowrap;
+  overflow: hidden;
+
+  &::after {
+    position: absolute;
+    right: 0;
+    z-index: 1;
+
+    width: 35px;
+    height: 24px;
+    content: "";
+
+    background-color: @basic-white;
+    box-shadow: -25px 0 10px 15px #ffffff;
+  }
+}
+
+.leisure-plan__input {
+  width: 100%;
+  padding: 10px 14px;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: @special-grey;
+
+  border: 1px solid @special-light-grey;
+  border-radius: 4px;
+  resize: none;
+
+  &::placeholder {
+    opacity: 0.3;
+  }
+}

@@ -1,0 +1,37 @@
+.promo {
+  position: relative;
+
+  background: linear-gradient(to top, @basic-blue 0 20px, transparent 20px 100%),
+    url("../img/decorative/earth@1x.jpg") no-repeat left 50% bottom -65px;
+  background-size: 100%, 320px;
+  background-color: @basic-blue;
+
+  &::before {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+
+    width: 192px;
+    height: 255px;
+    content: "";
+
+    transform: translateX(-40%);
+    background: transparent url("../img/decorative/traveller@1x.png");
+  }
+}
+
+.promo__container {
+  padding-top: 94px;
+}
+
+.promo__title {
+  display: block;
+  margin: 0;
+  margin-bottom: 285px;
+
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 700;
+  text-align: center;
+  color: @basic-white;
+}

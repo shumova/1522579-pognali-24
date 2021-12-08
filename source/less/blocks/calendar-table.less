@@ -1,0 +1,50 @@
+.calendar-table {
+  border-collapse: collapse;
+}
+
+.calendar-table__weekday {
+  padding-bottom: 10px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: @special-grey;
+}
+
+.calendar-table__weekday--weekend {
+  color: @basic-red;
+}
+
+.calendar-table__full-weekday-name {
+  display: none;
+}
+
+.calendar-table__date {
+  padding: 0;
+  border: 1px solid @special-light-grey;
+}
+
+.calendar-date__button {
+  padding: 0;
+  width: 32px;
+  height: 32px;
+
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  color: @basic-blue-light;
+
+  background-color: @basic-light-grey;
+}
+
+.calendar-date__button--pressed {
+  color: @basic-white;
+
+  background-color: @basic-blue-light;
+}
+
+.calendar-date__button:disabled {
+  color: @special-grey;
+
+  background-color: transparent;
+  opacity: 0.3;
+}

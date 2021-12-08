@@ -1,0 +1,26 @@
+.arrow-pagination {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1px;
+  align-items: center;
+  justify-items: center;
+
+  border-radius: 20px;
+}
+
+.arrow-pagination__link {
+  display: block;
+
+  width: 100%;
+  padding: 17px 20px 14px;
+  background-color: @basic-white;
+}
+
+.arrow-pagination__link--prev {
+  border-radius: 20px 0 0 20px;
+}
+
+.arrow-pagination__link--next {
+  border-radius: 0 20px 20px 0;
+}

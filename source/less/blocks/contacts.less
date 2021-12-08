@@ -1,0 +1,55 @@
+.contacts {
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+  color: @basic-yellow;
+  text-transform: uppercase;
+  list-style-type: none;
+}
+
+.contacts--main-menu {
+  color: @basic-blue-dark;
+}
+
+.contacts__item {
+  margin: 0;
+}
+
+.contacts__item--address {
+  margin-bottom: 32px;
+  color: @basic-blue-light;
+}
+
+.contacts__link {
+  font: inherit;
+  line-height: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
+.contacts__text {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 45px 1fr;
+  align-items: center;
+  gap: 0 16px;
+
+  &::before {
+    grid-column: 1 / 2;
+    width: 45px;
+    height: 45px;
+    content: "";
+
+    border-radius: 50%;
+    background-color: @basic-blue-dark;
+  }
+}
+
+.contacts__button {
+  padding: 19px;
+  border: 3px solid @basic-dark;
+  border-radius: 10px;
+}

@@ -1,0 +1,61 @@
+.plan-card {
+  background-color: @basic-white;
+  border-radius: 10px;
+}
+
+.plan-card__title {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 5px;
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+  color: @basic-blue-light;
+
+  &::before {
+    grid-column: 1 / 2;
+    content: counter(plan-card) ".";
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 500;
+  }
+}
+
+.plan-card__link {
+  font: inherit;
+  line-height: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
+.plan-card__info {
+  margin-bottom: 24px;
+
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  color: @basic-blue-light;
+  text-transform: uppercase;
+}
+
+.plan-card__company {
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.plan-card__change {
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  color: @basic-black;
+  opacity: 0.3;
+  text-transform: uppercase;
+  text-decoration: none;
+}

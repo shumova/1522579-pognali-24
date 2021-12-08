@@ -1,0 +1,77 @@
+.rate {
+  counter-reset: rate__item--counted;
+}
+
+.rate__item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  padding: 13px 0 18px;
+  border-top: 1px solid @light-grey;
+}
+
+.rate__item:last-of-type {
+  border-bottom: 1px solid @light-grey;
+}
+
+.rate__item--business {
+  border-top-color: rgba(0, 0, 0, 0.05);
+  border-bottom-color: rgba(0, 0, 0, 0.05);
+}
+
+.rate__item--counted::after {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  display: grid;
+  width: 34px;
+  height: 34px;
+  align-items: center;
+  justify-items: center;
+
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  color: @basic-white;
+
+  counter-increment: rate__item--counted;
+  content: counter(rate__item--counted);
+  border-radius: 50%;
+}
+
+.rate__item--counted:nth-child(1)::after {
+  background-color: @special-orange;
+}
+
+.rate__item--counted:nth-child(2)::after {
+  background-color: @special-yellow-dark;
+}
+
+.rate__item--counted:nth-child(3)::after {
+  background-color: @basic-yellow;
+}
+
+.rate__name {
+  margin-bottom: 6px;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 300;
+  color: @special-grey;
+}
+
+.rate__name--business {
+  margin-bottom: 0;
+  line-height: 22px;
+}
+
+.rate__cost {
+  grid-row: 2 / 3;
+  margin: 0;
+
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 300;
+  color: @special-grey;
+}
+
+.rate__cost--business {
+  line-height: 22px;
+}
