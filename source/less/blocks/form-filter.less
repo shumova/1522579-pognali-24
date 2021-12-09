@@ -1,0 +1,75 @@
+.form-filter {
+  border: none;
+}
+
+.form-filter__title {
+  display: grid;
+  margin-bottom: 9px;
+  grid-template-columns: 1fr auto;
+
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: @basic-blue-light;
+  text-transform: uppercase;
+}
+
+.form-filter__note {
+  letter-spacing: 0.7px;
+  opacity: 0.3;
+}
+
+.form-filter__controls {
+  display: grid;
+  grid-template-columns: 42px 1fr 42px;
+  align-items: center;
+  justify-items: center;
+
+  border: 1px solid @special-light-grey;
+  border-radius: 4px;
+}
+
+.form-filter__field {
+  width: 100%;
+  padding: 16px 20px 13px;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 500;
+  color: @basic-blue-light;
+  text-align: center;
+
+  border: none;
+}
+
+.form-filter__label {
+  display: grid;
+  grid-template-columns: 26px 1fr;
+  align-items: center;
+  column-gap: 13px;
+
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: 400;
+  color: @basic-blue-light;
+
+  &::before {
+    grid-column: 1 / 2;
+    width: 26px;
+    height: 26px;
+    content: "";
+
+    border: 1px solid @special-light-grey;
+    border-radius: 4px;
+  }
+}
+
+.form-filter__month {
+  margin-bottom: 20px;
+}
+
+.form-filter__calendar {
+  margin-bottom: 22px;
+}

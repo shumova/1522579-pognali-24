@@ -1,0 +1,52 @@
+.first-letters {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  justify-items: center;
+
+  list-style-type: none;
+}
+
+.first-letters--catalog {
+  background-color: @basic-white;
+  border-top: 1px solid @special-light-grey;
+}
+
+.first-letters__item {
+  width: 100%;
+
+  border-right: 1px solid @special-light-grey;
+  border-bottom: 1px solid @special-light-grey;
+
+  &:nth-child(5n + 1) {
+    border-left: 1px solid @special-light-grey;
+  }
+}
+
+.first-letters__link {
+  display: grid;
+  justify-items: center;
+  padding-top: 12px;
+  padding-bottom: 15px;
+
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  color: @basic-blue-light;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.first-letters__link--catalog {
+  padding-top: 15px;
+  padding-bottom: 14px;
+}
+
+.first-letters__link--selected {
+  background-color: @basic-light-grey;
+}
+
+.first-letters__link--selected-catalog {
+  background-color: @basic-blue-light;
+  color: @basic-white;
+}

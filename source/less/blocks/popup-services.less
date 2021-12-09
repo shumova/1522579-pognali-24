@@ -1,0 +1,29 @@
+.popup-services {
+  display: grid;
+  grid-template-columns: 25px 1fr 25px;
+  padding: 34px 0 0;
+  background-color: @basic-white;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px 0 rgba(29, 46, 91, 0.14);
+}
+
+.popup-services__title {
+  grid-column: 2 / 3;
+  margin: 0;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.popup-services__close {
+  grid-column: 1 / -1;
+  padding: 21px;
+
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  color: @basic-blue-light;
+  text-transform: uppercase;
+
+  background-color: @basic-grey;
+  border-radius: 0 0 20px 20px;
+}

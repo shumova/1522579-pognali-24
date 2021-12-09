@@ -1,0 +1,59 @@
+.services {
+  background-color: @basic-dark;
+}
+
+.services__background {
+  background-color: @middle-grey;
+  border-radius: 0 0 25px 25px;
+}
+
+.services__container {
+  position: relative;
+  padding: 53px 0 38px 25px;
+
+  &::before {
+    position: absolute;
+    top: 37px;
+    right: 0;
+
+    width: 100px;
+    height: 100px;
+    content: "";
+
+    background: @basic-white url("../../img/decorative/rates@1x.jpg") no-repeat center;
+  }
+}
+
+.services__title {
+  display: block;
+  max-width: 107px;
+  margin-bottom: 56px;
+  text-decoration: none;
+}
+
+.services__rate {
+  margin: 0;
+  margin-bottom: 31px;
+}
+
+.services__rate--business {
+  grid-column: 2 / 3;
+  margin-bottom: 34px;
+}
+
+.services__link {
+  font-style: normal;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+  color: @basic-blue-medium;
+  text-decoration: none;
+}
+
+.services__popup {
+  position: absolute;
+  display: none;
+  top: -10px;
+  right: 0;
+  left: 0;
+}

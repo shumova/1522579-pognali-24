@@ -1,0 +1,77 @@
+.page-body {
+  display: grid;
+  grid-template-rows:
+    auto
+    1fr
+    auto;
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+  color: @special-grey;
+
+  background-color: @basic-light-grey;
+}
+
+// layout-header-and-intro
+.page-body__layout-header-and-intro {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+
+  display: grid;
+
+  background-color: @basic-dark;
+}
+
+.page-body__header {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  z-index: 1;
+}
+
+.page-body__promo {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+}
+
+.page-body__review {
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
+  padding: 28px 0;
+}
+
+.page-body__steps-layout {
+  grid-column: 1 / -1;
+  grid-row: 3 / 4;
+  padding-bottom: 39px;
+
+  background-image: linear-gradient(to bottom, @basic-blue 0 65px, transparent 65px 100%);
+}
+
+.page-body__steps {
+  padding: 0;
+}
+
+// main
+.page-body__main {
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
+}
+
+// footer
+.page-body__footer {
+  grid-column: 1 / -1;
+  grid-row: 3 / 4;
+}
+
+.page-body__footer--index {
+  position: relative;
+  z-index: 1;
+
+  margin-top: -120px;
+}
+
+.page-body__footer--form {
+  margin-top: -20px;
+}

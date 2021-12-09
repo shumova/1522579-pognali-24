@@ -1,0 +1,151 @@
+.catalog-filter {
+  border: none;
+}
+
+.catalog-filter__inner-layout {
+  display: grid;
+  justify-items: start;
+
+  border-top: 1px solid @basic-yellow-dark;
+}
+
+.catalog-filter__title {
+  width: 100%;
+  justify-items: start;
+  margin: 0;
+  padding: 12px 0 14px;
+
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  color: @basic-blue-light;
+  text-transform: uppercase;
+}
+
+.catalog-filter__title-colon {
+  display: none;
+}
+
+.catalog-filter__content {
+  display: grid;
+  margin-top: 2px;
+  margin-bottom: 20px;
+}
+
+// .catalog-filter__content--hidden {
+//   // display: none;
+// }
+
+.catalog-filter__field-wrapper {
+  margin-bottom: 12px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.catalog-filter__label {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 400;
+  color: @basic-black;
+}
+
+.catalog-filter__range-fields-wrapper {
+  position: relative;
+
+  grid-row: 1 / 2;
+  display: grid;
+  margin-bottom: 25px;
+  grid-template-columns: repeat(2, 1fr);
+
+  background-color: @basic-white;
+  border: 1px solid @special-light-grey;
+  border-radius: 4px;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 16px;
+    height: 11px;
+    content: "";
+
+    background-color: @basic-white;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 16px;
+    content: "";
+
+    border-top: 1px solid @special-light-grey;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+.catalog-filter__range-label:first-of-type {
+  border-right: 1px solid @special-light-grey;
+}
+
+.catalog-filter__range-field {
+  width: 110px;
+  padding: 13px 20px 9px;
+
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 13px;
+  font-weight: 500;
+  color: @basic-blue-light;
+  text-align: center;
+
+  border: none;
+  background-color: @basic-white;
+  border-radius: 4px;
+}
+
+.catalog-filter__range-scale {
+  position: relative;
+  width: 220px;
+  height: 2px;
+
+  background-color: @special-blue-light-opacity-20;
+}
+
+.catalog-filter__range-bar {
+  position: absolute;
+  height: 2px;
+  background-color: @basic-blue-light;
+}
+
+.catalog-filter__range-toggle {
+  position: absolute;
+  top: 50%;
+
+  width: 10px;
+  height: 10px;
+
+  background-color: @basic-blue-light;
+  border: none;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.catalog-filter__range-toggle--min {
+  left: 0;
+}
+
+.catalog-filter__range-toggle--max {
+  right: 0;
+}
+
+.catalog-form__submit {
+  width: 100%;
+  line-height: 17px;
+  background-color: @basic-white;
+}
