@@ -1,6 +1,10 @@
 .user-menu {
   display: flex;
   flex-wrap: wrap;
+
+  @media (max-width: calc(@tablet-width - 1px)) {
+    margin-bottom: 70px;
+  }
 }
 
 .user-menu--inner-page {
@@ -12,12 +16,26 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .user-menu__link {
   display: block;
   width: 40px;
   height: 40px;
+
+  @media (min-width: @desktop-width) {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .user-menu__link--phone {
@@ -30,4 +48,12 @@
 
 .user-menu__login {
   flex-grow: 1;
+  align-self: flex-start;
+  padding: 12px 20px 8px;
+
+  @media (min-width: @tablet-width) {
+    flex-grow: 0;
+    margin-left: auto;
+    padding: 16px 32px 13px 30px;
+  }
 }

@@ -6,21 +6,33 @@
 .step-tips__item {
   display: grid;
   grid-template-columns: 150px 1fr;
-  margin-top: -14px;
-  padding: 22px 24px;
+  margin-top: -20px;
+  padding: 22px 24px 44px;
 
-  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-family: @general-font-family;
   font-style: normal;
   font-size: 18px;
   line-height: 18px;
   font-weight: 700;
   color: @basic-blue;
 
-  border-radius: 10px;
-}
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows:
+      1fr
+      auto;
+    gap: 10px;
+    padding: 31px 33px 22px;
 
-.step-tips__item:first-child {
-  margin-top: 0;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto;
+  }
 }
 
 .step-tips__item::after {
@@ -29,20 +41,88 @@
   content: counter(step);
   color: @basic-white;
   text-align: right;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+
+    font-size: 30px;
+    line-height: 30px;
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
 }
 
 .step-tips__item:nth-child(1) {
+  margin-top: 0;
   background-color: @special-orange;
+  border-radius: 10px 10px 0 0;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 135px;
+    padding-bottom: 44px;
+    border-radius: 20px 0 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 40px;
+    border-radius: 20px 0 0 20px;
+  }
 }
 
 .step-tips__item:nth-child(2) {
   background-color: @medium-orange;
+  border-radius: 10px 10px 0 0;
+
+  @media (min-width: @tablet-width) {
+    margin-left: -20px;
+    padding-right: 100px;
+    padding-bottom: 44px;
+    border-radius: 20px 20px 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 40px;
+    border-radius: 20px 0 0 20px;
+  }
 }
 
 .step-tips__item:nth-child(3) {
   background-color: @special-yellow-dark;
+  border-radius: 10px 10px 0 0;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -20px;
+    padding-right: 115px;
+    border-radius: 0 0 0 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+    margin-left: -20px;
+    padding-right: 40px;
+    border-radius: 20px 0 0 20px;
+  }
 }
 
 .step-tips__item:nth-child(4) {
+  padding-bottom: 24px;
   background-color: @basic-yellow;
+  border-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -20px;
+    margin-left: -20px;
+    padding-right: 40px;
+    border-radius: 0 0 20px 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+    border-radius: 20px 20px 20px 20px;
+  }
 }

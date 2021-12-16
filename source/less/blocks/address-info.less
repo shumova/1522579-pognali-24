@@ -1,15 +1,46 @@
 .address-info__inner {
   position: relative;
-  z-index: 1;
-  padding: 33px 0 35px;
+  z-index: 2;
+
+  padding: 61px 0 35px;
   background-color: @basic-yellow;
   border-radius: 0 0 25px 25px;
+
+  @media (min-width: @tablet-width) {
+    padding: 108px 0 84px;
+    border-radius: 0 0 50px 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 115px 0 56px;
+  }
+}
+
+.address-info__container {
+  @media (min-width: @tablet-width) {
+    padding: 0 35px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    padding: 0 75px 0 225px;
+    grid-template-columns: 1fr 324px;
+    gap: 30px;
+    align-items: center;
+  }
 }
 
 .address-info__map-wrapper {
-  margin-top: -80px;
+  position: relative;
+  z-index: 1;
+  margin-top: -30px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -60px;
+  }
 }
 
 .address-info__map {
   width: 100%;
+  border: none;
 }

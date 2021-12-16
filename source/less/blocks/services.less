@@ -1,26 +1,52 @@
-.services {
-  background-color: @basic-dark;
-}
-
-.services__background {
+.services--basic {
   background-color: @middle-grey;
   border-radius: 0 0 25px 25px;
+
+  @media (min-width: @tablet-width) {
+    background-color: @basic-light-grey;
+    border-radius: 0 0 50px 50px;
+  }
 }
 
 .services__container {
   position: relative;
-  padding: 53px 0 38px 25px;
+  padding-left: 24px;
 
   &::before {
     position: absolute;
-    top: 37px;
+    top: 0;
     right: 0;
+    z-index: 1;
 
     width: 100px;
     height: 100px;
     content: "";
 
-    background: @basic-white url("../../img/decorative/rates@1x.jpg") no-repeat center;
+    background: transparent url("../../img/decorative/rates@1x.png") no-repeat center;
+    background-size: 100px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+
+    &::before {
+      top: auto;
+      right: 50px;
+      bottom: -10px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 72px;
+
+    &::before {
+      right: 72px;
+      bottom: 50%;
+      width: 198px;
+      height: 198px;
+      background-size: 198px;
+      transform: translateY(50%);
+    }
   }
 }
 
@@ -29,6 +55,11 @@
   max-width: 107px;
   margin-bottom: 56px;
   text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    max-width: 100%;
+    text-align: center;
+  }
 }
 
 .services__rate {
@@ -36,9 +67,25 @@
   margin-bottom: 31px;
 }
 
+.services__rate--basic {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    padding: 41px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 111px;
+    padding: 51px 0;
+  }
+}
+
 .services__rate--business {
   grid-column: 2 / 3;
   margin-bottom: 34px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 65px;
+  }
 }
 
 .services__link {
@@ -48,16 +95,24 @@
   font-weight: 700;
   color: @basic-blue-medium;
   text-decoration: none;
-}
 
-.services__popup {
-  position: absolute;
-  display: none;
-  top: -10px;
-  right: 0;
-  left: 0;
-}
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 68px 1fr;
+    gap: 21px;
+    align-items: center;
 
-.services__popup--open {
-  display: grid;
+    font-size: 20px;
+    line-height: 20px;
+
+    &::before {
+      grid-column: 1 / 2;
+      width: 68px;
+      height: 68px;
+      content: "";
+
+      background-color: @special-medium-grey;
+      border-radius: 50%;
+    }
+  }
 }

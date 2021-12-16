@@ -1,10 +1,14 @@
 .popup-services {
-  display: grid;
   grid-template-columns: 25px 1fr 25px;
   padding: 34px 0 0;
   background-color: @basic-white;
   border-radius: 20px;
   box-shadow: 0 2px 8px 0 rgba(29, 46, 91, 0.14);
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 90px 1fr 90px;
+    padding-top: 54px;
+  }
 }
 
 .popup-services__title {
@@ -12,6 +16,10 @@
   margin: 0;
   margin-bottom: 28px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 47px;
+  }
 }
 
 .popup-services__close {
@@ -26,4 +34,10 @@
 
   background-color: @basic-grey;
   border-radius: 0 0 20px 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 41px;
+
+    font-size: 24px;
+  }
 }

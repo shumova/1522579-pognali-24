@@ -1,14 +1,137 @@
 .page-main__about-service {
-  padding: 33px 0 60px;
+  position: relative;
+  z-index: 7;
+  margin-top: -30px;
+  padding: 63px 0 82px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -60px;
+    padding: 60px 0 89px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 130px 0 0;
+  }
 }
 
 .page-main__countries-preview {
-  padding-bottom: 2px;
+  position: relative;
+  z-index: 6;
+  margin-top: -30px;
+  padding: 101px 0 34px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -60px;
+    padding: 133px 0 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 148px 0 87px;
+  }
 }
 
 .page-main__users-preview {
-  margin-top: -2px;
+  position: relative;
+  z-index: 5;
+  margin-top: -30px;
+  padding: 64px 0 31px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -60px;
+    padding: 131px 0 87px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 171px 0 80px;
+  }
 }
+
+.page-main__services {
+  position: relative;
+  z-index: 4;
+  margin-top: -30px;
+  padding: 67px 0 38px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -60px;
+    padding: 134px 0 63px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 175px 0 165px;
+  }
+}
+
+.page-main__registration {
+  position: relative;
+  z-index: 3;
+  margin-top: -30px;
+  padding: 102px 0 30px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -60px;
+    padding: 136px 0 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 169px 0 60px;
+  }
+}
+
+.page-main__contact-info {
+  position: relative;
+  z-index: 2;
+  margin-top: -30px;
+  padding: 30px 0 29px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -60px;
+    padding: 60px 0 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 70px 0 104px;
+  }
+}
+
+.page-main__address-info {
+  position: relative;
+  z-index: 1;
+  margin-top: -30px;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -60px;
+  }
+}
+
+.page-main__popup {
+  position: absolute;
+  z-index: 8;
+  display: none;
+  right: 0;
+  left: 50%;
+
+  width: 270px;
+
+  transform: translateY(-475px) translateX(-50%);
+
+  @media (min-width: @tablet-width) {
+    width: 688px;
+    transform: translateY(-590px) translateX(-50%);
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 750px;
+    transform: translateY(-675px) translateX(-50%);
+  }
+}
+
+.page-main__popup--open {
+  display: grid;
+}
+
+// страницы form, catalog
 
 .page-main__country-filter {
   margin-bottom: 21px;

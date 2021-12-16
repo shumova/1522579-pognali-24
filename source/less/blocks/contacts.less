@@ -1,5 +1,5 @@
 .contacts {
-  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-family: @general-font-family;
   font-style: normal;
   font-size: 16px;
   line-height: 22px;
@@ -15,14 +15,31 @@
 
 .contacts__item {
   margin: 0;
+
+  @media (min-width: @desktop-width) {
+    margin-right: 110px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .contacts__item--address {
   margin-bottom: 32px;
   color: @basic-blue-light;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 44px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
 }
 
 .contacts__link {
+  display: block;
   font: inherit;
   line-height: inherit;
   color: inherit;
@@ -33,7 +50,7 @@
   position: relative;
 
   display: grid;
-  grid-template-columns: 45px 1fr;
+  grid-template-columns: auto 1fr;
   align-items: center;
   gap: 0 16px;
 
@@ -46,10 +63,34 @@
     border-radius: 50%;
     background-color: @basic-blue-dark;
   }
+
+  @media (min-width: @tablet-width) {
+    gap: 0 22px;
+    font-size: 28px;
+    line-height: 28px;
+
+    &::before {
+      width: 68px;
+      height: 68px;
+    }
+  }
 }
 
 .contacts__button {
   padding: 19px;
   border: 3px solid @basic-dark;
   border-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    padding: 29px 38px 27px;
+
+    font-size: 24px;
+    line-height: 24px;
+
+    border-radius: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
 }
