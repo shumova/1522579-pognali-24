@@ -7,86 +7,78 @@
     <title>Погнали | Поиск попутчиков в путешествия</title>
   </head>
   <body class="page__body page-body">
-    <div class="page-body__layout-header-and-intro">
-      <!-- активное состояние меню "включается" в два этапа:
-        - добавление класса page-header--active для header
-        - удаление класса logo__img--light у элемента logo__img -->
-      <header class="page-body__header page-header">
-        <nav class="page-header__main-nav main-nav container">
-          <a class="main-nav__logo logo" href="index.html">
-            <!-- здесь будет спрайт + доп.класс для tablet/desktop logo__img--pic -->
-            <svg class="logo__img logo__img--light" width="96" height="15" viewBox="0 0 96 15" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Погнали." aria-current="page">
-              <path d="M94.91 6.19C95.64 5.73 96 5.02 96 4.06a3.4 3.4 0 00-1.57-2.96 6 6 0 00-3.6-1.1c-1.34 0-2.57.4-3.7 1.2a3.66 3.66 0 00-1.65 3.12c0 .5.16.9.46 1.22.3.3.74.46 1.3.46s.98-.16 1.27-.46c.3-.33.46-.73.46-1.22-.03-.37.1-.75.37-1.13.27-.4.77-.6 1.5-.6.6.02 1.04.17 1.3.47.28.3.4.59.38.88 0 .2-.08.41-.22.62-.15.2-.3.36-.46.48-.14.11-.38.28-.72.5l-.7.46a2.58 2.58 0 00-1.13 2.19c0 .45.16.82.48 1.13.34.3.78.44 1.33.44s.99-.14 1.3-.44c.34-.3.5-.68.5-1.13a1.32 1.32 0 01.46-1l.44-.35c.13-.09.32-.2.57-.34l.54-.31zM76.3 10.24l3.86-4.78c.4-.57.93-.9 1.61-.96.68-.08 1.27.09 1.78.5.51.4.75.94.72 1.62v6.84c0 .43-.17.8-.5 1.1-.33.28-.73.43-1.2.43a1.8 1.8 0 01-1.2-.43c-.33-.3-.49-.67-.49-1.1V9.2L77.03 14c-.4.57-.94.9-1.61.96a2.32 2.32 0 01-1.78-.5c-.51-.4-.75-.94-.72-1.62V6c0-.43.16-.8.48-1.1.34-.3.74-.45 1.21-.45s.86.15 1.19.45c.34.3.5.67.5 1.1v4.23z"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M58.97 13.39V5.98c0-.43-.18-.8-.54-1.1a1.73 1.73 0 00-1.22-.48c-.45 0-.85.16-1.2.48-.34.3-.5.67-.5 1.1V5.8c-.18-.4-.52-.74-1.03-1.02-.52-.3-1.1-.44-1.76-.44-1.28 0-2.47.47-3.55 1.42a4.97 4.97 0 00-1.58 3.9c0 1.68.52 3 1.56 3.93a5.2 5.2 0 003.57 1.4c.66 0 1.23-.12 1.73-.36.5-.26.87-.56 1.1-.9.08.36.28.66.6.9.3.22.66.34 1.06.34.47 0 .88-.16 1.22-.46.36-.3.54-.68.54-1.12zm-5.47-1.36c1.17 0 2.11-1.03 2.11-2.3 0-1.26-.94-2.29-2.11-2.29s-2.12 1.03-2.12 2.3c0 1.26.95 2.29 2.12 2.29z"/>
-              <path d="M43.08 8.24V6.09c0-.43.18-.8.53-1.1a1.8 1.8 0 011.24-.48c.47 0 .88.16 1.23.48.36.3.53.67.53 1.1v7.35c0 .43-.17.8-.53 1.1-.34.3-.75.46-1.23.46-.49 0-.9-.15-1.26-.46-.34-.3-.5-.67-.5-1.1v-2.18h-3.83v2.18c0 .43-.17.8-.53 1.1-.33.3-.75.46-1.23.46-.49 0-.9-.15-1.26-.46-.34-.3-.5-.67-.5-1.1V6.09c0-.43.17-.8.52-1.1a1.8 1.8 0 011.24-.48c.47 0 .88.16 1.23.48.36.3.53.67.53 1.1v2.15h3.82zM33.96 4.51c.35 0 .64.13.9.4.24.26.36.86.36 1.23s-.12.75-.37 1c-.25.27-.54.36-.89.36H31v5.97c0 1.13-.99 1.53-1.99 1.53-.92 0-1.8-.5-1.8-1.52l.03-8.97h6.72zM12.86 0v13.33c0 .44-.24.81-.57 1.12-.32.3-.82.46-1.28.46-.45 0-1.1-.15-1.44-.46a1.5 1.5 0 01-.47-1.12V3.01H3.77v10.32c0 .44-.16.81-.5 1.12-.31.3-.96.46-1.41.46a2.2 2.2 0 01-1.38-.46A1.5 1.5 0 010 13.33V0h12.86zM24.64 13.37a6.06 6.06 0 01-4.32 1.51c-1.8 0-3.24-.5-4.3-1.52a5.06 5.06 0 01-1.64-3.84c0-1.56.54-2.84 1.64-3.85a5.97 5.97 0 014.3-1.51c1.8 0 3.24.5 4.32 1.51a5.1 5.1 0 011.61 3.85 5.1 5.1 0 01-1.61 3.85zm-2.8-5.44c-.3-.31-.68-.5-1.12-.56a2.29 2.29 0 00-1.24.11c-.38.15-.7.4-.97.77-.25.36-.36.79-.33 1.27 0 .63.2 1.16.6 1.58.4.4.92.61 1.54.61.63 0 1.14-.2 1.54-.59.4-.4.6-.94.6-1.6 0-.64-.21-1.16-.62-1.59zM64.02 4.46l7.42.03v8.9c0 .44-.18.82-.54 1.14-.35.3-.66.46-1.2.46-.52 0-.8.04-1.16-.27a2.1 2.1 0 01-.66-1.33V7.44h-2.46c0 4.26 0 5.2-1.57 6.72-.58.55-1.33.83-2.24.83-.54 0-.86-.13-1.21-.44a1.9 1.9 0 01-.62-1.3c0-1.02.22-1.43.76-2.09 1.57 0 1.5-.38 1.4-3.27V6.06l.1-1.6h1.98zM93.16 12.75a2.3 2.3 0 01-2.34 2.24c-1.3 0-2.35-1-2.35-2.24a2.3 2.3 0 012.35-2.25c1.29 0 2.34 1 2.34 2.25z"/>
-            </svg>
-            <span class="visually-hidden">Обновить главную страницу.</span>
-          </a>
-          <button class="main-nav__toggle button" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
-                        <!-- выпадающее меню отображается добавлением класса .main-menu--open -->
-          <div class="main-nav__main-menu main-menu">
-            <div class="container">
-              <ul class="main-menu__list">
-                <li class="main-menu__item">
-                  <a class="main-menu__link" href="#">О&nbsp;сервисе</a>
-                </li>
-                <li class="main-menu__item">
-                  <a class="main-menu__link" href="form.html">Направления</a>
-                </li>
-                <li class="main-menu__item">
-                  <a class="main-menu__link" href="catalog.html">Попутчики</a>
-                </li>
-              </ul>
-              <a class="main-menu__login button button--primary" href="#">Авторизация</a>
-              <ul class="main-menu__contacts contacts contacts--main-menu">
-                <li class="contacts__item">
-                  <a class="contacts__link" href="tel:+78005558628">
-                    <span class="contacts__text">8 800 555-86-28</span>
-                  </a>
-                </li>
-                <li class="contacts__item">
-                  <a class="contacts__link" href="mailto:mail@htmlacademy.ru">
-                    <span class="contacts__text">mail@htmlacademy.ru</span>
-                  </a>
-                </li>
-              </ul>
-              <ul class="main-menu__social social">
-                <li class="social__item">
-                  <a class="social__link button button--iconic button--social-contour button--facebook" href="https://www.facebook.com/htmlacademy" target="_blank">
-                    <span class="visually-hidden">Мы в Facebook.</span>
-                  </a>
-                </li>
-                <li class="social__item">
-                  <a class="social__link button button--iconic button--social-contour button--vk" href="https://vk.com/htmlacademy" target="_blank">
-                    <span class="visually-hidden">Мы в Вконтакте.</span>
-                  </a>
-                </li>
-                <li class="social__item">
-                  <a class="social__link button button--iconic button--social-contour button--instagram" href="https://www.instagram.com/htmlacademy/" target="_blank">
-                    <span class="visually-hidden">Мы в Instagram.</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="main-nav__user-menu user-menu">
-            <ul class="user-menu__list">
-              <li class="user-menu__item">
-                <a class="user-menu__link user-menu__link--phone button button--iconic" href="tel:+78005558628">
-                  <span class="visually-hidden">Позвонить нам.</span>
-                </a>
-              </li>
-              <li class="user-menu__item">
-                <a class="user-menu__link user-menu__link--email button button--iconic" href="mailto:mail@htmlacademy.ru">
-                  <span class="visually-hidden">Написать нам письмо.</span>
-                </a>
-              </li>
-            </ul>
-            <a class="user-menu__login button button--primary" href="#">Авторизация</a>
-          </div>
+    <div class="page-body__layout-header-and-promo">
+      <!--
+        Режим "без js" отображатся классом page-header--no-js (для mobile и tablet)
+        При включённом js меню открывается добавлением класса page-header--main-menu-open (для mobile и tablet)
+        Меню при скролле страницы активируется классом page-header--scrolling-page
+        Так же класс page-header--scrolling-page можно комбинировать с классами page-header--no-js и page-header--main-menu-open
+      -->
+      <header class="page-body__header page-header page-header--no-js">
+        <a class="page-header__logo logo" href="index.html">
+          <span class="visually-hidden">Обновить главную страницу.</span>
+        </a>
+        <button class="page-header__toggle button" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <nav class="page-header__main-menu main-menu">
+          <ul class="main-menu__list">
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="#">О&nbsp;сервисе</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="form.html">Направления</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="catalog.html">Попутчики</a>
+            </li>
+          </ul>
+          <a class="main-menu__login button button--primary" href="#">Авторизация</a>
+          <ul class="main-menu__contacts contacts contacts--main-menu">
+            <li class="contacts__item">
+              <a class="contacts__link" href="tel:+78005558628">
+                <span class="contacts__text">8 800 555-86-28</span>
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a class="contacts__link" href="mailto:mail@htmlacademy.ru">
+                <span class="contacts__text">mail@htmlacademy.ru</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="main-menu__social social">
+            <li class="social__item">
+              <a class="social__link button button--iconic button--social-contour button--facebook" href="https://www.facebook.com/htmlacademy" target="_blank">
+                <span class="visually-hidden">Мы в Facebook.</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link button button--iconic button--social-contour button--vk" href="https://vk.com/htmlacademy" target="_blank">
+                <span class="visually-hidden">Мы в Вконтакте.</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link button button--iconic button--social-contour button--instagram" href="https://www.instagram.com/htmlacademy/" target="_blank">
+                <span class="visually-hidden">Мы в Instagram.</span>
+              </a>
+            </li>
+          </ul>
         </nav>
+        <div class="page-header__user-menu user-menu">
+          <ul class="user-menu__list">
+            <li class="user-menu__item">
+              <a class="user-menu__link user-menu__link--phone button button--iconic" href="tel:+78005558628">
+                <span class="visually-hidden">Позвонить нам.</span>
+              </a>
+            </li>
+            <li class="user-menu__item">
+              <a class="user-menu__link user-menu__link--email button button--iconic" href="mailto:mail@htmlacademy.ru">
+                <span class="visually-hidden">Написать нам письмо.</span>
+              </a>
+            </li>
+          </ul>
+          <a class="user-menu__login button button--primary" href="#">Авторизация</a>
+        </div>
       </header>
       <div class="page-body__promo promo">
         <div class="promo__container container">
@@ -94,9 +86,9 @@
         </div>
       </div>
       <div class="page-body__review review">
-        <blockquote class="review__container container">
+        <blockquote class="review__wrapper">
           <p class="review__text index-font index-font--light">&laquo;Лучшее приложение, что я&nbsp;видел в&nbsp;жизни!&raquo;</p>
-          <cite class="review__author index-font index-font--bold index-font--light">Мурат Эльтазин главный редактор газеты &laquo;гаджетлайф&raquo;</cite>
+          <cite class="review__author index-font index-font--bold index-font--light"><span class="review__author-name">Мурат Эльтазин</span> главный редактор газеты &laquo;гаджетлайф&raquo;</cite>
         </blockquote>
       </div>
       <div class="page-body__steps-layout">
@@ -104,300 +96,294 @@
           <li class="step-tips__item">Выберите направление</li>
           <li class="step-tips__item">Изучите идеи путешественников</li>
           <li class="step-tips__item">Находите тех, кто&nbsp;похож на&nbsp;вас</li>
-          <li class="step-tips__item">Путешествуйте вместе!</li>
+          <li class="step-tips__item">Путешествуйте <br>вместе!</li>
         </ol>
       </div>
     </div>
     <main class="page-body__main page-main">
       <h1 class="visually-hidden">Сервис для поиска попутчиков в путешествиях.</h1>
       <section class="page-main__about-service about-service">
-        <div class="container">
+        <div class="about-service__container container">
           <div class="about-service__intro">
             <h2 class="about-service__title index-font index-font--title">О&nbsp;сервисе</h2>
             <p class="about-service__text index-font index-font--light">Любое путешествие веселее с&nbsp;попутчиками, которые на&nbsp;од&shy;ной волне с&nbsp;тобой! Делитесь своими идеями путешествий и&nbsp;черпайте вдохновение в&nbsp;чужих.</p>
             <p class="about-service__note index-font index-font--bold index-font--light">А&nbsp;если найдете кого-то близкого по&nbsp;духу&nbsp;&mdash; скорее зовите в&nbsp;совместный трип!</p>
-            <!-- ссылка .about__more понадобится для desktop и tablet -->
-            <a class="about-service__more" href="#">Подробнее</a>
+            <a class="about-service__more button button--secondary" href="#">Подробнее</a>
           </div>
         </div>
       </section>
       <section class="page-main__countries-preview countries-preview">
-        <div class="countries-preview__background">
-          <div class="container">
-            <div class="countries-preview__intro">
-              <h2 class="countries-preview__title index-font index-font--title">Направления</h2>
-              <p class="countries-preview__text index-font">Мы&nbsp;не&nbsp;продаем туры и&nbsp;ничего не&nbsp;рекламируем. Люди сами пишут о&nbsp;странах, куда хотели&nbsp;бы отправиться и&nbsp;чем можно там заняться.</p>
-            </div>
-            <div class="countries-preview__cards">
-              <ul class="countries-preview__list">
-                <li class="countries-preview__item country-card">
-                  <div class="country-card__text">
-                    <h3 class="country-card__title">
-                      <a class="country-card__link index-font index-font--sub-title" href="#">Таиланд</a>
-                    </h3>
-                    <p class="country-card__subtitle">Джунгли зовут!</p>
-                    <p class="country-card__number">18321</p>
-                  </div>
-                  <picture class="country-card__picture">
-                    <source srcset="img/countries/thailand@1x.webp 1x, img/countries/thailand@2x.webp 2x" type="image/webp">
-                    <img class="country-card__img" src="img/countries/thailand@1x.jpg" srcset="img/countries/thailand@2x.jpg 2x" width="270" height="110" alt="Небольшой покрытый зеленью остров в океане.">
-                  </picture>
-                </li>
-                <li class="countries-preview__item country-card">
-                  <div class="country-card__text">
-                    <h3 class="country-card__title">
-                      <a class="country-card__link index-font index-font--sub-title" href="#">Франция</a>
-                    </h3>
-                    <p class="country-card__subtitle">Трэ бьен, манифик!</p>
-                    <p class="country-card__number">12518</p>
-                  </div>
-                    <picture class="country-card__picture">
-                      <source srcset="img/countries/france@1x.webp 1x, img/countries/france@2x.webp 2x" type="image/webp">
-                      <img class="country-card__img" src="img/countries/france@1x.jpg" srcset="img/countries/france@2x.jpg 2x" width="270" height="110" alt="Фасад дома на улице во Франции.">
-                    </picture>
-                </li>
-                <li class="countries-preview__item country-card">
-                  <div class="country-card__text">
-                    <h3 class="country-card__title">
-                      <a class="country-card__link index-font index-font--sub-title" href="#">Чехия</a>
-                    </h3>
-                    <p class="country-card__subtitle">Закоулки старой Европы</p>
-                    <p class="country-card__number">5326</p>
-                  </div>
-                  <picture class="country-card__picture">
-                    <source srcset="img/countries/czech@1x.webp 1x, img/countries/czech@2x.webp 2x" type="image/webp">
-                    <img class="country-card__img" src="img/countries/czech@1x.jpg" srcset="img/countries/czech@2x.jpg 2x" width="270" height="110" alt="Речной паром на фоне Карлова моста.">
-                  </picture>
-                </li>
-              </ul>
-              <a class="countries-preview__more button button--secondary" href="form.html">Показать все</a>
-            </div>
+        <div class="countries-preview__container container">
+          <div class="countries-preview__intro">
+            <h2 class="countries-preview__title index-font index-font--title">Направления</h2>
+            <p class="countries-preview__text index-font">Мы&nbsp;не&nbsp;продаем туры и&nbsp;ничего не&nbsp;рекламируем. Люди сами пишут о&nbsp;странах, куда хотели&nbsp;бы отправиться и&nbsp;чем можно там заняться.</p>
           </div>
+          <div class="countries-preview__cards">
+            <ul class="countries-preview__list">
+              <li class="countries-preview__item country-card">
+                <div class="country-card__text">
+                  <h3 class="country-card__title">
+                    <a class="country-card__link index-font index-font--sub-title" href="#">Таиланд</a>
+                  </h3>
+                  <p class="country-card__subtitle">Джунгли зовут!</p>
+                  <p class="country-card__number">18321</p>
+                </div>
+                <picture class="country-card__picture">
+                  <source srcset="img/countries/thailand@1x.webp 1x, img/countries/thailand@2x.webp 2x" type="image/webp">
+                  <img class="country-card__img" src="img/countries/thailand@1x.jpg" srcset="img/countries/thailand@2x.jpg 2x" width="270" height="110" alt="Небольшой покрытый зеленью остров в океане.">
+                </picture>
+              </li>
+              <li class="countries-preview__item country-card">
+                <div class="country-card__text">
+                  <h3 class="country-card__title">
+                    <a class="country-card__link index-font index-font--sub-title" href="#">Франция</a>
+                  </h3>
+                  <p class="country-card__subtitle">Трэ бьен, манифик!</p>
+                  <p class="country-card__number">12518</p>
+                </div>
+                  <picture class="country-card__picture">
+                    <source srcset="img/countries/france@1x.webp 1x, img/countries/france@2x.webp 2x" type="image/webp">
+                    <img class="country-card__img" src="img/countries/france@1x.jpg" srcset="img/countries/france@2x.jpg 2x" width="270" height="110" alt="Фасад дома на улице во Франции.">
+                  </picture>
+              </li>
+              <li class="countries-preview__item country-card">
+                <div class="country-card__text">
+                  <h3 class="country-card__title">
+                    <a class="country-card__link index-font index-font--sub-title" href="#">Чехия</a>
+                  </h3>
+                  <p class="country-card__subtitle">Закоулки старой Европы</p>
+                  <p class="country-card__number">5326</p>
+                </div>
+                <picture class="country-card__picture">
+                  <source srcset="img/countries/czech@1x.webp 1x, img/countries/czech@2x.webp 2x" type="image/webp">
+                  <img class="country-card__img" src="img/countries/czech@1x.jpg" srcset="img/countries/czech@2x.jpg 2x" width="270" height="110" alt="Речной паром на фоне Карлова моста.">
+                </picture>
+              </li>
+            </ul>
+          </div>
+          <a class="countries-preview__more button button--secondary" href="form.html">Показать все</a>
         </div>
       </section>
       <section class="page-main__users-preview users-preview">
-        <div class="users-preview__background">
-          <div class="users-preview__container container">
-            <div class="users-preview__intro">
-              <h2 class="users-preview__title index-font index-font--title">Попутчики</h2>
-              <p class="users-preview__text index-font index-font--light">Все мы&nbsp;индивидуальны и&nbsp;у&nbsp;каждого свой взгляд на&nbsp;идеальный отдых. Одному нужен пляж и&nbsp;коктейль, а&nbsp;другому маршрут для хайкинга.</p>
-              <p class="users-preview__note index-font index-font--bold index-font--light">Теперь можно легко найти единомышленников!</p>
-            </div>
-            <ul class="users-preview__list">
-              <li class="users-preview__item user-card user-card--preview">
-                <div class="user-card__title-and-status user-card__title-and-status--preview">
-                  <h3 class="user-card__title user-card__title--preview">
-                    <a class="user-card__link index-font index-font--sub-title" href="#">Таня Фирсова</a>
-                  </h3>
-                  <!-- цвет статуса и текст для скринридеров меняется при добавлении/удалении классов .user-card__status--offline и .user-card__status--online -->
-                  <span class="user-card__status user-card__status--preview user-card__status--offline">
-                    <span class="user-card__status-text user-card__status-text--online visually-hidden">Сейчас online.</span>
-                    <span class="user-card__status-text user-card__status-text--offline visually-hidden">Сейчас offline.</span>
-                  </span>
-                </div>
-                <picture class="user-card__picture user-card__picture--preview">
-                  <source srcset="img/users/tanya-firsova/tanya-firsova-size-large@1x.webp 1x, img/users/tanya-firsova/tanya-firsova-size-large@2x.webp 2x" type="image/webp">
-                  <img class="user-card__img" src="img/users/tanya-firsova/tanya-firsova-size-large@1x.jpg" srcset="img/users/tanya-firsova/tanya-firsova-size-large@2x.jpg 2x" width="270" height="270" alt="Молодая стройная девушка плавает в бассейне.">
-                </picture>
-                <div class="user-card__level user-card__level--preview level level--preview">
-                  <div class="level__value level__value--preview">
-                    <span class="level__number level__number--preview">99</span>
-                    <span class="level__text level__text--preview">level</span>
-                  </div>
-                </div>
-                <div class="user-card__tags user-card__tags--preview">
-                  <p class="visually-hidden">Интересы.</p>
-                  <ul class="user-card__tags-list user-card__tags-list--preview">
-                    <li class="user-card__tags-item">#ЗОЖ</li>
-                    <li class="user-card__tags-item">#ПП</li>
-                    <li class="user-card__tags-item">#Фитнес</li>
-                    <li class="user-card__tags-item">#пляж</li>
-                    <li class="user-card__tags-item">#авокадо</li>
-                    <li class="user-card__tags-item">#смузи</li>
-                  </ul>
-                </div>
-                <div class="user-card__prefer-countries user-card__prefer-countries--preview prefer-countries prefer-countries--preview">
-                  <p class="prefer-countries__subtitle visually-hidden">Cтраны, в которые вы можете отправиться вместе.</p>
-                  <ul class="prefer-countries__list">
-                    <li class="prefer-countries__item">
-                      <span class="visually-hidden">Шри-Ланка</span>
-                      <svg class="prefer-countries__img" width="35" height="25" viewBox="0 0 35 25" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                        <use xlink:href="img/sprite.svg#sri-lanka"></use>
-                      </svg>
-                    </li>
-                    <li class="prefer-countries__item">
-                      <span class="visually-hidden">Таиланд</span>
-                      <svg class="prefer-countries__img" width="35" height="25" viewBox="0 0 35 25" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                        <use xlink:href="img/sprite.svg#thailand"></use>
-                      </svg>
-                    </li>
-                    <li class="prefer-countries__item">
-                      <span class="visually-hidden">Сейшелы</span>
-                      <svg class="prefer-countries__img" width="35" height="25" viewBox="0 0 35 25" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                        <use xlink:href="img/sprite.svg#seychelles"></use>
-                      </svg>
-                    </li>
-                  </ul>
-                </div>
-                <div class="user-card__prefer-transport user-card__prefer-transport--preview prefer-transport prefer-transport--preview">
-                  <p class="visually-hidden">Для путешествия подойдут следующие виды транспорта.</p>
-                  <ul class="prefer-transport__list prefer-transport__list--center">
-                    <li class="prefer-transport__item prefer-transport__item--light prefer-transport__item--active">
-                      <span class="prefer-transport__name visually-hidden">Самолёт.</span>
-                      <svg class="prefer-transport__img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                        <use xlink:href="img/sprite.svg#airplane"></use>
-                      </svg>
-                    </li>
-                    <li class="prefer-transport__item prefer-transport__item--light prefer-transport__item--disabled">
-                      <span class="prefer-transport__name visually-hidden">Общественный транспорт.</span>
-                      <svg class="prefer-transport__img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                        <use xlink:href="img/sprite.svg#public-transport"></use>
-                      </svg>
-                    </li>
-                    <li class="prefer-transport__item prefer-transport__item--light prefer-transport__item--disabled">
-                      <span class="prefer-transport__name visually-hidden">Велосипед.</span>
-                      <svg class="prefer-transport__img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                        <use xlink:href="img/sprite.svg#bicycle"></use>
-                      </svg>
-                    </li>
-                    <li class="prefer-transport__item prefer-transport__item--light prefer-transport__item--disabled">
-                      <span class="prefer-transport__name visually-hidden">Пеший туризм.</span>
-                      <svg class="prefer-transport__img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                        <use xlink:href="img/sprite.svg#hiking"></use>
-                      </svg>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="users-preview__item user-card user-card--preview">
-                <div class="user-card__title-and-status user-card__title-and-status--preview">
-                  <h3 class="user-card__title user-card__title--preview">
-                    <a class="user-card__link index-font index-font--sub-title" href="#">Петя Демин</a>
-                  </h3>
-                  <!-- цвет статуса и текст для скринридеров меняется при добавлении/удалении классов .user-card__status--offline и .user-card__status--online -->
-                  <span class="user-card__status user-card__status--preview user-card__status--online">
-                    <span class="user-card__status-text user-card__status-text--online visually-hidden">Сейчас online.</span>
-                    <span class="user-card__status-text user-card__status-text--offline visually-hidden">Сейчас offline.</span>
-                  </span>
-                </div>
-                <picture class="user-card__picture user-card__picture--preview">
-                  <source srcset="img/users/petya-demin/petya-demin-size-large@1x.webp 1x, img/users/petya-demin/petya-demin-size-large@2x.webp 2x" type="image/webp">
-                  <img class="user-card__img" src="img/users/petya-demin/petya-demin-size-large@1x.jpg" srcset="img/users/petya-demin/petya-demin-size-large@2x.jpg 2x" width="270" height="270" alt="Молодой человек с бородой, в тёмной шапке-бини и очках.">
-                </picture>
-                <div class="user-card__level user-card__level--preview level level--preview">
-                  <div class="level__value level__value--preview">
-                    <span class="level__number level__number--preview">80</span>
-                    <span class="level__text level__text--preview">level</span>
-                  </div>
-                </div>
-                <div class="user-card__tags user-card__tags--preview tags">
-                  <p class="visually-hidden">Интересы.</p>
-                  <ul class="user-card__tags-list user-card__tags-list--preview">
-                    <li class="user-card__tags-item">#бургер</li>
-                    <li class="user-card__tags-item">#бар</li>
-                    <li class="user-card__tags-item">#футбол</li>
-                    <li class="user-card__tags-item">#концерт</li>
-                    <li class="user-card__tags-item">#крафт</li>
-                  </ul>
-                </div>
-                <div class="user-card__prefer-countries user-card__prefer-countries--preview prefer-countries prefer-countries--preview">
-                  <p class="prefer-countries__subtitle visually-hidden">Cтраны, в которые вы можете отправиться вместе.</p>
-                  <ul class="prefer-countries__list">
-                    <li class="prefer-countries__item">
-                      <span class="visually-hidden">Бельгия</span>
-                      <svg class="prefer-countries__img" width="35" height="25" viewBox="0 0 35 25" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                        <use xlink:href="img/sprite.svg#belgium"></use>
-                      </svg>
-                    </li>
-                    <li class="prefer-countries__item">
-                      <span class="visually-hidden">Чехия</span>
-                      <svg class="prefer-countries__img" width="35" height="25" viewBox="0 0 35 25" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                        <use xlink:href="img/sprite.svg#czech-republic"></use>
-                      </svg>
-                    </li>
-                  </ul>
-                </div>
-                <div class="user-card__prefer-transport user-card__prefer-transport--preview prefer-transport prefer-transport--preview">
-                  <p class="visually-hidden">Для путешествия подойдут следующие виды транспорта.</p>
-                  <ul class="prefer-transport__list prefer-transport__list--center">
-                    <li class="prefer-transport__item prefer-transport__item--light prefer-transport__item--active">
-                      <span class="prefer-transport__name visually-hidden">Cамолёт.</span>
-                      <svg class="prefer-transport__img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                        <use xlink:href="img/sprite.svg#airplane"></use>
-                      </svg>
-                    </li>
-                    <li class="prefer-transport__item prefer-transport__item--light prefer-transport__item--active">
-                      <span class="prefer-transport__name visually-hidden">Общественный транспорт.</span>
-                      <svg class="prefer-transport__img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                        <use xlink:href="img/sprite.svg#public-transport"></use>
-                      </svg>
-                    </li>
-                    <li class="prefer-transport__item prefer-transport__item--light prefer-transport__item--disabled">
-                      <span class="prefer-transport__name visually-hidden">Велосипед.</span>
-                      <svg class="prefer-transport__img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                        <use xlink:href="img/sprite.svg#bicycle"></use>
-                      </svg>
-                    </li>
-                    <li class="prefer-transport__item prefer-transport__item--light prefer-transport__item--active">
-                      <span class="prefer-transport__name visually-hidden">Пеший туризм.</span>
-                      <svg class="prefer-transport__img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                        <use xlink:href="img/sprite.svg#hiking"></use>
-                      </svg>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
-            <a class="users-preview__more button button--secondary" href="catalog.html">Показать всех</a>
+        <div class="users-preview__container container">
+          <div class="users-preview__intro">
+            <h2 class="users-preview__title index-font index-font--title">Попутчики</h2>
+            <p class="users-preview__text index-font index-font--light">Все мы&nbsp;индивидуальны и&nbsp;у&nbsp;каждого свой взгляд на&nbsp;идеальный отдых. Одному нужен пляж и&nbsp;коктейль, а&nbsp;другому маршрут для хайкинга.</p>
+            <p class="users-preview__note index-font index-font--bold index-font--light">Теперь можно легко найти единомышленников!</p>
           </div>
+          <ul class="users-preview__list">
+            <li class="users-preview__item user-card user-card--preview">
+              <div class="user-card__title-and-status user-card__title-and-status--preview">
+                <h3 class="user-card__title user-card__title--preview">
+                  <a class="user-card__link index-font index-font--sub-title" href="#">Таня Фирсова</a>
+                </h3>
+                <!-- цвет статуса и текст для скринридеров меняется при добавлении/удалении классов .user-card__status--offline и .user-card__status--online -->
+                <span class="user-card__status user-card__status--preview user-card__status--offline">
+                  <span class="user-card__status-text user-card__status-text--online visually-hidden">Сейчас online.</span>
+                  <span class="user-card__status-text user-card__status-text--offline visually-hidden">Сейчас offline.</span>
+                </span>
+              </div>
+              <picture class="user-card__picture user-card__picture--preview">
+                <source srcset="img/users/tanya-firsova/tanya-firsova-size-large@1x.webp 1x, img/users/tanya-firsova/tanya-firsova-size-large@2x.webp 2x" type="image/webp">
+                <img class="user-card__img" src="img/users/tanya-firsova/tanya-firsova-size-large@1x.jpg" srcset="img/users/tanya-firsova/tanya-firsova-size-large@2x.jpg 2x" width="270" height="270" alt="Молодая стройная девушка плавает в бассейне.">
+              </picture>
+              <div class="user-card__level user-card__level--preview level level--preview">
+                <div class="level__value level__value--preview">
+                  <span class="level__number level__number--preview">99</span>
+                  <span class="level__text level__text--preview">level</span>
+                </div>
+              </div>
+              <div class="user-card__tags user-card__tags--preview">
+                <p class="visually-hidden">Интересы.</p>
+                <ul class="user-card__tags-list user-card__tags-list--preview">
+                  <li class="user-card__tags-item">#ЗОЖ</li>
+                  <li class="user-card__tags-item">#ПП</li>
+                  <li class="user-card__tags-item">#Фитнес</li>
+                  <li class="user-card__tags-item">#пляж</li>
+                  <li class="user-card__tags-item">#авокадо</li>
+                  <li class="user-card__tags-item">#смузи</li>
+                </ul>
+              </div>
+              <div class="user-card__prefer-countries user-card__prefer-countries--preview prefer-countries prefer-countries--preview">
+                <p class="prefer-countries__subtitle visually-hidden">Cтраны, в которые вы можете отправиться вместе.</p>
+                <ul class="prefer-countries__list">
+                  <li class="prefer-countries__item">
+                    <span class="visually-hidden">Шри-Ланка</span>
+                    <svg class="prefer-countries__img" width="35" height="25" viewBox="0 0 35 25" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite.svg#sri-lanka"></use>
+                    </svg>
+                  </li>
+                  <li class="prefer-countries__item">
+                    <span class="visually-hidden">Таиланд</span>
+                    <svg class="prefer-countries__img" width="35" height="25" viewBox="0 0 35 25" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite.svg#thailand"></use>
+                    </svg>
+                  </li>
+                  <li class="prefer-countries__item">
+                    <span class="visually-hidden">Сейшелы</span>
+                    <svg class="prefer-countries__img" width="35" height="25" viewBox="0 0 35 25" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite.svg#seychelles"></use>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+              <div class="user-card__prefer-transport user-card__prefer-transport--preview prefer-transport prefer-transport--preview">
+                <p class="visually-hidden">Для путешествия подойдут следующие виды транспорта.</p>
+                <ul class="prefer-transport__list prefer-transport__list--center">
+                  <li class="prefer-transport__item prefer-transport__item--light prefer-transport__item--active">
+                    <span class="prefer-transport__name visually-hidden">Самолёт.</span>
+                    <svg class="prefer-transport__img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite.svg#airplane"></use>
+                    </svg>
+                  </li>
+                  <li class="prefer-transport__item prefer-transport__item--light prefer-transport__item--disabled">
+                    <span class="prefer-transport__name visually-hidden">Общественный транспорт.</span>
+                    <svg class="prefer-transport__img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite.svg#public-transport"></use>
+                    </svg>
+                  </li>
+                  <li class="prefer-transport__item prefer-transport__item--light prefer-transport__item--disabled">
+                    <span class="prefer-transport__name visually-hidden">Велосипед.</span>
+                    <svg class="prefer-transport__img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite.svg#bicycle"></use>
+                    </svg>
+                  </li>
+                  <li class="prefer-transport__item prefer-transport__item--light prefer-transport__item--disabled">
+                    <span class="prefer-transport__name visually-hidden">Пеший туризм.</span>
+                    <svg class="prefer-transport__img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite.svg#hiking"></use>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="users-preview__item user-card user-card--preview">
+              <div class="user-card__title-and-status user-card__title-and-status--preview">
+                <h3 class="user-card__title user-card__title--preview">
+                  <a class="user-card__link index-font index-font--sub-title" href="#">Петя Демин</a>
+                </h3>
+                <!-- цвет статуса и текст для скринридеров меняется при добавлении/удалении классов .user-card__status--offline и .user-card__status--online -->
+                <span class="user-card__status user-card__status--preview user-card__status--online">
+                  <span class="user-card__status-text user-card__status-text--online visually-hidden">Сейчас online.</span>
+                  <span class="user-card__status-text user-card__status-text--offline visually-hidden">Сейчас offline.</span>
+                </span>
+              </div>
+              <picture class="user-card__picture user-card__picture--preview">
+                <source srcset="img/users/petya-demin/petya-demin-size-large@1x.webp 1x, img/users/petya-demin/petya-demin-size-large@2x.webp 2x" type="image/webp">
+                <img class="user-card__img" src="img/users/petya-demin/petya-demin-size-large@1x.jpg" srcset="img/users/petya-demin/petya-demin-size-large@2x.jpg 2x" width="270" height="270" alt="Молодой человек с бородой, в тёмной шапке-бини и очках.">
+              </picture>
+              <div class="user-card__level user-card__level--preview level level--preview">
+                <div class="level__value level__value--preview">
+                  <span class="level__number level__number--preview">80</span>
+                  <span class="level__text level__text--preview">level</span>
+                </div>
+              </div>
+              <div class="user-card__tags user-card__tags--preview tags">
+                <p class="visually-hidden">Интересы.</p>
+                <ul class="user-card__tags-list user-card__tags-list--preview">
+                  <li class="user-card__tags-item">#бургер</li>
+                  <li class="user-card__tags-item">#бар</li>
+                  <li class="user-card__tags-item">#футбол</li>
+                  <li class="user-card__tags-item">#концерт</li>
+                  <li class="user-card__tags-item">#крафт</li>
+                </ul>
+              </div>
+              <div class="user-card__prefer-countries user-card__prefer-countries--preview prefer-countries prefer-countries--preview">
+                <p class="prefer-countries__subtitle visually-hidden">Cтраны, в которые вы можете отправиться вместе.</p>
+                <ul class="prefer-countries__list">
+                  <li class="prefer-countries__item">
+                    <span class="visually-hidden">Бельгия</span>
+                    <svg class="prefer-countries__img" width="35" height="25" viewBox="0 0 35 25" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite.svg#belgium"></use>
+                    </svg>
+                  </li>
+                  <li class="prefer-countries__item">
+                    <span class="visually-hidden">Чехия</span>
+                    <svg class="prefer-countries__img" width="35" height="25" viewBox="0 0 35 25" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite.svg#czech-republic"></use>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+              <div class="user-card__prefer-transport user-card__prefer-transport--preview prefer-transport prefer-transport--preview">
+                <p class="visually-hidden">Для путешествия подойдут следующие виды транспорта.</p>
+                <ul class="prefer-transport__list prefer-transport__list--center">
+                  <li class="prefer-transport__item prefer-transport__item--light prefer-transport__item--active">
+                    <span class="prefer-transport__name visually-hidden">Cамолёт.</span>
+                    <svg class="prefer-transport__img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite.svg#airplane"></use>
+                    </svg>
+                  </li>
+                  <li class="prefer-transport__item prefer-transport__item--light prefer-transport__item--active">
+                    <span class="prefer-transport__name visually-hidden">Общественный транспорт.</span>
+                    <svg class="prefer-transport__img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite.svg#public-transport"></use>
+                    </svg>
+                  </li>
+                  <li class="prefer-transport__item prefer-transport__item--light prefer-transport__item--disabled">
+                    <span class="prefer-transport__name visually-hidden">Велосипед.</span>
+                    <svg class="prefer-transport__img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite.svg#bicycle"></use>
+                    </svg>
+                  </li>
+                  <li class="prefer-transport__item prefer-transport__item--light prefer-transport__item--active">
+                    <span class="prefer-transport__name visually-hidden">Пеший туризм.</span>
+                    <svg class="prefer-transport__img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite.svg#hiking"></use>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <a class="users-preview__more button button--secondary" href="catalog.html">Показать всех</a>
         </div>
       </section>
-      <section class="page-main__services services">
-        <div class="services__background">
-          <div class="services__container container">
-            <h2 class="visually-hidden">Услуги и тарифы сервиса.</h2>
-            <a class="services__title index-font index-font--title" href="#">Добавьте свой профиль</a>
-            <h3 class="visually-hidden">Базовые услуги и тарифы.</h3>
-            <dl class="services__rate rate">
-              <div class="rate__item rate__item--counted">
-                <dt class="rate__name">Базовое размещение</dt>
-                <dd class="rate__cost">Бесплатно</dd>
-              </div>
-              <div class="rate__item rate__item--counted">
-                <dt class="rate__name">Вывод на&nbsp;первых позициях</dt>
-                <dd class="rate__cost">99&nbsp;руб./мес</dd>
-              </div>
-              <div class="rate__item rate__item--counted">
-                <dt class="rate__name">Кастомный цвет карточки</dt>
-                <dd class="rate__cost">59&nbsp;руб./мес</dd>
-              </div>
-            </dl>
-            <a class="services__link" href="#">Показать тарифы для бизнеса</a>
-            <div class="services__popup popup-services">
-              <h3 class="popup-services__title index-font index-font--title">Бизнес-тарифы</h3>
-              <dl class="services__rate services__rate--business rate rate--business">
-                <div class="rate__item rate__item--business">
-                  <dt class="rate__name rate__name--business">Реклама у&nbsp;блоггера</dt>
-                  <dd class="rate__cost rate__cost--business">300&nbsp;000 руб./пост</dd>
-                </div>
-                <div class="rate__item rate__item--business">
-                  <dt class="rate__name rate__name--business">Накрутка подписчиков</dt>
-                  <dd class="rate__cost rate__cost--business">от&nbsp;1&nbsp;руб./шт.</dd>
-                </div>
-                <div class="rate__item rate__item--business">
-                  <dt class="rate__name rate__name--business">Лайки от&nbsp;ботов</dt>
-                  <dd class="rate__cost rate__cost--business">от&nbsp;20&nbsp;коп./лайк</dd>
-                </div>
-                <div class="rate__item rate__item--business">
-                  <dt class="rate__name rate__name--business">Ваш продакт-плейсмент</dt>
-                  <dd class="rate__cost rate__cost--business">Индивидуально</dd>
-                </div>
-              </dl>
-              <button class="popup-services__close button" type="button">Закрыть окно</button>
+      <section class="page-main__services services services--basic">
+        <div class="services__container container">
+          <h2 class="visually-hidden">Услуги и тарифы сервиса.</h2>
+          <a class="services__title index-font index-font--title" href="#">Добавьте свой профиль</a>
+          <h3 class="visually-hidden">Базовые услуги и тарифы.</h3>
+          <dl class="services__rate services__rate--basic rate rate--basic">
+            <div class="rate__item rate__item--counted">
+              <dt class="rate__name rate__name--basic">Базовое размещение</dt>
+              <dd class="rate__cost rate__cost--basic">Бесплатно</dd>
             </div>
-          </div>
+            <div class="rate__item rate__item--counted">
+              <dt class="rate__name rate__name--basic">Вывод на&nbsp;первых позициях</dt>
+              <dd class="rate__cost rate__cost--basic">99&nbsp;руб./мес</dd>
+            </div>
+            <div class="rate__item rate__item--counted">
+              <dt class="rate__name rate__name--basic">Кастомный цвет карточки</dt>
+              <dd class="rate__cost rate__cost--basic">59&nbsp;руб./мес</dd>
+            </div>
+          </dl>
+          <a class="services__link" href="#">Показать тарифы для бизнеса</a>
         </div>
       </section>
+      <!-- для открытия бизнес-тарифов использовать класс page-main__popup--open -->
+      <div class="page-main__popup popup-services services">
+        <p class="popup-services__title index-font index-font--title">Бизнес-тарифы</p>
+        <dl class="services__rate services__rate--business rate rate--business">
+          <div class="rate__item rate__item--business">
+            <dt class="rate__name rate__name--business">Реклама у&nbsp;блоггера</dt>
+            <dd class="rate__cost rate__cost--business">300&nbsp;000 руб./пост</dd>
+          </div>
+          <div class="rate__item rate__item--business">
+            <dt class="rate__name rate__name--business">Накрутка подписчиков</dt>
+            <dd class="rate__cost rate__cost--business">от&nbsp;1&nbsp;руб./шт.</dd>
+          </div>
+          <div class="rate__item rate__item--business">
+            <dt class="rate__name rate__name--business">Лайки от&nbsp;ботов</dt>
+            <dd class="rate__cost rate__cost--business">от&nbsp;20&nbsp;коп./лайк</dd>
+          </div>
+          <div class="rate__item rate__item--business">
+            <dt class="rate__name rate__name--business">Ваш продакт-плейсмент</dt>
+            <dd class="rate__cost rate__cost--business">Индивидуально</dd>
+          </div>
+        </dl>
+        <button class="popup-services__close button" type="button">Закрыть окно</button>
+      </div>
       <section class="page-main__registration registration">
         <div class="registration__container container">
           <h2 class="visually-hidden">Регистрация.</h2>
@@ -413,23 +399,21 @@
         </div>
       </section>
       <section class="page-main__contact-info contact-info">
-        <div class="contact-info__background">
-          <div class="contact-info__container container">
-            <h2 class="visually-hidden">Наши контакты.</h2>
-            <p class="contact-info__text index-font index-font--light">Остались вопросы? Мы&nbsp;с&nbsp;радостью на&nbsp;них ответим!</p>
-            <ul class="contact-info__contacts-list contacts container">
-              <li class="contacts__item">
-                <a class="contacts__link" href="tel:+78005558628">
-                  <span class="contacts__text">8 800 555-86-28</span>
-                </a>
-              </li>
-              <li class="contacts__item">
-                <a class="contacts__link" href="mailto:mail@htmlacademy.ru">
-                  <span class="contacts__text">mail@htmlacademy.ru</span>
-                </a>
-              </li>
-            </ul>
-          </div>
+        <div class="contact-info__container container">
+          <h2 class="visually-hidden">Наши контакты.</h2>
+          <p class="contact-info__text index-font index-font--light">Остались вопросы? Мы&nbsp;с&nbsp;радостью на&nbsp;них ответим!</p>
+          <ul class="contact-info__contacts-list contacts">
+            <li class="contacts__item">
+              <a class="contacts__link" href="tel:+78005558628">
+                <span class="contacts__text">8 800 555-86-28</span>
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a class="contacts__link" href="mailto:mail@htmlacademy.ru">
+                <span class="contacts__text">mail@htmlacademy.ru</span>
+              </a>
+            </li>
+          </ul>
         </div>
       </section>
       <section class="page-main__address-info address-info">
@@ -443,19 +427,13 @@
           </address>
         </div>
         <div class="address-info__map-wrapper">
-          <iframe class="address-info__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40291.541655567125!2d30.29329860430264!3d59.936893746627725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1638074219679!5m2!1sru!2sru" height="432" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
+          <iframe class="address-info__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40291.541655567125!2d30.29329860430264!3d59.936893746627725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1638074219679!5m2!1sru!2sru" width="320" height="424" allowfullscreen="" loading="lazy"></iframe>
         </div>
       </section>
     </main>
     <footer class="page-body__footer page-body__footer--index page-footer">
       <div class="page-footer__container container">
         <a class="page-footer__logo logo" href="index.html">
-          <!-- здесь будет спрайт + доп.класс для tablet/desktop logo__img--pic -->
-          <svg class="logo__img" width="96" height="15" viewBox="0 0 96 15" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Погнали." aria-current="page">
-            <path d="M94.91 6.19C95.64 5.73 96 5.02 96 4.06a3.4 3.4 0 00-1.57-2.96 6 6 0 00-3.6-1.1c-1.34 0-2.57.4-3.7 1.2a3.66 3.66 0 00-1.65 3.12c0 .5.16.9.46 1.22.3.3.74.46 1.3.46s.98-.16 1.27-.46c.3-.33.46-.73.46-1.22-.03-.37.1-.75.37-1.13.27-.4.77-.6 1.5-.6.6.02 1.04.17 1.3.47.28.3.4.59.38.88 0 .2-.08.41-.22.62-.15.2-.3.36-.46.48-.14.11-.38.28-.72.5l-.7.46a2.58 2.58 0 00-1.13 2.19c0 .45.16.82.48 1.13.34.3.78.44 1.33.44s.99-.14 1.3-.44c.34-.3.5-.68.5-1.13a1.32 1.32 0 01.46-1l.44-.35c.13-.09.32-.2.57-.34l.54-.31zM76.3 10.24l3.86-4.78c.4-.57.93-.9 1.61-.96.68-.08 1.27.09 1.78.5.51.4.75.94.72 1.62v6.84c0 .43-.17.8-.5 1.1-.33.28-.73.43-1.2.43a1.8 1.8 0 01-1.2-.43c-.33-.3-.49-.67-.49-1.1V9.2L77.03 14c-.4.57-.94.9-1.61.96a2.32 2.32 0 01-1.78-.5c-.51-.4-.75-.94-.72-1.62V6c0-.43.16-.8.48-1.1.34-.3.74-.45 1.21-.45s.86.15 1.19.45c.34.3.5.67.5 1.1v4.23z"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M58.97 13.39V5.98c0-.43-.18-.8-.54-1.1a1.73 1.73 0 00-1.22-.48c-.45 0-.85.16-1.2.48-.34.3-.5.67-.5 1.1V5.8c-.18-.4-.52-.74-1.03-1.02-.52-.3-1.1-.44-1.76-.44-1.28 0-2.47.47-3.55 1.42a4.97 4.97 0 00-1.58 3.9c0 1.68.52 3 1.56 3.93a5.2 5.2 0 003.57 1.4c.66 0 1.23-.12 1.73-.36.5-.26.87-.56 1.1-.9.08.36.28.66.6.9.3.22.66.34 1.06.34.47 0 .88-.16 1.22-.46.36-.3.54-.68.54-1.12zm-5.47-1.36c1.17 0 2.11-1.03 2.11-2.3 0-1.26-.94-2.29-2.11-2.29s-2.12 1.03-2.12 2.3c0 1.26.95 2.29 2.12 2.29z"/>
-            <path d="M43.08 8.24V6.09c0-.43.18-.8.53-1.1a1.8 1.8 0 011.24-.48c.47 0 .88.16 1.23.48.36.3.53.67.53 1.1v7.35c0 .43-.17.8-.53 1.1-.34.3-.75.46-1.23.46-.49 0-.9-.15-1.26-.46-.34-.3-.5-.67-.5-1.1v-2.18h-3.83v2.18c0 .43-.17.8-.53 1.1-.33.3-.75.46-1.23.46-.49 0-.9-.15-1.26-.46-.34-.3-.5-.67-.5-1.1V6.09c0-.43.17-.8.52-1.1a1.8 1.8 0 011.24-.48c.47 0 .88.16 1.23.48.36.3.53.67.53 1.1v2.15h3.82zM33.96 4.51c.35 0 .64.13.9.4.24.26.36.86.36 1.23s-.12.75-.37 1c-.25.27-.54.36-.89.36H31v5.97c0 1.13-.99 1.53-1.99 1.53-.92 0-1.8-.5-1.8-1.52l.03-8.97h6.72zM12.86 0v13.33c0 .44-.24.81-.57 1.12-.32.3-.82.46-1.28.46-.45 0-1.1-.15-1.44-.46a1.5 1.5 0 01-.47-1.12V3.01H3.77v10.32c0 .44-.16.81-.5 1.12-.31.3-.96.46-1.41.46a2.2 2.2 0 01-1.38-.46A1.5 1.5 0 010 13.33V0h12.86zM24.64 13.37a6.06 6.06 0 01-4.32 1.51c-1.8 0-3.24-.5-4.3-1.52a5.06 5.06 0 01-1.64-3.84c0-1.56.54-2.84 1.64-3.85a5.97 5.97 0 014.3-1.51c1.8 0 3.24.5 4.32 1.51a5.1 5.1 0 011.61 3.85 5.1 5.1 0 01-1.61 3.85zm-2.8-5.44c-.3-.31-.68-.5-1.12-.56a2.29 2.29 0 00-1.24.11c-.38.15-.7.4-.97.77-.25.36-.36.79-.33 1.27 0 .63.2 1.16.6 1.58.4.4.92.61 1.54.61.63 0 1.14-.2 1.54-.59.4-.4.6-.94.6-1.6 0-.64-.21-1.16-.62-1.59zM64.02 4.46l7.42.03v8.9c0 .44-.18.82-.54 1.14-.35.3-.66.46-1.2.46-.52 0-.8.04-1.16-.27a2.1 2.1 0 01-.66-1.33V7.44h-2.46c0 4.26 0 5.2-1.57 6.72-.58.55-1.33.83-2.24.83-.54 0-.86-.13-1.21-.44a1.9 1.9 0 01-.62-1.3c0-1.02.22-1.43.76-2.09 1.57 0 1.5-.38 1.4-3.27V6.06l.1-1.6h1.98zM93.16 12.75a2.3 2.3 0 01-2.34 2.24c-1.3 0-2.35-1-2.35-2.24a2.3 2.3 0 012.35-2.25c1.29 0 2.34 1 2.34 2.25z"/>
-          </svg>
           <span class="visually-hidden">Обновить главную страницу.</span>
         </a>
         <ul class="page-footer__social social">

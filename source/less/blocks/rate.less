@@ -2,20 +2,95 @@
   counter-reset: rate__item--counted;
 }
 
+.rate--basic {
+  @media (min-width: @tablet-width) {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+
+      width: 198px;
+      content: "";
+
+      background-color: @special-medium-grey;
+      border-radius: 20px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      width: 446px;
+    }
+  }
+}
+
 .rate__item {
   display: grid;
   grid-template-columns: 1fr auto;
-  padding: 13px 0 18px;
-  border-top: 1px solid @light-grey;
 }
 
 .rate__item:last-of-type {
-  border-bottom: 1px solid @light-grey;
+  @media (min-width: @tablet-width) {
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 68px;
+      right: 198px;
+
+      height: 100%;
+      content: "";
+
+      border-top: 1px solid @light-grey;
+      border-bottom: 1px solid @light-grey;
+    }
+  }
 }
 
 .rate__item--business {
-  border-top-color: rgba(0, 0, 0, 0.05);
-  border-bottom-color: rgba(0, 0, 0, 0.05);
+  padding: 12px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+
+  &:last-of-type {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 15px 0;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.rate__item--counted {
+  padding: 13px 0 18px;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    z-index: 1;
+
+    padding: 0 35px 0 0;
+    grid-template-columns: 68px 1fr 198px;
+    gap: 0 22px;
+    align-items: center;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 68px;
+      right: 198px;
+
+      content: "";
+
+      border-top: 1px solid @light-grey;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    grid-template-columns: 68px 1fr 446px;
+  }
 }
 
 .rate__item--counted::after {
@@ -35,6 +110,16 @@
   counter-increment: rate__item--counted;
   content: counter(rate__item--counted);
   border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    width: 68px;
+    height: 68px;
+
+    font-size: 28px;
+    line-height: 28px;
+  }
 }
 
 .rate__item--counted:nth-child(1)::after {
@@ -55,11 +140,30 @@
   line-height: 16px;
   font-weight: 300;
   color: @special-grey;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.rate__name--basic {
+  @media (min-width: @tablet-width) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+
+    font-size: 28px;
+    line-height: 28px;
+  }
 }
 
 .rate__name--business {
   margin-bottom: 0;
   line-height: 22px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 22px;
+    line-height: 28px;
+  }
 }
 
 .rate__cost {
@@ -72,6 +176,30 @@
   color: @special-grey;
 }
 
+.rate__cost--basic {
+  @media (min-width: @tablet-width) {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    justify-self: end;
+
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-self: center;
+  }
+}
+
 .rate__cost--business {
   line-height: 22px;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    justify-self: end;
+
+    font-size: 22px;
+    line-height: 28px;
+  }
 }

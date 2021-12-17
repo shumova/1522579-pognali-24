@@ -1,5 +1,19 @@
+.page {
+  margin: 0;
+  padding: 0;
+}
+
 .page__body {
-  min-width: 320px;
+  min-width: @mobile-width;
   min-height: 100vh;
   margin: 0;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    min-width: calc(@tablet-width - 20px);
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: calc(@desktop-width - 20px); // 20px - корректировка с учётом скролла
+  }
 }

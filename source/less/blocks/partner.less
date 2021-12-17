@@ -6,10 +6,21 @@
   align-items: center;
 
   border-top: 1px solid @extra-light-grey;
+
+  @media (min-width: @tablet-width) {
+    justify-self: end;
+    width: auto;
+    border: none;
+  }
 }
 
 .partner__text {
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

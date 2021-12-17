@@ -3,7 +3,7 @@
   align-items: center;
   justify-items: center;
 
-  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-family: @general-font-family;
   font-style: normal;
   text-decoration: none;
 
@@ -13,8 +13,6 @@
 }
 
 .button--primary {
-  padding: 12px;
-
   font-size: 17px;
   line-height: 20px;
   font-weight: 700;
@@ -23,6 +21,10 @@
 
   background-color: @basic-yellow;
   border-radius: 25px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+  }
 }
 
 .button--iconic {
@@ -30,14 +32,21 @@
 }
 
 .button--secondary {
+  justify-items: start;
+
   font-size: 18px;
   line-height: 18px;
   font-weight: 700;
   color: @basic-blue-light;
-  justify-items: start;
+  text-transform: none;
 
   background-color: @basic-yellow;
   border-radius: 10px;
+
+  @media (min-width: @desktop-width) {
+    font-size: 24px;
+    line-height: 24px;
+  }
 }
 
 .button--social {

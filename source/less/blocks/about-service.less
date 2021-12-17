@@ -1,28 +1,127 @@
 .about-service {
-  background: @basic-dark url("../../img/decorative/mobile-background@1x.jpg") no-repeat 50% 0;
+  background: @basic-dark url("../img/decorative/mobile-background-size-s@1x.jpg") no-repeat left 50% bottom 0;
   background-size: 320px;
-  border-radius: 0 0 25px 25px;
+  border-radius: 0 0 50px 50px;
+
+  @media (min-width: @tablet-width) {
+    background-image: none;
+  }
+}
+
+.about-service__container {
+  @media (min-width: @tablet-width) {
+    position: relative;
+    padding: 41px 0 0;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+
+      height: 212px;
+      content: "";
+
+      background-color: #141b3b;
+      border-radius: 25px;
+    }
+
+    &::after {
+      position: absolute;
+      top: 45px;
+      right: -40px;
+
+      content: "";
+      width: 376px;
+      height: 548px;
+
+      background: @basic-dark url("../img/decorative/mobile-background-size-m@1x.jpg") no-repeat right 0 top 0;
+      background-size: 384px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 62px 0 163px 70px;
+    background: url("../img/decorative/mobile-background-size-l@1x.jpg") no-repeat top 0 left 0;
+    background-size: 1322px;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .about-service__intro {
   width: 252px;
   padding-left: 29px;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    z-index: 1;
+
+    width: 340px;
+    display: grid;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 710px;
+    padding-left: 72px;
+  }
 }
 
 .about-service__title {
   margin: 0;
   margin-bottom: 19px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 57px;
+  }
 }
 
 .about-service__text {
   margin: 0;
   margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 31px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 38px;
+  }
 }
 
 .about-service__note {
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 52px;
+
+    font-size: 21px;
+    line-height: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 475px;
+    margin-bottom: 85px;
+  }
 }
 
 .about-service__more {
   display: none;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    padding: 29px 33px 27px;
+    justify-self: start;
+    min-width: 276px;
+  }
 }

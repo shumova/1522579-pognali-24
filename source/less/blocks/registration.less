@@ -4,16 +4,29 @@
 
 .registration__container {
   display: grid;
-  padding: 72px 0 12px;
   grid-template-columns: 27px 1fr 27px;
   justify-items: center;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 35px;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 74px;
+  }
 }
 
 .registration__title {
   grid-column: 2 / 3;
   margin: 0;
   margin-bottom: 19px;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 1 / -1;
+    margin-bottom: 59px;
+  }
 }
 
 .registration__text {
@@ -21,6 +34,16 @@
   max-width: 190px;
   margin: 0;
   margin-bottom: 29px;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 1 / -1;
+    max-width: 100%;
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 680px;
+  }
 }
 
 .registration__login-link {
@@ -51,6 +74,15 @@
 
   background-color: @basic-white;
   border-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    width: 616px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1174px;
+    grid-template-columns: 1fr 330px;
+  }
 }
 
 .registration__field {
@@ -60,7 +92,7 @@
   border-radius: 10px 0 0 10px;
 
   &::placeholder {
-    font-family: "Blogger Sans", "Arial", sans-serif;
+    font-family: @general-font-family;
     font-style: normal;
     font-size: 18px;
     line-height: 18px;
@@ -68,9 +100,17 @@
     color: @special-grey;
     opacity: 0.3;
   }
+
+  @media (min-width: @tablet-width) {
+    max-width: 536px;
+  }
 }
 
 .registration__submit {
   background-color: @basic-yellow;
   border-radius: 10px;
+
+  @media (min-width: @desktop-width) {
+    padding: 30px 42px 27px;
+  }
 }

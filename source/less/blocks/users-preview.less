@@ -1,32 +1,73 @@
 .users-preview {
-  background-color: @middle-grey;
+  border-radius: 0 0 25px 25px;
+  background: @basic-dark url("../img/decorative/photos-background@1x.jpg") no-repeat left 50% top 64px;
+  background-size: 320px;
+
+  @media (min-width: @tablet-width) {
+    background-image: none;
+    border-radius: 0 0 50px 50px;
+  }
 }
 
-.users-preview__background {
-  padding: 68px 0 31px;
-  border-radius: 0 0 25px 25px;
-  background: @basic-dark url("../img/decorative/photos-background@1x.jpg") no-repeat left 50% top 34px;
-  background-size: 320px;
+.users-preview__container {
+  padding: 34px 0 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 70px 33px 0;
+    background: url("../img/decorative/photos-background-size-m@1x.jpg") no-repeat left 0 top 0;
+    background-size: 654px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    padding: 64px 0 54px 71px;
+    grid-template-columns: repeat(2, 1fr);
+    background: url("../img/decorative/photos-background-size-l@1x.jpg") no-repeat left 0 top 0;
+    background-size: 632px;
+  }
 }
 
 .users-preview__intro {
   width: 265px;
   padding-left: 24px;
   margin-bottom: 54px;
+
+  @media (min-width: @tablet-width) {
+    width: 450px;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-row: 1 / 2;
+    margin-bottom: 85px;
+  }
 }
 
 .users-preview__title {
   margin: 0;
   margin-bottom: 19px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 55px;
+  }
 }
 
 .users-preview__text {
   margin: 0;
   margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 39px;
+  }
 }
 
 .users-preview__note {
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    line-height: 24px;
+  }
 }
 
 .users-preview__list {
@@ -37,8 +78,29 @@
   margin-bottom: 20px;
   padding: 0;
   list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    margin-bottom: 81px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-row: 1 / 3;
+    margin-bottom: 0;
+  }
 }
 
 .users-preview__more {
   padding: 23px;
+
+  @media (min-width: @tablet-width) {
+    padding: 28px 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-row: 2 / 3;
+    justify-self: start;
+    min-width: 280px;
+  }
 }
