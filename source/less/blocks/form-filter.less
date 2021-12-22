@@ -2,10 +2,18 @@
   border: none;
 }
 
+.form-filter--border-bottom {
+  @media (min-width: @tablet-width) {
+    border-bottom: 1px solid @light-grey;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-bottom: none;
+  }
+}
+
 .form-filter__title {
-  display: grid;
   margin-bottom: 9px;
-  grid-template-columns: 1fr auto;
 
   font-size: 16px;
   line-height: 16px;
@@ -13,25 +21,64 @@
   letter-spacing: 1px;
   color: @basic-blue-light;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 24px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .form-filter__note {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 500;
   letter-spacing: 0.7px;
   opacity: 0.3;
+  text-transform: uppercase;
+  text-align: end;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 3 / 4;
+    text-align: left;
+    opacity: 1;
+  }
 }
 
 .form-filter__controls {
   display: grid;
+  grid-column: 1 / 3;
   grid-template-columns: 42px 1fr 42px;
   align-items: center;
   justify-items: center;
 
   border: 1px solid @special-light-grey;
   border-radius: 4px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 66px 1fr 66px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 2 / 3;
+    grid-template-columns: 60px 1fr 60px;
+  }
 }
 
 .form-filter__field {
-  width: 100%;
+  width: 136px;
   padding: 16px 20px 13px;
 
   font-family: @general-font-family;
@@ -42,6 +89,18 @@
   text-align: center;
 
   border: none;
+
+  @media (min-width: @tablet-width) {
+    padding: 26px 20px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 60px;
+    padding: 26px 10px;
+  }
 }
 
 .form-filter__label {
@@ -64,12 +123,28 @@
     border: 1px solid @special-light-grey;
     border-radius: 4px;
   }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+  }
 }
 
 .form-filter__month {
   margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 39px;
+  }
 }
 
 .form-filter__calendar {
   margin-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 47px;
+  }
 }

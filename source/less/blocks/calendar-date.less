@@ -1,7 +1,7 @@
 .calendar-date__button {
   padding: 0;
-  width: 32px;
-  height: 32px;
+  height: 30px;
+  width: 100%;
 
   font-size: 14px;
   line-height: 18px;
@@ -9,12 +9,53 @@
   color: @basic-blue-light;
 
   background-color: @basic-light-grey;
+
+  @media (min-width: @tablet-width) {
+    height: 69px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+    line-height: 18px;
+    align-items: start;
+    justify-items: start;
+    padding-top: 14px;
+    padding-left: 16px;
+  }
 }
 
 .calendar-date__button--pressed {
   color: @basic-white;
 
   background-color: @basic-blue-light;
+
+  @media (min-width: @desktop-width) {
+    font-weight: 400;
+
+    &::after {
+      position: relative;
+      text-align: left;
+    }
+  }
+}
+
+.calendar-date__button--first-date {
+  @media (min-width: @desktop-width) {
+    &::after {
+      content: "Заезд";
+    }
+  }
+}
+
+.calendar-date__button--last-date {
+  @media (min-width: @desktop-width) {
+    &::after {
+      content: "Выезд";
+    }
+  }
 }
 
 .calendar-date__button:disabled {

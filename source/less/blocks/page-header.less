@@ -29,7 +29,16 @@
 }
 
 .page-header--inner {
-  background-image: linear-gradient(to bottom, @special-dark 0 73px, transparent 73px 100%);
+  background-image: linear-gradient(to bottom, @special-dark 0 53px, transparent 53px 100%);
+
+  @media (min-width: @tablet-width) {
+    background-image: linear-gradient(to bottom, @special-dark 0 130px, transparent 130px 100%);
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    justify-self: center;
+  }
 }
 
 .page-header__logo {
@@ -105,9 +114,8 @@
 // стили при отключенном js
 
 .page-header--no-js {
-  min-width: 320px;
-
   @media (max-width: calc(@desktop-width - 1px)) {
+    min-width: 320px;
     grid-row: 1 / 3;
     padding-top: 27px;
     grid-template-areas:
@@ -130,6 +138,10 @@
       "main-menu main-menu main-menu main-menu";
     grid-template-columns: 1fr 344px 344px 1fr;
   }
+}
+
+.page-header--inner.page-header--no-js {
+  grid-row: 1 / 2;
 }
 
 .page-header--no-js .page-header__toggle {
@@ -168,6 +180,10 @@
   }
 }
 
+.page-header--inner.page-header--no-js .page-header__main-menu {
+  margin-bottom: 0;
+}
+
 .page-header--no-js + .page-body__promo {
   @media (max-width: calc(@desktop-width - 1px)) {
     grid-row: 1 / 3;
@@ -193,6 +209,12 @@
   }
 }
 
+.page-header--inner.page-header--main-menu-open {
+  @media (max-width: calc(@desktop-width - 1px)) {
+    height: 73px;
+  }
+}
+
 .page-header--main-menu-open .page-header__logo {
   @media (max-width: calc(@desktop-width - 1px)) {
     background-image: url("../../img/logo-text-dark.svg");
@@ -214,7 +236,7 @@
 
 .page-header--scrolling-page {
   min-width: 320px;
-  padding-top: 27px;
+  // padding-top: 27px;
 
   &::before {
     position: fixed;

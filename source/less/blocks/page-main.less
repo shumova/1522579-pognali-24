@@ -133,24 +133,68 @@
 
 // страницы form, catalog
 
+.page-main__header {
+  position: relative;
+  z-index: 3;
+  margin-top: -2px;
+}
+
+.page-main__header--catalog {
+  margin-top: -2px;
+  padding: 43px 0 11px;
+
+  @media (min-width: @tablet-width) {
+    padding: 112px 0 68px;
+  }
+}
+
 .page-main__country-filter {
-  margin-bottom: 21px;
+  position: relative;
+  z-index: 2;
+
+  margin: -30px 0 21px;
+  padding: 50px 0 15px;
+
+  @media (min-width: @tablet-width) {
+    margin: -60px 0 43px;
+    padding: 124px 0 56px;
+  }
 }
 
 .page-main__users-catalog {
-  margin-bottom: 46px;
+  padding-bottom: 76px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 122px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 137px;
+  }
 }
 
 .page-main__plans {
+  margin-top: -30px;
+  padding: 28px 0 60px;
+
   background-color: @special-blue-light;
   border-radius: 25px 25px 0 0;
-  padding: 28px 0 59px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -60px;
+    padding: 57px 37px 136px;
+  }
 }
 
 .page-main__new-plan {
-  margin-top: -20px;
+  margin-top: -30px;
 
   background-color: @light-purple;
   border-radius: 25px 25px 0 0;
-  padding: 28px 0 59px;
+  padding: 28px 0 73px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -60px;
+    padding: 53px 37px 123px;
+  }
 }

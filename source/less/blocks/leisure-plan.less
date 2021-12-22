@@ -24,6 +24,15 @@
     background-color: @basic-white;
     box-shadow: -25px 0 10px 15px #ffffff;
   }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 38px;
+    margin-left: 0;
+
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 700;
+  }
 }
 
 .leisure-plan__input {
@@ -43,5 +52,18 @@
 
   &::placeholder {
     opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 500px;
+    margin-bottom: 53px;
+
+    &:last-of-type {
+      margin-bottom: 49px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 730px;
   }
 }

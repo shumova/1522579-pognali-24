@@ -3,10 +3,12 @@
 }
 
 .regions__item {
-  margin-bottom: 5px;
+  @media (min-width: @tablet-width) {
+    margin-right: 28px;
 
-  &:last-child {
-    margin-bottom: 0;
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 
@@ -19,6 +21,11 @@
   text-decoration: none;
 
   opacity: 0.3;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .regions__link--active {

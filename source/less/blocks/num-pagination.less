@@ -1,0 +1,32 @@
+.num-pagination {
+  @media (min-width: @tablet-width) {
+    align-items: center;
+
+    list-style-type: none;
+    background-color: @basic-white;
+    border-radius: 20px 0 0 20px;
+  }
+}
+
+.num-pagination__link {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    width: 50px;
+    height: 50px;
+
+    font-size: 20px;
+    line-height: 20px;
+    color: @basic-blue-light;
+    text-decoration: none;
+
+    border-radius: 50%;
+  }
+}
+
+.num-pagination__link--current {
+  @media (min-width: @tablet-width) {
+    background-color: @basic-yellow;
+  }
+}
