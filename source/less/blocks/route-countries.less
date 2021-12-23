@@ -1,6 +1,17 @@
-
 .route-countries__next-country {
   position: relative;
   display: grid;
   margin-bottom: 22px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 16px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
 }

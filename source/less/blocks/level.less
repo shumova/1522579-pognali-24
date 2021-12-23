@@ -9,11 +9,15 @@
   position: absolute;
   top: 8px;
   left: 0;
-  right: -12px;
+  right: -20px;
 
   content: "";
 
   border-top: 1px solid @basic-light-grey;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .level__value {
@@ -41,7 +45,7 @@
 
   margin: 0;
   margin-bottom: 10px;
-  padding-left: 11px;
+  padding-left: 6px;
   padding-right: 10px;
 
   font-size: 15px;
@@ -50,6 +54,12 @@
   text-transform: lowercase;
 
   background-color: @basic-white;
+}
+
+.level__title--catalog {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .level__number {
@@ -68,6 +78,21 @@
   align-self: center;
   font-size: 24px;
   line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      left: 0;
+
+      content: "";
+
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  }
 }
 
 .level__number--form {
@@ -88,8 +113,21 @@
   line-height: 18px;
   font-weight: 400;
   color: @special-grey;
+
+  @media (min-width: @desktop-width) {
+    color: @basic-white;
+  }
 }
 
 .level__text--catalog {
   display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 400;
+    color: @basic-black;
+    opacity: 0.4;
+  }
 }

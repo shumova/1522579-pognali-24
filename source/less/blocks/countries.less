@@ -1,17 +1,171 @@
-.countries__first-letters {
-  margin: 0;
-  padding: 0;
+.countries__first-letters--catalog {
+  width: 100%;
+  border-collapse: collapse;
+
+  @media (min-width: @tablet-width) {
+    margin-left: -20px;
+    border-collapse: separate;
+    border-spacing: 5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.countries__first-letters--form {
+  border-collapse: collapse;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: -16px 102px 0 -16px;
+    border-collapse: separate;
+    border-spacing: 16px;
+  }
 }
 
 .countries__list {
-  margin: 0;
-}
+  display: none;
 
-.countries__list--form {
-  padding: 20px 19px;
+  @media (min-width: @desktop-width) {
+    &--a::before {
+      content: "А";
+    }
+
+    &--b::before {
+      content: "Б";
+    }
+
+    &--v::before {
+      content: "В";
+    }
+
+    &--g::before {
+      content: "Г";
+    }
+
+    &--d::before {
+      content: "Д";
+    }
+
+    &--e::before {
+      content: "Е";
+    }
+
+    &--z::before {
+      content: "З";
+    }
+
+    &--i::before {
+      content: "И";
+    }
+
+    &--k::before {
+      content: "К";
+    }
+
+    &--l::before {
+      content: "Л";
+    }
+
+    &--m::before {
+      content: "М";
+    }
+
+    &--n::before {
+      content: "Н";
+    }
+
+    &--o::before {
+      content: "О";
+    }
+
+    &--p::before {
+      content: "П";
+    }
+
+    &--r::before {
+      content: "Р";
+    }
+
+    &--s::before {
+      content: "С";
+    }
+
+    &--t::before {
+      content: "Т";
+    }
+
+    &--u::before {
+      content: "У";
+    }
+
+    &--f::before {
+      content: "Ф";
+    }
+
+    &--h::before {
+      content: "Х";
+    }
+
+    &--ch::before {
+      content: "Ч";
+    }
+
+    &--sh::before {
+      content: "Ш";
+    }
+
+    &--ea::before {
+      content: "Э";
+    }
+
+    &--yu::before {
+      content: "Ю";
+    }
+
+    &--ya::before {
+      content: "Я";
+    }
+  }
 }
 
 .countries__list--catalog {
-  margin-top: 15px;
+  margin: 15px 0 0;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    padding-top: 60px;
+
+    &::before {
+      position: relative;
+      top: -30px;
+
+      font-size: 60px;
+      line-height: 60px;
+      font-weight: 700;
+      color: @basic-dark;
+    }
+  }
+}
+
+.countries__list--form {
+  margin: 0;
+  padding: 19px 19px;
+  border: 1px solid @special-light-grey;
+  border-top-color: transparent;
+  border-radius: 0 0 4px 4px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 20px 0 25px;
+    border: none;
+  }
 }

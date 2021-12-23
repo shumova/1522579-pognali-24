@@ -1,3 +1,13 @@
+.catalog-form--no-js .catalog-filter__content {
+  @media (max-width: calc(@tablet-width - 1px)) {
+    display: grid;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+  }
+}
+
 .catalog-form__filter {
   margin: 0;
   padding: 0;
@@ -5,10 +15,17 @@
   &:last-of-type {
     margin-bottom: 5px;
   }
+
+  @media (min-width: @tablet-width) {
+    &:last-of-type {
+      margin-bottom: 36px;
+    }
+  }
 }
 
 .catalog-form__submit {
   width: 100%;
+  padding: 14px 20px;
   line-height: 17px;
   background-color: @basic-white;
 }

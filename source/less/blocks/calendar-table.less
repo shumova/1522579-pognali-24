@@ -1,5 +1,6 @@
 .calendar-table {
   border-collapse: collapse;
+  width: 100%;
 }
 
 .calendar-table__weekday {
@@ -8,6 +9,15 @@
   line-height: 18px;
   font-weight: 400;
   color: @special-grey;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+    padding-left: 18px;
+  }
 }
 
 .calendar-table__weekday--weekend {
@@ -16,9 +26,17 @@
 
 .calendar-table__full-weekday-name {
   display: none;
+
+  @media (min-width: @desktop-width) {
+    display: inline-block;
+  }
 }
 
 .calendar-table__date {
   padding: 0;
   border: 1px solid @special-light-grey;
+
+  @media (min-width: @desktop-width) {
+    width: 144px;
+  }
 }

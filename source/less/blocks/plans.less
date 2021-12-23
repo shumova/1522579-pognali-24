@@ -1,3 +1,9 @@
+.plans__container {
+  @media (min-width: @tablet-width) {
+    padding: 0 37px;
+  }
+}
+
 .plans__title {
   margin: 0;
   margin-bottom: 29px;
@@ -6,6 +12,13 @@
   line-height: 24px;
   font-weight: 700;
   color: @basic-blue-light;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 48px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .plans__list {
@@ -24,5 +37,13 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 40px 32px 14px 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 40px 42px 38px;
   }
 }
