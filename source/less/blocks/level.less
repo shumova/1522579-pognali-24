@@ -3,6 +3,18 @@
 
   display: grid;
   justify-items: center;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 60px;
+    height: 60px;
+    content: "";
+
+    border-radius: 50%;
+  }
 }
 
 .level--catalog::before {
@@ -67,6 +79,7 @@
 }
 
 .level__number--preview {
+  margin-bottom: 3px;
   align-self: end;
 
   font-size: 24px;
@@ -101,6 +114,20 @@
   line-height: 38px;
 }
 
+.level__text {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    top: -2px;
+    right: 0;
+    left: 0;
+    content: "";
+
+    border-top: 1px solid fade(@basic-white, 30);
+  }
+}
+
 .level__text--preview {
   font-size: 14px;
   line-height: 14px;
@@ -130,4 +157,11 @@
     color: @basic-black;
     opacity: 0.4;
   }
+}
+
+.level__rate-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
 }

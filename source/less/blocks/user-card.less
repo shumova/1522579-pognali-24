@@ -3,10 +3,36 @@
   display: grid;
   background-color: @basic-white;
   border-radius: 15px;
+
+  &:hover {
+    .user-card__picture {
+      transform: scale(1.02);
+    }
+
+    &::before {
+      position: absolute;
+      top: 270px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: "";
+      background-color: @basic-white;
+      border-radius: 0 0 15px 15px;
+      transform: scale(1.02);
+      box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.16);
+    }
+
+    @media (min-width: @tablet-width) {
+      &::before {
+        top: 285px;
+      }
+    }
+  }
 }
 
 .user-card--preview {
   padding: 0;
+  padding-bottom: 23px;
   grid-template-columns: 30px 1fr 30px;
   justify-items: center;
 }
@@ -63,14 +89,62 @@
   }
 }
 
+.user-card__link {
+  display: block;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:hover + .user-card__status,
+  &:focus + .user-card__status {
+    opacity: 0.7;
+  }
+
+  &:focus:not(:focus-visible),
+  &:focus:not(:focus-visible) + .user-card__status {
+    opacity: 1;
+  }
+
+  &:focus:not(:focus-visible):hover,
+  &:focus:not(:focus-visible):hover + .user-card__status {
+    opacity: 0.7;
+  }
+
+  &:focus:not(:focus-visible):active,
+  &:focus:not(:focus-visible):active + .user-card__status {
+    opacity: 0.3;
+  }
+
+  &:focus-visible {
+    outline: 2px solid @special-grey;
+    outline-offset: 4px;
+  }
+
+  &:focus-visible,
+  &:focus-visible + .user-card__status {
+    opacity: 0.7;
+  }
+
+  &:active,
+  &:active + .user-card__status {
+    opacity: 0.3;
+  }
+}
+
 .user-card__title {
   margin: 0;
+
+  font-weight: 700;
+  color: @basic-blue-light;
 }
 
 .user-card__title--preview {
+  font-size: 21px;
+  line-height: 21px;
+
   @media (min-width: @tablet-width) {
     font-size: 24px;
-    line-height: 22px;
+    line-height: 24px;
   }
 }
 
@@ -78,7 +152,6 @@
   max-width: 80px;
   font-size: 20px;
   line-height: 20px;
-  font-weight: 700;
 
   @media (min-width: @tablet-width) {
     max-width: 290px;
@@ -86,13 +159,6 @@
     font-size: 30px;
     line-height: 30px;
   }
-}
-
-.user-card__link {
-  font: inherit;
-  line-height: inherit;
-  color: @basic-blue-light;
-  text-decoration: none;
 }
 
 .user-card__status {
@@ -278,6 +344,7 @@
 }
 
 .user-card__tags--preview {
+  position: relative;
   grid-column: 2 / 3;
   grid-row: 3 / 4;
   margin: 0 0 14px;
@@ -356,7 +423,7 @@
 
 .user-card__prefer-countries--preview {
   position: absolute;
-  top: 259px;
+  top: 258px;
   left: 50%;
 
   justify-content: center;
@@ -367,6 +434,10 @@
 
   list-style-type: none;
   transform: translateX(-50%);
+
+  @media (min-width: @tablet-width) {
+    top: 272px;
+  }
 }
 
 .user-card__prefer-countries--catalog {

@@ -35,6 +35,34 @@
   background-color: @basic-grey;
   border-radius: 0 0 20px 20px;
 
+  &:hover,
+  &:focus {
+    background-color: @basic-light-grey;
+  }
+
+  &:focus:not(:focus-visible) {
+    background-color: @basic-grey;
+  }
+
+  &:focus:not(:focus-visible):hover {
+    background-color: @basic-light-grey;
+  }
+
+  &:focus:not(:focus-visible):active {
+    color: fade(@basic-blue-light, 30);
+    background-color: @basic-light-grey;
+  }
+
+  &:focus-visible {
+    background-color: @basic-light-grey;
+    outline: none;
+  }
+
+  &:active {
+    color: fade(@basic-blue-light, 30);
+    background-color: @basic-light-grey;
+  }
+
   @media (min-width: @tablet-width) {
     padding: 41px;
 

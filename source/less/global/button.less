@@ -43,9 +43,145 @@
   background-color: @basic-yellow;
   border-radius: 10px;
 
+  &::after {
+    grid-column: 2 / 3;
+    justify-self: end;
+    content: "";
+    border-top: 10px solid transparent;
+    border-right: none;
+    border-bottom: 10px solid transparent;
+    border-left: 16px solid @basic-blue-light;
+  }
+
   @media (min-width: @desktop-width) {
     font-size: 24px;
     line-height: 24px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: @special-yellow-dark;
+  }
+
+  &:focus:not(:focus-visible) {
+    background-color: @basic-yellow;
+  }
+
+  &:focus:not(:focus-visible):hover {
+    background-color: @special-yellow-dark;
+  }
+
+  &:focus:not(:focus-visible):active {
+    color: fade(@basic-blue-light, 30);
+    background-color: @special-yellow-dark;
+  }
+
+  &:focus:not(:focus-visible):active::after {
+    border-left-color: fade(@basic-blue-light, 30);
+  }
+
+  &:focus-visible {
+    background-color: @special-yellow-dark;
+    outline: none;
+  }
+
+  &:active {
+    color: fade(@basic-blue-light, 30);
+    background-color: @special-yellow-dark;
+  }
+
+  &:active::after {
+    border-left-color: fade(@basic-blue-light, 30);
+  }
+}
+
+.button--special {
+  justify-items: start;
+
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  color: @basic-blue-light;
+  text-transform: none;
+
+  background-color: @basic-yellow;
+  border: 3px solid @basic-dark;
+  border-radius: 10px;
+
+  &::after {
+    grid-column: 2 / 3;
+    justify-self: end;
+    content: "";
+    border-top: 10px solid transparent;
+    border-right: none;
+    border-bottom: 10px solid transparent;
+    border-left: 16px solid @basic-blue-light;
+  }
+
+  @media (min-width: @tablet-width) {
+    border-radius: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  &:hover,
+  &:focus {
+    color: @basic-white;
+    background-color: @basic-dark;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    border-left-color: @basic-white;
+  }
+
+  &:focus:not(:focus-visible) {
+    color: @basic-dark;
+    background-color: transparent;
+  }
+
+  &:focus:not(:focus-visible)::after {
+    border-left-color: @basic-dark;
+  }
+
+  &:focus:not(:focus-visible):hover {
+    color: @basic-white;
+    background-color: @basic-dark;
+  }
+
+  &:focus:not(:focus-visible):hover::after {
+    border-left-color: @basic-white;
+  }
+
+  &:focus:not(:focus-visible):active {
+    color: fade(@basic-white, 30);
+    background-color: @basic-dark;
+  }
+
+  &:focus:not(:focus-visible):active::after {
+    border-left-color: fade(@basic-white, 30);
+  }
+
+  &:focus-visible {
+    color: @basic-white;
+    background-color: @basic-dark;
+    outline: none;
+  }
+
+  &:focus-visible::after {
+    border-left-color: @basic-white;
+  }
+
+  &:active {
+    color: fade(@basic-white, 30);
+    background-color: @basic-dark;
+  }
+
+  &:active::after {
+    border-left-color: fade(@basic-white, 30);
   }
 }
 
@@ -53,4 +189,83 @@
   width: 45px;
   height: 45px;
   background-color: @basic-yellow;
+  background-position: center;
+
+  .social__icon {
+    fill: @basic-dark;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: @special-yellow-dark;
+  }
+
+  &:focus:not(:focus-visible) {
+    background-color: @basic-yellow;
+  }
+
+  &:focus:not(:focus-visible):hover {
+    background-color: @special-yellow-dark;
+  }
+
+  &:focus:not(:focus-visible):active .social__icon {
+    fill: fade(@basic-dark, 30);
+  }
+
+  &:focus-visible {
+    background-color: @special-yellow-dark;
+    outline: none;
+  }
+
+  &:active .social__icon {
+    fill: fade(@basic-dark, 30);
+  }
+}
+
+.button--social-contour {
+  width: 45px;
+  height: 45px;
+
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:focus:not(:focus-visible) {
+    opacity: 1;
+  }
+
+  &:focus:not(:focus-visible):hover {
+    opacity: 0.6;
+  }
+
+  &:focus:not(:focus-visible):active {
+    opacity: 0.3;
+  }
+
+  &:focus-visible {
+    opacity: 0.6;
+    outline: 2px solid @basic-blue;
+    outline-offset: 0;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.button--facebook {
+  background-image: url("../../img/icons/social/facebook.svg");
+}
+
+.button--instagram {
+  background-image: url("../../img/icons/social/instagram.svg");
+}
+
+.button--vk {
+  background-image: url("../../img/icons/social/vkontakte.svg");
 }

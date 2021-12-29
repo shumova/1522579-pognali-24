@@ -4,6 +4,7 @@
   grid-template-columns: 1fr auto;
   justify-content: space-between;
   align-items: center;
+  column-gap: 16px;
 
   border-top: 1px solid @extra-light-grey;
 
@@ -22,5 +23,39 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
+  }
+}
+
+.partner__link {
+  display: block;
+
+  background: transparent url("../../img/icons/html-academy.svg") no-repeat center;
+  background-size: 27px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:focus:not(:focus-visible) {
+    opacity: 1;
+  }
+
+  &:focus:not(:focus-visible):hover {
+    opacity: 0.6;
+  }
+
+  &:focus:not(:focus-visible):active {
+    opacity: 0.3;
+  }
+
+  &:focus-visible {
+    opacity: 0.3;
+    outline: 4px solid @special-grey;
+    outline-offset: 4px;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

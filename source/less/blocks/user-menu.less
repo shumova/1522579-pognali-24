@@ -1,6 +1,7 @@
 .user-menu {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 
   @media (max-width: calc(@tablet-width - 1px)) {
     margin-bottom: 70px;
@@ -32,9 +33,11 @@
 }
 
 .user-menu__link {
-  display: block;
+  display: grid;
   width: 40px;
   height: 40px;
+  align-items: center;
+  justify-items: center;
 
   @media (min-width: @desktop-width) {
     width: 50px;
@@ -42,22 +45,119 @@
   }
 }
 
+.user-menu__link .user-menu__icon {
+  fill: @basic-blue;
+}
+
 .user-menu__link--phone {
   background-color: @special-orange;
+}
+
+.user-menu__link--phone:hover,
+.user-menu__link--phone:focus {
+  background-color: @interactive-orange-dark;
+}
+
+.user-menu__link--phone:focus:not(:focus-visible) {
+  background-color: @special-orange;
+}
+
+.user-menu__link--phone:focus:not(:focus-visible):hover {
+  background-color: @interactive-orange-dark;
+}
+
+.user-menu__link--phone:focus:not(:focus-visible):active {
+  background-color: @interactive-orange-dark;
+}
+
+.user-menu__link--phone:focus:not(:focus-visible):active .user-menu__icon {
+  fill: fade(@basic-blue, 30);
+}
+
+.user-menu__link--phone:focus-visible {
+  background-color: @interactive-orange-dark;
+  outline: none;
+}
+
+.user-menu__link--phone:active .user-menu__icon {
+  fill: fade(@basic-blue, 30);
 }
 
 .user-menu__link--email {
   background-color: @special-yellow-dark;
 }
 
+.user-menu__link--email:hover,
+.user-menu__link--email:focus {
+  background-color: @interactive-orange-light;
+}
+
+.user-menu__link--email:focus:not(:focus-visible) {
+  background-color: @special-yellow-dark;
+}
+
+.user-menu__link--email:focus:not(:focus-visible):hover {
+  background-color: @interactive-orange-light;
+}
+
+.user-menu__link--email:focus:not(:focus-visible):active {
+  background-color: @interactive-orange-light;
+}
+
+.user-menu__link--email:focus:not(:focus-visible):active .user-menu__icon {
+  fill: fade(@basic-blue, 30);
+}
+
+.user-menu__link--email:focus-visible {
+  background-color: @interactive-orange-light;
+  outline: none;
+}
+
+.user-menu__link--email:active .user-menu__icon {
+  fill: fade(@basic-blue, 30);
+}
+
 .user-menu__login {
-  flex-grow: 1;
-  align-self: flex-start;
+  min-width: 190px;
   padding: 12px 20px 8px;
+  align-self: flex-start;
+
+  background-color: @basic-yellow;
 
   @media (min-width: @tablet-width) {
-    flex-grow: 0;
     margin-left: auto;
     padding: 16px 32px 13px 30px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-left: 0;
+    padding: 16px 32px 13px 30px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: @special-yellow-dark;
+  }
+
+  &:focus:not(:focus-visible) {
+    background-color: @basic-yellow;
+  }
+
+  &:focus:not(:focus-visible):hover {
+    background-color: @special-yellow-dark;
+  }
+
+  &:focus:not(:focus-visible):active {
+    background-color: @special-yellow-dark;
+    color: fade(@basic-blue, 30);
+  }
+
+  &:focus-visible {
+    background-color: @special-yellow-dark;
+    outline: none;
+  }
+
+  &:active {
+    color: fade(@basic-blue, 30);
   }
 }
