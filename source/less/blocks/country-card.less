@@ -41,16 +41,46 @@
 }
 
 .country-card__text {
+  position: relative;
+  z-index: 1;
+
   display: grid;
   grid-column: 1 / -1;
   grid-row: 2 / 3;
-  z-index: 1;
   margin-top: 99px;
   padding: 26px 24px;
   grid-template-columns: 1fr auto;
 
   background-color: @basic-white;
   border-radius: 10px;
+
+  &::after {
+    position: absolute;
+    top: -12px;
+    left: 25px;
+
+    width: 35px;
+    height: 24px;
+    content: "";
+
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border-radius: 4px;
+  }
+
+  &--thailand::after {
+    background-image: url("../img/countries/flags/thailand@1x.jpg");
+  }
+
+  &--france::after {
+    background-image: url("../img/countries/flags/france@1x.jpg");
+  }
+
+  &--czech::after {
+    background-image: url("../img/countries/flags/czech@1x.jpg");
+  }
 
   @media (min-width: @tablet-width) {
     grid-column: 1 / 2;
@@ -61,12 +91,23 @@
     padding: 30px 29px 22px;
 
     border-radius: 20px 0 0 20px;
+
+    &::after {
+      top: 17px;
+      left: calc(100% - 35px);
+
+      width: 70px;
+      height: 47px;
+
+      border-radius: 8px;
+    }
   }
 }
 
 .country-card__title {
   display: block;
   margin: 0;
+  justify-self: start;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 5px;
@@ -76,6 +117,11 @@
 .country-card__link {
   display: block;
   text-decoration: none;
+
+  &:focus-visible {
+    outline: 2px solid @special-grey;
+    outline-offset: 2px;
+  }
 }
 
 .country-card__subtitle {
@@ -97,9 +143,13 @@
 }
 
 .country-card__number {
+  display: grid;
   grid-column: 2 / 3;
   grid-row: 1 / 2;
   margin: 0;
+  grid-auto-flow: column;
+  column-gap: 5px;
+  align-items: center;
 
   font-size: 16px;
   line-height: 20px;
@@ -107,12 +157,30 @@
   color: @special-grey;
   opacity: 0.3;
 
+  &::before {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    width: 14px;
+    height: 14px;
+
+    content: "";
+
+    background: transparent url("../img/icons/user.svg") no-repeat center;
+    background-size: contain;
+  }
+
   @media (min-width: @tablet-width) {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
+    justify-self: start;
 
     font-size: 20px;
     line-height: 20px;
     font-weight: 400;
+
+    &::before {
+      width: 24px;
+      height: 24px;
+    }
   }
 }

@@ -9,6 +9,7 @@
 }
 
 .services__container {
+  display: grid;
   position: relative;
   padding-left: 24px;
 
@@ -22,7 +23,7 @@
     height: 100px;
     content: "";
 
-    background: transparent url("../../img/decorative/rates@1x.png") no-repeat center;
+    background: transparent url("../img/decorative/rates@1x.png") no-repeat center;
     background-size: 100px;
   }
 
@@ -55,10 +56,16 @@
   max-width: 107px;
   margin-bottom: 56px;
   text-decoration: none;
+  justify-self: start;
 
   @media (min-width: @tablet-width) {
     max-width: 100%;
-    text-align: center;
+    justify-self: center;
+  }
+
+  &:focus-visible {
+    outline: 2px solid @special-grey;
+    outline-offset: 8px;
   }
 }
 
@@ -89,12 +96,25 @@
 }
 
 .services__link {
+  justify-self: start;
   font-style: normal;
   font-size: 16px;
   line-height: 16px;
   font-weight: 700;
   color: @basic-blue-medium;
   text-decoration: none;
+
+  &-icon {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      justify-self: center;
+      fill: @basic-blue-medium;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     display: grid;
@@ -107,12 +127,66 @@
 
     &::before {
       grid-column: 1 / 2;
+      grid-row: 1 / 2;
       width: 68px;
       height: 68px;
       content: "";
 
-      background-color: @special-medium-grey;
+      background: @special-medium-grey url("../img/icons/businessman.svg") no-repeat center;
+      background-size: 27px;
       border-radius: 50%;
     }
+  }
+
+  &:hover,
+  &:focus {
+    color: fade(@basic-blue-medium, 70);
+  }
+
+  &:hover &-icon,
+  &:focus &-icon {
+    fill: fade(@basic-blue-medium, 70);
+  }
+
+  &:focus:not(:focus-visible) {
+    color: @basic-blue-medium;
+  }
+
+  &:focus:not(:focus-visible) &-icon {
+    fill: @basic-blue-medium;
+  }
+
+  &:focus:not(:focus-visible):hover {
+    color: fade(@basic-blue-medium, 70);
+  }
+
+  &:focus:not(:focus-visible):hover &-icon {
+    fill: fade(@basic-blue-medium, 70);
+  }
+
+  &:focus:not(:focus-visible):active {
+    color: fade(@basic-blue-medium, 30);
+  }
+
+  &:focus:not(:focus-visible):active &-icon {
+    fill: fade(@basic-blue-medium, 30);
+  }
+
+  &:focus-visible {
+    color: fade(@basic-blue-medium, 70);
+    outline: 2px solid @special-grey;
+    outline-offset: 8px;
+  }
+
+  &:focus-visible &-icon {
+    fill: fade(@basic-blue-medium, 70);
+  }
+
+  &:active {
+    color: fade(@basic-blue-medium, 30);
+  }
+
+  &:active &-icon {
+    fill: fade(@basic-blue-medium, 30);
   }
 }

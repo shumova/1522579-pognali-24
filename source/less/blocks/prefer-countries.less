@@ -51,14 +51,17 @@
 }
 
 .prefer-countries__list {
+  max-width: 225px;
   margin: 0;
-  margin-bottom: 12px;
   padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 35px);
 
   list-style-type: none;
+}
+
+.prefer-countries__list--index {
+  gap: 20px;
 }
 
 .prefer-countries__list--catalog {
@@ -72,15 +75,93 @@
 }
 
 .prefer-countries__item {
+  position: relative;
+
   display: grid;
-  margin-bottom: 10px;
   grid-template-columns: auto 1fr;
   column-gap: 14px;
   align-items: center;
 
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 6px;
+
   &:last-child {
     margin-bottom: 0;
   }
+
+  &--sri-lanka {
+    background-image: url("../img/countries/flags/sri-lanka@1x.jpg");
+  }
+
+  &--thailand {
+    background-image: url("../img/countries/flags/thailand@1x.jpg");
+  }
+
+  &--seychelles {
+    background-image: url("../img/countries/flags/seychelles@1x.jpg");
+  }
+
+  &--czech {
+    background-image: url("../img/countries/flags/czech@1x.jpg");
+  }
+
+  &--belgium {
+    background-image: url("../img/countries/flags/belgium@1x.jpg");
+  }
+
+  &--bosnia {
+    background-image: url("../img/countries/flags/bosnia@1x.jpg");
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+
+    display: none;
+
+    transform: translateX(-50%);
+  }
+
+  &::before {
+    top: calc(100% + 10px);
+    padding: 20px;
+    content: attr(data-country);
+    width: max-content;
+    max-width: 180px;
+
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
+    color: @basic-white;
+
+    background-color: @icon-blue;
+    border-radius: 4px;
+  }
+
+  &::after {
+    top: 100%;
+
+    content: "";
+
+    border-top: none;
+    border-right: 10px solid transparent;
+    border-bottom: 12px solid @icon-blue;
+    border-left: 10px solid transparent;
+  }
+
+  &:hover::before,
+  &:hover::after {
+    display: block;
+  }
+}
+
+.prefer-countries__item--index {
+  width: 35px;
+  height: 25px;
+  background-size: 35px;
 }
 
 .prefer-countries__item--catalog {

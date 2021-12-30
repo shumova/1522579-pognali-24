@@ -2,8 +2,8 @@
   position: relative;
 
   background: linear-gradient(to top, @basic-blue 0 20px, transparent 20px 100%),
-    url("../img/decorative/earth@1x.jpg") no-repeat left 50% bottom 0;
-  background-size: 100%, contain;
+    url("../img/decorative/earth@1x.jpg") no-repeat left 50% bottom 50%;
+  background-size: 100%, cover;
   background-color: @basic-blue;
 
   &::before {
@@ -20,9 +20,9 @@
   }
 
   @media (min-width: @tablet-width) {
-    background: linear-gradient(to top, transparent 0 100%),
-      url("../img/decorative/earth-tablet@1x.jpg") no-repeat left 50% bottom 0;
-    background-size: 100%, contain;
+    background: linear-gradient(to top, @special-dark 0 20px, transparent 20px 100%),
+      url("../img/decorative/earth-tablet@1x.jpg") no-repeat left 50% top 350px;
+    background-size: 100%, cover;
 
     &::before {
       bottom: 135px;

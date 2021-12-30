@@ -23,7 +23,7 @@
   width: 96px;
   height: 15px;
   margin-bottom: 40px;
-  background: url("../../img/logo-text-dark.svg") no-repeat center;
+  background: url("../img/logo-text-dark.svg") no-repeat center;
 
   @media (min-width: @tablet-width) {
     width: 166px;
@@ -31,11 +31,17 @@
     margin-bottom: 0;
     justify-self: start;
 
-    background-image: url("../../img/logo-full-dark.svg");
+    background-image: url("../img/logo-full-dark.svg");
+  }
+
+  &:focus-visible {
+    outline: 4px solid fade(@special-grey, 30);
+    outline-offset: 8px;
   }
 }
 
 .page-footer__social {
+  display: flex;
   margin: 0;
   margin-bottom: 37px;
   padding: 0;
