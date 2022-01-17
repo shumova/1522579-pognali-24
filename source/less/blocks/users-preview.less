@@ -22,6 +22,9 @@
     display: grid;
     padding: 64px 0 54px 71px;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1fr;
+    align-items: start;
+
     background: url("../img/decorative/photos-background-size-l@1x.jpg") no-repeat left 0 top 0;
     background-size: 632px;
   }
@@ -93,6 +96,7 @@
 
 .users-preview__more {
   padding: 23px;
+  column-gap: 30px;
 
   @media (min-width: @tablet-width) {
     padding: 28px 32px;
@@ -102,5 +106,6 @@
     grid-row: 2 / 3;
     justify-self: start;
     min-width: 280px;
+    max-width: 440px;
   }
 }

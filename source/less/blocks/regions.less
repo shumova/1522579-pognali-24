@@ -13,6 +13,9 @@
 }
 
 .regions__link {
+  display: grid;
+  max-width: 220px;
+
   font-size: 16px;
   line-height: 18px;
   font-weight: 700;
@@ -26,8 +29,35 @@
     font-size: 20px;
     line-height: 20px;
   }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:focus:not(:focus-visible) {
+    opacity: 0.3;
+  }
+
+  &:focus:not(:focus-visible):hover {
+    opacity: 0.6;
+  }
+
+  &:focus:not(:focus-visible):active {
+    opacity: 1;
+  }
+
+  &:focus-visible {
+    opacity: 0.6;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 1;
+  }
 }
 
 .regions__link--active {
   opacity: 1;
+  pointer-events: none;
 }

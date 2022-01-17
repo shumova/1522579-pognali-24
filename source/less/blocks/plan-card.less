@@ -46,13 +46,16 @@
     font-size: 24px;
     line-height: 24px;
 
-    &::before {
+    &::after {
       grid-column: 2 / 3;
+      content: counter(plan-card) ".";
       font-size: 20px;
       line-height: 20px;
+      font-weight: 500;
     }
 
-    &::after {
+    &::before {
+      grid-column: auto;
       position: absolute;
       right: -32px;
       left: -40px;
@@ -72,14 +75,14 @@
     grid-template-columns: auto 1fr;
     column-gap: 36px;
 
-    &::before {
+    &::after {
       grid-column: 1 / 2;
       grid-row: 1 / 2;
       font-size: 20px;
       line-height: 20px;
     }
 
-    &::after {
+    &::before {
       display: none;
     }
   }
@@ -149,6 +152,7 @@
   @media (min-width: @tablet-width) {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+    max-width: 120px;
     margin-right: 8px;
 
     font-size: 20px;
@@ -159,5 +163,31 @@
     grid-column: 3 / 4;
     grid-row: 1 / 2;
     margin-right: 0;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:focus:not(:focus-visible) {
+    opacity: 0.3;
+  }
+
+  &:focus:not(:focus-visible):hover {
+    opacity: 0.6;
+  }
+
+  &:focus:not(:focus-visible):active {
+    opacity: 0.1;
+  }
+
+  &:focus-visible {
+    opacity: 0.6;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.1;
   }
 }

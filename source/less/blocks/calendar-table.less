@@ -4,13 +4,16 @@
 }
 
 .calendar-table__weekday {
+  max-width: 31px;
   padding-bottom: 10px;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
   color: @special-grey;
+  overflow-wrap: break-word;
 
   @media (min-width: @tablet-width) {
+    max-width: 77px;
     font-size: 18px;
   }
 
@@ -33,8 +36,14 @@
 }
 
 .calendar-table__date {
+  width: 14%;
+  max-width: 31px;
   padding: 0;
   border: 1px solid @special-light-grey;
+
+  @media (min-width: @desktop-width) {
+    max-width: 77px;
+  }
 
   @media (min-width: @desktop-width) {
     width: 144px;

@@ -73,6 +73,35 @@
     padding: 16px 20px 14px;
     align-self: start;
   }
+
+  &:hover,
+  &:focus {
+    background-color: #d1d7e9;
+  }
+
+  &:focus:not(:focus-visible) {
+    background-color: @special-blue-light;
+  }
+
+  &:focus:not(:focus-visible):hover {
+    background-color: #d1d7e9;
+  }
+
+  &:focus:not(:focus-visible):active {
+    background-color: @special-blue-light;
+    color: fade(@basic-blue, 30);
+  }
+
+  &:focus-visible {
+    background-color: #d1d7e9;
+    color: @basic-blue;
+    outline: none;
+  }
+
+  &:active {
+    background-color: @special-blue-light;
+    color: fade(@basic-blue, 30);
+  }
 }
 
 .user-profile__change-photo-full-text {
@@ -88,6 +117,7 @@
   height: 100px;
   margin-top: 20px;
   justify-self: center;
+  overflow: hidden;
 
   @media (min-width: @tablet-width) {
     grid-column: 2 / 3;
@@ -101,6 +131,8 @@
     grid-row: 1 / 2;
     width: 95px;
     height: 95px;
+    margin-bottom: 53px;
+    align-self: end;
     color: @basic-white;
   }
 }
@@ -110,7 +142,7 @@
 
   grid-column: 2 / -2;
   grid-row: 4 / 5;
-  margin-top: 25px;
+  margin-top: 33px;
 
   @media (min-width: @tablet-width) {
     margin-top: 52px;
@@ -126,28 +158,37 @@
 .user-profile__tags-title {
   position: absolute;
   z-index: 1;
-  top: -8px;
+  bottom: 90%;
   left: 50%;
 
+  max-height: 33px;
   padding: 0 15px;
 
   font-size: 16px;
   line-height: 18px;
   font-weight: 700;
   color: @basic-blue-light;
+  text-align: center;
   text-transform: uppercase;
+  overflow: hidden;
 
   background-color: @basic-light-grey;
   transform: translateX(-50%);
 
   @media (min-width: @tablet-width) {
-    top: auto;
-    bottom: -2px;
+    bottom: auto;
+    top: 90%;
+    max-width: 270px;
+    max-height: 42px;
+
     font-size: 20px;
     line-height: 20px;
+    overflow-wrap: break-word;
   }
 
   @media (min-width: @desktop-width) {
+    max-width: 600px;
+    max-height: 38px;
     left: 20px;
     transform: none;
   }
@@ -155,6 +196,7 @@
 
 .user-profile__tags-input {
   min-height: 95px;
+  width: 100%;
   padding: 27px 25px;
 
   font-family: @general-font-family;
@@ -170,8 +212,19 @@
   opacity: 0.6;
   resize: none;
 
-  @media (min-width: @tablet-width) {
-    width: 100%;
+  &:hover {
+    border-color: #aeb4cb;
+  }
+
+  &:focus {
+    border-color: @basic-blue;
+    opacity: 1;
+    outline: none;
+  }
+
+  &:active {
+    border-color: @basic-blue;
+    opacity: 1;
   }
 }
 
@@ -181,7 +234,7 @@
   grid-column: 2 / -2;
   grid-row: 5 / 6;
   width: 100%;
-  margin-top: 25px;
+  margin-top: 33px;
 
   @media (min-width: @tablet-width) {
     grid-column: 4 / 5;

@@ -13,7 +13,7 @@
     display: grid;
     align-items: center;
     justify-items: center;
-    width: 50px;
+    min-width: 50px;
     height: 50px;
 
     font-size: 20px;
@@ -22,10 +22,40 @@
     text-decoration: none;
 
     border-radius: 50%;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:focus:not(:focus-visible) {
+      opacity: 1;
+    }
+
+    &:focus:not(:focus-visible):hover {
+      opacity: 0.6;
+    }
+
+    &:focus:not(:focus-visible):active {
+      background-color: @basic-yellow;
+      opacity: 1;
+    }
+
+    &:focus-visible {
+      opacity: 0.6;
+      outline: none;
+    }
+
+    &:active {
+      background-color: @basic-yellow;
+      opacity: 1;
+    }
   }
 }
 
 .num-pagination__link--current {
+  pointer-events: none;
+
   @media (min-width: @tablet-width) {
     background-color: @basic-yellow;
   }

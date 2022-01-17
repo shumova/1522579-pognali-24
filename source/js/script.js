@@ -21,11 +21,7 @@ var popupClose = document.querySelector('.popup-services__close');
 
 if (pagePopup) {
   popupOpen.addEventListener('click', function(open) {
-    if (pagePopup.classList.contains('page-main__popup--open')) {
-      pagePopup.classList.remove('page-main__popup--open');
-    } else {
-      pagePopup.classList.add('page-main__popup--open');
-    }
+    pagePopup.classList.toggle('page-main__popup--open');
     open.preventDefault();
     return false;
   });
@@ -46,11 +42,19 @@ if (canvas) {
     var context = canvas[i].getContext('2d');
     var x = canvas[i].width / 2;
     var y = canvas[i].height / 2
-    var radius = 28;
+    var radius = (canvas[i].width / 2) - 2;
     var startAngle = Math.PI * 1.5;
     var endAngle = (Math.PI * rate * 1.5 / 100) - 0.2;
 
-    context.lineWidth = 4;
+    // Код ниже проверю на сверке по pixel perfect
+    // if (canvas[i].width == 60) {
+    //   context.lineWidth = 4;
+    // } else if (canvas[i].width == 45) {
+    //   context.lineWidth = 3;
+    // }
+
+    context.lineWidth = 3
+
     context.lineCap = "round";
     context.strokeStyle = "#ff8d30";
 
@@ -70,14 +74,32 @@ if (countryFilter) {
   countryFilter.classList.remove('country-filter--no-js');
 
   countryFilterToggle.addEventListener('click', function() {
-    if (countryFilter.classList.contains('country-filter--open')) {
-      countryFilter.classList.remove('country-filter--open');
-    } else {
-      countryFilter.classList.add('country-filter--open');
-    }
+    countryFilter.classList.toggle('country-filter--open');
   });
 
   countryFilterHideBtn.addEventListener('click', function() {
     countryFilter.classList.remove('country-filter--open');
   });
+}
+
+// показ/скрытие полей фильтра попутчиков на странице catalog (Попутчики)
+
+var catalogFilter = document.querySelector('.catalog-form');
+var peopleFilterToggle = document.querySelectorAll('.catalog-filter__title');
+var peopleFilter = document.querySelectorAll('.catalog-filter');
+
+if (catalogFilter) {
+  catalogFilter.classList.remove('catalog-form--no-js');
+
+  for (var i = 0; i < peopleFilterToggle.length; i++) {
+    var index = i;
+    peopleFilterToggle[i].addEventListener('click', function() {
+      funcToggle(index);
+    });
+  }
+
+  function funcToggle(filter) {
+    var currentFilter = peopleFilter[filter];
+    currentFilter.classList.toggle('catalog-filter--hidden');
+  }
 }
