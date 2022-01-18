@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 
   @media (max-width: calc(@tablet-width - 1px)) {
     margin-bottom: 70px;
@@ -118,13 +119,14 @@
 }
 
 .user-menu__login {
-  min-width: 190px;
+  min-width: 188px;
   padding: 12px 20px 8px;
   align-self: flex-start;
 
   background-color: @basic-yellow;
 
   @media (min-width: @tablet-width) {
+    max-width: 310px;
     margin-left: auto;
     padding: 16px 32px 13px 30px;
   }

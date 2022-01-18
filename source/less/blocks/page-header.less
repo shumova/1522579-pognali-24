@@ -19,6 +19,7 @@
     grid-template-areas: ". . logo toggle user-menu . .";
     grid-template-columns: 1fr 5% 43% 4% 43% 5% 1fr;
     grid-template-rows: auto;
+    align-items: center;
 
     background-image: linear-gradient(to bottom, @special-dark 0 73px, transparent 73px 100%);
   }
@@ -31,6 +32,7 @@
     grid-template-areas: ". logo main-menu user-menu .";
     grid-template-columns: 5% 14% 1fr auto 5%;
     grid-template-rows: auto;
+    align-items: center;
 
     background-image: linear-gradient(to bottom, @basic-blue 0 136px, transparent 136px 100%);
   }
@@ -72,7 +74,8 @@
   }
 
   &:focus-visible {
-    outline-offset: 8px;
+    outline: none;
+    opacity: 0.6;
   }
 }
 
@@ -104,8 +107,8 @@
   }
 
   @media (min-width: @tablet-width) {
-    top: 15px;
     justify-self: center;
+    align-self: center;
   }
 
   @media (min-width: @desktop-width) {
@@ -135,13 +138,15 @@
   }
 
   @media (min-width: @desktop-width) {
+    position: realtive;
     top: 15px;
     left: 100px;
-    grid-area: main-menu;
-    align-self: start;
 
     display: flex;
+    grid-area: main-menu;
+    align-self: start;
     width: auto;
+    max-width: 570px;
     padding: 0;
     grid-template-columns: 1fr;
   }
@@ -256,12 +261,13 @@
 // стили при открытом меню
 
 .page-header--main-menu-open {
-  @media (max-width: calc(@desktop-width - 1px)) {
+  @media (max-width: calc(@tablet-width - 1px)) {
     min-width: 100%;
     background-image: linear-gradient(to bottom, @basic-white 73px, transparent 73px 100%);
   }
 
   @media (min-width: @tablet-width) and (max-width: calc(@desktop-width - 1px)) {
+    padding-bottom: 42px;
     background-image: linear-gradient(to bottom, @basic-white 130px, transparent 130px 100%);
   }
 }

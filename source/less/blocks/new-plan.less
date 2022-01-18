@@ -1,10 +1,17 @@
 .new-plan__container {
+  position: relative;
+
   @media (min-width: @tablet-width) {
     padding: 0 37px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
   }
 }
 
 .new-plan__title {
+  max-width: 170px;
   margin: 0;
   margin-bottom: 29px;
 
@@ -14,9 +21,55 @@
   color: @basic-blue-light;
 
   @media (min-width: @tablet-width) {
+    max-width: 460px;
     margin-bottom: 56px;
 
     font-size: 36px;
     line-height: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 900px;
+    padding-left: 69px;
+  }
+}
+
+.new-plan__indicator {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  grid-auto-flow: column;
+  column-gap: 16px;
+
+  @media (min-width: @tablet-width) {
+    top: 20px;
+    right: 40px;
+  }
+}
+
+.new-plan__indicator-step {
+  width: 5px;
+  height: 5px;
+
+  background-color: @basic-blue-light;
+  border-radius: 50%;
+  opacity: 0.3;
+
+  &--current {
+    opacity: 1;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 6px;
+    height: 6px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
   }
 }

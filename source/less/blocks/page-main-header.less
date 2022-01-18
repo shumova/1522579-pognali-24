@@ -143,6 +143,7 @@
 
 .page-main-header__index-link {
   display: none;
+  align-items: center;
 
   font-family: @general-font-family;
   font-size: 20px;
@@ -154,6 +155,7 @@
 
   @media (min-width: @tablet-width) {
     display: grid;
+    max-width: 500px;
     grid-template-columns: 1fr auto;
     column-gap: 28px;
 
@@ -161,9 +163,38 @@
       grid-column: 2 / 3;
 
       width: 32px;
-      height: 13px;
+      height: 16px;
 
       content: "";
+
+      background: transparent url("../img/icons/arrow-bend.svg") no-repeat center;
+      background-size: contain;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:focus:not(:focus-visible) {
+      opacity: 1;
+    }
+
+    &:focus:not(:focus-visible):hover {
+      opacity: 0.6;
+    }
+
+    &:focus:not(:focus-visible):active {
+      opacity: 0.3;
+    }
+
+    &:focus-visible {
+      opacity: 0.6;
+      outline: none;
+    }
+
+    &:active {
+      opacity: 0.3;
     }
   }
 }

@@ -13,6 +13,7 @@
 }
 
 .form-filter__title {
+  max-width: 155px;
   margin-bottom: 9px;
 
   font-size: 16px;
@@ -21,8 +22,10 @@
   letter-spacing: 1px;
   color: @basic-blue-light;
   text-transform: uppercase;
+  overflow-wrap: break-word;
 
   @media (min-width: @tablet-width) {
+    max-width: 390px;
     margin-bottom: 24px;
 
     font-size: 20px;
@@ -30,6 +33,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    max-width: 205px;
     margin-bottom: 0;
   }
 }
@@ -37,21 +41,31 @@
 .form-filter__note {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
+  max-width: 35px;
+  margin-bottom: 9px;
+  justify-self: end;
+
   font-size: 16px;
   line-height: 16px;
   font-weight: 500;
   letter-spacing: 0.7px;
   opacity: 0.3;
   text-transform: uppercase;
-  text-align: end;
+  text-align: right;
+  overflow-wrap: break-word;
 
   @media (min-width: @tablet-width) {
+    max-width: 125px;
+    margin-bottom: 24px;
     font-size: 20px;
     line-height: 20px;
   }
 
   @media (min-width: @desktop-width) {
+    max-width: 300px;
+    margin-bottom: 0;
     grid-column: 3 / 4;
+    justify-self: start;
     text-align: left;
     opacity: 1;
   }
@@ -75,10 +89,75 @@
     grid-column: 2 / 3;
     grid-template-columns: 60px 1fr 60px;
   }
+
+  &:hover {
+    border-color: #959bb2;
+  }
+
+  &:focus-within {
+    border-color: @basic-blue;
+  }
+}
+
+.form-filter__control {
+  &--less::before,
+  &--more::before {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    width: 14px;
+
+    content: "";
+    border-top: 2px solid #cccccc;
+  }
+
+  &--more::after {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    height: 14px;
+
+    content: "";
+    border-right: 2px solid #cccccc;
+  }
+
+  &:hover::before,
+  &:focus::before,
+  &:hover::after,
+  &:focus::after {
+    border-color: #999999;
+  }
+
+  &:focus:not(:focus-visible)::before,
+  &:focus:not(:focus-visible)::after {
+    border-color: #cccccc;
+  }
+
+  &:focus:not(:focus-visible):hover::before,
+  &:focus:not(:focus-visible):hover::after {
+    border-color: #999999;
+  }
+
+  &:focus:not(:focus-visible):active::before,
+  &:focus:not(:focus-visible):active::after {
+    border-color: #e5e5e5;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:focus-visible::before,
+  &:focus-visible::after {
+    border-color: #999999;
+  }
+
+  &:active::before,
+  &:active::after {
+    border-color: #e5e5e5;
+  }
 }
 
 .form-filter__field {
-  width: 136px;
+  width: 134px;
   padding: 16px 20px 13px;
 
   font-family: @general-font-family;
@@ -101,21 +180,29 @@
     width: 60px;
     padding: 26px 10px;
   }
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .form-filter__label {
   display: grid;
+  max-width: 220px;
   grid-template-columns: 26px 1fr;
   align-items: center;
+  justify-self: start;
   column-gap: 13px;
 
   font-size: 15px;
   line-height: 15px;
   font-weight: 400;
   color: @basic-blue-light;
+  cursor: pointer;
 
   &::before {
     grid-column: 1 / 2;
+    grid-row: 1 / 2;
     width: 26px;
     height: 26px;
     content: "";
@@ -125,11 +212,49 @@
   }
 
   @media (min-width: @tablet-width) {
+    max-width: 538px;
+
     font-size: 20px;
     line-height: 20px;
     font-weight: 500;
     letter-spacing: 0.2px;
     text-transform: uppercase;
+  }
+
+  &:hover::before {
+    border-color: #959bb2;
+  }
+
+  &:active::before {
+    background-color: @special-active-grey;
+    border-color: @special-active-grey;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 270px;
+  }
+}
+
+
+.form-filter__field--kids {
+  &:checked + .form-filter__label::after {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-image: url("../img/icons/check-mark.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 18px 17px;
+  }
+
+  &:checked + .form-filter__label:active::after {
+    opacity: 0.3;
+  }
+
+  &:focus + .form-filter__label::before {
+    border-color: #959bb2;
   }
 }
 

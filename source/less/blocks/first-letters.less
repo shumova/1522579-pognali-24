@@ -18,16 +18,21 @@
   font-weight: 500;
   color: @basic-blue-light;
   text-transform: uppercase;
+  overflow-wrap: break-word;
+  overflow: hidden;
 
   background-color: @basic-white;
   border: 1px solid @special-light-grey;
+
+  @media (max-width: calc(@tablet-width - 1px)) {
+    max-width: 43px;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
     font-weight: 700;
     color: @basic-blue-light;
-    opacity: 0.3;
 
     background-color: transparent;
     border: none;
@@ -35,6 +40,9 @@
 }
 
 .first-letters__item--form {
+  width: 20%;
+  max-width: 42px;
+
   font-size: 14px;
   line-height: 18px;
   font-weight: 500;
@@ -46,29 +54,6 @@
 
   @media (min-width: @desktop-width) {
     border-radius: 4px;
-  }
-}
-
-.first-letters__item--catalog-selected {
-  color: @basic-white;
-  background-color: @basic-blue-light;
-  border-color: @basic-blue-light;
-
-  @media (min-width: @tablet-width) {
-    color: @basic-blue-light;
-
-    background-color: transparent;
-    opacity: 1;
-  }
-}
-
-.first-letters__item--form-selected {
-  background-color: @basic-light-grey;
-
-  @media (min-width: @tablet-width) {
-    color: @basic-white;
-    background-color: @basic-blue-light;
-    border-color: @basic-blue-light;
   }
 }
 
@@ -92,23 +77,177 @@
 .first-letters__link--catalog {
   padding-top: 14px;
   padding-bottom: 14px;
+
+  &:hover,
+  &:focus {
+    color: @basic-blue-light;
+    background-color: @basic-white;
+    outline: 1px solid #959bb2;
+    outline-offset: -1px;
+  }
+
+  &:focus:not(:focus-visible) {
+    color: @basic-blue-light;
+    background-color: @basic-white;
+    outline: 1px solid @special-light-grey;
+    outline-offset: -1px;
+  }
+
+  &:focus:not(:focus-visible):hover {
+    color: @basic-blue-light;
+    background-color: @basic-white;
+    outline: 1px solid #959bb2;
+    outline-offset: -1px;
+  }
+
+  &:focus:not(:focus-visible):active {
+    color: @basic-white;
+    background-color: @basic-blue-light;
+    outline: 1px solid @basic-blue-light;
+    outline-offset: -1px;
+  }
+
+  &:focus-visible {
+    color: @basic-blue-light;
+    background-color: @basic-white;
+    outline: 1px solid #959bb2;
+    outline-offset: -1px;
+  }
+
+  &:active {
+    color: @basic-white;
+    background-color: @basic-blue-light;
+    outline: 1px solid @basic-blue-light;
+    outline-offset: -1px;
+  }
+
+  @media (min-width: @tablet-width) {
+    color: fade(@basic-blue-light, 30);
+
+    &:hover,
+    &:focus {
+      color: fade(@basic-blue-light, 60);
+      background-color: transparent;
+      outline: none;
+    }
+
+    &:focus:not(:focus-visible) {
+      color: fade(@basic-blue-light, 30);
+      background-color: transparent;
+      outline: none;
+    }
+
+    &:focus:not(:focus-visible):hover {
+      color: fade(@basic-blue-light, 60);
+      background-color: transparent;
+      outline: none;
+    }
+
+    &:focus:not(:focus-visible):active {
+      color: @basic-blue-light;
+      background-color: transparent;
+      outline: none;
+    }
+
+    &:focus-visible {
+      color: fade(@basic-blue-light, 60);
+      background-color: transparent;
+      outline: none;
+    }
+
+    &:active {
+      color: @basic-blue-light;
+      background-color: transparent;
+      outline: none;
+    }
+  }
+}
+
+.first-letters__link--catalog-selected {
+  color: @basic-white;
+  background-color: @basic-blue-light;
+  outline: 1px solid @basic-blue-light;
+  outline-offset: -1px;
+  pointer-events: none;
+
+  @media (min-width: @tablet-width) {
+    color: @basic-blue-light;
+
+    background-color: transparent;
+    outline: none;
+  }
 }
 
 .first-letters__link--form {
-  width: 43px;
+  width: 100%;
   padding-top: 12px;
   padding-bottom: 15px;
 
+  &:hover,
+  &:focus {
+    outline: 1px solid #959bb2;
+    outline-offset: 0;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus:not(:focus-visible):hover {
+    outline: 1px solid #959bb2;
+  }
+
+  &:focus:not(:focus-visible):active {
+    color: @basic-blue-light;
+    background-color: @basic-light-grey;
+    outline: 1px solid #959bb2;
+  }
+
+  &:focus-visible {
+    color: @basic-blue-light;
+    background-color: @basic-white;
+    outline: 1px solid #959bb2;
+  }
+
+  &:active {
+    color: @basic-blue-light;
+    background-color: @basic-light-grey;
+    outline: 1px solid #959bb2;
+  }
+
   @media (min-width: @tablet-width) {
-    width: 52px;
     padding-top: 27px;
     padding-bottom: 27px;
 
     font-size: 20px;
     line-height: 20px;
+
+    &:focus:not(:focus-visible):active {
+      color: @basic-white;
+      background-color: @basic-blue-light;
+      outline: 1px solid @basic-blue-light;
+    }
+
+    &:active {
+      color: @basic-white;
+      background-color: @basic-blue-light;
+      outline: 1px solid @basic-blue-light;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    width: 60px;
+    border-radius: 4px;
+  }
+}
+
+.first-letters__link--form-selected {
+  background-color: @basic-light-grey;
+  pointer-events: none;
+
+  @media (min-width: @tablet-width) {
+    color: @basic-white;
+    background-color: @basic-blue-light;
+    outline: 1px solid @basic-blue-light;
+    outline-offset: 0;
   }
 }

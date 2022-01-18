@@ -1,6 +1,7 @@
 .month-filter {
   display: grid;
   grid-template-columns: auto 1fr auto;
+  column-gap: 10px;
   align-items: center;
   justify-items: center;
 
@@ -22,6 +23,8 @@
   font-size: 20px;
   line-height: 20px;
   font-weight: 700;
+  text-align: center;
+
   color: @basic-blue-light;
 
   @media (min-width: @tablet-width) {
@@ -34,4 +37,48 @@
 
 .month-filter__month--selected {
   display: inline-block;
+}
+
+.month-filter__control {
+  opacity: 0.3;
+
+  .month-filter__control-img {
+    fill: @basic-black;
+
+    @media (min-width: @tablet-width) {
+      width: 30px;
+      height: 36px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 35px;
+      height: 30px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:focus:not(:focus-visible) {
+    opacity: 0.3;
+  }
+
+  &:focus:not(:focus-visible):hover {
+    opacity: 0.5;
+  }
+
+  &:focus:not(:focus-visible):active {
+    opacity: 0.1;
+  }
+
+  &:focus-visible {
+    opacity: 0.5;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }

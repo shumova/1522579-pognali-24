@@ -17,6 +17,8 @@
 }
 
 .countries-list__link {
+  max-width: 220px;
+
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
@@ -26,5 +28,31 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:focus:not(:focus-visible) {
+    opacity: 1;
+  }
+
+  &:focus:not(:focus-visible):hover {
+    opacity: 0.6;
+  }
+
+  &:focus:not(:focus-visible):active {
+    opacity: 0.3;
+  }
+
+  &:focus-visible {
+    opacity: 0.6;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

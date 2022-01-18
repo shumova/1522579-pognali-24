@@ -1,7 +1,124 @@
 .favourite {
-  background-color: @special-medium-grey;
+  padding: 0;
+  background-color: @basic-light-grey;
+
+  .favourite__img {
+    stroke: fade(@basic-dark, 30);
+    fill: transparent;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: @special-medium-grey;
+
+    .favourite__img {
+      stroke: @basic-dark;
+    }
+  }
+
+  &:focus:not(:focus-visible) {
+    background-color: @basic-light-grey;
+
+    .favourite__img {
+      stroke: fade(@basic-dark, 30);
+    }
+  }
+
+  &:focus:not(:focus-visible):hover {
+    background-color: @special-medium-grey;
+
+    .favourite__img {
+      stroke: @basic-dark;
+    }
+  }
+
+  &:focus:not(:focus-visible):active {
+    background-color: @special-medium-grey;
+
+    .favourite__img {
+      stroke: fade(@basic-dark, 10);
+    }
+  }
+
+  &:focus-visible {
+    background-color: @special-medium-grey;
+    outline: none;
+
+    .favourite__img {
+      stroke: @basic-dark;
+    }
+  }
+
+  &:active {
+    background-color: @special-medium-grey;
+
+    .favourite__img {
+      stroke: fade(@basic-dark, 10);
+    }
+  }
 }
 
 .favourite--selected {
   background-color: @light-pink;
+
+  .favourite__img {
+    stroke: transparent;
+    fill: #f02323;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: @special-pink;
+
+    .favourite__img {
+      stroke: transparent;
+      fill: #f02323;
+    }
+  }
+
+  &:focus:not(:focus-visible) {
+    background-color: @light-pink;
+
+    .favourite__img {
+      stroke: transparent;
+      fill: #f02323;
+    }
+  }
+
+  &:focus:not(:focus-visible):hover {
+    background-color: @special-pink;
+
+    .favourite__img {
+      stroke: transparent;
+      fill: #f02323;
+    }
+  }
+
+  &:focus:not(:focus-visible):active {
+    background-color: @special-pink;
+
+    .favourite__img {
+      stroke: transparent;
+      fill: fade(#f02323, 30);
+    }
+  }
+
+  &:focus-visible {
+    background-color: @special-pink;
+    outline: none;
+
+    .favourite__img {
+      stroke: transparent;
+      fill: #f02323;
+    }
+  }
+
+  &:active .favourite__img {
+    background-color: @special-pink;
+
+    .favourite__img {
+      stroke: transparent;
+      fill: fade(#f02323, 30);
+    }
+  }
 }

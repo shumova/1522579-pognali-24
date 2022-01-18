@@ -41,11 +41,17 @@
       <ul class="main-menu__contacts contacts contacts--main-menu">
         <li class="contacts__item">
           <a class="contacts__link" href="tel:+78005558628">
+            <svg class="contacts__icon" width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+              <path d="M9.5 1.09c-2.8 0-5.6.47-6.62 1.41-.84.78-1.12 2.16-1.22 3.04l-.01.12c0 .34.3.62.65.62l2.57-.2h.07c.35-.02.64-.29.64-.63V4.24c0-.38.32-.68.72-.68h6.4c.4 0 .72.3.72.68v1.21c0 .34.29.61.64.62l.07.01 2.57.2c.36 0 .65-.28.65-.62l-.01-.12c-.1-.88-.38-2.26-1.22-3.04C15.1 1.56 12.3 1.1 9.5 1.1zm0 8.03c-.72 0-1.3.55-1.3 1.23 0 .69.58 1.24 1.3 1.24.72 0 1.3-.55 1.3-1.24 0-.68-.58-1.23-1.3-1.23zm-.98-2.78v-.77a.8.8 0 00-.82-.78.8.8 0 00-.82.78v.77l-4.4 4.45c-.31.28-.5.67-.5 1.1v1.24c0 .69.58 1.24 1.3 1.24h.33v.77c0 .43.37.77.82.77a.8.8 0 00.82-.77v-.77h8.5v.77c0 .43.37.77.82.77a.8.8 0 00.82-.77v-.77h.32c.73 0 1.31-.55 1.31-1.24V11.9c0-.43-.19-.82-.5-1.1l-4.4-4.45v-.77c0-.43-.37-.78-.82-.78a.8.8 0 00-.82.78v.77H8.52zm.98 1.54c1.45 0 2.62 1.1 2.62 2.47a2.55 2.55 0 01-2.62 2.47 2.55 2.55 0 01-2.62-2.47A2.55 2.55 0 019.5 7.88z"/>
+            </svg>
             <span class="contacts__text">8 800 555-86-28</span>
           </a>
         </li>
         <li class="contacts__item">
           <a class="contacts__link" href="mailto:mail@htmlacademy.ru">
+            <svg class="contacts__icon" width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M19.14 16.47L14.8 12.5l4.33-3.97-.6-.63-6.29 5.77-6.3-5.77-.59.63L9.7 12.5l-4.33 3.97.6.63 4.37-4.01 1.92 1.75 1.92-1.75 4.38 4 .59-.62zM4.58 6.25c-.81 0-1.47.7-1.47 1.56v9.38c0 .86.65 1.56 1.47 1.56h15.34c.81 0 1.47-.7 1.47-1.56V7.81c0-.86-.65-1.56-1.47-1.56H4.58z"/>
+            </svg>
             <span class="contacts__text">mail@htmlacademy.ru</span>
           </a>
         </li>
@@ -128,8 +134,8 @@
           <table class="countries__first-letters countries__first-letters--catalog first-letters first-letters--catalog">
             <tbody>
               <tr class="first-letters__row first-letters__row--catalog first-letters__row first-letters__row--catalog--catalog">
-                <td class="first-letters__item first-letters__item--catalog first-letters__item--catalog-selected">
-                  <a class="first-letters__link first-letters__link--catalog" href="#">А</a>
+                <td class="first-letters__item first-letters__item--catalog">
+                  <a class="first-letters__link first-letters__link--catalog first-letters__link--catalog-selected" href="#">А</a>
                 </td>
                 <td class="first-letters__item first-letters__item--catalog">
                   <a class="first-letters__link first-letters__link--catalog" href="#">Б</a>
@@ -754,7 +760,9 @@
             </li>
           </ul>
         </div>
-        <button class="country-filter__hide-countries button" type="button">Свернуть</button>
+        <button class="country-filter__hide-countries button" type="button">
+          <span class="country-filter__hide-countries-text">Свернуть</span>
+        </button>
       </div>
     </section>
     <section class="page-main__users-catalog users-catalog">
@@ -768,22 +776,23 @@
           <fieldset class="catalog-form__filter catalog-filter catalog-filter--hidden">
             <legend class="visually-hidden">Хобби.</legend>
             <div class="catalog-filter__inner-layout">
-              <button class="catalog-filter__title button" type="button">
-                <span class="visually-hidden">Показать варианты хобби.</span>
+              <!-- при работающем js значение tabindex меняется на "0" -->
+              <button class="catalog-filter__title button" type="button" tabindex="-1">
+                <span class="visually-hidden">Показать варианты</span>
                 Хобби<span class="catalog-filter__title-colon">:</span>
               </button>
               <div class="catalog-filter__content">
                 <div class="catalog-filter__field-wrapper">
-                  <label class="catalog-filter__label" for="sport">Спортзал</label>
                   <input class="catalog-filter__field visually-hidden" type="checkbox" name="sport" id="sport" checked>
+                  <label class="catalog-filter__label" for="sport">Спортзал</label>
                 </div>
                 <div class="catalog-filter__field-wrapper">
-                  <label class="catalog-filter__label" for="hookah">Кальян</label>
                   <input class="catalog-filter__field visually-hidden" type="checkbox" name="hookah" id="hookah">
+                  <label class="catalog-filter__label" for="hookah">Кальян</label>
                 </div>
                 <div class="catalog-filter__field-wrapper">
-                  <label class="catalog-filter__label" for="sofa">Диван</label>
                   <input class="catalog-filter__field visually-hidden" type="checkbox" name="sofa" id="sofa">
+                  <label class="catalog-filter__label" for="sofa">Диван</label>
                 </div>
               </div>
             </div>
@@ -791,22 +800,23 @@
           <fieldset class="catalog-form__filter catalog-filter">
             <legend class="visually-hidden">Музыка.</legend>
             <div class="catalog-filter__inner-layout">
-              <button class="catalog-filter__title button" type="button">
-                <span class="visually-hidden">Показать жанры музыки.</span>
+              <!-- при работающем js значение tabindex меняется на "0" -->
+              <button class="catalog-filter__title button" type="button" tabindex="-1">
+                <span class="visually-hidden">Показать, какая нравится</span>
                 Музыка<span class="catalog-filter__title-colon">:</span>
               </button>
               <div class="catalog-filter__content">
                 <div class="catalog-filter__field-wrapper">
-                  <label class="catalog-filter__label" for="rock">Тяжелый рок</label>
                   <input class="catalog-filter__field visually-hidden" type="checkbox" name="rock" id="rock" checked>
+                  <label class="catalog-filter__label" for="rock">Тяжелый рок</label>
                 </div>
                 <div class="catalog-filter__field-wrapper">
-                  <label class="catalog-filter__label" for="rap">Русский рэп</label>
                   <input class="catalog-filter__field visually-hidden" type="checkbox" name="rap" id="rap">
+                  <label class="catalog-filter__label" for="rap">Русский рэп</label>
                 </div>
                 <div class="catalog-filter__field-wrapper">
-                  <label class="catalog-filter__label" for="eurodance">Евроденс</label>
                   <input class="catalog-filter__field visually-hidden" type="checkbox" name="eurodance" id="eurodance">
+                  <label class="catalog-filter__label" for="eurodance">Евроденс</label>
                 </div>
               </div>
             </div>
@@ -814,22 +824,23 @@
           <fieldset class="catalog-form__filter catalog-filter catalog-filter--hidden">
             <legend class="visually-hidden">Еда.</legend>
             <div class="catalog-filter__inner-layout">
-              <button class="catalog-filter__title button" type="button">
-                <span class="visually-hidden">Показать предпочтения в еде.</span>
+              <!-- при работающем js значение tabindex меняется на "0" -->
+              <button class="catalog-filter__title button" type="button" tabindex="-1">
+                <span class="visually-hidden">Показать, какая предпочтительна</span>
                 Еда<span class="catalog-filter__title-colon">:</span>
               </button>
               <div class="catalog-filter__content">
                 <div class="catalog-filter__field-wrapper">
-                  <label class="catalog-filter__label" for="meat">Мясоед</label>
                   <input class="catalog-filter__field visually-hidden" type="checkbox" name="meat" id="meat" checked>
+                  <label class="catalog-filter__label" for="meat">Мясоед</label>
                 </div>
                 <div class="catalog-filter__field-wrapper">
-                  <label class="catalog-filter__label" for="healthy">Сидит на ПП</label>
                   <input class="catalog-filter__field visually-hidden" type="checkbox" name="healthy" id="healthy">
+                  <label class="catalog-filter__label" for="healthy">Сидит на ПП</label>
                 </div>
                 <div class="catalog-filter__field-wrapper">
-                  <label class="catalog-filter__label" for="raw">Веган-сыроед</label>
                   <input class="catalog-filter__field visually-hidden" type="checkbox" name="raw" id="raw">
+                  <label class="catalog-filter__label" for="raw">Веган-сыроед</label>
                 </div>
               </div>
             </div>
@@ -837,60 +848,47 @@
           <fieldset class="catalog-form__filter catalog-filter">
             <legend class="visually-hidden">Транспорт.</legend>
             <div class="catalog-filter__inner-layout">
-              <button class="catalog-filter__title button" type="button">
-                <span class="visually-hidden">Показать предпочтительные виды транспорта.</span>
+              <button class="catalog-filter__title button" type="button" tabindex="-1">
+                <span class="visually-hidden">Показать, какой подходит</span>
                 Транспорт<span class="catalog-filter__title-colon">:</span>
               </button>
               <div class="catalog-filter__content prefer-transport">
                 <ul class="prefer-transport__list prefer-transport__list--catalog">
-                  <li class="prefer-transport__item prefer-transport__item--catalog">
-                    <button class="prefer-transport__button prefer-transport__button--catalog prefer-transport__button--on" type="button">
+                  <li class="prefer-transport__item prefer-transport__item--button">
+                    <button class="prefer-transport__button button" type="button">
                       <span class="prefer-transport__name visually-hidden">Cамолёт.</span>
-                      <svg class="prefer-transport__img" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <svg class="prefer-transport__img" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                         <!-- <use xlink:href="img/sprite.svg#airplane"></use> -->
-                        <g clip-path="url(#clip0_58_80)">
-                          <path d="M16.78 2.1c-.73.17-1.46.34-1.73.82l-2.1 4.2L1.62 9.8l-.46 1.34 8.66.82-1.47 3.63-3.28.78-.83 1.43 2.37.26.27 1.17c.12.41.55.69.9.6l1.1-.26 1.27 2.16.83-1.43-.81-3.5 2.37-3.03 4.54 7.96.91-1.04-2.79-12.07 2.57-3.9c.27-.47.1-1.25-.09-2.03-.09-.39-.54-.7-.9-.6z"/>
-                        </g>
-                        <defs>
-                          <clipPath id="clip0_58_80">
-                            <path fill="#fff" transform="translate(0 .96)" d="M0 0h20.83v21.12H0z"/>
-                          </clipPath>
-                        </defs>
+                        <path d="M13.75.86c-.58.13-1.17.26-1.39.62l-1.7 3.18L1.59 6.7l-.37 1.02 6.96.62-1.18 2.75-2.64.6-.66 1.08 1.9.19.22.89c.1.3.44.52.73.45l.88-.2 1.01 1.64.67-1.08-.65-2.65 1.9-2.3L14 15.74l.73-.78L12.5 5.8l2.06-2.95c.22-.36.08-.95-.07-1.54-.07-.3-.44-.53-.73-.46z"/>
                       </svg>
                     </button>
                   </li>
-                  <li class="prefer-transport__item prefer-transport__item--catalog">
-                    <button class="prefer-transport__button prefer-transport__button--catalog prefer-transport__button--on" type="button">
+                  <li class="prefer-transport__item prefer-transport__item--button">
+                    <!-- при работающем js значение tabindex меняется на "0" -->
+                    <button class="prefer-transport__button button" type="button" tabindex="-1">
                       <span class="prefer-transport__name visually-hidden">Общественный транспорт.</span>
-                      <svg class="prefer-transport__img" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <svg class="prefer-transport__img" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                         <!-- <use xlink:href="img/sprite.svg#public-transport"></use> -->
-                        <g clip-path="url(#clip0_13537_974)">
-                          <path d="M4.34 13.95c0-.38-.14-.7-.42-.97a1.4 1.4 0 00-1-.4c-.4 0-.73.13-1 .4-.28.27-.42.59-.42.97s.14.7.42.97c.27.27.6.4 1 .4s.73-.13 1-.4c.28-.27.42-.6.42-.97zm11.36 0c0-.38-.14-.7-.42-.97a1.4 1.4 0 00-1-.4c-.4 0-.73.13-1 .4-.28.27-.42.59-.42.97s.14.7.41.97c.28.27.61.4 1 .4.4 0 .73-.13 1.01-.4s.42-.6.42-.97zm-.51-4.24l-.8-4.12a.7.7 0 00-.25-.4.7.7 0 00-.45-.16H3.5a.7.7 0 00-.45.16.7.7 0 00-.25.4l-.8 4.12c-.04.21.02.4.16.56.14.17.32.25.54.25h11.78c.22 0 .4-.08.54-.25.14-.16.2-.35.16-.56zm-2.51-6.56a.49.49 0 00-.16-.37.52.52 0 00-.37-.15h-7.1a.52.52 0 00-.38.15c-.1.1-.15.23-.15.37 0 .14.05.26.15.36.1.1.23.15.38.15h7.1c.14 0 .27-.05.37-.15.1-.1.16-.22.16-.36zm4.43 7.77v6.46H15.7v1.37c0 .38-.14.7-.42.97-.28.27-.61.4-1 .4-.4 0-.73-.13-1-.4a1.3 1.3 0 01-.42-.97v-1.37H4.34v1.37c0 .38-.14.7-.42.97-.27.27-.6.4-1 .4s-.73-.13-1-.4a1.3 1.3 0 01-.42-.97v-1.37H.08v-6.46c0-.8.1-1.6.28-2.4L1.5 3.67c.07-.55.43-1.04 1.08-1.47.66-.42 1.5-.73 2.55-.95A17.3 17.3 0 018.6.92c1.26 0 2.42.1 3.46.32 1.05.22 1.9.53 2.55.95.66.43 1.02.92 1.09 1.47l1.16 4.87c.17.73.25 1.52.25 2.39z"/>
-                        </g>
-                        <defs>
-                          <clipPath id="clip0_13537_974">
-                            <path fill="#fff" transform="translate(.08 .92)" d="M0 0h17.04v19.2H0z"/>
-                          </clipPath>
-                        </defs>
+                        <path d="M4.46 10.86c0-.32-.14-.59-.41-.81a1.5 1.5 0 00-.99-.34c-.38 0-.71.12-.98.34-.28.22-.41.5-.41.8 0 .32.13.6.4.82.28.22.6.33 1 .33.38 0 .7-.11.98-.33.27-.23.4-.5.4-.81zm11.14 0c0-.32-.13-.59-.4-.81a1.5 1.5 0 00-1-.34c-.38 0-.7.12-.98.34-.27.22-.4.5-.4.8 0 .32.13.6.4.82.28.22.6.33.99.33.38 0 .71-.11.98-.33.28-.23.41-.5.41-.81zm-.5-3.54l-.78-3.43a.58.58 0 00-.25-.33.77.77 0 00-.44-.13h-10a.77.77 0 00-.43.13c-.13.08-.21.2-.25.33l-.78 3.43a.5.5 0 00.15.47c.14.14.32.21.54.21h11.56c.21 0 .4-.07.53-.2a.5.5 0 00.15-.48zm-2.46-5.46a.38.38 0 00-.15-.3.56.56 0 00-.37-.13H5.15a.56.56 0 00-.37.12.38.38 0 00-.15.3c0 .13.05.23.15.31.1.08.23.13.37.13h6.97c.14 0 .27-.05.37-.13.1-.08.15-.18.15-.3zM17 8.33v5.38h-1.4v1.15c0 .31-.13.58-.4.8-.28.23-.6.34-1 .34a1.5 1.5 0 01-.98-.33c-.27-.23-.4-.5-.4-.81V13.7H4.46v1.15c0 .31-.14.58-.41.8-.27.23-.6.34-.99.34a1.5 1.5 0 01-.98-.33c-.28-.23-.41-.5-.41-.81V13.7H.27V8.33c0-.67.1-1.33.28-2L1.67 2.3c.06-.47.42-.88 1.06-1.23a8.18 8.18 0 012.5-.8C6.26.1 7.4 0 8.63 0c1.25 0 2.38.09 3.4.27 1.03.18 1.87.44 2.51.8.64.34 1 .75 1.06 1.22l1.15 4.05c.16.6.25 1.27.25 1.99z"/>
                       </svg>
                     </button>
                   </li>
-                  <li class="prefer-transport__item prefer-transport__item--catalog">
-                    <button class="prefer-transport__button prefer-transport__button--catalog prefer-transport__button--off" type="button">
+                  <li class="prefer-transport__item prefer-transport__item--button">
+                    <button class="prefer-transport__button prefer-transport__button--off button" type="button">
                       <span class="prefer-transport__name visually-hidden">Велосипед.</span>
-                      <svg class="prefer-transport__img" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <svg class="prefer-transport__img" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                         <!-- <use xlink:href="img/sprite.svg#bicycle"></use> -->
-                        <path d="M18.3 21a4.21 4.21 0 01-3.92-2.66 4.37 4.37 0 01.92-4.7 4.23 4.23 0 017.26 3.05c0 1.14-.45 2.24-1.25 3.05-.8.8-1.88 1.26-3 1.26zm0-7.13a2.75 2.75 0 00-2.55 1.74 2.85 2.85 0 00.6 3.07 2.76 2.76 0 004.73-2c0-.74-.3-1.45-.81-1.98a2.76 2.76 0 00-1.96-.82zM6.1 21a4.21 4.21 0 01-3.92-2.66 4.37 4.37 0 01.92-4.7 4.23 4.23 0 017.26 3.05c0 1.14-.45 2.24-1.25 3.05-.8.8-1.88 1.26-3 1.26zm0-7.13a2.75 2.75 0 00-2.56 1.74 2.85 2.85 0 00.6 3.07 2.76 2.76 0 004.74-2c0-.74-.3-1.45-.82-1.98a2.76 2.76 0 00-1.96-.82zM15.16 6a1.46 1.46 0 001.37-.93c.08-.18.11-.38.11-.57a1.5 1.5 0 00-.9-1.39 1.46 1.46 0 00-1.93.81 1.52 1.52 0 00.79 1.96c.18.08.37.12.56.12z"/>
-                        <path d="M17.36 9h-2.02a.18.18 0 01-.16-.1L13.7 6.18a1.45 1.45 0 00-1.05-.77 1.41 1.41 0 00-1.23.4L8.2 9.11c-.27.28-.43.66-.43 1.05 0 .82.58 1.1.85 1.27a146.31 146.31 0 012.82 1.72.2.2 0 01.03.09v3.24c0 .4.3.75.7.77a.73.73 0 00.72-.45c.04-.1.06-.2.06-.3v-4.03a.76.76 0 00-.31-.61l-1.71-1.25a.19.19 0 01-.08-.13.19.19 0 01.05-.15l1.94-2.1a.18.18 0 01.24-.03l.06.07 1 1.84a.74.74 0 00.65.39h2.6a.73.73 0 00.53-.23.75.75 0 00-.56-1.27z"/>
+                        <path d="M12.95 14a3.1 3.1 0 01-1.67-.48 2.9 2.9 0 01-1.1-1.3 2.76 2.76 0 01.64-3.13 3.13 3.13 0 013.28-.62c.55.22 1.02.58 1.35 1.06a2.79 2.79 0 01-.38 3.63c-.56.54-1.32.84-2.12.84zm0-4.75c-.39 0-.77.11-1.09.32-.32.2-.57.5-.72.84a1.8 1.8 0 00.42 2.04 2.04 2.04 0 002.14.4c.36-.13.66-.38.88-.68a1.82 1.82 0 00-.25-2.37 2 2 0 00-1.38-.55zM4.32 14a3.1 3.1 0 01-1.67-.48 2.9 2.9 0 01-1.1-1.3A2.76 2.76 0 012.2 9.1a3.13 3.13 0 013.28-.62c.54.22 1.01.58 1.34 1.06a2.79 2.79 0 01-.37 3.63c-.57.54-1.33.84-2.13.84zm0-4.75c-.38 0-.76.11-1.09.32-.32.2-.57.5-.72.84a1.8 1.8 0 00.43 2.04 2.04 2.04 0 002.14.4c.35-.13.66-.38.87-.68a1.82 1.82 0 00-.24-2.37 2 2 0 00-1.39-.55zM10.73 4a1.08 1.08 0 00.74-.3 1 1 0 00.3-.7.95.95 0 00-.3-.71 1.03 1.03 0 00-.74-.29 1.09 1.09 0 00-.74.3 1 1 0 00-.3.7.96.96 0 00.3.7 1.05 1.05 0 00.74.3z"/>
+                        <path d="M12.28 6h-1.43c-.02 0-.05 0-.07-.02a.13.13 0 01-.04-.04L9.7 4.12a.98.98 0 00-.3-.34 1.04 1.04 0 00-1.31.1L5.8 6.08a1 1 0 00-.3.7c0 .54.41.73.6.84a105.12 105.12 0 012 1.14l.01.07v2.16c0 .26.22.5.5.5a.54.54 0 00.39-.13.5.5 0 00.16-.36V8.31a.48.48 0 00-.06-.23.5.5 0 00-.16-.17l-1.2-.84A.13.13 0 017.67 7a.12.12 0 01.03-.1l1.38-1.4a.13.13 0 01.1-.04c.03 0 .05 0 .06.02l.05.04.7 1.23c.05.08.12.15.2.2.08.04.17.06.27.06h1.83a.54.54 0 00.37-.15.5.5 0 00.15-.37c-.02-.27-.26-.48-.54-.48z"/>
                       </svg>
                     </button>
                   </li>
-                  <li class="prefer-transport__item prefer-transport__item--catalog">
-                    <button class="prefer-transport__button prefer-transport__button--catalog prefer-transport__button--on" type="button">
+                  <li class="prefer-transport__item prefer-transport__item--button">
+                    <button class="prefer-transport__button button" type="button">
                       <span class="prefer-transport__name visually-hidden">Пеший туризм.</span>
-                      <svg class="prefer-transport__img" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <svg class="prefer-transport__img" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                         <!-- <use xlink:href="img/sprite.svg#hiking"></use> -->
-                        <path d="M14.98 5.76c.95 0 1.72-.86 1.72-1.92s-.77-1.92-1.72-1.92-1.73.86-1.73 1.92.78 1.92 1.73 1.92zM13.92 10.53c.2.33.48.58.81.72.34.15.7.17 1.04.08l2.86-.8-.42-1.86-2.85.8-1.2-1.99a1.73 1.73 0 00-1.09-.82l-3.3-.74a1.56 1.56 0 00-1.1.16c-.34.18-.61.49-.78.87l-1.43 3.18 1.54.86L9.43 7.8l1.69.38-4.38 8.14H2.93v1.92h3.81c.6 0 1.17-.36 1.48-.93l1.65-3.07 4.45 1 1.56 5.22 1.63-.6-1.56-5.23c-.1-.33-.27-.61-.5-.84-.22-.22-.5-.37-.8-.44l-2.61-.58 1.52-2.84.36.6z"/>
+                        <path d="M12.12 4c.77 0 1.4-.6 1.4-1.33 0-.74-.63-1.34-1.4-1.34-.77 0-1.4.6-1.4 1.34 0 .73.63 1.33 1.4 1.33zM11.27 7.31a1.46 1.46 0 001.5.55l2.3-.55-.33-1.29-2.31.55-.96-1.38c-.2-.29-.53-.5-.89-.56L7.9 4.1c-.3-.06-.61-.02-.88.11-.28.13-.5.34-.64.6L5.23 7.03l1.24.6 1.16-2.21L9 5.68l-3.55 5.65H2.36v1.34h3.1c.48 0 .94-.25 1.19-.65l1.34-2.13 3.6.69 1.26 3.63 1.33-.42-1.27-3.63a1.34 1.34 0 00-.4-.58c-.18-.16-.4-.26-.65-.31l-2.12-.4 1.24-1.97.29.41z"/>
                       </svg>
                     </button>
                   </li>
@@ -901,8 +899,9 @@
           <fieldset class="catalog-form__filter catalog-filter">
             <legend class="visually-hidden">Левел.</legend>
             <div class="catalog-filter__inner-layout">
-              <button class="catalog-filter__title button" type="button">
-                <span class="visually-hidden">Показать поле настройки левела.</span>
+              <!-- при работающем js значение tabindex меняется на "0" -->
+              <button class="catalog-filter__title button" type="button" tabindex="-1">
+                <span class="visually-hidden">Показать</span>
                 Левел<span class="catalog-filter__title-colon">:</span>
               </button>
               <div class="catalog-filter__content">
@@ -917,14 +916,14 @@
                   </div>
                 </div>
                 <div class="catalog-filter__range-fields-wrapper">
-                  <label class="catalog-filter__range-label catalog-filter__range-label--min-level" for="min-level">
+                  <label class="catalog-filter__range-label catalog-filter__range-label--min-level visually-hidden" for="min-level">
                     <span class="visually-hidden">от</span>
-                    <input class="catalog-filter__range-field" type="number" name="min-level" id="min-level" value="30">
                   </label>
-                  <label class="catalog-filter__range-label catalog-filter__range-label--max-level" for="max-level">
+                  <input class="catalog-filter__range-field" type="number" name="min-level" id="min-level" value="30">
+                  <label class="catalog-filter__range-label catalog-filter__range-label--max-level visually-hidden" for="max-level">
                     <span class="visually-hidden">до</span>
-                    <input class="catalog-filter__range-field" type="number" name="max-level" id="max-level" value="100">
                   </label>
+                  <input class="catalog-filter__range-field" type="number" name="max-level" id="max-level" value="100">
                 </div>
               </div>
             </div>
@@ -947,8 +946,9 @@
           <button class="user-card__favourite user-card__favourite--catalog favourite favourite--selected button button--iconic" type="button">
             <span class="favourite__add visually-hidden">Добавить в избранные.</span>
             <span class="favourite__delete visually-hidden">Удалить из избранных.</span>
-            <svg class="favourite__img" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-              <use xlink:href="img/sprite.svg#favourite"></use>
+            <svg class="favourite__img" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+              <!-- <use xlink:href="img/sprite.svg#favourite"></use> -->
+              <path d="M3.26 1.47c1.69 0 3.06 1.35 3.06 3.01a3.04 3.04 0 013.06-3c1.7 0 3.07 1.34 3.07 3 0 2.5-2.48 3.4-5.83 7.38a.4.4 0 01-.6 0C2.67 7.87.19 7 .19 4.48a3.04 3.04 0 013.07-3z"/>
             </svg>
           </button>
           <p class="user-card__likes">1,5 м</p>
@@ -960,9 +960,10 @@
           </a>
           <div class="user-card__level user-card__level--catalog level level--catalog">
             <p class="level__title level__title--catalog">левел:</p>
-            <div class="level__value">
+            <div class="level__value level__value--catalog">
               <span class="level__number level__number--catalog">99</span>
               <span class="level__text level__text--catalog">level</span>
+              <canvas class="level__rate-line level__rate-line--catalog" width="45" height="45" data-rate="99"></canvas>
             </div>
           </div>
           <div class="user-card__tags user-card__tags--catalog">
@@ -980,23 +981,14 @@
             <p class="prefer-countries__title prefer-countries__title--catalog">Хочет посетить:</p>
             <p class="prefer-countries__subtitle visually-hidden">Cтраны, в которые вы можете отправиться вместе.</p>
             <ul class="prefer-countries__list prefer-countries__list--catalog">
-              <li class="prefer-countries__item prefer-countries__item--catalog">
+              <li class="prefer-countries__item prefer-countries__item--sri-lanka prefer-countries__item--catalog">
                 <p class="prefer-countries__country-name prefer-countries__country-name--catalog">Шри-Ланка</p>
-                <svg class="prefer-countries__img" width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                  <use xlink:href="img/sprite.svg#sri-lanka"></use>
-                </svg>
               </li>
-              <li class="prefer-countries__item prefer-countries__item--catalog">
+              <li class="prefer-countries__item prefer-countries__item--thailand prefer-countries__item--catalog">
                 <p class="prefer-countries__country-name prefer-countries__country-name--catalog">Таиланд</p>
-                <svg class="prefer-countries__img" width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                  <use xlink:href="img/sprite.svg#thailand"></use>
-                </svg>
               </li>
-              <li class="prefer-countries__item prefer-countries__item--catalog">
+              <li class="prefer-countries__item prefer-countries__item--seychelles prefer-countries__item--catalog">
                 <p class="prefer-countries__country-name prefer-countries__country-name--catalog">Сейшелы</p>
-                <svg class="prefer-countries__img" width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                  <use xlink:href="img/sprite.svg#seychelles"></use>
-                </svg>
               </li>
             </ul>
           </div>
@@ -1004,36 +996,33 @@
             <p class="prefer-transport__title prefer-transport__title--catalog">Транспорт:</p>
             <p class="visually-hidden">Для путешествия подойдут следующие виды транспорта.</p>
             <ul class="prefer-transport__list prefer-transport__list--vertical prefer-transport__list--catalog">
-              <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog--active">
+              <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog--active" data-transport="Авиаперелет">
                 <span class="prefer-transport__name visually-hidden">Самолёт.</span>
-                <svg class="prefer-transport__img" width="14" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <svg class="prefer-transport__img" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                   <!-- <use xlink:href="img/sprite.svg#airplane"></use> -->
-                  <path d="M16.78 2.1c-.73.17-1.46.34-1.73.82l-2.1 4.2L1.62 9.8l-.46 1.34 8.66.82-1.47 3.63-3.28.78-.83 1.43 2.37.26.27 1.17c.12.41.55.69.9.6l1.1-.26 1.27 2.16.83-1.43-.81-3.5 2.37-3.03 4.54 7.96.91-1.04-2.79-12.07 2.57-3.9c.27-.47.1-1.25-.09-2.03-.09-.39-.54-.7-.9-.6z"/>
+                  <path d="M13.75.86c-.58.13-1.17.26-1.39.62l-1.7 3.18L1.59 6.7l-.37 1.02 6.96.62-1.18 2.75-2.64.6-.66 1.08 1.9.19.22.89c.1.3.44.52.73.45l.88-.2 1.01 1.64.67-1.08-.65-2.65 1.9-2.3L14 15.74l.73-.78L12.5 5.8l2.06-2.95c.22-.36.08-.95-.07-1.54-.07-.3-.44-.53-.73-.46z"/>
                 </svg>
               </li>
-              <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog--disabled">
+              <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog--disabled" data-transport="Автотранспорт">
                 <span class="prefer-transport__name visually-hidden">Общественный транспорт.</span>
-                <svg class="prefer-transport__img" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <svg class="prefer-transport__img" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                   <!-- <use xlink:href="img/sprite.svg#public-transport"></use> -->
-                  <g clip-path="url(#clip0_13537_974)">
-                    <path d="M4.34 13.95c0-.38-.14-.7-.42-.97a1.4 1.4 0 00-1-.4c-.4 0-.73.13-1 .4-.28.27-.42.59-.42.97s.14.7.42.97c.27.27.6.4 1 .4s.73-.13 1-.4c.28-.27.42-.6.42-.97zm11.36 0c0-.38-.14-.7-.42-.97a1.4 1.4 0 00-1-.4c-.4 0-.73.13-1 .4-.28.27-.42.59-.42.97s.14.7.41.97c.28.27.61.4 1 .4.4 0 .73-.13 1.01-.4s.42-.6.42-.97zm-.51-4.24l-.8-4.12a.7.7 0 00-.25-.4.7.7 0 00-.45-.16H3.5a.7.7 0 00-.45.16.7.7 0 00-.25.4l-.8 4.12c-.04.21.02.4.16.56.14.17.32.25.54.25h11.78c.22 0 .4-.08.54-.25.14-.16.2-.35.16-.56zm-2.51-6.56a.49.49 0 00-.16-.37.52.52 0 00-.37-.15h-7.1a.52.52 0 00-.38.15c-.1.1-.15.23-.15.37 0 .14.05.26.15.36.1.1.23.15.38.15h7.1c.14 0 .27-.05.37-.15.1-.1.16-.22.16-.36zm4.43 7.77v6.46H15.7v1.37c0 .38-.14.7-.42.97-.28.27-.61.4-1 .4-.4 0-.73-.13-1-.4a1.3 1.3 0 01-.42-.97v-1.37H4.34v1.37c0 .38-.14.7-.42.97-.27.27-.6.4-1 .4s-.73-.13-1-.4a1.3 1.3 0 01-.42-.97v-1.37H.08v-6.46c0-.8.1-1.6.28-2.4L1.5 3.67c.07-.55.43-1.04 1.08-1.47.66-.42 1.5-.73 2.55-.95A17.3 17.3 0 018.6.92c1.26 0 2.42.1 3.46.32 1.05.22 1.9.53 2.55.95.66.43 1.02.92 1.09 1.47l1.16 4.87c.17.73.25 1.52.25 2.39z"/>
-                  </g>
-                  <path fill="#fff" transform="translate(.08 .92)" d="M0 0h17.04v19.2H0z"/>
+                  <path d="M4.46 10.86c0-.32-.14-.59-.41-.81a1.5 1.5 0 00-.99-.34c-.38 0-.71.12-.98.34-.28.22-.41.5-.41.8 0 .32.13.6.4.82.28.22.6.33 1 .33.38 0 .7-.11.98-.33.27-.23.4-.5.4-.81zm11.14 0c0-.32-.13-.59-.4-.81a1.5 1.5 0 00-1-.34c-.38 0-.7.12-.98.34-.27.22-.4.5-.4.8 0 .32.13.6.4.82.28.22.6.33.99.33.38 0 .71-.11.98-.33.28-.23.41-.5.41-.81zm-.5-3.54l-.78-3.43a.58.58 0 00-.25-.33.77.77 0 00-.44-.13h-10a.77.77 0 00-.43.13c-.13.08-.21.2-.25.33l-.78 3.43a.5.5 0 00.15.47c.14.14.32.21.54.21h11.56c.21 0 .4-.07.53-.2a.5.5 0 00.15-.48zm-2.46-5.46a.38.38 0 00-.15-.3.56.56 0 00-.37-.13H5.15a.56.56 0 00-.37.12.38.38 0 00-.15.3c0 .13.05.23.15.31.1.08.23.13.37.13h6.97c.14 0 .27-.05.37-.13.1-.08.15-.18.15-.3zM17 8.33v5.38h-1.4v1.15c0 .31-.13.58-.4.8-.28.23-.6.34-1 .34a1.5 1.5 0 01-.98-.33c-.27-.23-.4-.5-.4-.81V13.7H4.46v1.15c0 .31-.14.58-.41.8-.27.23-.6.34-.99.34a1.5 1.5 0 01-.98-.33c-.28-.23-.41-.5-.41-.81V13.7H.27V8.33c0-.67.1-1.33.28-2L1.67 2.3c.06-.47.42-.88 1.06-1.23a8.18 8.18 0 012.5-.8C6.26.1 7.4 0 8.63 0c1.25 0 2.38.09 3.4.27 1.03.18 1.87.44 2.51.8.64.34 1 .75 1.06 1.22l1.15 4.05c.16.6.25 1.27.25 1.99z"/>
                 </svg>
               </li>
-              <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog--disabled">
+              <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog--disabled" data-transport="Велосипед">
                 <span class="prefer-transport__name visually-hidden">Велосипед.</span>
-                <svg class="prefer-transport__img" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <svg class="prefer-transport__img" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                   <!-- <use xlink:href="img/sprite.svg#bicycle"></use> -->
-                  <path d="M18.3 21a4.21 4.21 0 01-3.92-2.66 4.37 4.37 0 01.92-4.7 4.23 4.23 0 017.26 3.05c0 1.14-.45 2.24-1.25 3.05-.8.8-1.88 1.26-3 1.26zm0-7.13a2.75 2.75 0 00-2.55 1.74 2.85 2.85 0 00.6 3.07 2.76 2.76 0 004.73-2c0-.74-.3-1.45-.81-1.98a2.76 2.76 0 00-1.96-.82zM6.1 21a4.21 4.21 0 01-3.92-2.66 4.37 4.37 0 01.92-4.7 4.23 4.23 0 017.26 3.05c0 1.14-.45 2.24-1.25 3.05-.8.8-1.88 1.26-3 1.26zm0-7.13a2.75 2.75 0 00-2.56 1.74 2.85 2.85 0 00.6 3.07 2.76 2.76 0 004.74-2c0-.74-.3-1.45-.82-1.98a2.76 2.76 0 00-1.96-.82zM15.16 6a1.46 1.46 0 001.37-.93c.08-.18.11-.38.11-.57a1.5 1.5 0 00-.9-1.39 1.46 1.46 0 00-1.93.81 1.52 1.52 0 00.79 1.96c.18.08.37.12.56.12z"/>
-                  <path d="M17.36 9h-2.02a.18.18 0 01-.16-.1L13.7 6.18a1.45 1.45 0 00-1.05-.77 1.41 1.41 0 00-1.23.4L8.2 9.11c-.27.28-.43.66-.43 1.05 0 .82.58 1.1.85 1.27a146.31 146.31 0 012.82 1.72.2.2 0 01.03.09v3.24c0 .4.3.75.7.77a.73.73 0 00.72-.45c.04-.1.06-.2.06-.3v-4.03a.76.76 0 00-.31-.61l-1.71-1.25a.19.19 0 01-.08-.13.19.19 0 01.05-.15l1.94-2.1a.18.18 0 01.24-.03l.06.07 1 1.84a.74.74 0 00.65.39h2.6a.73.73 0 00.53-.23.75.75 0 00-.56-1.27z"/>
+                  <path d="M12.95 14a3.1 3.1 0 01-1.67-.48 2.9 2.9 0 01-1.1-1.3 2.76 2.76 0 01.64-3.13 3.13 3.13 0 013.28-.62c.55.22 1.02.58 1.35 1.06a2.79 2.79 0 01-.38 3.63c-.56.54-1.32.84-2.12.84zm0-4.75c-.39 0-.77.11-1.09.32-.32.2-.57.5-.72.84a1.8 1.8 0 00.42 2.04 2.04 2.04 0 002.14.4c.36-.13.66-.38.88-.68a1.82 1.82 0 00-.25-2.37 2 2 0 00-1.38-.55zM4.32 14a3.1 3.1 0 01-1.67-.48 2.9 2.9 0 01-1.1-1.3A2.76 2.76 0 012.2 9.1a3.13 3.13 0 013.28-.62c.54.22 1.01.58 1.34 1.06a2.79 2.79 0 01-.37 3.63c-.57.54-1.33.84-2.13.84zm0-4.75c-.38 0-.76.11-1.09.32-.32.2-.57.5-.72.84a1.8 1.8 0 00.43 2.04 2.04 2.04 0 002.14.4c.35-.13.66-.38.87-.68a1.82 1.82 0 00-.24-2.37 2 2 0 00-1.39-.55zM10.73 4a1.08 1.08 0 00.74-.3 1 1 0 00.3-.7.95.95 0 00-.3-.71 1.03 1.03 0 00-.74-.29 1.09 1.09 0 00-.74.3 1 1 0 00-.3.7.96.96 0 00.3.7 1.05 1.05 0 00.74.3z"/>
+                  <path d="M12.28 6h-1.43c-.02 0-.05 0-.07-.02a.13.13 0 01-.04-.04L9.7 4.12a.98.98 0 00-.3-.34 1.04 1.04 0 00-1.31.1L5.8 6.08a1 1 0 00-.3.7c0 .54.41.73.6.84a105.12 105.12 0 012 1.14l.01.07v2.16c0 .26.22.5.5.5a.54.54 0 00.39-.13.5.5 0 00.16-.36V8.31a.48.48 0 00-.06-.23.5.5 0 00-.16-.17l-1.2-.84A.13.13 0 017.67 7a.12.12 0 01.03-.1l1.38-1.4a.13.13 0 01.1-.04c.03 0 .05 0 .06.02l.05.04.7 1.23c.05.08.12.15.2.2.08.04.17.06.27.06h1.83a.54.54 0 00.37-.15.5.5 0 00.15-.37c-.02-.27-.26-.48-.54-.48z"/>
                 </svg>
               </li>
-              <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog--disabled">
+              <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog--disabled" data-transport="Пешком">
                 <span class="prefer-transport__name visually-hidden">Пеший туризм.</span>
-                <svg class="prefer-transport__img" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <svg class="prefer-transport__img" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                   <!-- <use xlink:href="img/sprite.svg#hiking"></use> -->
-                  <path d="M14.98 5.76c.95 0 1.72-.86 1.72-1.92s-.77-1.92-1.72-1.92-1.73.86-1.73 1.92.78 1.92 1.73 1.92zM13.92 10.53c.2.33.48.58.81.72.34.15.7.17 1.04.08l2.86-.8-.42-1.86-2.85.8-1.2-1.99a1.73 1.73 0 00-1.09-.82l-3.3-.74a1.56 1.56 0 00-1.1.16c-.34.18-.61.49-.78.87l-1.43 3.18 1.54.86L9.43 7.8l1.69.38-4.38 8.14H2.93v1.92h3.81c.6 0 1.17-.36 1.48-.93l1.65-3.07 4.45 1 1.56 5.22 1.63-.6-1.56-5.23c-.1-.33-.27-.61-.5-.84-.22-.22-.5-.37-.8-.44l-2.61-.58 1.52-2.84.36.6z"/>
+                  <path d="M12.12 4c.77 0 1.4-.6 1.4-1.33 0-.74-.63-1.34-1.4-1.34-.77 0-1.4.6-1.4 1.34 0 .73.63 1.33 1.4 1.33zM11.27 7.31a1.46 1.46 0 001.5.55l2.3-.55-.33-1.29-2.31.55-.96-1.38c-.2-.29-.53-.5-.89-.56L7.9 4.1c-.3-.06-.61-.02-.88.11-.28.13-.5.34-.64.6L5.23 7.03l1.24.6 1.16-2.21L9 5.68l-3.55 5.65H2.36v1.34h3.1c.48 0 .94-.25 1.19-.65l1.34-2.13 3.6.69 1.26 3.63 1.33-.42-1.27-3.63a1.34 1.34 0 00-.4-.58c-.18-.16-.4-.26-.65-.31l-2.12-.4 1.24-1.97.29.41z"/>
                 </svg>
               </li>
             </ul>
@@ -1054,8 +1043,9 @@
           <button class="user-card__favourite  user-card__favourite--catalog favourite button button--iconic" type="button">
             <span class="favourite__add visually-hidden">Добавить в избранные.</span>
             <span class="favourite__delete visually-hidden">Удалить из избранных.</span>
-            <svg class="favourite__img" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-              <use xlink:href="img/sprite.svg#favourite"></use>
+            <svg class="favourite__img" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+              <!-- <use xlink:href="img/sprite.svg#favourite"></use> -->
+              <path d="M3.26 1.47c1.69 0 3.06 1.35 3.06 3.01a3.04 3.04 0 013.06-3c1.7 0 3.07 1.34 3.07 3 0 2.5-2.48 3.4-5.83 7.38a.4.4 0 01-.6 0C2.67 7.87.19 7 .19 4.48a3.04 3.04 0 013.07-3z"/>
             </svg>
           </button>
           <p class="user-card__likes">1500</p>
@@ -1067,9 +1057,10 @@
           </a>
           <div class="user-card__level user-card__level--catalog level level--catalog">
             <p class="level__title level__title--catalog">левел:</p>
-            <div class="level__value">
+            <div class="level__value level__value--catalog">
               <span class="level__number level__number--catalog">80</span>
               <span class="level__text level__text--catalog">level</span>
+              <canvas class="level__rate-line level__rate-line--catalog" width="45" height="45" data-rate="80"></canvas>
             </div>
           </div>
           <div class="user-card__tags user-card__tags--catalog">
@@ -1086,17 +1077,11 @@
             <p class="prefer-countries__title prefer-countries__title--catalog">Хочет посетить:</p>
             <p class="prefer-countries__subtitle visually-hidden">Cтраны, в которые вы можете отправиться вместе.</p>
             <ul class="prefer-countries__list prefer-countries__list--catalog">
-              <li class="prefer-countries__item prefer-countries__item--catalog">
+              <li class="prefer-countries__item prefer-countries__item--belgium prefer-countries__item--catalog">
                 <p class="prefer-countries__country-name prefer-countries__country-name--catalog">Бельгия</p>
-                <svg class="prefer-countries__img" width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                  <use xlink:href="img/sprite.svg#belgium"></use>
-                </svg>
               </li>
-              <li class="prefer-countries__item prefer-countries__item--catalog">
+              <li class="prefer-countries__item prefer-countries__item--czech prefer-countries__item--catalog">
                 <p class="prefer-countries__country-name prefer-countries__country-name--catalog">Чехия</p>
-                <svg class="prefer-countries__img" width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                  <use xlink:href="img/sprite.svg#czech-republic"></use>
-                </svg>
               </li>
             </ul>
           </div>
@@ -1104,33 +1089,33 @@
             <p class="prefer-transport__title prefer-transport__title--catalog">Транспорт:</p>
             <p class="visually-hidden">Для путешествия подойдут следующие виды транспорта.</p>
             <ul class="prefer-transport__list prefer-transport__list--vertical prefer-transport__list--catalog">
-              <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog--active">
+              <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog--active" data-transport="Авиаперелет">
                 <span class="prefer-transport__name visually-hidden">Cамолёт.</span>
-                <svg class="prefer-transport__img" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <svg class="prefer-transport__img" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                   <!-- <use xlink:href="img/sprite.svg#airplane"></use> -->
-                  <path d="M16.78 2.1c-.73.17-1.46.34-1.73.82l-2.1 4.2L1.62 9.8l-.46 1.34 8.66.82-1.47 3.63-3.28.78-.83 1.43 2.37.26.27 1.17c.12.41.55.69.9.6l1.1-.26 1.27 2.16.83-1.43-.81-3.5 2.37-3.03 4.54 7.96.91-1.04-2.79-12.07 2.57-3.9c.27-.47.1-1.25-.09-2.03-.09-.39-.54-.7-.9-.6z"/>
+                  <path d="M13.75.86c-.58.13-1.17.26-1.39.62l-1.7 3.18L1.59 6.7l-.37 1.02 6.96.62-1.18 2.75-2.64.6-.66 1.08 1.9.19.22.89c.1.3.44.52.73.45l.88-.2 1.01 1.64.67-1.08-.65-2.65 1.9-2.3L14 15.74l.73-.78L12.5 5.8l2.06-2.95c.22-.36.08-.95-.07-1.54-.07-.3-.44-.53-.73-.46z"/>
                 </svg>
               </li>
-              <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog--active">
+              <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog--active" data-transport="Автотранспорт">
                 <span class="prefer-transport__name visually-hidden">Общественный транспорт.</span>
-                <svg class="prefer-transport__img" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <svg class="prefer-transport__img" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                   <!-- <use xlink:href="img/sprite.svg#public-transport"></use> -->
-                  <path d="M4.34 13.95c0-.38-.14-.7-.42-.97a1.4 1.4 0 00-1-.4c-.4 0-.73.13-1 .4-.28.27-.42.59-.42.97s.14.7.42.97c.27.27.6.4 1 .4s.73-.13 1-.4c.28-.27.42-.6.42-.97zm11.36 0c0-.38-.14-.7-.42-.97a1.4 1.4 0 00-1-.4c-.4 0-.73.13-1 .4-.28.27-.42.59-.42.97s.14.7.41.97c.28.27.61.4 1 .4.4 0 .73-.13 1.01-.4s.42-.6.42-.97zm-.51-4.24l-.8-4.12a.7.7 0 00-.25-.4.7.7 0 00-.45-.16H3.5a.7.7 0 00-.45.16.7.7 0 00-.25.4l-.8 4.12c-.04.21.02.4.16.56.14.17.32.25.54.25h11.78c.22 0 .4-.08.54-.25.14-.16.2-.35.16-.56zm-2.51-6.56a.49.49 0 00-.16-.37.52.52 0 00-.37-.15h-7.1a.52.52 0 00-.38.15c-.1.1-.15.23-.15.37 0 .14.05.26.15.36.1.1.23.15.38.15h7.1c.14 0 .27-.05.37-.15.1-.1.16-.22.16-.36zm4.43 7.77v6.46H15.7v1.37c0 .38-.14.7-.42.97-.28.27-.61.4-1 .4-.4 0-.73-.13-1-.4a1.3 1.3 0 01-.42-.97v-1.37H4.34v1.37c0 .38-.14.7-.42.97-.27.27-.6.4-1 .4s-.73-.13-1-.4a1.3 1.3 0 01-.42-.97v-1.37H.08v-6.46c0-.8.1-1.6.28-2.4L1.5 3.67c.07-.55.43-1.04 1.08-1.47.66-.42 1.5-.73 2.55-.95A17.3 17.3 0 018.6.92c1.26 0 2.42.1 3.46.32 1.05.22 1.9.53 2.55.95.66.43 1.02.92 1.09 1.47l1.16 4.87c.17.73.25 1.52.25 2.39z"/>
+                  <path d="M4.46 10.86c0-.32-.14-.59-.41-.81a1.5 1.5 0 00-.99-.34c-.38 0-.71.12-.98.34-.28.22-.41.5-.41.8 0 .32.13.6.4.82.28.22.6.33 1 .33.38 0 .7-.11.98-.33.27-.23.4-.5.4-.81zm11.14 0c0-.32-.13-.59-.4-.81a1.5 1.5 0 00-1-.34c-.38 0-.7.12-.98.34-.27.22-.4.5-.4.8 0 .32.13.6.4.82.28.22.6.33.99.33.38 0 .71-.11.98-.33.28-.23.41-.5.41-.81zm-.5-3.54l-.78-3.43a.58.58 0 00-.25-.33.77.77 0 00-.44-.13h-10a.77.77 0 00-.43.13c-.13.08-.21.2-.25.33l-.78 3.43a.5.5 0 00.15.47c.14.14.32.21.54.21h11.56c.21 0 .4-.07.53-.2a.5.5 0 00.15-.48zm-2.46-5.46a.38.38 0 00-.15-.3.56.56 0 00-.37-.13H5.15a.56.56 0 00-.37.12.38.38 0 00-.15.3c0 .13.05.23.15.31.1.08.23.13.37.13h6.97c.14 0 .27-.05.37-.13.1-.08.15-.18.15-.3zM17 8.33v5.38h-1.4v1.15c0 .31-.13.58-.4.8-.28.23-.6.34-1 .34a1.5 1.5 0 01-.98-.33c-.27-.23-.4-.5-.4-.81V13.7H4.46v1.15c0 .31-.14.58-.41.8-.27.23-.6.34-.99.34a1.5 1.5 0 01-.98-.33c-.28-.23-.41-.5-.41-.81V13.7H.27V8.33c0-.67.1-1.33.28-2L1.67 2.3c.06-.47.42-.88 1.06-1.23a8.18 8.18 0 012.5-.8C6.26.1 7.4 0 8.63 0c1.25 0 2.38.09 3.4.27 1.03.18 1.87.44 2.51.8.64.34 1 .75 1.06 1.22l1.15 4.05c.16.6.25 1.27.25 1.99z"/>
                 </svg>
               </li>
-              <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog--disabled">
+              <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog--disabled" data-transport="Велосипед">
                 <span class="prefer-transport__name visually-hidden">Велосипед.</span>
-                <svg class="prefer-transport__img" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <svg class="prefer-transport__img" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                   <!-- <use xlink:href="img/sprite.svg#bicycle"></use> -->
-                  <path d="M18.3 21a4.21 4.21 0 01-3.92-2.66 4.37 4.37 0 01.92-4.7 4.23 4.23 0 017.26 3.05c0 1.14-.45 2.24-1.25 3.05-.8.8-1.88 1.26-3 1.26zm0-7.13a2.75 2.75 0 00-2.55 1.74 2.85 2.85 0 00.6 3.07 2.76 2.76 0 004.73-2c0-.74-.3-1.45-.81-1.98a2.76 2.76 0 00-1.96-.82zM6.1 21a4.21 4.21 0 01-3.92-2.66 4.37 4.37 0 01.92-4.7 4.23 4.23 0 017.26 3.05c0 1.14-.45 2.24-1.25 3.05-.8.8-1.88 1.26-3 1.26zm0-7.13a2.75 2.75 0 00-2.56 1.74 2.85 2.85 0 00.6 3.07 2.76 2.76 0 004.74-2c0-.74-.3-1.45-.82-1.98a2.76 2.76 0 00-1.96-.82zM15.16 6a1.46 1.46 0 001.37-.93c.08-.18.11-.38.11-.57a1.5 1.5 0 00-.9-1.39 1.46 1.46 0 00-1.93.81 1.52 1.52 0 00.79 1.96c.18.08.37.12.56.12z"/>
-                  <path d="M17.36 9h-2.02a.18.18 0 01-.16-.1L13.7 6.18a1.45 1.45 0 00-1.05-.77 1.41 1.41 0 00-1.23.4L8.2 9.11c-.27.28-.43.66-.43 1.05 0 .82.58 1.1.85 1.27a146.31 146.31 0 012.82 1.72.2.2 0 01.03.09v3.24c0 .4.3.75.7.77a.73.73 0 00.72-.45c.04-.1.06-.2.06-.3v-4.03a.76.76 0 00-.31-.61l-1.71-1.25a.19.19 0 01-.08-.13.19.19 0 01.05-.15l1.94-2.1a.18.18 0 01.24-.03l.06.07 1 1.84a.74.74 0 00.65.39h2.6a.73.73 0 00.53-.23.75.75 0 00-.56-1.27z"/>
+                  <path d="M12.95 14a3.1 3.1 0 01-1.67-.48 2.9 2.9 0 01-1.1-1.3 2.76 2.76 0 01.64-3.13 3.13 3.13 0 013.28-.62c.55.22 1.02.58 1.35 1.06a2.79 2.79 0 01-.38 3.63c-.56.54-1.32.84-2.12.84zm0-4.75c-.39 0-.77.11-1.09.32-.32.2-.57.5-.72.84a1.8 1.8 0 00.42 2.04 2.04 2.04 0 002.14.4c.36-.13.66-.38.88-.68a1.82 1.82 0 00-.25-2.37 2 2 0 00-1.38-.55zM4.32 14a3.1 3.1 0 01-1.67-.48 2.9 2.9 0 01-1.1-1.3A2.76 2.76 0 012.2 9.1a3.13 3.13 0 013.28-.62c.54.22 1.01.58 1.34 1.06a2.79 2.79 0 01-.37 3.63c-.57.54-1.33.84-2.13.84zm0-4.75c-.38 0-.76.11-1.09.32-.32.2-.57.5-.72.84a1.8 1.8 0 00.43 2.04 2.04 2.04 0 002.14.4c.35-.13.66-.38.87-.68a1.82 1.82 0 00-.24-2.37 2 2 0 00-1.39-.55zM10.73 4a1.08 1.08 0 00.74-.3 1 1 0 00.3-.7.95.95 0 00-.3-.71 1.03 1.03 0 00-.74-.29 1.09 1.09 0 00-.74.3 1 1 0 00-.3.7.96.96 0 00.3.7 1.05 1.05 0 00.74.3z"/>
+                  <path d="M12.28 6h-1.43c-.02 0-.05 0-.07-.02a.13.13 0 01-.04-.04L9.7 4.12a.98.98 0 00-.3-.34 1.04 1.04 0 00-1.31.1L5.8 6.08a1 1 0 00-.3.7c0 .54.41.73.6.84a105.12 105.12 0 012 1.14l.01.07v2.16c0 .26.22.5.5.5a.54.54 0 00.39-.13.5.5 0 00.16-.36V8.31a.48.48 0 00-.06-.23.5.5 0 00-.16-.17l-1.2-.84A.13.13 0 017.67 7a.12.12 0 01.03-.1l1.38-1.4a.13.13 0 01.1-.04c.03 0 .05 0 .06.02l.05.04.7 1.23c.05.08.12.15.2.2.08.04.17.06.27.06h1.83a.54.54 0 00.37-.15.5.5 0 00.15-.37c-.02-.27-.26-.48-.54-.48z"/>
                 </svg>
               </li>
-              <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog--active">
+              <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog--active" data-transport="Пешком">
                 <span class="prefer-transport__name visually-hidden">Пеший туризм.</span>
-                <svg class="prefer-transport__img" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <svg class="prefer-transport__img" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                   <!-- <use xlink:href="img/sprite.svg#hiking"></use> -->
-                  <path d="M14.98 5.76c.95 0 1.72-.86 1.72-1.92s-.77-1.92-1.72-1.92-1.73.86-1.73 1.92.78 1.92 1.73 1.92zM13.92 10.53c.2.33.48.58.81.72.34.15.7.17 1.04.08l2.86-.8-.42-1.86-2.85.8-1.2-1.99a1.73 1.73 0 00-1.09-.82l-3.3-.74a1.56 1.56 0 00-1.1.16c-.34.18-.61.49-.78.87l-1.43 3.18 1.54.86L9.43 7.8l1.69.38-4.38 8.14H2.93v1.92h3.81c.6 0 1.17-.36 1.48-.93l1.65-3.07 4.45 1 1.56 5.22 1.63-.6-1.56-5.23c-.1-.33-.27-.61-.5-.84-.22-.22-.5-.37-.8-.44l-2.61-.58 1.52-2.84.36.6z"/>
+                  <path d="M12.12 4c.77 0 1.4-.6 1.4-1.33 0-.74-.63-1.34-1.4-1.34-.77 0-1.4.6-1.4 1.34 0 .73.63 1.33 1.4 1.33zM11.27 7.31a1.46 1.46 0 001.5.55l2.3-.55-.33-1.29-2.31.55-.96-1.38c-.2-.29-.53-.5-.89-.56L7.9 4.1c-.3-.06-.61-.02-.88.11-.28.13-.5.34-.64.6L5.23 7.03l1.24.6 1.16-2.21L9 5.68l-3.55 5.65H2.36v1.34h3.1c.48 0 .94-.25 1.19-.65l1.34-2.13 3.6.69 1.26 3.63 1.33-.42-1.27-3.63a1.34 1.34 0 00-.4-.58c-.18-.16-.4-.26-.65-.31l-2.12-.4 1.24-1.97.29.41z"/>
                 </svg>
               </li>
             </ul>
@@ -1151,8 +1136,9 @@
           <button class="user-card__favourite  user-card__favourite--catalog favourite button button--iconic" type="button">
             <span class="favourite__add visually-hidden">Добавить в избранные.</span>
             <span class="favourite__delete visually-hidden">Удалить из избранных.</span>
-            <svg class="favourite__img" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-              <use xlink:href="img/sprite.svg#favourite"></use>
+            <svg class="favourite__img" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+              <!-- <use xlink:href="img/sprite.svg#favourite"></use> -->
+              <path d="M3.26 1.47c1.69 0 3.06 1.35 3.06 3.01a3.04 3.04 0 013.06-3c1.7 0 3.07 1.34 3.07 3 0 2.5-2.48 3.4-5.83 7.38a.4.4 0 01-.6 0C2.67 7.87.19 7 .19 4.48a3.04 3.04 0 013.07-3z"/>
             </svg>
           </button>
           <p class="user-card__likes">170</p>
@@ -1164,9 +1150,10 @@
           </a>
           <div class="user-card__level user-card__level--catalog level level--catalog">
             <p class="level__title level__title--catalog">левел:</p>
-            <div class="level__value">
+            <div class="level__value level__value--catalog">
               <span class="level__number level__number--catalog">25</span>
               <span class="level__text level__text--catalog">level</span>
+              <canvas class="level__rate-line level__rate-line--catalog" width="45" height="45" data-rate="25"></canvas>
             </div>
           </div>
           <div class="user-card__tags user-card__tags--catalog">
@@ -1183,23 +1170,14 @@
             <p class="prefer-countries__title prefer-countries__title--catalog">Хочет посетить:</p>
             <p class="prefer-countries__subtitle visually-hidden">Cтраны, в которые вы можете отправиться вместе.</p>
             <ul class="prefer-countries__list prefer-countries__list--catalog">
-              <li class="prefer-countries__item prefer-countries__item--catalog">
+              <li class="prefer-countries__item prefer-countries__item--usa prefer-countries__item--catalog">
                 <span class="prefer-countries__country-name prefer-countries__country-name--catalog">США</span>
-                <svg class="prefer-countries__img" width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                  <use xlink:href="img/sprite.svg#usa"></use>
-                </svg>
               </li>
-              <li class="prefer-countries__item prefer-countries__item--catalog">
+              <li class="prefer-countries__item prefer-countries__item--australia prefer-countries__item--catalog">
                 <p class="prefer-countries__country-name prefer-countries__country-name--catalog">Австралия</p>
-                <svg class="prefer-countries__img" width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                  <use xlink:href="img/sprite.svg#australia"></use>
-                </svg>
               </li>
-              <li class="prefer-countries__item prefer-countries__item--catalog">
+              <li class="prefer-countries__item prefer-countries__item--dominica prefer-countries__item--catalog">
                 <p class="prefer-countries__country-name prefer-countries__country-name--catalog">Доминикана</p>
-                <svg class="prefer-countries__img" width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                  <use xlink:href="img/sprite.svg#dominican-republic"></use>
-                </svg>
               </li>
             </ul>
           </div>
@@ -1207,33 +1185,33 @@
             <p class="prefer-transport__title prefer-transport__title--catalog">Транспорт:</p>
             <p class="visually-hidden">Для путешествия подойдут следующие виды транспорта.</p>
             <ul class="prefer-transport__list prefer-transport__list--vertical prefer-transport__list--catalog">
-              <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog--active">
-                <span class="prefer-transport__name visually-hidden">Cамолёт.</span>
-                <svg class="prefer-transport__img" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+              <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog--active" data-transport="Авиаперелет">
+                <span class="prefer-transport__name visually-hidden">Самолёт.</span>
+                <svg class="prefer-transport__img" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                   <!-- <use xlink:href="img/sprite.svg#airplane"></use> -->
-                  <path d="M16.78 2.1c-.73.17-1.46.34-1.73.82l-2.1 4.2L1.62 9.8l-.46 1.34 8.66.82-1.47 3.63-3.28.78-.83 1.43 2.37.26.27 1.17c.12.41.55.69.9.6l1.1-.26 1.27 2.16.83-1.43-.81-3.5 2.37-3.03 4.54 7.96.91-1.04-2.79-12.07 2.57-3.9c.27-.47.1-1.25-.09-2.03-.09-.39-.54-.7-.9-.6z"/>
+                  <path d="M13.75.86c-.58.13-1.17.26-1.39.62l-1.7 3.18L1.59 6.7l-.37 1.02 6.96.62-1.18 2.75-2.64.6-.66 1.08 1.9.19.22.89c.1.3.44.52.73.45l.88-.2 1.01 1.64.67-1.08-.65-2.65 1.9-2.3L14 15.74l.73-.78L12.5 5.8l2.06-2.95c.22-.36.08-.95-.07-1.54-.07-.3-.44-.53-.73-.46z"/>
                 </svg>
               </li>
-              <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog--disabled">
+              <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog--disabled" data-transport="Автотранспорт">
                 <span class="prefer-transport__name visually-hidden">Общественный транспорт.</span>
-                <svg class="prefer-transport__img" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <svg class="prefer-transport__img" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                   <!-- <use xlink:href="img/sprite.svg#public-transport"></use> -->
-                  <path d="M4.34 13.95c0-.38-.14-.7-.42-.97a1.4 1.4 0 00-1-.4c-.4 0-.73.13-1 .4-.28.27-.42.59-.42.97s.14.7.42.97c.27.27.6.4 1 .4s.73-.13 1-.4c.28-.27.42-.6.42-.97zm11.36 0c0-.38-.14-.7-.42-.97a1.4 1.4 0 00-1-.4c-.4 0-.73.13-1 .4-.28.27-.42.59-.42.97s.14.7.41.97c.28.27.61.4 1 .4.4 0 .73-.13 1.01-.4s.42-.6.42-.97zm-.51-4.24l-.8-4.12a.7.7 0 00-.25-.4.7.7 0 00-.45-.16H3.5a.7.7 0 00-.45.16.7.7 0 00-.25.4l-.8 4.12c-.04.21.02.4.16.56.14.17.32.25.54.25h11.78c.22 0 .4-.08.54-.25.14-.16.2-.35.16-.56zm-2.51-6.56a.49.49 0 00-.16-.37.52.52 0 00-.37-.15h-7.1a.52.52 0 00-.38.15c-.1.1-.15.23-.15.37 0 .14.05.26.15.36.1.1.23.15.38.15h7.1c.14 0 .27-.05.37-.15.1-.1.16-.22.16-.36zm4.43 7.77v6.46H15.7v1.37c0 .38-.14.7-.42.97-.28.27-.61.4-1 .4-.4 0-.73-.13-1-.4a1.3 1.3 0 01-.42-.97v-1.37H4.34v1.37c0 .38-.14.7-.42.97-.27.27-.6.4-1 .4s-.73-.13-1-.4a1.3 1.3 0 01-.42-.97v-1.37H.08v-6.46c0-.8.1-1.6.28-2.4L1.5 3.67c.07-.55.43-1.04 1.08-1.47.66-.42 1.5-.73 2.55-.95A17.3 17.3 0 018.6.92c1.26 0 2.42.1 3.46.32 1.05.22 1.9.53 2.55.95.66.43 1.02.92 1.09 1.47l1.16 4.87c.17.73.25 1.52.25 2.39z"/>
+                  <path d="M4.46 10.86c0-.32-.14-.59-.41-.81a1.5 1.5 0 00-.99-.34c-.38 0-.71.12-.98.34-.28.22-.41.5-.41.8 0 .32.13.6.4.82.28.22.6.33 1 .33.38 0 .7-.11.98-.33.27-.23.4-.5.4-.81zm11.14 0c0-.32-.13-.59-.4-.81a1.5 1.5 0 00-1-.34c-.38 0-.7.12-.98.34-.27.22-.4.5-.4.8 0 .32.13.6.4.82.28.22.6.33.99.33.38 0 .71-.11.98-.33.28-.23.41-.5.41-.81zm-.5-3.54l-.78-3.43a.58.58 0 00-.25-.33.77.77 0 00-.44-.13h-10a.77.77 0 00-.43.13c-.13.08-.21.2-.25.33l-.78 3.43a.5.5 0 00.15.47c.14.14.32.21.54.21h11.56c.21 0 .4-.07.53-.2a.5.5 0 00.15-.48zm-2.46-5.46a.38.38 0 00-.15-.3.56.56 0 00-.37-.13H5.15a.56.56 0 00-.37.12.38.38 0 00-.15.3c0 .13.05.23.15.31.1.08.23.13.37.13h6.97c.14 0 .27-.05.37-.13.1-.08.15-.18.15-.3zM17 8.33v5.38h-1.4v1.15c0 .31-.13.58-.4.8-.28.23-.6.34-1 .34a1.5 1.5 0 01-.98-.33c-.27-.23-.4-.5-.4-.81V13.7H4.46v1.15c0 .31-.14.58-.41.8-.27.23-.6.34-.99.34a1.5 1.5 0 01-.98-.33c-.28-.23-.41-.5-.41-.81V13.7H.27V8.33c0-.67.1-1.33.28-2L1.67 2.3c.06-.47.42-.88 1.06-1.23a8.18 8.18 0 012.5-.8C6.26.1 7.4 0 8.63 0c1.25 0 2.38.09 3.4.27 1.03.18 1.87.44 2.51.8.64.34 1 .75 1.06 1.22l1.15 4.05c.16.6.25 1.27.25 1.99z"/>
                 </svg>
               </li>
-              <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog--active">
+              <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog--active" data-transport="Велосипед">
                 <span class="prefer-transport__name visually-hidden">Велосипед.</span>
-                <svg class="prefer-transport__img" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <svg class="prefer-transport__img" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                   <!-- <use xlink:href="img/sprite.svg#bicycle"></use> -->
-                  <path d="M18.3 21a4.21 4.21 0 01-3.92-2.66 4.37 4.37 0 01.92-4.7 4.23 4.23 0 017.26 3.05c0 1.14-.45 2.24-1.25 3.05-.8.8-1.88 1.26-3 1.26zm0-7.13a2.75 2.75 0 00-2.55 1.74 2.85 2.85 0 00.6 3.07 2.76 2.76 0 004.73-2c0-.74-.3-1.45-.81-1.98a2.76 2.76 0 00-1.96-.82zM6.1 21a4.21 4.21 0 01-3.92-2.66 4.37 4.37 0 01.92-4.7 4.23 4.23 0 017.26 3.05c0 1.14-.45 2.24-1.25 3.05-.8.8-1.88 1.26-3 1.26zm0-7.13a2.75 2.75 0 00-2.56 1.74 2.85 2.85 0 00.6 3.07 2.76 2.76 0 004.74-2c0-.74-.3-1.45-.82-1.98a2.76 2.76 0 00-1.96-.82zM15.16 6a1.46 1.46 0 001.37-.93c.08-.18.11-.38.11-.57a1.5 1.5 0 00-.9-1.39 1.46 1.46 0 00-1.93.81 1.52 1.52 0 00.79 1.96c.18.08.37.12.56.12z"/>
-                  <path d="M17.36 9h-2.02a.18.18 0 01-.16-.1L13.7 6.18a1.45 1.45 0 00-1.05-.77 1.41 1.41 0 00-1.23.4L8.2 9.11c-.27.28-.43.66-.43 1.05 0 .82.58 1.1.85 1.27a146.31 146.31 0 012.82 1.72.2.2 0 01.03.09v3.24c0 .4.3.75.7.77a.73.73 0 00.72-.45c.04-.1.06-.2.06-.3v-4.03a.76.76 0 00-.31-.61l-1.71-1.25a.19.19 0 01-.08-.13.19.19 0 01.05-.15l1.94-2.1a.18.18 0 01.24-.03l.06.07 1 1.84a.74.74 0 00.65.39h2.6a.73.73 0 00.53-.23.75.75 0 00-.56-1.27z"/>
+                  <path d="M12.95 14a3.1 3.1 0 01-1.67-.48 2.9 2.9 0 01-1.1-1.3 2.76 2.76 0 01.64-3.13 3.13 3.13 0 013.28-.62c.55.22 1.02.58 1.35 1.06a2.79 2.79 0 01-.38 3.63c-.56.54-1.32.84-2.12.84zm0-4.75c-.39 0-.77.11-1.09.32-.32.2-.57.5-.72.84a1.8 1.8 0 00.42 2.04 2.04 2.04 0 002.14.4c.36-.13.66-.38.88-.68a1.82 1.82 0 00-.25-2.37 2 2 0 00-1.38-.55zM4.32 14a3.1 3.1 0 01-1.67-.48 2.9 2.9 0 01-1.1-1.3A2.76 2.76 0 012.2 9.1a3.13 3.13 0 013.28-.62c.54.22 1.01.58 1.34 1.06a2.79 2.79 0 01-.37 3.63c-.57.54-1.33.84-2.13.84zm0-4.75c-.38 0-.76.11-1.09.32-.32.2-.57.5-.72.84a1.8 1.8 0 00.43 2.04 2.04 2.04 0 002.14.4c.35-.13.66-.38.87-.68a1.82 1.82 0 00-.24-2.37 2 2 0 00-1.39-.55zM10.73 4a1.08 1.08 0 00.74-.3 1 1 0 00.3-.7.95.95 0 00-.3-.71 1.03 1.03 0 00-.74-.29 1.09 1.09 0 00-.74.3 1 1 0 00-.3.7.96.96 0 00.3.7 1.05 1.05 0 00.74.3z"/>
+                  <path d="M12.28 6h-1.43c-.02 0-.05 0-.07-.02a.13.13 0 01-.04-.04L9.7 4.12a.98.98 0 00-.3-.34 1.04 1.04 0 00-1.31.1L5.8 6.08a1 1 0 00-.3.7c0 .54.41.73.6.84a105.12 105.12 0 012 1.14l.01.07v2.16c0 .26.22.5.5.5a.54.54 0 00.39-.13.5.5 0 00.16-.36V8.31a.48.48 0 00-.06-.23.5.5 0 00-.16-.17l-1.2-.84A.13.13 0 017.67 7a.12.12 0 01.03-.1l1.38-1.4a.13.13 0 01.1-.04c.03 0 .05 0 .06.02l.05.04.7 1.23c.05.08.12.15.2.2.08.04.17.06.27.06h1.83a.54.54 0 00.37-.15.5.5 0 00.15-.37c-.02-.27-.26-.48-.54-.48z"/>
                 </svg>
               </li>
-              <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog--disabled">
+              <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog--disabled" data-transport="Пешком">
                 <span class="prefer-transport__name visually-hidden">Пеший туризм.</span>
-                <svg class="prefer-transport__img" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <svg class="prefer-transport__img" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                   <!-- <use xlink:href="img/sprite.svg#hiking"></use> -->
-                  <path d="M14.98 5.76c.95 0 1.72-.86 1.72-1.92s-.77-1.92-1.72-1.92-1.73.86-1.73 1.92.78 1.92 1.73 1.92zM13.92 10.53c.2.33.48.58.81.72.34.15.7.17 1.04.08l2.86-.8-.42-1.86-2.85.8-1.2-1.99a1.73 1.73 0 00-1.09-.82l-3.3-.74a1.56 1.56 0 00-1.1.16c-.34.18-.61.49-.78.87l-1.43 3.18 1.54.86L9.43 7.8l1.69.38-4.38 8.14H2.93v1.92h3.81c.6 0 1.17-.36 1.48-.93l1.65-3.07 4.45 1 1.56 5.22 1.63-.6-1.56-5.23c-.1-.33-.27-.61-.5-.84-.22-.22-.5-.37-.8-.44l-2.61-.58 1.52-2.84.36.6z"/>
+                  <path d="M12.12 4c.77 0 1.4-.6 1.4-1.33 0-.74-.63-1.34-1.4-1.34-.77 0-1.4.6-1.4 1.34 0 .73.63 1.33 1.4 1.33zM11.27 7.31a1.46 1.46 0 001.5.55l2.3-.55-.33-1.29-2.31.55-.96-1.38c-.2-.29-.53-.5-.89-.56L7.9 4.1c-.3-.06-.61-.02-.88.11-.28.13-.5.34-.64.6L5.23 7.03l1.24.6 1.16-2.21L9 5.68l-3.55 5.65H2.36v1.34h3.1c.48 0 .94-.25 1.19-.65l1.34-2.13 3.6.69 1.26 3.63 1.33-.42-1.27-3.63a1.34 1.34 0 00-.4-.58c-.18-.16-.4-.26-.65-.31l-2.12-.4 1.24-1.97.29.41z"/>
                 </svg>
               </li>
             </ul>
@@ -1254,8 +1232,9 @@
           <button class="user-card__favourite  user-card__favourite--catalog favourite button button--iconic" type="button">
             <span class="favourite__add visually-hidden">Добавить в избранные.</span>
             <span class="favourite__delete visually-hidden">Удалить из избранных.</span>
-            <svg class="favourite__img" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-              <use xlink:href="img/sprite.svg#favourite"></use>
+            <svg class="favourite__img" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+              <!-- <use xlink:href="img/sprite.svg#favourite"></use> -->
+              <path d="M3.26 1.47c1.69 0 3.06 1.35 3.06 3.01a3.04 3.04 0 013.06-3c1.7 0 3.07 1.34 3.07 3 0 2.5-2.48 3.4-5.83 7.38a.4.4 0 01-.6 0C2.67 7.87.19 7 .19 4.48a3.04 3.04 0 013.07-3z"/>
             </svg>
           </button>
           <p class="user-card__likes">23</p>
@@ -1267,9 +1246,10 @@
           </a>
           <div class="user-card__level user-card__level--catalog level level--catalog">
             <p class="level__title level__title--catalog">левел:</p>
-            <div class="level__value">
+            <div class="level__value level__value--catalog">
               <span class="level__number level__number--catalog">50</span>
               <span class="level__text level__text--catalog">level</span>
+              <canvas class="level__rate-line level__rate-line--catalog" width="45" height="45" data-rate="50"></canvas>
             </div>
           </div>
           <div class="user-card__tags user-card__tags--catalog">
@@ -1285,17 +1265,11 @@
             <p class="prefer-countries__title prefer-countries__title--catalog">Хочет посетить:</p>
             <p class="prefer-countries__subtitle visually-hidden">Cтраны, в которые вы можете отправиться вместе.</p>
             <ul class="prefer-countries__list prefer-countries__list--catalog">
-              <li class="prefer-countries__item prefer-countries__item--catalog">
+              <li class="prefer-countries__item prefer-countries__item--uk prefer-countries__item--catalog">
                 <p class="prefer-countries__country-name prefer-countries__country-name--catalog">Великобритания</p>
-                <svg class="prefer-countries__img" width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                  <use xlink:href="img/sprite.svg#great-britain"></use>
-                </svg>
               </li>
-              <li class="prefer-countries__item prefer-countries__item--catalog">
+              <li class="prefer-countries__item prefer-countries__item--germany prefer-countries__item--catalog">
                 <p class="prefer-countries__country-name prefer-countries__country-name--catalog">Германия</p>
-                <svg class="prefer-countries__img" width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                  <use xlink:href="img/sprite.svg#germany"></use>
-                </svg>
               </li>
             </ul>
           </div>
@@ -1303,33 +1277,33 @@
             <p class="prefer-transport__title prefer-transport__title--catalog">Транспорт:</p>
             <p class="visually-hidden">Для путешествия подойдут следующие виды транспорта.</p>
             <ul class="prefer-transport__list prefer-transport__list--vertical prefer-transport__list--catalog">
-              <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog--active">
+              <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog--active" data-transport="Авиаперелет">
                 <span class="prefer-transport__name visually-hidden">Самолёт.</span>
-                <svg class="prefer-transport__img" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <svg class="prefer-transport__img" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                   <!-- <use xlink:href="img/sprite.svg#airplane"></use> -->
-                  <path d="M16.78 2.1c-.73.17-1.46.34-1.73.82l-2.1 4.2L1.62 9.8l-.46 1.34 8.66.82-1.47 3.63-3.28.78-.83 1.43 2.37.26.27 1.17c.12.41.55.69.9.6l1.1-.26 1.27 2.16.83-1.43-.81-3.5 2.37-3.03 4.54 7.96.91-1.04-2.79-12.07 2.57-3.9c.27-.47.1-1.25-.09-2.03-.09-.39-.54-.7-.9-.6z"/>
+                  <path d="M13.75.86c-.58.13-1.17.26-1.39.62l-1.7 3.18L1.59 6.7l-.37 1.02 6.96.62-1.18 2.75-2.64.6-.66 1.08 1.9.19.22.89c.1.3.44.52.73.45l.88-.2 1.01 1.64.67-1.08-.65-2.65 1.9-2.3L14 15.74l.73-.78L12.5 5.8l2.06-2.95c.22-.36.08-.95-.07-1.54-.07-.3-.44-.53-.73-.46z"/>
                 </svg>
               </li>
-              <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog--active">
+              <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog--active" data-transport="Автотранспорт">
                 <span class="prefer-transport__name visually-hidden">Общественный транспорт.</span>
-                <svg class="prefer-transport__img" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <svg class="prefer-transport__img" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                   <!-- <use xlink:href="img/sprite.svg#public-transport"></use> -->
-                  <path d="M4.34 13.95c0-.38-.14-.7-.42-.97a1.4 1.4 0 00-1-.4c-.4 0-.73.13-1 .4-.28.27-.42.59-.42.97s.14.7.42.97c.27.27.6.4 1 .4s.73-.13 1-.4c.28-.27.42-.6.42-.97zm11.36 0c0-.38-.14-.7-.42-.97a1.4 1.4 0 00-1-.4c-.4 0-.73.13-1 .4-.28.27-.42.59-.42.97s.14.7.41.97c.28.27.61.4 1 .4.4 0 .73-.13 1.01-.4s.42-.6.42-.97zm-.51-4.24l-.8-4.12a.7.7 0 00-.25-.4.7.7 0 00-.45-.16H3.5a.7.7 0 00-.45.16.7.7 0 00-.25.4l-.8 4.12c-.04.21.02.4.16.56.14.17.32.25.54.25h11.78c.22 0 .4-.08.54-.25.14-.16.2-.35.16-.56zm-2.51-6.56a.49.49 0 00-.16-.37.52.52 0 00-.37-.15h-7.1a.52.52 0 00-.38.15c-.1.1-.15.23-.15.37 0 .14.05.26.15.36.1.1.23.15.38.15h7.1c.14 0 .27-.05.37-.15.1-.1.16-.22.16-.36zm4.43 7.77v6.46H15.7v1.37c0 .38-.14.7-.42.97-.28.27-.61.4-1 .4-.4 0-.73-.13-1-.4a1.3 1.3 0 01-.42-.97v-1.37H4.34v1.37c0 .38-.14.7-.42.97-.27.27-.6.4-1 .4s-.73-.13-1-.4a1.3 1.3 0 01-.42-.97v-1.37H.08v-6.46c0-.8.1-1.6.28-2.4L1.5 3.67c.07-.55.43-1.04 1.08-1.47.66-.42 1.5-.73 2.55-.95A17.3 17.3 0 018.6.92c1.26 0 2.42.1 3.46.32 1.05.22 1.9.53 2.55.95.66.43 1.02.92 1.09 1.47l1.16 4.87c.17.73.25 1.52.25 2.39z"/>
+                  <path d="M4.46 10.86c0-.32-.14-.59-.41-.81a1.5 1.5 0 00-.99-.34c-.38 0-.71.12-.98.34-.28.22-.41.5-.41.8 0 .32.13.6.4.82.28.22.6.33 1 .33.38 0 .7-.11.98-.33.27-.23.4-.5.4-.81zm11.14 0c0-.32-.13-.59-.4-.81a1.5 1.5 0 00-1-.34c-.38 0-.7.12-.98.34-.27.22-.4.5-.4.8 0 .32.13.6.4.82.28.22.6.33.99.33.38 0 .71-.11.98-.33.28-.23.41-.5.41-.81zm-.5-3.54l-.78-3.43a.58.58 0 00-.25-.33.77.77 0 00-.44-.13h-10a.77.77 0 00-.43.13c-.13.08-.21.2-.25.33l-.78 3.43a.5.5 0 00.15.47c.14.14.32.21.54.21h11.56c.21 0 .4-.07.53-.2a.5.5 0 00.15-.48zm-2.46-5.46a.38.38 0 00-.15-.3.56.56 0 00-.37-.13H5.15a.56.56 0 00-.37.12.38.38 0 00-.15.3c0 .13.05.23.15.31.1.08.23.13.37.13h6.97c.14 0 .27-.05.37-.13.1-.08.15-.18.15-.3zM17 8.33v5.38h-1.4v1.15c0 .31-.13.58-.4.8-.28.23-.6.34-1 .34a1.5 1.5 0 01-.98-.33c-.27-.23-.4-.5-.4-.81V13.7H4.46v1.15c0 .31-.14.58-.41.8-.27.23-.6.34-.99.34a1.5 1.5 0 01-.98-.33c-.28-.23-.41-.5-.41-.81V13.7H.27V8.33c0-.67.1-1.33.28-2L1.67 2.3c.06-.47.42-.88 1.06-1.23a8.18 8.18 0 012.5-.8C6.26.1 7.4 0 8.63 0c1.25 0 2.38.09 3.4.27 1.03.18 1.87.44 2.51.8.64.34 1 .75 1.06 1.22l1.15 4.05c.16.6.25 1.27.25 1.99z"/>
                 </svg>
               </li>
-              <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog--disabled">
+              <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog--disabled" data-transport="Велосипед">
                 <span class="prefer-transport__name visually-hidden">Велосипед.</span>
-                <svg class="prefer-transport__img" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <svg class="prefer-transport__img" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                   <!-- <use xlink:href="img/sprite.svg#bicycle"></use> -->
-                  <path d="M18.3 21a4.21 4.21 0 01-3.92-2.66 4.37 4.37 0 01.92-4.7 4.23 4.23 0 017.26 3.05c0 1.14-.45 2.24-1.25 3.05-.8.8-1.88 1.26-3 1.26zm0-7.13a2.75 2.75 0 00-2.55 1.74 2.85 2.85 0 00.6 3.07 2.76 2.76 0 004.73-2c0-.74-.3-1.45-.81-1.98a2.76 2.76 0 00-1.96-.82zM6.1 21a4.21 4.21 0 01-3.92-2.66 4.37 4.37 0 01.92-4.7 4.23 4.23 0 017.26 3.05c0 1.14-.45 2.24-1.25 3.05-.8.8-1.88 1.26-3 1.26zm0-7.13a2.75 2.75 0 00-2.56 1.74 2.85 2.85 0 00.6 3.07 2.76 2.76 0 004.74-2c0-.74-.3-1.45-.82-1.98a2.76 2.76 0 00-1.96-.82zM15.16 6a1.46 1.46 0 001.37-.93c.08-.18.11-.38.11-.57a1.5 1.5 0 00-.9-1.39 1.46 1.46 0 00-1.93.81 1.52 1.52 0 00.79 1.96c.18.08.37.12.56.12z"/>
-                  <path d="M17.36 9h-2.02a.18.18 0 01-.16-.1L13.7 6.18a1.45 1.45 0 00-1.05-.77 1.41 1.41 0 00-1.23.4L8.2 9.11c-.27.28-.43.66-.43 1.05 0 .82.58 1.1.85 1.27a146.31 146.31 0 012.82 1.72.2.2 0 01.03.09v3.24c0 .4.3.75.7.77a.73.73 0 00.72-.45c.04-.1.06-.2.06-.3v-4.03a.76.76 0 00-.31-.61l-1.71-1.25a.19.19 0 01-.08-.13.19.19 0 01.05-.15l1.94-2.1a.18.18 0 01.24-.03l.06.07 1 1.84a.74.74 0 00.65.39h2.6a.73.73 0 00.53-.23.75.75 0 00-.56-1.27z"/>
+                  <path d="M12.95 14a3.1 3.1 0 01-1.67-.48 2.9 2.9 0 01-1.1-1.3 2.76 2.76 0 01.64-3.13 3.13 3.13 0 013.28-.62c.55.22 1.02.58 1.35 1.06a2.79 2.79 0 01-.38 3.63c-.56.54-1.32.84-2.12.84zm0-4.75c-.39 0-.77.11-1.09.32-.32.2-.57.5-.72.84a1.8 1.8 0 00.42 2.04 2.04 2.04 0 002.14.4c.36-.13.66-.38.88-.68a1.82 1.82 0 00-.25-2.37 2 2 0 00-1.38-.55zM4.32 14a3.1 3.1 0 01-1.67-.48 2.9 2.9 0 01-1.1-1.3A2.76 2.76 0 012.2 9.1a3.13 3.13 0 013.28-.62c.54.22 1.01.58 1.34 1.06a2.79 2.79 0 01-.37 3.63c-.57.54-1.33.84-2.13.84zm0-4.75c-.38 0-.76.11-1.09.32-.32.2-.57.5-.72.84a1.8 1.8 0 00.43 2.04 2.04 2.04 0 002.14.4c.35-.13.66-.38.87-.68a1.82 1.82 0 00-.24-2.37 2 2 0 00-1.39-.55zM10.73 4a1.08 1.08 0 00.74-.3 1 1 0 00.3-.7.95.95 0 00-.3-.71 1.03 1.03 0 00-.74-.29 1.09 1.09 0 00-.74.3 1 1 0 00-.3.7.96.96 0 00.3.7 1.05 1.05 0 00.74.3z"/>
+                  <path d="M12.28 6h-1.43c-.02 0-.05 0-.07-.02a.13.13 0 01-.04-.04L9.7 4.12a.98.98 0 00-.3-.34 1.04 1.04 0 00-1.31.1L5.8 6.08a1 1 0 00-.3.7c0 .54.41.73.6.84a105.12 105.12 0 012 1.14l.01.07v2.16c0 .26.22.5.5.5a.54.54 0 00.39-.13.5.5 0 00.16-.36V8.31a.48.48 0 00-.06-.23.5.5 0 00-.16-.17l-1.2-.84A.13.13 0 017.67 7a.12.12 0 01.03-.1l1.38-1.4a.13.13 0 01.1-.04c.03 0 .05 0 .06.02l.05.04.7 1.23c.05.08.12.15.2.2.08.04.17.06.27.06h1.83a.54.54 0 00.37-.15.5.5 0 00.15-.37c-.02-.27-.26-.48-.54-.48z"/>
                 </svg>
               </li>
-              <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog--disabled">
+              <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog--disabled" data-transport="Пешком">
                 <span class="prefer-transport__name visually-hidden">Пеший туризм.</span>
-                <svg class="prefer-transport__img" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <svg class="prefer-transport__img" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                   <!-- <use xlink:href="img/sprite.svg#hiking"></use> -->
-                  <path d="M14.98 5.76c.95 0 1.72-.86 1.72-1.92s-.77-1.92-1.72-1.92-1.73.86-1.73 1.92.78 1.92 1.73 1.92zM13.92 10.53c.2.33.48.58.81.72.34.15.7.17 1.04.08l2.86-.8-.42-1.86-2.85.8-1.2-1.99a1.73 1.73 0 00-1.09-.82l-3.3-.74a1.56 1.56 0 00-1.1.16c-.34.18-.61.49-.78.87l-1.43 3.18 1.54.86L9.43 7.8l1.69.38-4.38 8.14H2.93v1.92h3.81c.6 0 1.17-.36 1.48-.93l1.65-3.07 4.45 1 1.56 5.22 1.63-.6-1.56-5.23c-.1-.33-.27-.61-.5-.84-.22-.22-.5-.37-.8-.44l-2.61-.58 1.52-2.84.36.6z"/>
+                  <path d="M12.12 4c.77 0 1.4-.6 1.4-1.33 0-.74-.63-1.34-1.4-1.34-.77 0-1.4.6-1.4 1.34 0 .73.63 1.33 1.4 1.33zM11.27 7.31a1.46 1.46 0 001.5.55l2.3-.55-.33-1.29-2.31.55-.96-1.38c-.2-.29-.53-.5-.89-.56L7.9 4.1c-.3-.06-.61-.02-.88.11-.28.13-.5.34-.64.6L5.23 7.03l1.24.6 1.16-2.21L9 5.68l-3.55 5.65H2.36v1.34h3.1c.48 0 .94-.25 1.19-.65l1.34-2.13 3.6.69 1.26 3.63 1.33-.42-1.27-3.63a1.34 1.34 0 00-.4-.58c-.18-.16-.4-.26-.65-.31l-2.12-.4 1.24-1.97.29.41z"/>
                 </svg>
               </li>
             </ul>
@@ -1341,7 +1315,7 @@
         <a class="users-catalog-pagination__more button" href="#">Показать еще</a>
         <ol class="users-catalog-pagination__num num-pagination">
           <li class="num-pagination__item">
-            <a class="num-pagination__link num-pagination__link--current" href="#">1</a>
+            <a class="num-pagination__link num-pagination__link--current" href="#" tabindex="-1">1</a>
           </li>
           <li class="num-pagination__item">
             <a class="num-pagination__link" href="#">2</a>

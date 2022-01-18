@@ -2,18 +2,43 @@
   display: grid;
 
   @media (min-width: @tablet-width) {
-    grid-template-columns: 1fr 130px;
+    grid-template-columns: 1fr auto;
   }
 }
 
 .users-catalog-pagination__more {
   margin-bottom: 18px;
+  justify-self: center;
+  grid-template-columns: auto 1fr;
+  column-gap: 15px;
 
   font-size: 17px;
   line-height: 30px;
   font-weight: 700;
   color: @basic-blue-light;
   text-transform: uppercase;
+
+  &::before {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    width: 18px;
+
+    content: "";
+
+    border-top: 2px solid @basic-blue-light;
+    border-radius: 2px;
+  }
+
+  &::after {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    height: 18px;
+
+    content: "";
+
+    border-right: 2px solid @basic-blue-light;
+    border-radius: 2px;
+  }
 
   @media (min-width: @tablet-width) {
     grid-column: 1 / 3;
@@ -22,10 +47,54 @@
 
     font-size: 20px;
     line-height: 20px;
+
+    &::before {
+      width: 26px;
+    }
+
+    &::after {
+      height: 26px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 71px;
+  }
+
+  &:hover::before,
+  &:hover::after,
+  &:focus::before,
+  &:focus::after {
+    opacity: 0.6;
+  }
+
+  &:focus:not(:focus-visible)::before,
+  &:focus:not(:focus-visible)::after {
+    opacity: 1;
+  }
+
+  &:focus:not(:focus-visible):hover::before,
+  &:focus:not(:focus-visible):hover::after {
+    opacity: 0.6;
+  }
+
+  &:focus:not(:focus-visible):active::before,
+  &:focus:not(:focus-visible):active::after {
+    opacity: 0.3;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:focus-visible::before,
+  &:focus-visible::after {
+    opacity: 0.6;
+  }
+
+  &:active::before,
+  &:active::after {
+    opacity: 0.3;
   }
 }
 

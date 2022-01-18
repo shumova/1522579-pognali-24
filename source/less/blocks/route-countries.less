@@ -1,3 +1,26 @@
+.route-countries {
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 141px;
+      bottom: -35px;
+
+      content: "";
+
+      border-right: 1px solid @light-grey;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      right: 225px;
+    }
+  }
+}
+
 .route-countries__next-country {
   position: relative;
   display: grid;

@@ -114,16 +114,6 @@
   }
 }
 
-.country-card__link {
-  display: block;
-  text-decoration: none;
-
-  &:focus-visible {
-    outline: 2px solid @special-grey;
-    outline-offset: 2px;
-  }
-}
-
 .country-card__subtitle {
   margin: 0;
 
@@ -182,5 +172,9 @@
       width: 24px;
       height: 24px;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    column-gap: 8px;
   }
 }

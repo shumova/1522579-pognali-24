@@ -63,9 +63,30 @@
     justify-self: center;
   }
 
+  &:hover,
+  &:focus {
+    color: @interactive-orange-dark;
+  }
+
+  &:focus:not(:focus-visible) {
+    color: @special-orange;
+  }
+
+  &:focus:not(:focus-visible):hover {
+    color: @interactive-orange-dark;
+  }
+
+  &:focus:not(:focus-visible):active {
+    color: fade(@interactive-orange-dark, 60);
+  }
+
   &:focus-visible {
-    outline: 2px solid @special-grey;
-    outline-offset: 8px;
+    color: @interactive-orange-dark;
+    outline: none;
+  }
+
+  &:active {
+    color: fade(@interactive-orange-dark, 60);
   }
 }
 
@@ -118,6 +139,7 @@
 
   @media (min-width: @tablet-width) {
     display: grid;
+    max-width: 480px;
     grid-template-columns: 68px 1fr;
     gap: 21px;
     align-items: center;
@@ -174,8 +196,7 @@
 
   &:focus-visible {
     color: fade(@basic-blue-medium, 70);
-    outline: 2px solid @special-grey;
-    outline-offset: 8px;
+    outline: none;
   }
 
   &:focus-visible &-icon {

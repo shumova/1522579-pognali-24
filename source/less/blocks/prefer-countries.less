@@ -51,26 +51,31 @@
 }
 
 .prefer-countries__list {
-  max-width: 225px;
   margin: 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 35px);
+  display: flex;
+  flex-wrap: wrap;
+  align-content: start;
 
   list-style-type: none;
 }
 
 .prefer-countries__list--index {
+  min-width: 145px;
+  max-width: 230px;
+  justify-content: center;
   gap: 20px;
 }
 
 .prefer-countries__list--catalog {
+  gap: 10px;
+
   @media (min-width: @tablet-width) {
-    flex-direction: row;
+    gap: 25px;
   }
 
   @media (min-width: @desktop-width) {
-    flex-direction: column;
+    gap: 14px;
   }
 }
 
@@ -78,13 +83,9 @@
   position: relative;
 
   display: grid;
-  grid-template-columns: auto 1fr;
-  column-gap: 14px;
   align-items: center;
 
   background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 6px;
 
   &:last-child {
     margin-bottom: 0;
@@ -113,6 +114,35 @@
   &--bosnia {
     background-image: url("../img/countries/flags/bosnia@1x.jpg");
   }
+
+  &--usa {
+    background-image: url("../img/countries/flags/usa@1x.jpg");
+  }
+
+  &--australia {
+    background-image: url("../img/countries/flags/australia@1x.jpg");
+  }
+
+  &--dominica {
+    background-image: url("../img/countries/flags/dominica@1x.jpg");
+  }
+
+  &--germany {
+    background-image: url("../img/countries/flags/germany@1x.jpg");
+  }
+
+  &--uk {
+    background-image: url("../img/countries/flags/uk@1x.jpg");
+  }
+}
+
+.prefer-countries__item--index {
+  width: 35px;
+  height: 25px;
+
+  background-size: 35px;
+  background-position: center;
+  border-radius: 6px;
 
   &::before,
   &::after {
@@ -158,23 +188,20 @@
   }
 }
 
-.prefer-countries__item--index {
-  width: 35px;
-  height: 25px;
-  background-size: 35px;
-}
-
 .prefer-countries__item--catalog {
+  padding-left: 40px;
+
+  background-size: 26px 18px;
+  background-position: center left;
+  border-radius: 2px;
+
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 18px;
-
-    &:last-of-type {
-      margin-bottom: 0;
-    }
+    padding-left: 53px;
+    background-size: 35px 24px;
   }
 }
 
