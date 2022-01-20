@@ -30,7 +30,7 @@
 // layout-header-and-intro
 .page-body__layout-header-and-promo {
   position: relative;
-  z-index: 3;
+  z-index: 8;
 
   grid-column: 1 / -1;
   grid-row: 1 / 2;
@@ -45,6 +45,10 @@
     background-repeat: no-repeat;
     background-position: center, left 50% bottom 235px;
     background-size: 100%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(to top, @special-dark 0 240px, transparent 240px 100%), url("../img/decorative/earth-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: 950px) {
@@ -65,7 +69,7 @@
 .page-body__header {
   position: relative;
   grid-column: 1 / -1;
-  z-index: 2;
+  z-index: 4;
   display: grid;
 
   height: 100%;
@@ -91,14 +95,6 @@
     width: auto;
     align-self: start;
     padding-top: 46px;
-  }
-}
-
-.page-body__header--inner {
-  min-height: 73px;
-
-  @media (min-width: @tablet-width) {
-    min-height: 132px;
   }
 }
 
@@ -170,8 +166,13 @@
       content: "";
 
       transform: translateX(-30%);
-      background: transparent url("../img/decorative/traveller@1x.png") no-repeat;
-      background-size: 372px;
+      background: transparent url("../img/decorative/traveller-size-m@1x.png") no-repeat;
+      background-size: 372px auto;
+
+      @media (min-resolution: 2dppx) {
+        background: transparent url("../img/decorative/traveller-size-m@2x.png") no-repeat;
+        background-size: 372px auto;
+      }
     }
   }
 
@@ -203,7 +204,6 @@
 // main
 .page-body__main {
   position: relative;
-  z-index: 1;
 
   grid-column: 1 / -1;
   grid-row: 2 / 3;
@@ -223,4 +223,8 @@
   @media (min-width: @tablet-width) {
     margin-top: -60px;
   }
+}
+
+.page-body__footer--form {
+  z-index: 1;
 }

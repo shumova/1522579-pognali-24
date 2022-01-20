@@ -41,7 +41,6 @@
 
   background-color: transparent;
   border-radius: 50%;
-  overflow: hidden;
 }
 
 .level__value--preview {
@@ -57,8 +56,8 @@
   align-self: end;
 
   @media (min-width: @tablet-width) {
-    width: 60px;
-    height: 60px;
+    width: 65px;
+    height: 65px;
     align-self: center;
   }
 }
@@ -91,6 +90,7 @@
 
 .level__number {
   font-weight: 700;
+  overflow: hidden;
 }
 
 .level__number--preview {
@@ -131,6 +131,7 @@
 
 .level__text {
   position: relative;
+  overflow: hidden;
 
   &::after {
     position: absolute;
@@ -172,6 +173,7 @@
 
   @media (min-width: @tablet-width) {
     display: block;
+    margin-top: -6px;
     font-size: 14px;
     line-height: 14px;
     font-weight: 400;
@@ -189,8 +191,9 @@
 
 .level__rate-line--catalog {
   @media (min-width: @tablet-width) {
-    width: 60px;
-    height: 60px;
+    top: -4px;
+    width: 65px;
+    height: 65px;
   }
 }
 

@@ -140,11 +140,29 @@
 }
 
 .page-main__header--catalog {
+  position: relative;
   margin-top: -2px;
   padding: 43px 0 11px;
 
+  &::before {
+    position: absolute;
+    top: -30px;
+    right: 0;
+    bottom: 50%;
+    left: 0;
+
+    content: "";
+    background-color: @special-dark;
+  }
+
   @media (min-width: @tablet-width) {
     padding: 112px 0 68px;
+  }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      top: -70px;
+    }
   }
 }
 

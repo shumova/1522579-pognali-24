@@ -4,6 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="icon" href="../favicon.ico"> <!-- 32×32 -->
+    <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
+    <link rel="manifest" href="manifest.json">
+
     <title>Погнали | Поиск попутчиков в путешествия</title>
   </head>
   <body class="page__body page-body">
@@ -14,9 +20,31 @@
         Меню при скролле страницы активируется классом page-header--scrolling-page
         Так же класс page-header--scrolling-page можно комбинировать с классами page-header--no-js и page-header--main-menu-open
       -->
-      <header class="page-body__header page-body__header--index page-header">
-        <a class="page-header__logo logo">
+      <header class="page-body__header page-body__header--index page-header page-header--no-js">
+        <a class="page-header__logo">
           <span class="visually-hidden">Главная страница.</span>
+          <picture>
+            <source
+              media="(min-width: 1440px)"
+              srcset="img/logo-full-light-size-m.svg">
+            <source
+              media="(min-width: 768px)"
+              srcset="img/logo-full-light.svg">
+            <img class="page-header__logo-img page-header__logo-img--light"
+              src="img/logo-text-light.svg"
+              alt="Погнали." width="96" height="22">
+          </picture>
+          <picture>
+            <source
+              media="(min-width: 1440px)"
+              srcset="img/logo-full-dark-size-m.svg">
+            <source
+              media="(min-width: 768px)"
+              srcset="img/logo-full-dark.svg">
+            <img class="page-header__logo-img page-header__logo-img--dark"
+              src="img/logo-text-dark.svg"
+              alt="Погнали." width="96" height="22">
+          </picture>
         </a>
         <button class="page-header__toggle button" type="button">
           <span class="visually-hidden">Открыть меню</span>
@@ -140,38 +168,26 @@
           </div>
           <div class="countries-preview__cards">
             <ul class="countries-preview__list">
-              <li class="countries-preview__item country-card">
+              <li class="countries-preview__item country-card country-card--thailand">
                 <div class="country-card__text country-card__text--thailand">
                   <h3 class="country-card__title index-font index-font--sub-title">Таиланд</h3>
                   <p class="country-card__subtitle">Джунгли зовут!</p>
                   <p class="country-card__number">18321</p>
                 </div>
-                <picture class="country-card__picture">
-                  <source srcset="img/countries/thailand@1x.webp 1x, img/countries/thailand@2x.webp 2x" type="image/webp">
-                  <img class="country-card__img" src="img/countries/thailand@1x.jpg" srcset="img/countries/thailand@2x.jpg 2x" width="270" height="110" alt="Небольшой покрытый зеленью остров в океане.">
-                </picture>
               </li>
-              <li class="countries-preview__item country-card">
+              <li class="countries-preview__item country-card country-card--france">
                 <div class="country-card__text country-card__text--france">
                   <h3 class="country-card__title index-font index-font--sub-title">Франция</h3>
                   <p class="country-card__subtitle">Трэ бьен, манифик!</p>
                   <p class="country-card__number">12518</p>
                 </div>
-                  <picture class="country-card__picture">
-                    <source srcset="img/countries/france@1x.webp 1x, img/countries/france@2x.webp 2x" type="image/webp">
-                    <img class="country-card__img" src="img/countries/france@1x.jpg" srcset="img/countries/france@2x.jpg 2x" width="270" height="110" alt="Фасад дома на улице во Франции.">
-                  </picture>
               </li>
-              <li class="countries-preview__item country-card">
+              <li class="countries-preview__item country-card country-card--czech">
                 <div class="country-card__text country-card__text--czech">
                   <h3 class="country-card__title index-font index-font--sub-title">Чехия</h3>
                   <p class="country-card__subtitle">Закоулки старой Европы</p>
                   <p class="country-card__number">5326</p>
                 </div>
-                <picture class="country-card__picture">
-                  <source srcset="img/countries/czech@1x.webp 1x, img/countries/czech@2x.webp 2x" type="image/webp">
-                  <img class="country-card__img" src="img/countries/czech@1x.jpg" srcset="img/countries/czech@2x.jpg 2x" width="270" height="110" alt="Речной паром на фоне Карлова моста.">
-                </picture>
               </li>
             </ul>
           </div>
@@ -197,10 +213,24 @@
                   <span class="user-card__status-text user-card__status-text--offline visually-hidden">Сейчас offline.</span>
                 </span>
               </div>
-              <picture class="user-card__picture user-card__picture--preview">
-                <source srcset="img/users/tanya-firsova/tanya-firsova-size-large@1x.webp 1x, img/users/tanya-firsova/tanya-firsova-size-large@2x.webp 2x" type="image/webp">
-                <img class="user-card__img user-card__img--preview" src="img/users/tanya-firsova/tanya-firsova-size-large@1x.jpg" srcset="img/users/tanya-firsova/tanya-firsova-size-large@2x.jpg 2x" width="270" height="270" alt="Молодая стройная девушка плавает в бассейне.">
-              </picture>
+              <a class="user-card__picture user-card__picture--preview" href="#">
+                <picture>
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="img/users/tanya-firsova/tanya-firsova-size-xlarge@1x.webp 1x, img/users/tanya-firsova/tanya-firsova-size-xlarge@2x.webp 2x"
+                    type="image/webp">
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="img/users/tanya-firsova/tanya-firsova-size-xlarge@1x.jpg 1x, img/users/tanya-firsova/tanya-firsova-size-xlarge@2x.jpg 2x">
+                  <source
+                    srcset="img/users/tanya-firsova/tanya-firsova-size-large@1x.webp 1x, img/users/tanya-firsova/tanya-firsova-size-large@2x.webp 2x"
+                    type="image/webp">
+                  <img class="user-card__img user-card__img--preview"
+                    src="img/users/tanya-firsova/tanya-firsova-size-large@1x.jpg"
+                    srcset="img/users/tanya-firsova/tanya-firsova-size-large@2x.jpg 2x"
+                    alt="Молодая стройная девушка плавает в бассейне." width="270" height="270">
+                </picture>
+              </a>
               <div class="user-card__level user-card__level--preview level level--preview">
                 <div class="level__value level__value--preview">
                   <span class="level__number level__number--preview">99</span>
@@ -279,10 +309,24 @@
                   <span class="user-card__status-text user-card__status-text--offline visually-hidden">Сейчас offline.</span>
                 </span>
               </div>
-              <picture class="user-card__picture user-card__picture--preview">
-                <source srcset="img/users/petya-demin/petya-demin-size-large@1x.webp 1x, img/users/petya-demin/petya-demin-size-large@2x.webp 2x" type="image/webp">
-                <img class="user-card__img user-card__img--preview" src="img/users/petya-demin/petya-demin-size-large@1x.jpg" srcset="img/users/petya-demin/petya-demin-size-large@2x.jpg 2x" width="270" height="270" alt="Молодой человек с бородой, в тёмной шапке-бини и очках.">
-              </picture>
+              <a class="user-card__picture user-card__picture--preview" href="#">
+                <picture>
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="img/users/petya-demin/petya-demin-size-xlarge@1x.webp 1x, img/users/petya-demin/petya-demin-size-xlarge@2x.webp 2x"
+                    type="image/webp">
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="img/users/petya-demin/petya-demin-size-xlarge@1x.jpg 1x, img/users/petya-demin/petya-demin-size-xlarge@2x.jpg 2x">
+                  <source
+                    srcset="img/users/petya-demin/petya-demin-size-large@1x.webp 1x, img/users/petya-demin/petya-demin-size-large@2x.webp 2x"
+                    type="image/webp">
+                  <img class="user-card__img user-card__img--preview"
+                    src="img/users/petya-demin/petya-demin-size-large@1x.jpg"
+                    srcset="img/users/petya-demin/petya-demin-size-large@2x.jpg 2x"
+                    alt="Молодой человек с бородой, в тёмной шапке-бини и очках." width="270" height="270">
+                </picture>
+              </a>
               <div class="user-card__level user-card__level--preview level level--preview">
                 <div class="level__value level__value--preview">
                   <span class="level__number level__number--preview">80</span>
@@ -459,8 +503,19 @@
     </main>
     <footer class="page-body__footer page-body__footer--index page-footer">
       <div class="page-footer__container container">
-        <a class="page-footer__logo logo">
+        <a class="page-footer__logo">
           <span class="visually-hidden">Главная страница.</span>
+          <picture>
+            <source
+              media="(min-width: 1440px)"
+              srcset="img/logo-full-dark-size-m.svg">
+            <source
+              media="(min-width: 768px)"
+              srcset="img/logo-full-dark.svg">
+            <img class="page-footer__logo-img page-footer__logo-img--dark"
+              src="img/logo-text-dark.svg"
+              alt="Погнали." width="96" height="22">
+          </picture>
         </a>
         <ul class="page-footer__social social">
           <li class="social__item">

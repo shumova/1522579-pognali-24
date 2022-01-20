@@ -6,6 +6,12 @@
   background-size: 100%, cover;
   background-color: @basic-blue;
 
+  @media (min-resolution: 2dppx) {
+    background: linear-gradient(to top, @basic-blue 0 20px, transparent 20px 100%),
+      url("../img/decorative/earth@2x.jpg") no-repeat left 50% bottom 50%;
+    background-size: 100%, cover;
+  }
+
   &::before {
     position: absolute;
     bottom: 90px;
@@ -17,24 +23,32 @@
 
     transform: translateX(-40%);
     background: transparent url("../img/decorative/traveller@1x.png") no-repeat;
+    background-size: 192px auto;
+
+    @media (min-resolution: 2dppx) {
+      background: transparent url("../img/decorative/traveller@2x.png") no-repeat;
+      background-size: 192px auto;
+    }
   }
 
   @media (min-width: @tablet-width) {
-    background: linear-gradient(to top, @special-dark 0 20px, transparent 20px 100%);
+    background: transparent;
 
     &::before {
       display: none;
     }
   }
 
-  @media (min-width: @tablet-width) {
-    background: transparent;
-  }
-
   @media (min-width: @desktop-width) {
     background: url("../img/decorative/earth-size-l@1x.jpg") no-repeat left 50% top 0;
     background-size: cover;
     background-color: @basic-blue;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/decorative/earth-size-l@2x.jpg") no-repeat left 50% top 0;
+      background-size: cover;
+      background-color: @basic-blue;
+    }
 
     &::before {
       display: block;
@@ -43,8 +57,13 @@
       height: 640px;
 
       background-image: url("../img/decorative/traveller-size-l@1x.png");
-      background-size: 431px;
+      background-size: 431px auto;
       transform: translateX(-30%);
+
+      @media (min-resolution: 2dppx) {
+        background: transparent url("../img/decorative/traveller-size-l@2x.png") no-repeat;
+        background-size: 431px auto;
+      }
     }
   }
 }
