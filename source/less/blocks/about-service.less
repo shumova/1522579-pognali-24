@@ -1,7 +1,12 @@
 .about-service {
   background: @basic-dark url("../img/decorative/mobile-background-size-s@1x.jpg") no-repeat left 50% bottom 0;
-  background-size: 320px;
+  background-size: 320px auto;
   border-radius: 0 0 50px 50px;
+
+  @media (min-resolution: 2dppx) {
+    background: @basic-dark url("../img/decorative/mobile-background-size-s@2x.jpg") no-repeat left 50% bottom 0;
+    background-size: 320px auto;
+  }
 
   @media (min-width: @tablet-width) {
     background-image: none;
@@ -36,7 +41,12 @@
       height: 548px;
 
       background: @basic-dark url("../img/decorative/mobile-background-size-m@1x.jpg") no-repeat right 0 top 0;
-      background-size: 384px;
+      background-size: 384px auto;
+
+      @media (min-resolution: 2dppx) {
+        background: @basic-dark url("../img/decorative/mobile-background-size-m@2x.jpg") no-repeat right 0 top 0;
+        background-size: 384px auto;
+      }
     }
   }
 
@@ -44,6 +54,11 @@
     padding: 62px 0 163px 70px;
     background: url("../img/decorative/mobile-background-size-l@1x.jpg") no-repeat top 0 left 0;
     background-size: 1322px;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/decorative/mobile-background-size-l@2x.jpg") no-repeat top 0 left 0;
+      background-size: 1322px auto;
+    }
 
     &::before {
       display: none;

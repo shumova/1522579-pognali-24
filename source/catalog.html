@@ -4,6 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+
+  <link rel="icon" href="../favicon.ico"> <!-- 32×32 -->
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
+  <link rel="manifest" href="manifest.json">
+
   <title>Погнали | Попутчики</title>
 </head>
 <body class="page__body page-body page-body--inner">
@@ -15,6 +21,28 @@
   <header class="page-body__header page-body__header--inner page-header page-header--no-js page-header--inner">
     <a class="page-header__logo logo" href="index.html">
       <span class="visually-hidden">Перейти на главную страницу.</span>
+      <picture>
+        <source
+          media="(min-width: 1440px)"
+          srcset="img/logo-full-light-size-m.svg">
+        <source
+          media="(min-width: 768px)"
+          srcset="img/logo-full-light.svg">
+        <img class="page-header__logo-img page-header__logo-img--light"
+          src="img/logo-text-light.svg"
+          alt="Погнали." width="96" height="22">
+      </picture>
+      <picture>
+        <source
+          media="(min-width: 1440px)"
+          srcset="img/logo-full-dark-size-m.svg">
+        <source
+          media="(min-width: 768px)"
+          srcset="img/logo-full-dark.svg">
+        <img class="page-header__logo-img page-header__logo-img--dark"
+          src="img/logo-text-dark.svg"
+          alt="Погнали." width="96" height="22">
+      </picture>
     </a>
     <button class="page-header__toggle button" type="button">
       <span class="visually-hidden">Открыть меню</span>
@@ -98,7 +126,7 @@
       <a class="user-menu__login button button--primary" href="#">Авторизация</a>
     </div>
   </header>
-  <main class="page-body__main page-main">
+  <main class="page-body__main page-body__main--inner page-main">
     <div class="page-main__header page-main__header--catalog page-main-header page-main-header--catalog">
       <div class="page-main-header__container page-main-header__container--catalog container">
         <h1 class="page-main-header__title">Попутчики</h1>
@@ -854,7 +882,7 @@
               </button>
               <div class="catalog-filter__content prefer-transport">
                 <ul class="prefer-transport__list prefer-transport__list--catalog">
-                  <li class="prefer-transport__item prefer-transport__item--button">
+                  <li class="prefer-transport__item prefer-transport__item--button" data-transport="Авиаперелет">
                     <button class="prefer-transport__button button" type="button">
                       <span class="prefer-transport__name visually-hidden">Cамолёт.</span>
                       <svg class="prefer-transport__img" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
@@ -863,7 +891,7 @@
                       </svg>
                     </button>
                   </li>
-                  <li class="prefer-transport__item prefer-transport__item--button">
+                  <li class="prefer-transport__item prefer-transport__item--button" data-transport="Автотранспорт">
                     <!-- при работающем js значение tabindex меняется на "0" -->
                     <button class="prefer-transport__button button" type="button" tabindex="-1">
                       <span class="prefer-transport__name visually-hidden">Общественный транспорт.</span>
@@ -873,7 +901,7 @@
                       </svg>
                     </button>
                   </li>
-                  <li class="prefer-transport__item prefer-transport__item--button">
+                  <li class="prefer-transport__item prefer-transport__item--button" data-transport="Велосипед">
                     <button class="prefer-transport__button prefer-transport__button--off button" type="button">
                       <span class="prefer-transport__name visually-hidden">Велосипед.</span>
                       <svg class="prefer-transport__img" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
@@ -883,7 +911,7 @@
                       </svg>
                     </button>
                   </li>
-                  <li class="prefer-transport__item prefer-transport__item--button">
+                  <li class="prefer-transport__item prefer-transport__item--button" data-transport="Пешком">
                     <button class="prefer-transport__button button" type="button">
                       <span class="prefer-transport__name visually-hidden">Пеший туризм.</span>
                       <svg class="prefer-transport__img" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
@@ -954,8 +982,27 @@
           <p class="user-card__likes">1,5 м</p>
           <a class="user-card__picture user-card__picture--catalog" href="#">
             <picture>
-              <source srcset="img/users/tanya-firsova/tanya-firsova-size-tiny@1x.webp 1x, img/users/tanya-firsova/tanya-firsova-size-tiny@2x.webp 2x" type="image/webp">
-              <img class="user-card__img user-card__img--catalog" src="img/users/tanya-firsova/tanya-firsova-size-tiny@1x.jpg" srcset="img/users/tanya-firsova/tanya-firsova-size-tiny@2x.jpg 2x" width="70" height="70" alt="Молодая стройная девушка плавает в бассейне.">
+              <source
+                media="(min-width: 1440px)"
+                srcset="img/users/tanya-firsova/tanya-firsova-size-xlarge@1x.webp 1x, img/users/tanya-firsova/tanya-firsova-size-xlarge@2x.webp 2x"
+                type="image/webp">
+              <source
+                media="(min-width: 1440px)"
+                srcset="img/users/tanya-firsova/tanya-firsova-size-xlarge@1x.jpg, img/users/tanya-firsova/tanya-firsova-size-xlarge@2x.jpg 2x">
+              <source
+                media="(min-width: 768px)"
+                srcset="img/users/tanya-firsova/tanya-firsova-size-medium@1x.webp 1x, img/users/tanya-firsova/tanya-firsova-size-medium@2x.webp 2x"
+                type="image/webp">
+              <source
+                media="(min-width: 768px)"
+                srcset="img/users/tanya-firsova/tanya-firsova-size-medium@1x.jpg, img/users/tanya-firsova/tanya-firsova-size-medium@2x.jpg 2x">
+              <source
+                srcset="img/users/tanya-firsova/tanya-firsova-size-tiny@1x.webp 1x, img/users/tanya-firsova/tanya-firsova-size-tiny@2x.webp 2x"
+                type="image/webp">
+              <img class="user-card__img user-card__img--catalog"
+                src="img/users/tanya-firsova/tanya-firsova-size-tiny@1x.jpg"
+                srcset="img/users/tanya-firsova/tanya-firsova-size-tiny@2x.jpg 2x"
+                alt="Молодая стройная девушка плавает в бассейне." width="70" height="70">
             </picture>
           </a>
           <div class="user-card__level user-card__level--catalog level level--catalog">
@@ -1051,8 +1098,27 @@
           <p class="user-card__likes">1500</p>
           <a class="user-card__picture user-card__picture--catalog" href="#">
             <picture>
-              <source srcset="img/users/petya-demin/petya-demin-size-tiny@1x.webp 1x, img/users/petya-demin/petya-demin-size-tiny@2x.webp 2x" type="image/webp">
-              <img class="user-card__img user-card__img--catalog" src="img/users/petya-demin/petya-demin-size-tiny@1x.jpg" srcset="img/users/petya-demin/petya-demin-size-tiny@2x.jpg 2x" width="70" height="70" alt="Молодой человек с бородой, в тёмной шапке-бини и очках.">
+              <source
+                media="(min-width: 1440px)"
+                srcset="img/users/petya-demin/petya-demin-size-xlarge@1x.webp 1x, img/users/petya-demin/petya-demin-size-xlarge@2x.webp 2x"
+                type="image/webp">
+              <source
+                media="(min-width: 1440px)"
+                srcset="img/users/petya-demin/petya-demin-size-xlarge@1x.jpg, img/users/petya-demin/petya-demin-size-xlarge@2x.jpg 2x">
+              <source
+                media="(min-width: 768px)"
+                srcset="img/users/petya-demin/petya-demin-size-medium@1x.webp 1x, img/users/petya-demin/petya-demin-size-medium@2x.webp 2x"
+                type="image/webp">
+              <source
+                media="(min-width: 768px)"
+                srcset="img/users/petya-demin/petya-demin-size-medium@1x.jpg, img/users/petya-demin/petya-demin-size-medium@2x.jpg 2x">
+              <source
+                srcset="img/users/petya-demin/petya-demin-size-tiny@1x.webp 1x, img/users/petya-demin/petya-demin-size-tiny@2x.webp 2x"
+                type="image/webp">
+              <img class="user-card__img user-card__img--catalog"
+                src="img/users/petya-demin/petya-demin-size-tiny@1x.jpg"
+                srcset="img/users/petya-demin/petya-demin-size-tiny@2x.jpg 2x"
+                alt="Молодой человек с бородой, в тёмной шапке-бини и очках." width="70" height="70">
             </picture>
           </a>
           <div class="user-card__level user-card__level--catalog level level--catalog">
@@ -1144,8 +1210,27 @@
           <p class="user-card__likes">170</p>
           <a class="user-card__picture user-card__picture--catalog" href="#">
             <picture>
-              <source srcset="img/users/mark-smolov/mark-smolov-size-tiny@1x.webp 1x, img/users/mark-smolov/mark-smolov-size-tiny@2x.webp 2x" type="image/webp">
-              <img class="user-card__img user-card__img--catalog" src="img/users/mark-smolov/mark-smolov-size-tiny@1x.jpg" srcset="img/users/mark-smolov/mark-smolov-size-tiny@2x.jpg 2x" width="70" height="70" alt="Молодой человек с татуировками в белой футболке и джинсовых шортах.">
+              <source
+                media="(min-width: 1440px)"
+                srcset="img/users/mark-smolov/mark-smolov-size-xlarge@1x.webp 1x, img/users/mark-smolov/mark-smolov-size-xlarge@2x.webp 2x"
+                type="image/webp">
+              <source
+                media="(min-width: 1440px)"
+                srcset="img/users/mark-smolov/mark-smolov-size-xlarge@1x.jpg, img/users/mark-smolov/mark-smolov-size-xlarge@2x.jpg 2x">
+              <source
+                media="(min-width: 768px)"
+                srcset="img/users/mark-smolov/mark-smolov-size-medium@1x.webp 1x, img/users/mark-smolov/mark-smolov-size-medium@2x.webp 2x"
+                type="image/webp">
+              <source
+                media="(min-width: 768px)"
+                srcset="img/users/mark-smolov/mark-smolov-size-medium@1x.jpg, img/users/mark-smolov/mark-smolov-size-medium@2x.jpg 2x">
+              <source
+                srcset="img/users/mark-smolov/mark-smolov-size-tiny@1x.webp 1x, img/users/mark-smolov/mark-smolov-size-tiny@2x.webp 2x"
+                type="image/webp">
+              <img class="user-card__img user-card__img--catalog"
+                src="img/users/mark-smolov/mark-smolov-size-tiny@1x.jpg"
+                srcset="img/users/mark-smolov/mark-smolov-size-tiny@2x.jpg 2x"
+                alt="Молодой человек с татуировками в белой футболке и джинсовых шортах." width="70" height="70">
             </picture>
           </a>
           <div class="user-card__level user-card__level--catalog level level--catalog">
@@ -1240,8 +1325,27 @@
           <p class="user-card__likes">23</p>
           <a class="user-card__picture user-card__picture--catalog" href="#">
             <picture>
-              <source srcset="img/users/larisa-rogovaya/larisa-rogovaya-size-tiny@1x.webp 1x, img/users/larisa-rogovaya/larisa-rogovaya-size-tiny@2x.webp 2x" type="image/webp">
-              <img class="user-card__img user-card__img--catalog" src="img/users/larisa-rogovaya/larisa-rogovaya-size-tiny@1x.jpg" srcset="img/users/larisa-rogovaya/larisa-rogovaya-size-tiny@2x.jpg 2x" width="70" height="70" alt="Молодая стройная девушка плавает в бассейне.">
+              <source
+                media="(min-width: 1440px)"
+                srcset="img/users/larisa-rogovaya/larisa-rogovaya-size-xlarge@1x.webp 1x, img/users/larisa-rogovaya/larisa-rogovaya-size-xlarge@2x.webp 2x"
+                type="image/webp">
+              <source
+                media="(min-width: 1440px)"
+                srcset="img/users/larisa-rogovaya/larisa-rogovaya-size-xlarge@1x.jpg, img/users/larisa-rogovaya/larisa-rogovaya-size-xlarge@2x.jpg 2x">
+              <source
+                media="(min-width: 768px)"
+                srcset="img/users/larisa-rogovaya/larisa-rogovaya-size-medium@1x.webp 1x, img/users/larisa-rogovaya/larisa-rogovaya-size-medium@2x.webp 2x"
+                type="image/webp">
+              <source
+                media="(min-width: 768px)"
+                srcset="img/users/larisa-rogovaya/larisa-rogovaya-size-medium@1x.jpg, img/users/larisa-rogovaya/larisa-rogovaya-size-medium@2x.jpg 2x">
+              <source
+                srcset="img/users/larisa-rogovaya/larisa-rogovaya-size-tiny@1x.webp 1x, img/users/larisa-rogovaya/larisa-rogovaya-size-tiny@2x.webp 2x"
+                type="image/webp">
+              <img class="user-card__img user-card__img--catalog"
+                src="img/users/larisa-rogovaya/larisa-rogovaya-size-tiny@1x.jpg"
+                srcset="img/users/larisa-rogovaya/larisa-rogovaya-size-tiny@2x.jpg 2x"
+                alt="Молодая девушка в деловом костюме." width="70" height="70">
             </picture>
           </a>
           <div class="user-card__level user-card__level--catalog level level--catalog">

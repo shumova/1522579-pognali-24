@@ -4,6 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+
+  <link rel="icon" href="../favicon.ico"> <!-- 32×32 -->
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
+  <link rel="manifest" href="manifest.json">
+
   <title>Погнали | Направления</title>
 </head>
 <body class="page__body page-body page-body--inner">
@@ -16,6 +22,28 @@
   <header class="page-body__header page-body__header--inner page-header page-header--no-js page-header--inner">
     <a class="page-header__logo logo" href="index.html">
       <span class="visually-hidden">Перейти на главную страницу.</span>
+      <picture>
+        <source
+          media="(min-width: 1440px)"
+          srcset="img/logo-full-light-size-m.svg">
+        <source
+          media="(min-width: 768px)"
+          srcset="img/logo-full-light.svg">
+        <img class="page-header__logo-img page-header__logo-img--light"
+          src="img/logo-text-light.svg"
+          alt="Погнали." width="96" height="22">
+      </picture>
+      <picture>
+        <source
+          media="(min-width: 1440px)"
+          srcset="img/logo-full-dark-size-m.svg">
+        <source
+          media="(min-width: 768px)"
+          srcset="img/logo-full-dark.svg">
+        <img class="page-header__logo-img page-header__logo-img--dark"
+          src="img/logo-text-dark.svg"
+          alt="Погнали." width="96" height="22">
+      </picture>
     </a>
     <button class="page-header__toggle button" type="button">
       <span class="visually-hidden">Открыть меню</span>
@@ -99,15 +127,41 @@
       <a class="user-menu__login button button--primary" href="#">Авторизация</a>
     </div>
   </header>
-  <main class="page-body__main page-main">
+  <main class="page-body__main page-body__main--inner page-main">
     <div class="page-main__header page-main__header--form page-main-header page-main-header--form">
       <div class="page-main-header__container page-main-header__container--form user-profile">
         <h1 class="page-main-header__title page-main-header__title--form">Направления</h1>
         <h2 class="visually-hidden">Данные пользователя.</h2>
-        <picture class="user-profile__picture">
-          <source srcset="img/users/petya-demin/petya-demin-size-small@1x.webp 1x, img/users/petya-demin/petya-demin-size-small@2x.webp 2x" type="image/webp">
-          <img class="user-profile__img" src="img/users/petya-demin/petya-demin-size-small@1x.jpg" srcset="img/users/petya-demin/petya-demin-size-small@2x.jpg 2x" alt="Петя Дёмин" width="100" height="100">
-        </picture>
+        <div class="user-profile__picture">
+          <picture>
+            <source
+            media="(min-width: 1440px)"
+            srcset="img/users/petya-demin/petya-demin-size-medium@1x.webp 1x,
+              img/users/petya-demin/petya-demin-size-medium@2x.webp 2x"
+            type="image/webp">
+            <source
+              media="(min-width: 1440px)"
+              srcset="img/users/petya-demin/petya-demin-size-medium@1x.jpg 1x,
+              img/users/petya-demin/petya-demin-size-medium@2x.jpg 2x">
+            <source
+              media="(min-width: 768px)"
+              srcset="img/users/petya-demin/petya-demin-size-xsmall@1x.webp 1x,
+                img/users/petya-demin/petya-demin-size-xsmall@2x.webp 2x"
+              type="image/webp">
+            <source
+              media="(min-width: 768px)"
+              srcset="img/users/petya-demin/petya-demin-size-xsmall@1x.jpg 1x,
+              img/users/petya-demin/petya-demin-size-xsmall@2x.jpg 2x">
+            <source
+              srcset="img/users/petya-demin/petya-demin-size-small@1x.webp 1x,
+                img/users/petya-demin/petya-demin-size-small@2x.webp 2x"
+              type="image/webp">
+            <img class="user-profile__img"
+              src="img/users/petya-demin/petya-demin-size-small@1x.jpg"
+              srcset="img/users/petya-demin/petya-demin-size-small@2x.jpg 2x"
+              alt="Петя Дёмин" width="100" height="100">
+          </picture>
+        </div>
         <button class="user-profile__change-photo">
           <span class="user-profile__change-photo-full-text">Сменить </span>фото
         </button>
@@ -123,7 +177,7 @@
         <div class="user-profile__prefer-transport prefer-transport prefer-transport--form">
           <p class="prefer-transport__title prefer-transport__title--form">Транспорт</p>
           <ul class="prefer-transport__list prefer-transport__list--form">
-            <li class="prefer-transport__item">
+            <li class="prefer-transport__item" data-transport="Авиаперелет">
               <button class="prefer-transport__button prefer-transport__button--on button" type="button">
                 <span class="prefer-transport__name visually-hidden">Cамолёт.</span>
                 <svg class="prefer-transport__img" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
@@ -132,7 +186,7 @@
                 </svg>
               </button>
             </li>
-            <li class="prefer-transport__item">
+            <li class="prefer-transport__item" data-transport="Автотранспорт">
               <button class="prefer-transport__button prefer-transport__button--on button" type="button">
                 <span class="prefer-transport__name visually-hidden">Общественный транспорт.</span>
                 <svg class="prefer-transport__img" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
@@ -141,7 +195,7 @@
                 </svg>
               </button>
             </li>
-            <li class="prefer-transport__item">
+            <li class="prefer-transport__item" data-transport="Велосипед">
               <button class="prefer-transport__button prefer-transport__button--off button" type="button">
                 <span class="prefer-transport__name visually-hidden">Велосипед.</span>
                 <svg class="prefer-transport__img" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
@@ -151,7 +205,7 @@
                 </svg>
               </button>
             </li>
-            <li class="prefer-transport__item">
+            <li class="prefer-transport__item" data-transport="Пешком">
               <button class="prefer-transport__button prefer-transport__button--on button" type="button">
                 <span class="prefer-transport__name visually-hidden">Пеший туризм.</span>
                 <svg class="prefer-transport__img" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
@@ -227,7 +281,7 @@
                   <button class="form-filter__control form-filter__control--less button">
                     <span class="visually-hidden">Уменьшить</span>
                   </button>
-                  <input class="form-filter__field form-filter__field--company" type="number" name="company" id="company" value="2">
+                  <input class="form-filter__field form-filter__field--company" type="text" name="company" id="company" value="2">
                   <button class="form-filter__control form-filter__control--more button">
                     <span class="visually-hidden">Увеличить</span>
                   </button>
@@ -240,7 +294,7 @@
                   <button class="form-filter__control form-filter__control--less button">
                     <span class="visually-hidden">Уменьшить</span>
                   </button>
-                  <input class="form-filter__field form-filter__field--days" type="number" name="days" id="days" value="3">
+                  <input class="form-filter__field form-filter__field--days" type="text" name="days" id="days" value="3">
                   <button class="form-filter__control form-filter__control--more button">
                     <span class="visually-hidden">Увеличить</span>
                   </button>

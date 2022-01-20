@@ -23,8 +23,15 @@
     height: 100px;
     content: "";
 
-    background: transparent url("../img/decorative/rates@1x.png") no-repeat center;
-    background-size: 100px;
+    background-color: transparent;
+    background-image: url("../img/decorative/rates@1x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100px auto;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/decorative/rates@2x.png");
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -45,8 +52,14 @@
       bottom: 50%;
       width: 198px;
       height: 198px;
-      background-size: 198px;
+
+      background-image: url("../img/decorative/rates-large@1x.png");
+      background-size: 198px auto;
       transform: translateY(50%);
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/decorative/rates-large@2x.png");
+      }
     }
   }
 }

@@ -421,7 +421,6 @@
   background-color: @basic-blue-light;
   border: none;
   border-radius: 50%;
-  transform: translateY(-50%);
   cursor: pointer;
 
   @media (min-width: @tablet-width) {
@@ -497,8 +496,10 @@
 
 .catalog-filter__range-toggle--min {
   left: 0;
+  transform: translateX(-50%) translateY(-50%);
 }
 
 .catalog-filter__range-toggle--max {
   right: 0;
+  transform: translateX(50%) translateY(-50%);
 }

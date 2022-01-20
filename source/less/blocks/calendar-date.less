@@ -12,7 +12,10 @@
 
   &:hover,
   &:focus {
+    color: @basic-white;
+    background-color: @basic-blue-light;
     outline: 2px solid @basic-red;
+    outline-offset: 0;
   }
 
   &:focus:not(:focus-visible) {
@@ -20,7 +23,10 @@
   }
 
   &:focus:not(:focus-visible):hover {
+    color: @basic-white;
+    background-color: @basic-blue-light;
     outline: 2px solid @basic-red;
+    outline-offset: 0;
   }
 
   &:focus:not(:focus-visible):active {
@@ -31,6 +37,7 @@
 
   &:focus-visible {
     outline: 2px solid @basic-red;
+    outline-offset: 0;
   }
 
   &:active {
@@ -48,14 +55,17 @@
     &:hover,
     &:focus {
       outline-width: 4px;
+      outline-offset: -2px;
     }
 
     &:focus:not(:focus-visible):hover {
       outline-width: 4px;
+      outline-offset: -2px;
     }
 
     &:focus-visible {
       outline-width: 4px;
+      outline-offset: -2px;
     }
   }
 
@@ -104,9 +114,11 @@
 
 .calendar-date__button--hover {
   outline: 2px solid @basic-red;
+  outline-offset: 0;
 
   @media (min-width: @tablet-width) {
     outline-width: 4px;
+    outline-offset: -2px;
   }
 }
 
