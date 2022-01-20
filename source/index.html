@@ -503,8 +503,19 @@
     </main>
     <footer class="page-body__footer page-body__footer--index page-footer">
       <div class="page-footer__container container">
-        <a class="page-footer__logo logo">
+        <a class="page-footer__logo">
           <span class="visually-hidden">Главная страница.</span>
+          <picture>
+            <source
+              media="(min-width: 1440px)"
+              srcset="img/logo-full-dark-size-m.svg">
+            <source
+              media="(min-width: 768px)"
+              srcset="img/logo-full-dark.svg">
+            <img class="page-footer__logo-img page-footer__logo-img--dark"
+              src="img/logo-text-dark.svg"
+              alt="Погнали." width="96" height="22">
+          </picture>
         </a>
         <ul class="page-footer__social social">
           <li class="social__item">
