@@ -1,10 +1,10 @@
 .services--basic {
   background-color: @middle-grey;
-  border-radius: 0 0 25px 25px;
+  border-radius: 0 0 30px 30px;
 
   @media (min-width: @tablet-width) {
     background-color: @basic-light-grey;
-    border-radius: 0 0 50px 50px;
+    border-radius: 0 0 60px 60px;
   }
 }
 
@@ -15,7 +15,7 @@
 
   &::before {
     position: absolute;
-    top: 0;
+    top: -15px;
     right: 0;
     z-index: 1;
 
@@ -39,13 +39,13 @@
 
     &::before {
       top: auto;
-      right: 50px;
-      bottom: -10px;
+      right: 45px;
+      bottom: -18px;
     }
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 72px;
+    padding: 0 73px 0 70px;
 
     &::before {
       right: 72px;
@@ -55,7 +55,7 @@
 
       background-image: url("../img/decorative/rates-large@1x.png");
       background-size: 198px auto;
-      transform: translateY(50%);
+      transform: translateY(71%);
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/decorative/rates-large@2x.png");
@@ -67,13 +67,19 @@
 .services__title {
   display: block;
   max-width: 107px;
-  margin-bottom: 56px;
+  margin-bottom: 44px;
   text-decoration: none;
   justify-self: start;
 
   @media (min-width: @tablet-width) {
     max-width: 100%;
+    margin-bottom: 34px;
     justify-self: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 84px;
+    padding-left: 5px;
   }
 
   &:hover,
@@ -105,18 +111,18 @@
 
 .services__rate {
   margin: 0;
-  margin-bottom: 31px;
+  margin-bottom: 30px;
 }
 
 .services__rate--basic {
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
-    padding: 41px 0;
+    padding: 41px 0 30px;
   }
 
   @media (min-width: @desktop-width) {
     margin-right: 111px;
-    padding: 51px 0;
+    padding: 51px 0 30px;
   }
 }
 
@@ -125,7 +131,8 @@
   margin-bottom: 34px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 65px;
+    margin-bottom: 52px;
+    padding-right: 5px;
   }
 }
 

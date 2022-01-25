@@ -1,12 +1,16 @@
 .step-tips {
   counter-reset: step;
   list-style-type: none;
+
+  @media (min-width: @desktop-width) {
+    align-items: start;
+  }
 }
 
 .step-tips__item {
   display: grid;
   grid-template-columns: 150px 1fr;
-  margin-top: -20px;
+  margin-top: -22px;
   padding: 22px 24px 44px;
 
   font-family: @general-font-family;
@@ -23,7 +27,7 @@
       1fr
       auto;
     gap: 10px;
-    padding: 31px 33px 22px;
+    padding: 29px 33px 45px;
 
     font-size: 24px;
     line-height: 24px;
@@ -54,6 +58,9 @@
   @media (min-width: @desktop-width) {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
+
+    font-size: 24px;
+    line-height: 24px;
   }
 }
 
@@ -63,13 +70,16 @@
   border-radius: 10px 10px 0 0;
 
   @media (min-width: @tablet-width) {
+    margin-right: -25px;
     padding-right: 135px;
     padding-bottom: 44px;
     border-radius: 20px 0 0 0;
   }
 
   @media (min-width: @desktop-width) {
-    padding-right: 40px;
+    padding-top: 28px;
+    padding-right: 72px;
+    padding-bottom: 31px;
     border-radius: 20px 0 0 20px;
   }
 }
@@ -79,14 +89,15 @@
   border-radius: 10px 10px 0 0;
 
   @media (min-width: @tablet-width) {
-    margin-left: -20px;
     padding-right: 100px;
     padding-bottom: 44px;
     border-radius: 20px 20px 0 0;
   }
 
   @media (min-width: @desktop-width) {
-    padding-right: 40px;
+    margin-right: -20px;
+    margin-left: -14px;
+    padding: 28px 50px 31px 29px;
     border-radius: 20px 0 0 20px;
   }
 }
@@ -96,33 +107,39 @@
   border-radius: 10px 10px 0 0;
 
   @media (min-width: @tablet-width) {
-    margin-top: -20px;
+    margin-right: -40px;
+    margin-top: -21px;
     padding-right: 115px;
+    padding-bottom: 23px;
     border-radius: 0 0 0 20px;
   }
 
   @media (min-width: @desktop-width) {
     margin-top: 0;
-    margin-left: -20px;
-    padding-right: 40px;
+    margin-left: 0;
+    padding: 27px 53px 32px 31px;
     border-radius: 20px 0 0 20px;
   }
 }
 
 .step-tips__item:nth-child(4) {
-  padding-bottom: 24px;
+  padding-bottom: 22px;
   background-color: @basic-yellow;
   border-radius: 10px;
 
   @media (min-width: @tablet-width) {
-    margin-top: -20px;
-    margin-left: -20px;
+    margin-top: -21px;
     padding-right: 40px;
+    padding-bottom: 23px;
     border-radius: 0 0 20px 20px;
   }
 
   @media (min-width: @desktop-width) {
     margin-top: 0;
+    margin-left: 16px;
+    padding-top: 28px;
+    padding-bottom: 31px;
+    padding-left: 29px;
     border-radius: 20px 20px 20px 20px;
   }
 }

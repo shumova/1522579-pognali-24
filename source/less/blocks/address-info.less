@@ -13,6 +13,7 @@
 
   @media (min-width: @desktop-width) {
     padding: 115px 0 56px;
+    border-radius: 0 0 60px 60px;
   }
 }
 
@@ -23,8 +24,8 @@
 
   @media (min-width: @desktop-width) {
     display: grid;
-    padding: 0 75px 0 225px;
-    grid-template-columns: 1fr 340px;
+    padding: 0 75px 0 223px;
+    grid-template-columns: 1fr 324px;
     gap: 30px;
     align-items: center;
   }
@@ -44,4 +45,12 @@
   display: block;
   width: 100%;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    height: 584px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 516px;
+  }
 }

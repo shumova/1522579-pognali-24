@@ -2,7 +2,7 @@
   position: relative;
   z-index: 7;
   margin-top: -30px;
-  padding: 63px 0 82px;
+  padding: 61px 0 83px;
 
   @media (min-width: @tablet-width) {
     margin-top: -60px;
@@ -10,7 +10,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 130px 0 0;
+    padding: 125px 0 0;
   }
 }
 
@@ -18,11 +18,11 @@
   position: relative;
   z-index: 6;
   margin-top: -30px;
-  padding: 101px 0 34px;
+  padding: 99px 0 34px;
 
   @media (min-width: @tablet-width) {
     margin-top: -60px;
-    padding: 133px 0 80px;
+    padding: 129px 0 80px;
   }
 
   @media (min-width: @desktop-width) {
@@ -42,7 +42,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 171px 0 80px;
+    padding: 122px 0 80px;
   }
 }
 
@@ -50,15 +50,15 @@
   position: relative;
   z-index: 4;
   margin-top: -30px;
-  padding: 67px 0 38px;
+  padding: 81px 0 39px;
 
   @media (min-width: @tablet-width) {
     margin-top: -60px;
-    padding: 134px 0 63px;
+    padding: 130px 0 63px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 175px 0 165px;
+    padding: 163px 0 165px;
   }
 }
 
@@ -66,15 +66,15 @@
   position: relative;
   z-index: 3;
   margin-top: -30px;
-  padding: 102px 0 30px;
+  padding: 100px 0 28px;
 
   @media (min-width: @tablet-width) {
     margin-top: -60px;
-    padding: 136px 0 60px;
+    padding: 132px 0 58px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 169px 0 60px;
+    padding: 165px 0 60px;
   }
 }
 
@@ -82,7 +82,7 @@
   position: relative;
   z-index: 2;
   margin-top: -30px;
-  padding: 30px 0 29px;
+  padding: 30px 0 30px;
 
   @media (min-width: @tablet-width) {
     margin-top: -60px;
@@ -90,7 +90,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 70px 0 104px;
+    padding: 68px 0 103px;
   }
 }
 
@@ -114,16 +114,16 @@
 
   width: 270px;
 
-  transform: translateY(-475px) translateX(-50%);
+  transform: translateY(-461px) translateX(-50%);
 
   @media (min-width: @tablet-width) {
     width: 688px;
-    transform: translateY(-590px) translateX(-50%);
+    transform: translateY(-555px) translateX(-50%);
   }
 
   @media (min-width: @desktop-width) {
     width: 750px;
-    transform: translateY(-675px) translateX(-50%);
+    transform: translateY(-651px) translateX(-47.6%);
   }
 }
 
@@ -142,7 +142,7 @@
 .page-main__header--catalog {
   position: relative;
   margin-top: -2px;
-  padding: 43px 0 11px;
+  padding: 58px 0 14px;
 
   &::before {
     position: absolute;
@@ -156,10 +156,12 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 112px 0 68px;
+    padding: 88px 0 72px;
   }
 
   @media (min-width: @desktop-width) {
+    padding: 80px 0 71px;
+
     &::before {
       top: -70px;
     }
@@ -171,11 +173,15 @@
   z-index: 2;
 
   margin: -30px 0 21px;
-  padding: 50px 0 15px;
+  padding: 51px 0 16px;
 
   @media (min-width: @tablet-width) {
     margin: -60px 0 43px;
-    padding: 124px 0 56px;
+    padding: 120px 0 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 45px;
   }
 }
 
@@ -185,24 +191,34 @@
   padding-bottom: 76px;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 122px;
+    padding-bottom: 125px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 137px;
+    padding-bottom: 142px;
   }
 }
 
 .page-main__plans {
   margin-top: -30px;
-  padding: 28px 0 60px;
+  padding: 26px 0 60px;
 
   background-color: @special-blue-light;
-  border-radius: 25px 25px 0 0;
+  border-radius: 30px 30px 0 0;
 
   @media (min-width: @tablet-width) {
     margin-top: -60px;
-    padding: 57px 37px 136px;
+    padding: 54px 37px 136px 38px;
+
+    @-moz-document url-prefix("") {
+      margin-top: -55px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 51px;
+    padding-bottom: 124px;
+    border-radius: 56px 56px 0 0;
   }
 }
 
@@ -211,10 +227,17 @@
 
   background-color: @light-purple;
   border-radius: 25px 25px 0 0;
-  padding: 28px 0 73px;
+  padding: 28px 0 72px;
 
   @media (min-width: @tablet-width) {
     margin-top: -60px;
-    padding: 53px 37px 123px;
+    padding: 50px 37px 124px 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 60px;
+    padding-bottom: 133px;
+    padding-left: 60px;
+    border-radius: 55px 55px 0 0;
   }
 }

@@ -14,27 +14,29 @@
 
 .form-filter__title {
   max-width: 155px;
-  margin-bottom: 9px;
+  margin-bottom: 10px;
 
   font-size: 16px;
   line-height: 16px;
   font-weight: 500;
-  letter-spacing: 1px;
+  letter-spacing: 1.4px;
   color: @basic-blue-light;
   text-transform: uppercase;
   overflow-wrap: break-word;
 
   @media (min-width: @tablet-width) {
     max-width: 390px;
-    margin-bottom: 24px;
+    margin-bottom: 25px;
 
     font-size: 20px;
     line-height: 20px;
+    letter-spacing: 2px;
   }
 
   @media (min-width: @desktop-width) {
     max-width: 205px;
     margin-bottom: 0;
+    letter-spacing: 0;
   }
 }
 
@@ -56,9 +58,10 @@
 
   @media (min-width: @tablet-width) {
     max-width: 125px;
-    margin-bottom: 24px;
+    margin-bottom: 25px;
     font-size: 20px;
     line-height: 20px;
+    letter-spacing: 2px;
   }
 
   @media (min-width: @desktop-width) {
@@ -122,6 +125,17 @@
     border-right: 2px solid #cccccc;
   }
 
+  @media (min-width: @tablet-width) {
+    &--less::before,
+    &--more::before {
+      width: 20px;
+    }
+
+    &--more::after {
+      height: 20px;
+    }
+  }
+
   &:hover::before,
   &:focus::before,
   &:hover::after,
@@ -161,7 +175,7 @@
 
 .form-filter__field {
   width: 134px;
-  padding: 16px 20px 13px;
+  padding: 13px 20px 12px;
 
   font-family: @general-font-family;
   font-size: 14px;
@@ -174,7 +188,7 @@
   border: none;
 
   @media (min-width: @tablet-width) {
-    padding: 26px 20px;
+    padding: 22px 20px 22px 13px;
 
     font-size: 20px;
     line-height: 20px;
@@ -182,7 +196,7 @@
 
   @media (min-width: @desktop-width) {
     width: 60px;
-    padding: 26px 10px;
+    padding: 21px 10px 24px;
   }
 
   &:focus {
@@ -217,12 +231,19 @@
 
   @media (min-width: @tablet-width) {
     max-width: 538px;
+    grid-template-columns: 36px 1fr;
+    column-gap: 22px;
 
     font-size: 20px;
     line-height: 20px;
     font-weight: 500;
-    letter-spacing: 0.2px;
+    letter-spacing: 2px;
     text-transform: uppercase;
+
+    &::before {
+      width: 36px;
+      height: 36px;
+    }
   }
 
   &:hover::before {
@@ -236,6 +257,7 @@
 
   @media (min-width: @desktop-width) {
     max-width: 270px;
+    padding-top: 7px;
   }
 }
 
@@ -268,12 +290,16 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 39px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 15px;
+  }
 }
 
 .form-filter__calendar {
-  margin-bottom: 22px;
+  margin-bottom: 3px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 47px;
+    margin-bottom: 18px;
   }
 }

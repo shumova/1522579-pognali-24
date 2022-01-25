@@ -1,29 +1,34 @@
 .countries-preview {
   background-color: @basic-light-grey;
-  border-radius: 0 0 25px 25px;
+  border-radius: 0 0 30px 30px;
 
   @media (min-width: @tablet-width) {
-    border-radius: 0 0 50px 50px;
+    border-radius: 0 0 60px 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-radius: 0 0 56px 56px;
   }
 }
 
 .countries-preview__container {
   @media (min-width: @tablet-width) {
     position: relative;
-    padding: 0 34px;
-    background: url("../img/decorative/flags-background@1x.jpg") no-repeat top 0 left 0;
+    padding: 0 35px;
+    background: url("../img/decorative/flags-background@1x.jpg") no-repeat top 9px left 0;
     background-size: 688px;
   }
 
   @media (min-width: @desktop-width) {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: auto 1fr;
     grid-template-rows: auto 1fr;
-    gap: 0 160px;
-    padding: 73px 0 51px 73px;
+    gap: 0 172px;
+    padding: 73px 0 51px 70px;
     justify-items: center;
     align-items: start;
     background-image: url("../img/decorative/flags-background-size-l@1x.jpg");
+    background-position: 50% 50%;
     background-size: 1322px;
   }
 }
@@ -44,12 +49,12 @@
 
 .countries-preview__list {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 27px;
   padding: 0;
   list-style-type: none;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 46px;
+    margin-bottom: 45px;
   }
 
   @media (min-width: @desktop-width) {
@@ -58,25 +63,43 @@
 }
 
 .countries-preview__item {
-  margin-bottom: 9px;
+  margin-bottom: 11px;
 
-  @media (min-width: @tablet-width) {
-    margin-bottom: 11px;
+  @media (min-width: @desktop-width) {
+    margin-bottom: 10px;
   }
 }
 
 .countries-preview__item:last-child {
+  position: relative;
   margin-bottom: 0;
+
+  @media (min-width: @desktop-width) {
+    &::after {
+      position: absolute;
+      z-index: 1;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      height: 81px;
+      content: "";
+
+      background-image: linear-gradient(to top, #edeff6 0 24%, transparent 78% 100%);
+    }
+  }
 }
 
 .countries-preview__intro {
   width: 224px;
+  margin-bottom: 61px;
   padding-left: 24px;
 
   @media (min-width: @tablet-width) {
     position: relative;
     z-index: 1;
-    width: 375px;
+    width: 350px;
+    margin-bottom: 108px;
     padding-left: 0;
   }
 
@@ -84,47 +107,44 @@
     grid-row: 1 / 2;
     justify-self: start;
     width: 350px;
+    margin-bottom: 100px;
   }
 }
 
 .countries-preview__title {
   margin: 0;
-  margin-bottom: 19px;
+  margin-bottom: 20px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 57px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 61px;
   }
 }
 
 .countries-preview__text {
   margin: 0;
-  margin-bottom: 60px;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 104px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-bottom: 98px;
-  }
 }
 
 .countries-preview__more {
-  padding: 23px;
+  padding: 22px 23px;
 
   @media (min-width: @tablet-width) {
     max-width: 616px;
-    padding: 28px 30px;
+    padding: 31px 31px 27px;
     margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
     z-index: 1;
-    margin: 0;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+    min-width: 275px;
+    margin: 0;
+    padding: 27px 35px 29px 34px;
     align-self: start;
     justify-self: start;
-    min-width: 275px;
   }
 }

@@ -53,7 +53,11 @@ if (canvas) {
     //   context.lineWidth = 3;
     // }
 
-    context.lineWidth = 2;
+    if (canvas[i].width == 45) {
+      context.lineWidth = 3;
+    } else if (canvas[i].width == 100) {
+      context.lineWidth = 3;
+    } else context.lineWidth = 4;
 
     context.lineCap = "round";
     context.strokeStyle = "#ff8d30";

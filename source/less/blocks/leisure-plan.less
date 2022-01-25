@@ -3,11 +3,11 @@
 
   &:not(:nth-child(3))::before {
     position: absolute;
-    top: -100%;
-    left: -10px;
+    top: -102.5%;
+    left: -14px;
 
     width: 17px;
-    height: 287px;
+    height: 288px;
     content: "";
 
     background: transparent url("../img/route-line.svg") no-repeat center;
@@ -16,9 +16,9 @@
 
   @media (min-width: @tablet-width) {
     &:not(:nth-child(3))::before {
-      top: -108%;
-      left: auto;
-      right: 0;
+      top: -110%;
+      left: 524px;
+      right: auto;
 
       width: 14px;
       height: 274px;
@@ -31,8 +31,10 @@
 
   @media (min-width: @desktop-width) {
     &:not(:nth-child(3))::before {
+      top: -108%;
       z-index: 2;
-      right: 180px;
+      right: auto;
+      left: 768px;
     }
   }
 }
@@ -43,8 +45,8 @@
   display: grid;
   max-width: 220px;
   min-height: 24px;
-  margin-bottom: 18px;
-  padding-left: 8px;
+  margin-bottom: 14px;
+  padding-left: 11px;
   align-items: center;
   overflow-wrap: break-word;
 
@@ -146,10 +148,11 @@
   }
 
   @media (min-width: @tablet-width) {
-    max-width: 500px;
+    max-width: 505px;
     min-height: 47px;
     margin-bottom: 30px;
     margin-left: 0;
+    padding-left: 2px;
 
     font-size: 30px;
     line-height: 30px;
@@ -166,7 +169,11 @@
   }
 
   @media (min-width: @desktop-width) {
-    max-width: 925px;
+    max-width: 886px;
+    min-height: 58px;
+    margin-bottom: 20px;
+    padding-left: 0;
+    padding-bottom: 10px;
 
     &::after {
       box-shadow: -65px 0 10px 15px #ffffff, 35px 0 10px 15px #ffffff;
@@ -177,7 +184,7 @@
 .leisure-plan__input {
   width: 100%;
   height: 220px;
-  padding: 10px 14px;
+  padding: 9px 13px;
 
   font-family: @general-font-family;
   font-style: normal;
@@ -197,10 +204,17 @@
   @media (min-width: @tablet-width) {
     width: 500px;
     height: 140px;
+    padding: 16px 35px 16px 22px;
+
+    font-size: 20px;
+    line-height: 24px;
   }
 
   @media (min-width: @desktop-width) {
     width: 730px;
+    padding-top: 22px;
+    padding-right: 15px;
+    padding-left: 25px;
   }
 
   &:hover {

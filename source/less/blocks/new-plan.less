@@ -2,10 +2,13 @@
   position: relative;
 
   @media (min-width: @tablet-width) {
-    padding: 0 37px;
+    width: 100%;
+    max-width: 698px;
+    padding: 0 38px 0 42px;
   }
 
   @media (min-width: @desktop-width) {
+    max-width: 1320px;
     padding: 0;
   }
 }
@@ -13,7 +16,7 @@
 .new-plan__title {
   max-width: 170px;
   margin: 0;
-  margin-bottom: 29px;
+  margin-bottom: 31px;
 
   font-size: 24px;
   line-height: 24px;
@@ -22,7 +25,7 @@
 
   @media (min-width: @tablet-width) {
     max-width: 460px;
-    margin-bottom: 56px;
+    margin-bottom: 59px;
 
     font-size: 36px;
     line-height: 36px;
@@ -37,7 +40,7 @@
 .new-plan__indicator {
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: 18px;
 
   display: grid;
   margin: 0;
@@ -47,8 +50,9 @@
   column-gap: 16px;
 
   @media (min-width: @tablet-width) {
-    top: 20px;
-    right: 40px;
+    top: 16px;
+    right: 36px;
+    column-gap: 29px;
   }
 }
 

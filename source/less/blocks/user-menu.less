@@ -7,6 +7,10 @@
   @media (max-width: calc(@tablet-width - 1px)) {
     margin-bottom: 70px;
   }
+
+  @media (min-width: @desktop-width) {
+    justify-self: end;
+  }
 }
 
 .user-menu--inner-page {
@@ -120,7 +124,7 @@
 
 .user-menu__login {
   min-width: 188px;
-  padding: 12px 20px 8px;
+  padding: 10px 20px 10px 22px;
   align-self: flex-start;
 
   background-color: @basic-yellow;
@@ -128,12 +132,12 @@
   @media (min-width: @tablet-width) {
     max-width: 310px;
     margin-left: auto;
-    padding: 16px 32px 13px 30px;
+    padding: 14px 30px 16px 30px;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     margin-left: 0;
-    padding: 16px 32px 13px 30px;
+    padding: 16px 28px 14px 30px;
   }
 
   &:hover,

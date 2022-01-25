@@ -70,12 +70,14 @@
   }
 
   @media (min-width: @desktop-width) {
-    font-size: 18px;
-    line-height: 18px;
-    align-items: start;
-    justify-items: start;
+    min-height: 70px;
     padding-top: 14px;
     padding-left: 16px;
+    align-items: start;
+    justify-items: start;
+
+    font-size: 18px;
+    line-height: 18px;
   }
 }
 
@@ -114,11 +116,15 @@
 
 .calendar-date__button--hover {
   outline: 2px solid @basic-red;
-  outline-offset: 0;
+  outline-offset: -1px;
 
   @media (min-width: @tablet-width) {
     outline-width: 4px;
     outline-offset: -2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    outline-offset: -1px;
   }
 }
 

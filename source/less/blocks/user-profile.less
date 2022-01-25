@@ -3,11 +3,13 @@
   grid-row: 2 / 3;
   width: 100px;
   height: 100px;
-  margin-top: 20px;
+  margin-top: 24px;
   justify-self: center;
 
   @media (min-width: @tablet-width) {
     grid-column: -2 / -3;
+    width: 94px;
+    height: 94px;
     margin-top: 66px;
   }
 
@@ -40,7 +42,7 @@
   grid-column: 2 / -2;
   grid-row: 3 / 4;
   margin-top: 18px;
-  padding: 12.5px 20px;
+  padding: 11px 20px;
 
   font-family: @general-font-family;
   font-style: normal;
@@ -58,9 +60,10 @@
   @media (min-width: @tablet-width) {
     grid-column: 2 / -2;
     grid-row: 3 / 4;
-    margin-top: 40px;
-    padding: 22px 20px 20px;
+    margin-top: 45px;
+    padding: 20px 20px 21px;
     border-radius: 10px;
+    letter-spacing: 1.8px;
   }
 
   @media (min-width: @desktop-width) {
@@ -113,9 +116,8 @@
   grid-row: 2 / 3;
   width: 100px;
   height: 100px;
-  margin-top: 20px;
+  margin-top: 24px;
   justify-self: center;
-  overflow: hidden;
 
   @media (min-width: @tablet-width) {
     grid-column: 2 / 3;
@@ -129,7 +131,7 @@
     grid-row: 1 / 2;
     width: 95px;
     height: 95px;
-    margin-bottom: 53px;
+    margin-bottom: 51px;
     align-self: end;
     color: @basic-white;
   }
@@ -143,7 +145,7 @@
   margin-top: 33px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 52px;
+    margin-top: 53px;
   }
 
   @media (min-width: @desktop-width) {
@@ -175,12 +177,13 @@
 
   @media (min-width: @tablet-width) {
     bottom: auto;
-    top: 90%;
+    top: 82%;
     max-width: 270px;
     max-height: 42px;
 
     font-size: 20px;
     line-height: 20px;
+    letter-spacing: 1.6px;
     overflow-wrap: break-word;
   }
 
@@ -193,9 +196,9 @@
 }
 
 .user-profile__tags-input {
-  min-height: 95px;
+  min-height: 89px;
   width: 100%;
-  padding: 27px 25px;
+  padding: 25px 25px 20px;
 
   font-family: @general-font-family;
   font-style: normal;
@@ -209,6 +212,13 @@
   border-radius: 10px;
   opacity: 0.6;
   resize: none;
+
+  @media (min-width: @tablet-width) {
+    min-height: 94px;
+    padding: 33px 25px 20px 37px;
+    font-size: 20px;
+    line-height: 22px;
+  }
 
   &:hover {
     border-color: #aeb4cb;
@@ -232,12 +242,13 @@
   grid-column: 2 / -2;
   grid-row: 5 / 6;
   width: 100%;
-  margin-top: 33px;
+  margin-top: 19px;
 
   @media (min-width: @tablet-width) {
     grid-column: 4 / 5;
     grid-row: 2 / 3;
     margin-top: 66px;
+    align-self: start;
   }
 
   @media (min-width: @desktop-width) {
