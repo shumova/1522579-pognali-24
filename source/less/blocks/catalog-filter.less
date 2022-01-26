@@ -1,7 +1,7 @@
 .catalog-filter {
   border: none;
 
-  @media (min-width: @tablet-width) and (max-width: calc(@desktop-width - 1px)) {
+  @media (min-width: @tablet-width) and (max-width: @ls-desktop) {
     &:first-of-type {
       padding-top: 25px;
       border-top: 1px solid @basic-yellow-dark;
@@ -15,7 +15,7 @@
 }
 
 .catalog-filter--hidden .catalog-filter__content {
-  @media (max-width: calc(@tablet-width - 1px)) {
+  @media (max-width: @ls-tablet) {
     display: none;
   }
 
@@ -28,11 +28,11 @@
   display: grid;
   justify-items: start;
 
-  @media (max-width: calc(@tablet-width - 1px)) {
+  @media (max-width: @ls-tablet) {
     border-top: 1px solid @basic-yellow-dark;
   }
 
-  @media (min-width: @tablet-width) and (max-width: calc(@desktop-width - 1px)) {
+  @media (min-width: @tablet-width) and (max-width: @ls-desktop) {
     grid-template-columns: 108px 1fr;
     column-gap: 14px;
     align-items: center;
@@ -66,7 +66,7 @@
     border-bottom: 5px solid @basic-blue-light;
     border-left: 5px solid transparent;
 
-    @media (min-width: @tablet-width) and (max-width: calc(@desktop-width - 1px)) {
+    @media (min-width: @tablet-width) and (max-width: @ls-desktop) {
       display: none;
     }
   }
@@ -112,7 +112,7 @@
 .catalog-filter__title-colon {
   display: none;
 
-  @media (min-width: @tablet-width) and (max-width: calc(@desktop-width - 1px)) {
+  @media (min-width: @tablet-width) and (max-width: @ls-desktop) {
     display: inline-block;
   }
 }
@@ -127,7 +127,7 @@
   margin-top: 4px;
   margin-bottom: 18px;
 
-  @media (min-width: @tablet-width) and (max-width: calc(@desktop-width - 1px)) {
+  @media (min-width: @tablet-width) and (max-width: @ls-desktop) {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -141,7 +141,7 @@
 }
 
 .catalog-filter__content--range {
-  @media (min-width: @tablet-width) and (max-width: calc(@desktop-width - 1px)) {
+  @media (min-width: @tablet-width) and (max-width: @ls-desktop) {
     padding-top: 2px;
   }
 
@@ -164,7 +164,7 @@
     margin-bottom: 0;
   }
 
-  @media (min-width: @tablet-width) and (max-width: calc(@desktop-width - 1px)) {
+  @media (min-width: @tablet-width) and (max-width: @ls-desktop) {
     width: 164px;
     margin-right: 5px;
     margin-bottom: 0;

@@ -2,7 +2,7 @@
   position: relative;
   border-radius: 4px;
 
-  @media (max-width: calc(@tablet-width - 1px)) {
+  @media (max-width: @ls-tablet) {
     &:not(:first-child)::before {
       position: absolute;
       top: -17px;
@@ -423,7 +423,7 @@
     display: block;
   }
 
-  @media (max-width: calc(@tablet-width - 1px)) {
+  @media (max-width: @ls-tablet) {
     &::before {
       box-shadow: -10px 0 10px 15px @basic-white;
     }
@@ -460,7 +460,7 @@
   &::before {
     background-color: @basic-light-grey;
 
-    @media (max-width: calc(@tablet-width - 1px)) {
+    @media (max-width: @ls-tablet) {
       box-shadow: -10px 0 10px 15px @basic-light-grey;
     }
   }
@@ -484,7 +484,7 @@
   &:focus::before {
     background-color: @special-blue-light;
 
-    @media (max-width: calc(@tablet-width - 1px)) {
+    @media (max-width: @ls-tablet) {
       box-shadow: -10px 0 10px 15px @special-blue-light;
     }
   }
@@ -492,7 +492,7 @@
   &:focus:not(:focus-visible)::before {
     background-color: @basic-light-grey;
 
-    @media (max-width: calc(@tablet-width - 1px)) {
+    @media (max-width: @ls-tablet) {
       box-shadow: -10px 0 10px 15px @basic-light-grey;
     }
   }
@@ -500,7 +500,7 @@
   &:focus:not(:focus-visible):hover::before {
     background-color: @special-blue-light;
 
-    @media (max-width: calc(@tablet-width - 1px)) {
+    @media (max-width: @ls-tablet) {
       box-shadow: -10px 0 10px 15px @special-blue-light;
     }
   }
@@ -523,7 +523,7 @@
   &:focus:not(:focus-visible):active::before {
     background-color: @special-blue-light;
 
-    @media (max-width: calc(@tablet-width - 1px)) {
+    @media (max-width: @ls-tablet) {
       box-shadow: -10px 0 10px 15px @special-blue-light;
     }
   }
@@ -531,7 +531,7 @@
   &:focus-visible::before {
     background-color: @special-blue-light;
 
-    @media (max-width: calc(@tablet-width - 1px)) {
+    @media (max-width: @ls-tablet) {
       box-shadow: -10px 0 10px 15px @special-blue-light;
     }
   }
@@ -554,7 +554,7 @@
   &:active::before {
     background-color: @special-blue-light;
 
-    @media (max-width: calc(@tablet-width - 1px)) {
+    @media (max-width: @ls-tablet) {
       box-shadow: -10px 0 10px 15px @special-blue-light;
     }
   }

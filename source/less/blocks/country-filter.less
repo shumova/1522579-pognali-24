@@ -40,7 +40,7 @@
     background-size: contain;
   }
 
-  @media (min-width: @tablet-width) and (max-width: calc(@desktop-width - 1px)) {
+  @media (min-width: @tablet-width) and (max-width: @ls-desktop) {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -136,7 +136,7 @@
 }
 
 .country-filter__toggle-text {
-  @media (max-width: calc(@tablet-width - 1px)) {
+  @media (max-width: @ls-tablet) {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -369,7 +369,7 @@
 // стили при открытом меню
 
 .country-filter--open .country-filter__popup {
-  @media (max-width: calc(@desktop-width - 1px)) {
+  @media (max-width: @ls-desktop) {
     position: absolute;
     top: 100%;
     right: 0;
@@ -379,7 +379,7 @@
     padding: 36px 0 28px;
   }
 
-  @media (min-width: @tablet-width) and (max-width: calc(@desktop-width - 1px)) {
+  @media (min-width: @tablet-width) and (max-width: @ls-desktop) {
     padding: 26px 0 79px;
   }
 
@@ -401,7 +401,7 @@
 }
 
 .country-filter--open .country-filter__toggle-text--hide {
-  @media (min-width: @tablet-width) and (max-width: calc(@desktop-width - 1px)) {
+  @media (min-width: @tablet-width) and (max-width: @ls-desktop) {
     display: grid;
   }
 }
@@ -413,7 +413,7 @@
 }
 
 .country-filter--open + .page-main__users-catalog {
-  @media (max-width: calc(@tablet-width - 1px)) {
+  @media (max-width: @ls-tablet) {
     margin-top: -132px;
   }
 }
