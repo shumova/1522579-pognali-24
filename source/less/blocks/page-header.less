@@ -3,7 +3,7 @@
     ". . logo toggle . ."
     ". . . . . ."
     ". . user-menu user-menu . .";
-  grid-template-columns: 1fr 8% 76% 8% 8% 1fr;
+  grid-template-columns: 1fr 8% 76% 8.5% 7.5% 1fr;
   grid-template-rows:
     auto
     1fr
@@ -62,8 +62,8 @@
   max-width: 100%;
 
   @media (min-width: @tablet-width) {
-    width: 166px;
-    height: 42px;
+    width: 168px;
+    height: 43px;
   }
 
   @media (min-width: @desktop-width) {
@@ -91,21 +91,32 @@
   &::after {
     position: relative;
     z-index: 3;
+    right: 2px;
     width: 25px;
     content: "";
   }
 
   &::before {
+    top: 2px;
     border-top: 3px solid @basic-white;
   }
 
   &::after {
+    top: 0;
     border-top: 3px solid @basic-white;
   }
 
   @media (min-width: @tablet-width) {
     justify-self: center;
     align-self: center;
+
+    &::before {
+      top: 2px;
+    }
+
+    &::after {
+      top: 1px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -124,13 +135,13 @@
   left: 0;
 
   display: none;
-  padding-top: 118px;
-  padding-bottom: 42px;
+  padding-top: 115px;
+  padding-bottom: 29px;
   grid-template-columns: 1fr 270px 1fr;
 
   @media (min-width: @tablet-width) {
     padding-top: 185px;
-    padding-bottom: 91px;
+    padding-bottom: 76px;
     grid-template-columns: 1fr @tablet-width 1fr;
   }
 
@@ -159,6 +170,224 @@
 
   @media (min-width: @desktop-width) {
     align-self: start;
+  }
+}
+
+// стили при открытом меню
+
+.page-header--main-menu-open {
+  padding-top: 24px;
+
+  @media (max-width: calc(@tablet-width - 1px)) {
+    min-width: 100%;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: calc(@desktop-width - 1px)) {
+    padding-top: 40px;
+    padding-bottom: 42px;
+  }
+}
+
+.page-header--main-menu-open .page-header__logo {
+  position: relative;
+  z-index: 3;
+}
+
+.page-header--main-menu-open .page-header__logo-img--light {
+  @media (max-width: calc(@desktop-width - 1px)) {
+    display: none;
+  }
+}
+
+.page-header--main-menu-open .page-header__logo-img--dark {
+  @media (max-width: calc(@desktop-width - 1px)) {
+    display: block;
+  }
+}
+
+.page-header--main-menu-open .page-header__toggle {
+  &::before,
+  &::after {
+    border-color: #cccccc;
+  }
+
+  &::before {
+    transform: rotate(47deg);
+    top: 6px;
+    right: 1px;
+  }
+
+  &::after {
+    transform: rotate(-47deg);
+    top: -4px;
+    right: 1px;
+  }
+}
+
+.page-header--main-menu-open .page-header__main-menu {
+  @media (max-width: calc(@desktop-width - 1px)) {
+    display: grid;
+    min-width: 100%;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: calc(@desktop-width - 1px)) {
+    padding-top: 180px;
+    justify-items: start;
+  }
+}
+
+.page-header--main-menu-open .page-header__user-menu {
+  @media (min-width: @tablet-width) and (max-width: calc(@desktop-width - 1px)) {
+    position: relative;
+    z-index: 3;
+  }
+}
+
+.page-header--main-menu-open .main-menu__login {
+  width: 100%;
+}
+
+.page-header--main-menu-open + .page-body__main--inner {
+  margin-top: -9px;
+}
+
+.page-header--main-menu-open + .page-body__main--form {
+  margin-top: -6px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+  }
+}
+
+// стили при скроллле страницы
+
+.page-header--scrolling-page {
+  position: relative;
+  min-width: 320px;
+  padding-top: 27px;
+
+  &::before {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    height: 73px;
+    content: "";
+
+    background-color: @basic-white;
+  }
+
+  @media (min-width: @tablet-width) {
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    height: auto;
+    padding-top: 40px;
+    padding-bottom: 42px;
+
+    background: @basic-white;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.page-header--scrolling-page .page-header__logo {
+  @media (max-width: calc(@tablet-width - 1px)) {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-141%);
+  }
+}
+
+.page-header--scrolling-page .page-header__logo-img--light {
+  display: none;
+}
+
+.page-header--scrolling-page .page-header__logo-img--dark {
+  display: block;
+}
+
+.page-header--scrolling-page .page-header__toggle {
+  @media (max-width: calc(@tablet-width - 1px)) {
+    position: fixed;
+    right: 50%;
+    transform: translateX(137px);
+  }
+
+  &::before,
+  &::after {
+    border-color: #cccccc;
+  }
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.page-header--scrolling-page .page-header__main-menu {
+  position: fixed;
+  background: @basic-white;
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    color: @basic-blue;
+  }
+
+  &::before {
+    border-top: 1px solid @basic-blue;
+  }
+}
+
+.page-header--scrolling-page .main-menu__link {
+  &:focus:not(:focus-visible) {
+    @media (min-width: @desktop-width) {
+      color: @basic-blue;
+    }
+  }
+}
+
+.page-header--scrolling-page + .page-body__promo {
+  @media (min-width: @tablet-width) {
+    padding-top: 141px;
+  }
+}
+
+.page-header--scrolling-page ~ .page-body__review {
+  @media (min-width: @desktop-width) {
+    margin-top: 130px;
+  }
+}
+
+.page-header--scrolling-page + .page-body__main--inner {
+  padding-top: 10px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 132px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 139px;
+  }
+}
+
+.page-header--scrolling-page + .page-body__main--form {
+  @media (min-width: @desktop-width) {
+    padding-top: 141px;
   }
 }
 
@@ -242,7 +471,7 @@
     align-self: start;
     display: grid;
     margin-bottom: 450px;
-    padding-top: 90px;
+    padding-top: 73px;
 
     background-image: none;
     background-color: @basic-white;
@@ -250,7 +479,7 @@
 
   @media (min-width: @tablet-width) and (max-width: calc(@desktop-width - 1px)) {
     margin-bottom: 0;
-    padding-top: 95px;
+    padding-top: 90px;
   }
 }
 
@@ -270,173 +499,13 @@
   }
 }
 
-// стили при открытом меню
-
-.page-header--main-menu-open {
-  @media (max-width: calc(@tablet-width - 1px)) {
-    min-width: 100%;
-  }
-
-  @media (min-width: @tablet-width) and (max-width: calc(@desktop-width - 1px)) {
-    padding-bottom: 42px;
-  }
-}
-
-.page-header--main-menu-open .page-header__logo {
-  position: relative;
-  z-index: 3;
-}
-
-.page-header--main-menu-open .page-header__logo-img--light {
-  @media (max-width: calc(@desktop-width - 1px)) {
-    display: none;
-  }
-}
-
-.page-header--main-menu-open .page-header__logo-img--dark {
-  @media (max-width: calc(@desktop-width - 1px)) {
-    display: block;
-  }
-}
-
-.page-header--main-menu-open .page-header__toggle {
-  &::before,
-  &::after {
-    border-color: #cccccc;
-  }
-
-  &::before {
-    transform: rotate(45deg);
-    top: 5px;
-  }
-
-  &::after {
-    transform: rotate(-45deg);
-    top: -5px;
-  }
-}
-
-.page-header--main-menu-open .page-header__main-menu {
-  @media (max-width: calc(@desktop-width - 1px)) {
-    display: grid;
-    min-width: 100%;
-  }
-
-  @media (min-width: @tablet-width) and (max-width: calc(@desktop-width - 1px)) {
-    justify-items: start;
-  }
-}
-
-.page-header--main-menu-open .page-header__user-menu {
-  @media (min-width: @tablet-width) and (max-width: calc(@desktop-width - 1px)) {
-    position: relative;
-    z-index: 3;
-  }
-}
-
-.page-header--main-menu-open .main-menu__login {
-  width: 100%;
-}
-
-// стили при скроллле страницы
-
-.page-header--scrolling-page {
-  min-width: 320px;
-  padding-top: 27px;
-  padding-bottom: 31px;
-
-  position: fixed;
-  z-index: 4;
-
-  top: 0;
-  right: 0;
-  left: 0;
-
-  content: "";
-  height: auto;
-
-  background: @basic-white;
-
-  @media (min-width: @tablet-width) {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-}
-
-.page-header--scrolling-page .page-header__logo-img--light {
+.page-header--no-js.page-header--scrolling-page::before {
   display: none;
 }
 
-.page-header--scrolling-page .page-header__logo-img--dark {
-  display: block;
-}
-
-.page-header--scrolling-page .page-header__toggle {
-  &::before,
-  &::after {
-    border-color: #cccccc;
-  }
-
-  @media (min-width: @desktop-width) {
-    display: none;
-  }
-}
-
-.page-header--scrolling-page .page-header__main-menu {
-  background: @basic-white;
-
-  @media (min-width: @desktop-width) {
-    color: @basic-blue;
-  }
-
-  &::before {
-    border-top: 1px solid @basic-blue;
-  }
-}
-
-.page-header--scrolling-page .main-menu__link {
-  &:focus:not(:focus-visible) {
-    @media (min-width: @desktop-width) {
-      color: @basic-blue;
-    }
-  }
-}
-
-.page-header--scrolling-page .page-header__user-menu {
-  @media (max-width: calc(@tablet-width - 1px)) {
-    display: none;
-  }
-}
-
-.page-header--scrolling-page + .page-body__promo {
-  @media (min-width: @tablet-width) {
-    padding-top: 120px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-top: 150px;
-  }
-}
-
-.page-header--scrolling-page ~ .page-body__review {
-  @media (min-width: @desktop-width) {
-    margin-top: 130px;
-  }
-}
-
-.page-header--scrolling-page + .page-body__main--inner {
-  padding-top: 41px;
-
-  @media (min-width: @tablet-width) {
-    padding-top: 131px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-top: 139px;
-  }
+.page-header--no-js.page-header--scrolling-page .page-header__logo {
+  position: static;
+  z-index: 1;
+  left: auto;
+  transform: none;
 }

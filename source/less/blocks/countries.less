@@ -21,9 +21,37 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin: -16px 102px 0 -16px;
+    margin: -16px 86px 0 -16px;
     border-collapse: separate;
-    border-spacing: 16px;
+    border-spacing: 15px;
+  }
+}
+
+.countries__list--catalog {
+  margin: 12px 0 0;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+    padding-left: 4px;
+    padding-top: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 432px;
+    padding-top: 66px;
+    padding-left: 3px;
+
+    &::before {
+      position: relative;
+      top: -37px;
+      left: 2px;
+
+      font-size: 60px;
+      line-height: 60px;
+      font-weight: 700;
+      color: @basic-dark;
+    }
   }
 }
 
@@ -31,6 +59,10 @@
   display: none;
 
   @media (min-width: @desktop-width) {
+    &--catalog {
+      display: block;
+    }
+
     &--a::before {
       content: "А";
     }
@@ -111,55 +143,51 @@
       content: "Х";
     }
 
-    &--ch::before {
-      content: "Ч";
+    &--ch {
+      min-height: auto;
+
+      &::before {
+        content: "Ч";
+      }
     }
 
-    &--sh::before {
-      content: "Ш";
+    &--sh {
+      min-height: auto;
+
+      &::before {
+        content: "Ш";
+      }
     }
 
-    &--ea::before {
-      content: "Э";
+    &--ea {
+      min-height: auto;
+
+      &::before {
+        content: "Э";
+      }
     }
 
-    &--yu::before {
-      content: "Ю";
+    &--yu {
+      min-height: auto;
+
+      &::before {
+        content: "Ю";
+      }
     }
 
-    &--ya::before {
-      content: "Я";
-    }
-  }
-}
+    &--ya {
+      min-height: auto;
 
-.countries__list--catalog {
-  margin: 15px 0 0;
-  padding: 0;
-
-  @media (min-width: @tablet-width) {
-    margin-top: 0;
-  }
-
-  @media (min-width: @desktop-width) {
-    display: block;
-    padding-top: 60px;
-
-    &::before {
-      position: relative;
-      top: -30px;
-
-      font-size: 60px;
-      line-height: 60px;
-      font-weight: 700;
-      color: @basic-dark;
+      &::before {
+        content: "Я";
+      }
     }
   }
 }
 
 .countries__list--form {
   margin: 0;
-  padding: 19px 19px;
+  padding: 16px 18px 11px;
   border: 1px solid @special-light-grey;
   border-top-color: transparent;
   border-radius: 0 0 4px 4px;

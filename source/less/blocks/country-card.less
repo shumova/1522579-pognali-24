@@ -2,13 +2,22 @@
   display: grid;
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: contain;
+  background-size: 270px;
+  border-radius: 10px;
 
   &--thailand {
     background-image: url("../img/countries/thailand@1x.jpg");
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/countries/thailand@2x.jpg");
+    }
+
+    @media (min-width: @tablet-width) {
+      background-image: url("../img/countries/thailand-size-m@1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/countries/thailand-size-m@2x.jpg");
+      }
     }
   }
 
@@ -18,6 +27,14 @@
     @media (min-resolution: 2dppx) {
       background-image: url("../img/countries/france@2x.jpg");
     }
+
+    @media (min-width: @tablet-width) {
+      background-image: url("../img/countries/france-size-m@1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/countries/france-size-m@2x.jpg");
+      }
+    }
   }
 
   &--czech {
@@ -26,11 +43,20 @@
     @media (min-resolution: 2dppx) {
       background-image: url("../img/countries/czech@2x.jpg");
     }
+
+    @media (min-width: @tablet-width) {
+      background-image: url("../img/countries/czech-size-m@1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/countries/czech-size-m@2x.jpg");
+      }
+    }
   }
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 431px 185px;
     background-position: center right;
+    background-size: contain;
     border-radius: 20px;
   }
 
@@ -68,7 +94,7 @@
   grid-column: 1 / -1;
   grid-row: 2 / 3;
   margin-top: 99px;
-  padding: 26px 24px;
+  padding: 24px 24px 23px;
   grid-template-columns: 1fr auto;
 
   background-color: @basic-white;
@@ -76,7 +102,7 @@
 
   &::after {
     position: absolute;
-    top: -12px;
+    top: -13px;
     left: 25px;
 
     width: 35px;
@@ -98,6 +124,10 @@
     background-image: url("../img/countries/flags/france@1x.jpg");
   }
 
+  &--czech {
+    margin-top: 98px;
+  }
+
   &--czech::after {
     background-image: url("../img/countries/flags/czech@1x.jpg");
   }
@@ -108,7 +138,7 @@
     grid-template-columns: 1fr;
     min-height: 140px;
     margin-top: 0;
-    padding: 30px 29px 22px;
+    padding: 28px 29px 19px;
 
     border-radius: 20px 0 0 20px;
 
@@ -116,10 +146,19 @@
       top: 17px;
       left: calc(100% - 35px);
 
-      width: 70px;
+      width: 73px;
       height: 47px;
 
       border-radius: 8px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 22px;
+
+    &::after {
+      top: 23px;
+      left: calc(100% - 37px);
     }
   }
 }
@@ -127,10 +166,15 @@
 .country-card__title {
   display: block;
   margin: 0;
+  margin-bottom: 3px;
   justify-self: start;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 1px;
   }
 }
 
@@ -143,12 +187,20 @@
   color: @special-grey;
   opacity: 0.3;
 
+  @media (max-width: calc(@tablet-width - 1px)) {
+    grid-column: 1 / 3;
+  }
+
   @media (min-width: @tablet-width) {
-    margin-bottom: 17px;
+    margin-bottom: 20px;
 
     font-size: 20px;
     line-height: 20px;
     font-weight: 400;
+  }
+
+  @media (min-width: @desktop-width) {
+    letter-spacing: 0.6px;
   }
 }
 
@@ -156,16 +208,17 @@
   display: grid;
   grid-column: 2 / 3;
   grid-row: 1 / 2;
+  min-width: 62px;
   margin: 0;
   grid-auto-flow: column;
   column-gap: 5px;
   align-items: center;
+  justify-content: start;
 
   font-size: 16px;
   line-height: 20px;
   font-weight: 500;
-  color: @special-grey;
-  opacity: 0.3;
+  color: fade(@special-grey, 30);
 
   &::before {
     grid-column: 1 / 2;
@@ -177,6 +230,7 @@
 
     background: transparent url("../img/icons/user.svg") no-repeat center;
     background-size: contain;
+    opacity: 0.1;
   }
 
   @media (min-width: @tablet-width) {

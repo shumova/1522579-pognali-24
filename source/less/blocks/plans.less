@@ -1,16 +1,19 @@
 .plans__container {
   @media (min-width: @tablet-width) {
+    width: 100%;
+    max-width: 698px;
     padding: 0 37px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 0 0 64px;
+    max-width: 1362px;
+    padding: 0 21px 0 84px;
   }
 }
 
 .plans__title {
   margin: 0;
-  margin-bottom: 29px;
+  margin-bottom: 31px;
 
   font-size: 24px;
   line-height: 24px;
@@ -18,10 +21,14 @@
   color: @basic-blue-light;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 48px;
+    margin-bottom: 51px;
 
     font-size: 36px;
     line-height: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 7px;
   }
 }
 
@@ -35,7 +42,7 @@
 
 .plans__item {
   margin-bottom: 10px;
-  padding: 24px 25px;
+  padding: 23px 25px 20px;
 
   counter-increment: plan-card;
 
@@ -44,10 +51,12 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 40px 32px 14px 40px;
+    margin-bottom: 11px;
+    padding: 38px 34px 11px 40px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 40px 42px 38px;
+    margin-bottom: 15px;
+    padding: 36px 42px 38px;
   }
 }

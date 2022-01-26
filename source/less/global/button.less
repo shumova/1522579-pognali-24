@@ -47,10 +47,16 @@
     grid-column: 2 / 3;
     justify-self: end;
     content: "";
-    border-top: 10px solid transparent;
+    border-top: 5px solid transparent;
     border-right: none;
-    border-bottom: 10px solid transparent;
-    border-left: 16px solid @basic-blue-light;
+    border-bottom: 5px solid transparent;
+    border-left: 10px solid @basic-blue-light;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+    border-radius: 20px;
   }
 
   @media (min-width: @desktop-width) {
@@ -195,6 +201,11 @@
     fill: @basic-dark;
   }
 
+  @media (min-width: @tablet-width) {
+    width: 62px;
+    height: 62px;
+  }
+
   &:hover,
   &:focus {
     background-color: @special-yellow-dark;
@@ -230,6 +241,11 @@
   background-repeat: no-repeat;
   background-position: center;
 
+  @media (min-width: @tablet-width) {
+    width: 60px;
+    height: 60px;
+  }
+
   &:hover,
   &:focus {
     opacity: 0.6;
@@ -259,12 +275,27 @@
 
 .button--facebook {
   background-image: url("../../img/icons/social/facebook.svg");
+
+  @media (min-width: @tablet-width) {
+    background-size: 14px auto;
+    background-position: 50% 50%;
+  }
 }
 
 .button--instagram {
   background-image: url("../../img/icons/social/instagram.svg");
+
+  @media (min-width: @tablet-width) {
+    background-size: 24px auto;
+    background-position: 53% 58%;
+  }
 }
 
 .button--vk {
   background-image: url("../../img/icons/social/vkontakte.svg");
+
+  @media (min-width: @tablet-width) {
+    background-size: 31px auto;
+    background-position: 50% 60%;
+  }
 }

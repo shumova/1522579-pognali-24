@@ -28,11 +28,11 @@
 
 .contacts__item--address {
   display: grid;
-  margin-bottom: 32px;
+  margin-bottom: 33px;
   grid-template-columns: auto 1fr;
   justify-self: start;
   align-items: center;
-  gap: 0 16px;
+  gap: 0 26px;
 
   color: @basic-blue-light;
 
@@ -49,10 +49,21 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 44px;
+
+    &::before {
+      width: 68px;
+      height: 68px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     margin: 0;
+    gap: 0 31px;
+
+    &::before {
+      width: 90px;
+      height: 90px;
+    }
   }
 }
 
@@ -88,6 +99,15 @@
     }
   }
 
+  @media (min-width: @desktop-width) {
+    gap: 0 32px;
+
+    &::before {
+      width: 90px;
+      height: 90px;
+    }
+  }
+
   &:focus-visible {
     outline: none;
 
@@ -104,6 +124,40 @@
   justify-self: center;
 
   fill: @basic-yellow;
+
+  @media (min-width: @tablet-width) {
+    &--phone {
+      width: 27px;
+      height: 26px;
+    }
+
+    &--email {
+      width: 28px;
+      height: 19px;
+    }
+
+    &--location {
+      width: 24px;
+      height: 32px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--phone {
+      width: 36px;
+      height: 34px;
+    }
+
+    &--email {
+      width: 36px;
+      height: 25px;
+    }
+
+    &--location {
+      width: 42px;
+      height: 42px;
+    }
+  }
 }
 
 .contacts__link--main {
@@ -169,11 +223,18 @@
 }
 
 .contacts__button {
-  padding: 19px;
+  padding: 19px 18px 19px 19px;
   column-gap: 15px;
 
+  &::after {
+    border-top: 6px solid transparent;
+    border-right: none;
+    border-bottom: 6px solid transparent;
+    border-left: 12px solid @basic-blue-light;
+  }
+
   @media (min-width: @tablet-width) {
-    padding: 29px 38px 27px;
+    padding: 24px 32px 26px 34px;
 
     font-size: 24px;
     line-height: 24px;

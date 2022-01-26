@@ -11,6 +11,7 @@
   @media (min-width: @tablet-width) {
     justify-self: end;
     width: auto;
+    column-gap: 24px;
     border: none;
   }
 }
@@ -28,9 +29,11 @@
 
 .partner__link {
   display: block;
+  width: 27px;
+  height: 33px;
 
   background: transparent url("../img/icons/html-academy.svg") no-repeat center;
-  background-size: 27px;
+  background-size: 27px auto;
 
   &:hover,
   &:focus {

@@ -38,11 +38,15 @@
   text-transform: lowercase;
 
   background-color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 17px;
+  }
 }
 
 .prefer-countries__title--catalog {
   @media (min-width: @tablet-width) {
-    margin-left: 50px;
+    margin-left: 38px;
   }
 
   @media (min-width: @desktop-width) {
@@ -68,14 +72,16 @@
 }
 
 .prefer-countries__list--catalog {
-  gap: 10px;
+  min-height: 53px;
+  gap: 8px;
 
   @media (min-width: @tablet-width) {
+    min-height: auto;
     gap: 25px;
   }
 
   @media (min-width: @desktop-width) {
-    gap: 14px;
+    gap: 3px;
   }
 }
 
@@ -233,6 +239,7 @@
 }
 
 .prefer-countries__item--catalog {
+  margin-left: 5px;
   padding-left: 40px;
 
   background-size: 26px 18px;
@@ -241,6 +248,9 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
+    margin-left: 2px;
+    padding-left: 45px;
+    background-size: 35px 24px;
   }
 
   @media (min-width: @desktop-width) {
@@ -255,7 +265,7 @@
   margin: 0;
 
   font-size: 15px;
-  line-height: 16px;
+  line-height: 20px;
   font-weight: 500;
   color: @basic-blue-light;
   text-transform: uppercase;
@@ -264,7 +274,11 @@
 .prefer-countries__country-name--catalog {
   @media (min-width: @tablet-width) {
     font-size: 20px;
-    line-height: 20px;
+    line-height: 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    line-height: 34px;
   }
 }
 

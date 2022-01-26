@@ -9,9 +9,13 @@
   border-radius: 20px;
 
   @media (min-width: @tablet-width) {
-    padding-right: 35px;
+    padding-right: 25px;
     background-color: @basic-white;
     border-radius: 0 20px 20px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 33px;
   }
 }
 
@@ -21,13 +25,13 @@
   justify-items: center;
 
   width: 100%;
-  padding: 17px 0 14px;
+  padding: 16px 0;
   background-color: @basic-white;
 
   &::before {
     content: "";
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
   }
 
   &:hover::before,
@@ -65,12 +69,12 @@
 
   &::before {
     content: "";
-    border-right: 12px solid @basic-blue-light;
+    border-right: 10px solid @basic-blue-light;
     border-left: none;
   }
 
   @media (min-width: @tablet-width) {
-    margin-right: 27px;
+    margin-right: 21px;
   }
 }
 
@@ -80,6 +84,6 @@
   &::before {
     content: "";
     border-right: none;
-    border-left: 12px solid @basic-blue-light;
+    border-left: 10px solid @basic-blue-light;
   }
 }
