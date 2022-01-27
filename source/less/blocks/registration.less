@@ -161,7 +161,7 @@
   font-size: 18px;
   line-height: 18px;
   font-weight: 700;
-  color: @basic-white;
+  color: fade(#444444, 30);
 
   border: none;
   border-radius: 10px;
@@ -197,6 +197,11 @@
     background-color: @basic-light-grey;
   }
 
+  &:hover,
+  &:focus {
+    color: fade(@special-grey, 50);
+  }
+
   &:hover::placeholder,
   &:focus::placeholder {
     color: fade(@special-grey, 50);
@@ -210,11 +215,16 @@
     background-color: @basic-light-grey;
   }
 
+  &:focus:not(:focus-visible):hover {
+    color: fade(@special-grey, 50);
+  }
+
   &:focus:not(:focus-visible):hover::placeholder {
     color: fade(@special-grey, 50);
   }
 
   &:focus:not(:focus-visible):active {
+    color: @basic-white;
     background-color: @basic-dark;
     outline: 4px solid @basic-white;
     outline-offset: -4px;
@@ -233,6 +243,10 @@
     background-color: @basic-dark;
     outline: 4px solid @basic-white;
     outline-offset: -4px;
+  }
+
+  &:active {
+    color: @basic-white;
   }
 
   &:active::placeholder {
