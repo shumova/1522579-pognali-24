@@ -128,6 +128,14 @@
   }
 }
 
+.page-header__toggle-text--open {
+  display: block;
+}
+
+.page-header__toggle-text--close {
+  display: none;
+}
+
 .page-header__main-menu {
   position: absolute;
   z-index: 2;
@@ -222,6 +230,14 @@
     top: -4px;
     right: 1px;
   }
+}
+
+.page-header--main-menu-open .page-header__toggle-text--open {
+  display: none;
+}
+
+.page-header--main-menu-open .page-header__toggle-text--close {
+  display: block;
 }
 
 .page-header--main-menu-open .page-header__main-menu {
