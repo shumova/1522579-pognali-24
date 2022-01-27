@@ -136,7 +136,7 @@
 
 
 .prefer-transport__list--vertical {
-  @media (min-width: @tablet-width) and (max-width: calc(@desktop-width - 1px)) {
+  @media (min-width: @tablet-width) and (max-width: @ls-desktop) {
     flex-direction: column;
     padding-top: 0;
     padding-bottom: 0;
@@ -253,7 +253,7 @@
   align-items: center;
   justify-items: center;
 
-  @media (max-width: calc(@tablet-width - 1px)) {
+  @media (max-width: @ls-tablet) {
     margin-right: 1px;
 
     &:last-child {
