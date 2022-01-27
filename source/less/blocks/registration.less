@@ -194,12 +194,8 @@
 
   &:hover,
   &:focus {
-    background-color: @basic-light-grey;
-  }
-
-  &:hover,
-  &:focus {
     color: fade(@special-grey, 50);
+    background-color: @basic-light-grey;
   }
 
   &:hover::placeholder,
@@ -212,11 +208,8 @@
   }
 
   &:focus:not(:focus-visible):hover {
-    background-color: @basic-light-grey;
-  }
-
-  &:focus:not(:focus-visible):hover {
     color: fade(@special-grey, 50);
+    background-color: @basic-light-grey;
   }
 
   &:focus:not(:focus-visible):hover::placeholder {
@@ -240,13 +233,10 @@
   }
 
   &:active {
+    color: @basic-white;
     background-color: @basic-dark;
     outline: 4px solid @basic-white;
     outline-offset: -4px;
-  }
-
-  &:active {
-    color: @basic-white;
   }
 
   &:active::placeholder {
