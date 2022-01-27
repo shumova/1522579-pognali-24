@@ -32,7 +32,7 @@
   grid-template-columns: auto 1fr;
   justify-self: start;
   align-items: center;
-  gap: 0 26px;
+  gap: 0 16px;
 
   color: @basic-blue-light;
 
@@ -49,6 +49,7 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 44px;
+    gap: 0 26px;
 
     &::before {
       width: 68px;
@@ -110,11 +111,6 @@
 
   &:focus-visible {
     outline: none;
-
-    .contacts__text {
-      outline: 2px solid @basic-blue;
-      outline-offset: 4px;
-    }
   }
 }
 

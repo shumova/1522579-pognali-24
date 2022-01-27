@@ -3,8 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/bloggersans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans-light.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
     <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
@@ -134,7 +137,7 @@
       <div class="page-body__review review">
         <blockquote class="review__wrapper">
           <p class="review__text index-font index-font--light">&laquo;Лучшее приложение, что я&nbsp;видел в&nbsp;жизни!&raquo;</p>
-          <cite class="review__author index-font index-font--bold index-font--light">Мурат Эльтазин<br> главный редактор газеты &laquo;гаджетлайф&raquo;</cite>
+          <cite class="review__author index-font index-font--bold index-font--light">Мурат Эльтазин<br> главный редактор газеты <span class="review__author-quotes">&laquo;</span>гаджетлайф<span class="review__author-quotes">&raquo;</span></cite>
         </blockquote>
       </div>
       <div class="page-body__steps-layout">
@@ -197,7 +200,7 @@
           <div class="users-preview__intro">
             <h2 class="users-preview__title index-font index-font--title">Попутчики</h2>
             <p class="users-preview__text index-font index-font--light">Все мы&nbsp;индивидуальны и&nbsp;у&nbsp;каждого свой взгляд на&nbsp;идеальный отдых. Одному нужен пляж и&nbsp;коктейль, а&nbsp;другому маршрут для хайкинга.</p>
-            <p class="users-preview__note index-font index-font--bold index-font--light">Теперь можно легко <br class="users-preview__note-br">найти единомышленников!</p>
+            <p class="users-preview__note index-font index-font--bold index-font--light">Теперь можно легко&#32;<br class="users-preview__note-br">найти единомышленников!</p>
           </div>
           <ul class="users-preview__list">
             <li class="users-preview__item user-card user-card--preview">
@@ -226,6 +229,7 @@
                   <img class="user-card__img user-card__img--preview"
                     src="img/users/tanya-firsova/tanya-firsova-size-large@1x.jpg"
                     srcset="img/users/tanya-firsova/tanya-firsova-size-large@2x.jpg 2x"
+                    loading="lazy"
                     alt="Молодая стройная девушка плавает в бассейне." width="270" height="270">
                 </picture>
               </a>
@@ -266,25 +270,25 @@
                 <ul class="prefer-transport__list prefer-transport__list--center">
                   <li class="prefer-transport__item prefer-transport__item--index prefer-transport__item--active" data-transport="Авиаперелет">
                     <span class="prefer-transport__name visually-hidden">Самолёт.</span>
-                    <svg class="prefer-transport__img" width="20" height="21" viewBox="1 1 17 16" aria-hidden="true" focusable="false">
+                    <svg class="prefer-transport__img" width="20" height="21" viewBox="0 0 18 20" aria-hidden="true" focusable="false">
                       <use href="img/sprite.svg#plane"></use>
                     </svg>
                   </li>
                   <li class="prefer-transport__item prefer-transport__item--index prefer-transport__item--disabled" data-transport="Автотранспорт">
                     <span class="prefer-transport__name visually-hidden">Общественный транспорт.</span>
-                    <svg class="prefer-transport__img" width="17" height="19" viewBox="0 0 17 16" aria-hidden="true" focusable="false">
+                    <svg class="prefer-transport__img" width="21" height="21" viewBox="0 0 18 21" aria-hidden="true" focusable="false">
                       <use href="img/sprite.svg#bus"></use>
                     </svg>
                   </li>
                   <li class="prefer-transport__item prefer-transport__item--index prefer-transport__item--disabled" data-transport="Велосипед">
                     <span class="prefer-transport__name visually-hidden">Велосипед.</span>
-                    <svg class="prefer-transport__img" width="24" height="24" viewBox="0 0 17 16" aria-hidden="true" focusable="false">
+                    <svg class="prefer-transport__img" width="24" height="24" viewBox="0 0 25 24" aria-hidden="true" focusable="false">
                       <use href="img/sprite.svg#bicycle"></use>
                     </svg>
                   </li>
                   <li class="prefer-transport__item prefer-transport__item--index prefer-transport__item--disabled" data-transport="Пешком">
                     <span class="prefer-transport__name visually-hidden">Пеший туризм.</span>
-                    <svg class="prefer-transport__img" width="20" height="23" viewBox="0 0 17 16" aria-hidden="true" focusable="false">
+                    <svg class="prefer-transport__img" width="20" height="23" viewBox="0 0 21 24" aria-hidden="true" focusable="false">
                       <use href="img/sprite.svg#run"></use>
                     </svg>
                   </li>
@@ -317,6 +321,7 @@
                   <img class="user-card__img user-card__img--preview"
                     src="img/users/petya-demin/petya-demin-size-large@1x.jpg"
                     srcset="img/users/petya-demin/petya-demin-size-large@2x.jpg 2x"
+                    loading="lazy"
                     alt="Молодой человек с бородой, в тёмной шапке-бини и очках." width="270" height="270">
                 </picture>
               </a>
@@ -353,25 +358,25 @@
                 <ul class="prefer-transport__list prefer-transport__list--center">
                   <li class="prefer-transport__item prefer-transport__item--index prefer-transport__item--active" data-transport="Авиаперелет">
                     <span class="prefer-transport__name visually-hidden">Самолёт.</span>
-                    <svg class="prefer-transport__img" width="20" height="21" viewBox="1 1 17 16" aria-hidden="true" focusable="false">
+                    <svg class="prefer-transport__img" width="20" height="21" viewBox="0 0 18 20" aria-hidden="true" focusable="false">
                       <use href="img/sprite.svg#plane"></use>
                     </svg>
                   </li>
                   <li class="prefer-transport__item prefer-transport__item--index prefer-transport__item--active" data-transport="Автотранспорт">
                     <span class="prefer-transport__name visually-hidden">Общественный транспорт.</span>
-                    <svg class="prefer-transport__img" width="17" height="19" viewBox="0 0 17 16" aria-hidden="true" focusable="false">
+                    <svg class="prefer-transport__img" width="21" height="21" viewBox="0 0 18 21" aria-hidden="true" focusable="false">
                       <use href="img/sprite.svg#bus"></use>
                     </svg>
                   </li>
                   <li class="prefer-transport__item prefer-transport__item--index prefer-transport__item--disabled" data-transport="Велосипед">
                     <span class="prefer-transport__name visually-hidden">Велосипед.</span>
-                    <svg class="prefer-transport__img" width="24" height="24" viewBox="0 0 17 16" aria-hidden="true" focusable="false">
+                    <svg class="prefer-transport__img" width="24" height="24" viewBox="0 0 25 24" aria-hidden="true" focusable="false">
                       <use href="img/sprite.svg#bicycle"></use>
                     </svg>
                   </li>
                   <li class="prefer-transport__item prefer-transport__item--index prefer-transport__item--active" data-transport="Пешком">
                     <span class="prefer-transport__name visually-hidden">Пеший туризм.</span>
-                    <svg class="prefer-transport__img" width="20" height="23" viewBox="0 0 17 16" aria-hidden="true" focusable="false">
+                    <svg class="prefer-transport__img" width="20" height="23" viewBox="0 0 21 24" aria-hidden="true" focusable="false">
                       <use href="img/sprite.svg#run"></use>
                     </svg>
                   </li>

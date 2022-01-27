@@ -145,8 +145,17 @@
 
   @media (min-width: @tablet-width) {
     display: grid;
-    padding: 28px 35px 28px 33px;
+    padding: 28px 36px 28px 33px;
     justify-self: start;
+    min-width: 276px;
+
+    &::after {
+      border-top-width: 6px;
+      border-bottom-width: 6px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
     min-width: 274px;
   }
 }

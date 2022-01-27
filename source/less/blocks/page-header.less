@@ -62,7 +62,7 @@
   max-width: 100%;
 
   @media (min-width: @tablet-width) {
-    width: 168px;
+    width: 170px;
     height: 43px;
   }
 
@@ -176,7 +176,7 @@
 // стили при открытом меню
 
 .page-header--main-menu-open {
-  padding-top: 24px;
+  padding-top: 26px;
 
   @media (max-width: @ls-tablet) {
     min-width: 100%;
@@ -248,12 +248,10 @@
 }
 
 .page-header--main-menu-open + .page-body__main--inner {
-  margin-top: -9px;
+  margin-top: -8px;
 }
 
 .page-header--main-menu-open + .page-body__main--form {
-  margin-top: -6px;
-
   @media (min-width: @tablet-width) {
     margin-top: 0;
   }
@@ -330,8 +328,24 @@
     border-color: #cccccc;
   }
 
+  &::before {
+    top: -1px;
+  }
+
+  &::after {
+    top: -3px;
+  }
+
   @media (min-width: @tablet-width) {
     position: relative;
+
+    &::before {
+      top: 2px;
+    }
+
+    &::after {
+      top: 1px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -349,7 +363,9 @@
   }
 
   &::before {
-    border-top: 1px solid @basic-blue;
+    left: -44px;
+    width: 44px;
+    border-top: 2px solid @basic-blue;
   }
 }
 
@@ -363,13 +379,17 @@
 
 .page-header--scrolling-page + .page-body__promo {
   @media (min-width: @tablet-width) {
+    padding-top: 157px;
+  }
+
+  @media (min-width: @desktop-width) {
     padding-top: 141px;
   }
 }
 
 .page-header--scrolling-page ~ .page-body__review {
   @media (min-width: @desktop-width) {
-    margin-top: 130px;
+    margin-top: 141px;
   }
 }
 
@@ -381,13 +401,13 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 139px;
+    padding-top: 141px;
   }
 }
 
-.page-header--scrolling-page + .page-body__main--form {
-  @media (min-width: @desktop-width) {
-    padding-top: 141px;
+.page-header--scrolling-page .user-menu__login--catalog {
+  @media (min-width: @tablet-width) and (max-width: @ls-desktop) {
+    margin-right: 5px;
   }
 }
 

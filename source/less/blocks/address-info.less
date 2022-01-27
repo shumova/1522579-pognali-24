@@ -34,10 +34,20 @@
 .address-info__map-wrapper {
   position: relative;
   z-index: 1;
+  min-height: 200px;
   margin-top: -30px;
+  background: url("../img/map-size-s.jpg") no-repeat center;
+  background-size: cover;
 
   @media (min-width: @tablet-width) {
+    min-height: 580px;
     margin-top: -60px;
+    background-image: url("../img/map.jpg");
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 500px;
+    background-image: url("../img/map-size-l.jpg");
   }
 }
 
