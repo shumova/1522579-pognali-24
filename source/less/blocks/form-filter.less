@@ -282,6 +282,11 @@
   &:focus + .form-filter__label::before {
     border-color: #959bb2;
   }
+
+  &:disabled + .form-filter__label {
+    pointer-events: none;
+    opacity: 0.2;
+  }
 }
 
 .form-filter__month {

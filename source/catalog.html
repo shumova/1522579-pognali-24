@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/bloggersans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/bloggersans-light.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/bloggersans-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
 
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
@@ -45,7 +48,8 @@
       </picture>
     </a>
     <button class="page-header__toggle button" type="button">
-      <span class="visually-hidden">Открыть меню</span>
+      <span class="page-header__toggle-text page-header__toggle-text--open visually-hidden">Открыть меню</span>
+      <span class="page-header__toggle-text page-header__toggle-text--close visually-hidden">Закрыть меню</span>
     </button>
     <nav class="page-header__main-menu main-menu">
       <ul class="main-menu__list">
@@ -96,7 +100,7 @@
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link button button--iconic button--social-contour button--instagram" href="https://www.instagram.com/htmlacademy/" target="_blank">
+          <a class="social__link social__link--selected button button--iconic button--social-contour button--instagram" href="https://www.instagram.com/htmlacademy/" target="_blank">
             <span class="visually-hidden">Мы в Instagram.</span>
           </a>
         </li>
@@ -115,16 +119,16 @@
         <li class="user-menu__item">
           <a class="user-menu__link user-menu__link--email button button--iconic" href="mailto:mail@htmlacademy.ru">
             <span class="visually-hidden">Написать нам письмо.</span>
-            <svg class="user-menu__icon" width="18" height="16" viewBox="2 0 18 16" aria-hidden="true" focusable="false">
+            <svg class="user-menu__icon" width="18" height="16" viewBox="0 0 18 16" aria-hidden="true" focusable="false">
               <use href="img/sprite.svg#email"></use>
             </svg>
           </a>
         </li>
       </ul>
-      <a class="user-menu__login button button--primary" href="#">Авторизация</a>
+      <a class="user-menu__login user-menu__login--catalog button button--primary" href="#">Авторизация</a>
     </div>
   </header>
-  <main class="page-body__main page-body__main--inner page-main">
+  <main class="page-body__main page-body__main--catalog page-body__main--inner page-main">
     <div class="page-main__header page-main__header--catalog page-main-header page-main-header--catalog">
       <div class="page-main-header__container page-main-header__container--catalog container">
         <h1 class="page-main-header__title">Попутчики</h1>
@@ -247,37 +251,37 @@
             </tbody>
           </table>
           <ul class="countries__list countries__list--catalog countries__list--a countries-list countries-list--a">
-            <li class="countries-list__item">
+            <li class="countries-list__item countries-list__item--catalog">
               <a class="countries-list__link" href="#">Австралия</a>
             </li>
-            <li class="countries-list__item">
+            <li class="countries-list__item countries-list__item--catalog">
               <a class="countries-list__link" href="#">Австрия</a>
             </li>
-            <li class="countries-list__item">
+            <li class="countries-list__item countries-list__item--catalog">
               <a class="countries-list__link" href="#">Азербайджан</a>
             </li>
-            <li class="countries-list__item">
+            <li class="countries-list__item countries-list__item--catalog">
               <a class="countries-list__link" href="#">Албания</a>
             </li>
-            <li class="countries-list__item">
+            <li class="countries-list__item countries-list__item--catalog">
               <a class="countries-list__link" href="#">Алжир</a>
             </li>
-            <li class="countries-list__item">
+            <li class="countries-list__item countries-list__item--catalog">
               <a class="countries-list__link" href="#">Ангола</a>
             </li>
-            <li class="countries-list__item">
+            <li class="countries-list__item countries-list__item--catalog">
               <a class="countries-list__link" href="#">Андорра</a>
             </li>
-            <li class="countries-list__item">
+            <li class="countries-list__item countries-list__item--catalog">
               <a class="countries-list__link" href="#">Антигуа и&nbsp;Барбуда</a>
             </li>
-            <li class="countries-list__item">
+            <li class="countries-list__item countries-list__item--catalog">
               <a class="countries-list__link" href="#">Аргентина</a>
             </li>
-            <li class="countries-list__item">
+            <li class="countries-list__item countries-list__item--catalog">
               <a class="countries-list__link" href="#">Армения</a>
             </li>
-            <li class="countries-list__item">
+            <li class="countries-list__item countries-list__item--catalog">
               <a class="countries-list__link" href="#">Афганистан</a>
             </li>
           </ul>
@@ -798,7 +802,7 @@
           При отключённом js используется класс catalog-form--no-js
           При закрытии поля формы добавляетcя класс catalog-filter--hidden
          -->
-        <form class="users-catalog__form catalog-form" action="https://echo.htmlacademy.ru/" method="post">
+        <form class="users-catalog__form catalog-form catalog-form--no-js" action="https://echo.htmlacademy.ru/" method="post">
           <fieldset class="catalog-form__filter catalog-filter catalog-filter--hidden">
             <legend class="visually-hidden">Хобби.</legend>
             <div class="catalog-filter__inner-layout">
@@ -883,16 +887,16 @@
                   <li class="prefer-transport__item prefer-transport__item--button" data-transport="Авиаперелет">
                     <button class="prefer-transport__button button" type="button">
                       <span class="prefer-transport__name visually-hidden">Cамолёт.</span>
-                      <svg class="prefer-transport__img" width="20" height="21" viewBox="1 1 17 16" aria-hidden="true" focusable="false">
+                      <svg class="prefer-transport__img" width="17" height="16" viewBox="0 0 18 20" aria-hidden="true" focusable="false">
                         <use href="img/sprite.svg#plane"></use>
                       </svg>
                     </button>
                   </li>
                   <li class="prefer-transport__item prefer-transport__item--button" data-transport="Автотранспорт">
                     <!-- при работающем js значение tabindex меняется на "0" -->
-                    <button class="prefer-transport__button button" type="button" tabindex="-1">
+                    <button class="prefer-transport__button button" type="button">
                       <span class="prefer-transport__name visually-hidden">Общественный транспорт.</span>
-                      <svg class="prefer-transport__img" width="17" height="19" viewBox="0 0 17 16" aria-hidden="true" focusable="false">
+                      <svg class="prefer-transport__img" width="17" height="16" viewBox="0 0 18 21" aria-hidden="true" focusable="false">
                         <use href="img/sprite.svg#bus"></use>
                       </svg>
                     </button>
@@ -900,7 +904,7 @@
                   <li class="prefer-transport__item prefer-transport__item--button" data-transport="Велосипед">
                     <button class="prefer-transport__button prefer-transport__button--off button" type="button">
                       <span class="prefer-transport__name visually-hidden">Велосипед.</span>
-                      <svg class="prefer-transport__img" width="24" height="24" viewBox="0 0 17 16" aria-hidden="true" focusable="false">
+                      <svg class="prefer-transport__img" width="17" height="16" viewBox="0 0 25 24" aria-hidden="true" focusable="false">
                         <use href="img/sprite.svg#bicycle"></use>
                       </svg>
                     </button>
@@ -908,7 +912,7 @@
                   <li class="prefer-transport__item prefer-transport__item--button" data-transport="Пешком">
                     <button class="prefer-transport__button button" type="button">
                       <span class="prefer-transport__name visually-hidden">Пеший туризм.</span>
-                      <svg class="prefer-transport__img" width="20" height="23" viewBox="0 0 17 16" viewBox="0 0 17 16" aria-hidden="true" focusable="false">
+                      <svg class="prefer-transport__img" width="17" height="16" viewBox="0 0 21 24" aria-hidden="true" focusable="false">
                         <use href="img/sprite.svg#run"></use>
                       </svg>
                     </button>
@@ -940,11 +944,11 @@
                   <label class="catalog-filter__range-label catalog-filter__range-label--min-level visually-hidden" for="min-level">
                     <span class="visually-hidden">от</span>
                   </label>
-                  <input class="catalog-filter__range-field" type="number" name="min-level" id="min-level" value="30">
+                  <input class="catalog-filter__range-field" type="text" name="min-level" id="min-level" value="30">
                   <label class="catalog-filter__range-label catalog-filter__range-label--max-level visually-hidden" for="max-level">
                     <span class="visually-hidden">до</span>
                   </label>
-                  <input class="catalog-filter__range-field" type="number" name="max-level" id="max-level" value="100">
+                  <input class="catalog-filter__range-field" type="text" name="max-level" id="max-level" value="100">
                 </div>
               </div>
             </div>
@@ -967,7 +971,7 @@
           <button class="user-card__favourite user-card__favourite--catalog favourite favourite--selected button button--iconic" type="button">
             <span class="favourite__add visually-hidden">Добавить в избранные.</span>
             <span class="favourite__delete visually-hidden">Удалить из избранных.</span>
-            <svg class="favourite__img" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" focusable="false">
+            <svg class="favourite__img" width="13" height="12" viewBox="0 0 13 12" aria-hidden="true" focusable="false">
               <use href="img/sprite.svg#favourite"></use>
             </svg>
           </button>
@@ -994,6 +998,7 @@
               <img class="user-card__img user-card__img--catalog"
                 src="img/users/tanya-firsova/tanya-firsova-size-tiny@1x.jpg"
                 srcset="img/users/tanya-firsova/tanya-firsova-size-tiny@2x.jpg 2x"
+                loading="lazy"
                 alt="Молодая стройная девушка плавает в бассейне." width="70" height="70">
             </picture>
           </a>
@@ -1037,25 +1042,25 @@
             <ul class="prefer-transport__list prefer-transport__list--vertical prefer-transport__list--catalog">
               <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog-active" data-transport="Авиаперелет">
                 <span class="prefer-transport__name visually-hidden">Самолёт.</span>
-                <svg class="prefer-transport__img prefer-transport__img--plane" width="20" height="21" viewBox="1 1 17 16" aria-hidden="true" focusable="false">
+                <svg class="prefer-transport__img prefer-transport__img--plane" width="14" height="16" viewBox="0 0 18 20" aria-hidden="true" focusable="false">
                   <use href="img/sprite.svg#plane"></use>
                 </svg>
               </li>
               <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog-disabled" data-transport="Автотранспорт">
                 <span class="prefer-transport__name visually-hidden">Общественный транспорт.</span>
-                <svg class="prefer-transport__img prefer-transport__img--bus" width="17" height="19" viewBox="0 0 17 16" aria-hidden="true" focusable="false">
+                <svg class="prefer-transport__img prefer-transport__img--bus" width="14" height="16" viewBox="0 0 18 21" aria-hidden="true" focusable="false">
                   <use href="img/sprite.svg#bus"></use>
                 </svg>
               </li>
               <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog-disabled" data-transport="Велосипед">
                 <span class="prefer-transport__name visually-hidden">Велосипед.</span>
-                <svg class="prefer-transport__img prefer-transport__img--bicycle" width="24" height="24" viewBox="0 0 17 16" aria-hidden="true" focusable="false">
+                <svg class="prefer-transport__img prefer-transport__img--bicycle" width="14" height="16" viewBox="0 0 25 24" aria-hidden="true" focusable="false">
                   <use href="img/sprite.svg#bicycle"></use>
                 </svg>
               </li>
               <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog-disabled" data-transport="Пешком">
                 <span class="prefer-transport__name visually-hidden">Пеший туризм.</span>
-                <svg class="prefer-transport__img prefer-transport__img--run" width="20" height="23" viewBox="0 0 17 16" aria-hidden="true" focusable="false">
+                <svg class="prefer-transport__img prefer-transport__img--run" width="14" height="16" viewBox="0 0 21 24" aria-hidden="true" focusable="false">
                   <use href="img/sprite.svg#run"></use>
                 </svg>
               </li>
@@ -1077,7 +1082,7 @@
           <button class="user-card__favourite  user-card__favourite--catalog favourite button button--iconic" type="button">
             <span class="favourite__add visually-hidden">Добавить в избранные.</span>
             <span class="favourite__delete visually-hidden">Удалить из избранных.</span>
-            <svg class="favourite__img" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" focusable="false">
+            <svg class="favourite__img" width="13" height="12" viewBox="0 0 13 12" aria-hidden="true" focusable="false">
               <use href="img/sprite.svg#favourite"></use>
             </svg>
           </button>
@@ -1104,6 +1109,7 @@
               <img class="user-card__img user-card__img--catalog"
                 src="img/users/petya-demin/petya-demin-size-tiny@1x.jpg"
                 srcset="img/users/petya-demin/petya-demin-size-tiny@2x.jpg 2x"
+                loading="lazy"
                 alt="Молодой человек с бородой, в тёмной шапке-бини и очках." width="70" height="70">
             </picture>
           </a>
@@ -1143,25 +1149,25 @@
             <ul class="prefer-transport__list prefer-transport__list--vertical prefer-transport__list--catalog">
               <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog-active" data-transport="Авиаперелет">
                 <span class="prefer-transport__name visually-hidden">Cамолёт.</span>
-                <svg class="prefer-transport__img prefer-transport__img--plane" width="20" height="21" viewBox="1 1 17 16" aria-hidden="true" focusable="false">
+                <svg class="prefer-transport__img prefer-transport__img--plane" width="14" height="16" viewBox="0 0 18 20" aria-hidden="true" focusable="false">
                   <use href="img/sprite.svg#plane"></use>
                 </svg>
               </li>
               <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog-active" data-transport="Автотранспорт">
                 <span class="prefer-transport__name visually-hidden">Общественный транспорт.</span>
-                <svg class="prefer-transport__img prefer-transport__img--bus" width="17" height="19" viewBox="0 0 17 16" aria-hidden="true" focusable="false">
+                <svg class="prefer-transport__img prefer-transport__img--bus" width="14" height="16" viewBox="0 0 18 21" aria-hidden="true" focusable="false">
                   <use href="img/sprite.svg#bus"></use>
                 </svg>
               </li>
               <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog-disabled" data-transport="Велосипед">
                 <span class="prefer-transport__name visually-hidden">Велосипед.</span>
-                <svg class="prefer-transport__img prefer-transport__img--bicycle" width="24" height="24" viewBox="0 0 17 16" aria-hidden="true" focusable="false">
+                <svg class="prefer-transport__img prefer-transport__img--bicycle" width="14" height="16" viewBox="0 0 25 24" aria-hidden="true" focusable="false">
                   <use href="img/sprite.svg#bicycle"></use>
                 </svg>
               </li>
               <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog-active" data-transport="Пешком">
                 <span class="prefer-transport__name visually-hidden">Пеший туризм.</span>
-                <svg class="prefer-transport__img prefer-transport__img--run" width="20" height="23" viewBox="0 0 17 16" aria-hidden="true" focusable="false">
+                <svg class="prefer-transport__img prefer-transport__img--run" width="14" height="16" viewBox="0 0 21 24" aria-hidden="true" focusable="false">
                   <use href="img/sprite.svg#run"></use>
                 </svg>
               </li>
@@ -1183,7 +1189,7 @@
           <button class="user-card__favourite  user-card__favourite--catalog favourite button button--iconic" type="button">
             <span class="favourite__add visually-hidden">Добавить в избранные.</span>
             <span class="favourite__delete visually-hidden">Удалить из избранных.</span>
-            <svg class="favourite__img" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" focusable="false">
+            <svg class="favourite__img" width="13" height="12" viewBox="0 0 13 12" aria-hidden="true" focusable="false">
               <use href="img/sprite.svg#favourite"></use>
             </svg>
           </button>
@@ -1210,6 +1216,7 @@
               <img class="user-card__img user-card__img--catalog"
                 src="img/users/mark-smolov/mark-smolov-size-tiny@1x.jpg"
                 srcset="img/users/mark-smolov/mark-smolov-size-tiny@2x.jpg 2x"
+                loading="lazy"
                 alt="Молодой человек с татуировками в белой футболке и джинсовых шортах." width="70" height="70">
             </picture>
           </a>
@@ -1252,25 +1259,25 @@
             <ul class="prefer-transport__list prefer-transport__list--vertical prefer-transport__list--catalog">
               <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog-active" data-transport="Авиаперелет">
                 <span class="prefer-transport__name visually-hidden">Самолёт.</span>
-                <svg class="prefer-transport__img prefer-transport__img--plane" width="20" height="21" viewBox="1 1 17 16" aria-hidden="true" focusable="false">
+                <svg class="prefer-transport__img prefer-transport__img--plane" width="14" height="16" viewBox="0 0 18 20" aria-hidden="true" focusable="false">
                   <use href="img/sprite.svg#plane"></use>
                 </svg>
               </li>
               <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog-disabled" data-transport="Автотранспорт">
                 <span class="prefer-transport__name visually-hidden">Общественный транспорт.</span>
-                <svg class="prefer-transport__img prefer-transport__img--bus" width="17" height="19" viewBox="0 0 17 16" aria-hidden="true" focusable="false">
+                <svg class="prefer-transport__img prefer-transport__img--bus" width="14" height="16" viewBox="0 0 18 21" aria-hidden="true" focusable="false">
                   <use href="img/sprite.svg#bus"></use>
                 </svg>
               </li>
               <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog-active" data-transport="Велосипед">
                 <span class="prefer-transport__name visually-hidden">Велосипед.</span>
-                <svg class="prefer-transport__img prefer-transport__img--bicycle" width="24" height="24" viewBox="0 0 17 16" aria-hidden="true" focusable="false">
+                <svg class="prefer-transport__img prefer-transport__img--bicycle" width="14" height="16" viewBox="0 0 25 24" aria-hidden="true" focusable="false">
                   <use href="img/sprite.svg#bicycle"></use>
                 </svg>
               </li>
               <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog-disabled" data-transport="Пешком">
                 <span class="prefer-transport__name visually-hidden">Пеший туризм.</span>
-                <svg class="prefer-transport__img prefer-transport__img--run" width="20" height="23" viewBox="0 0 17 16" aria-hidden="true" focusable="false">
+                <svg class="prefer-transport__img prefer-transport__img--run" width="14" height="16" viewBox="0 0 21 24" aria-hidden="true" focusable="false">
                   <use href="img/sprite.svg#run"></use>
                 </svg>
               </li>
@@ -1292,7 +1299,7 @@
           <button class="user-card__favourite  user-card__favourite--catalog favourite button button--iconic" type="button">
             <span class="favourite__add visually-hidden">Добавить в избранные.</span>
             <span class="favourite__delete visually-hidden">Удалить из избранных.</span>
-            <svg class="favourite__img" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" focusable="false">
+            <svg class="favourite__img" width="13" height="12" viewBox="0 0 13 12" aria-hidden="true" focusable="false">
               <use href="img/sprite.svg#favourite"></use>
             </svg>
           </button>
@@ -1319,6 +1326,7 @@
               <img class="user-card__img user-card__img--catalog"
                 src="img/users/larisa-rogovaya/larisa-rogovaya-size-tiny@1x.jpg"
                 srcset="img/users/larisa-rogovaya/larisa-rogovaya-size-tiny@2x.jpg 2x"
+                loading="lazy"
                 alt="Молодая девушка в деловом костюме." width="70" height="70">
             </picture>
           </a>
@@ -1357,25 +1365,25 @@
             <ul class="prefer-transport__list prefer-transport__list--vertical prefer-transport__list--catalog">
               <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog-active" data-transport="Авиаперелет">
                 <span class="prefer-transport__name visually-hidden">Самолёт.</span>
-                <svg class="prefer-transport__img prefer-transport__img--plane" width="20" height="21" viewBox="1 1 17 16" aria-hidden="true" focusable="false">
+                <svg class="prefer-transport__img prefer-transport__img--plane" width="14" height="16" viewBox="0 0 18 20" aria-hidden="true" focusable="false">
                   <use href="img/sprite.svg#plane"></use>
                 </svg>
               </li>
               <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog-active" data-transport="Автотранспорт">
                 <span class="prefer-transport__name visually-hidden">Общественный транспорт.</span>
-                <svg class="prefer-transport__img prefer-transport__img--bus" width="17" height="19" viewBox="0 0 17 16" aria-hidden="true" focusable="false">
+                <svg class="prefer-transport__img prefer-transport__img--bus" width="14" height="16" viewBox="0 0 18 21" aria-hidden="true" focusable="false">
                   <use href="img/sprite.svg#bus"></use>
                 </svg>
               </li>
               <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog-disabled" data-transport="Велосипед">
                 <span class="prefer-transport__name visually-hidden">Велосипед.</span>
-                <svg class="prefer-transport__img prefer-transport__img--bicycle" width="24" height="24" viewBox="0 0 17 16" aria-hidden="true" focusable="false">
+                <svg class="prefer-transport__img prefer-transport__img--bicycle" width="14" height="16" viewBox="0 0 25 24" aria-hidden="true" focusable="false">
                   <use href="img/sprite.svg#bicycle"></use>
                 </svg>
               </li>
               <li class="prefer-transport__item prefer-transport__item--catalog prefer-transport__item prefer-transport__item--catalog-disabled" data-transport="Пешком">
                 <span class="prefer-transport__name visually-hidden">Пеший туризм.</span>
-                <svg class="prefer-transport__img prefer-transport__img--run" width="20" height="23" viewBox="0 0 17 16" aria-hidden="true" focusable="false">
+                <svg class="prefer-transport__img prefer-transport__img--run" width="14" height="16" viewBox="0 0 21 24" aria-hidden="true" focusable="false">
                   <use href="img/sprite.svg#run"></use>
                 </svg>
               </li>
@@ -1424,6 +1432,7 @@
             srcset="img/logo-full-dark.svg">
           <img class="page-footer__logo-img page-footer__logo-img--dark"
             src="img/logo-text-dark.svg"
+            loading="lazy"
             alt="Погнали." width="96" height="22">
         </picture>
       </a>

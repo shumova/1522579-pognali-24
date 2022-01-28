@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/bloggersans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/bloggersans-light.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/bloggersans-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
 
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
@@ -46,7 +49,8 @@
       </picture>
     </a>
     <button class="page-header__toggle button" type="button">
-      <span class="visually-hidden">Открыть меню</span>
+      <span class="page-header__toggle-text page-header__toggle-text--open visually-hidden">Открыть меню</span>
+      <span class="page-header__toggle-text page-header__toggle-text--close visually-hidden">Закрыть меню</span>
     </button>
     <nav class="page-header__main-menu main-menu">
       <ul class="main-menu__list">
@@ -97,7 +101,7 @@
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link button button--iconic button--social-contour button--instagram" href="https://www.instagram.com/htmlacademy/" target="_blank">
+          <a class="social__link social__link--selected button button--iconic button--social-contour button--instagram" href="https://www.instagram.com/htmlacademy/" target="_blank">
             <span class="visually-hidden">Мы в Instagram.</span>
           </a>
         </li>
@@ -116,7 +120,7 @@
         <li class="user-menu__item">
           <a class="user-menu__link user-menu__link--email button button--iconic" href="mailto:mail@htmlacademy.ru">
             <span class="visually-hidden">Написать нам письмо.</span>
-            <svg class="user-menu__icon" width="18" height="16" viewBox="2 0 18 16" aria-hidden="true" focusable="false">
+            <svg class="user-menu__icon" width="18" height="16" viewBox="0 0 18 16" aria-hidden="true" focusable="false">
               <use href="img/sprite.svg#email"></use>
             </svg>
           </a>
@@ -157,6 +161,7 @@
             <img class="user-profile__img"
               src="img/users/petya-demin/petya-demin-size-small@1x.jpg"
               srcset="img/users/petya-demin/petya-demin-size-small@2x.jpg 2x"
+              loading="lazy"
               alt="Петя Дёмин" width="100" height="100">
           </picture>
         </div>
@@ -178,7 +183,7 @@
             <li class="prefer-transport__item" data-transport="Авиаперелет">
               <button class="prefer-transport__button prefer-transport__button--on button" type="button">
                 <span class="prefer-transport__name visually-hidden">Cамолёт.</span>
-                <svg class="prefer-transport__img" width="20" height="21" viewBox="1 1 17 16" aria-hidden="true" focusable="false">
+                <svg class="prefer-transport__img" width="17" height="16" viewBox="0 0 18 20" aria-hidden="true" focusable="false">
                   <use href="img/sprite.svg#plane"></use>
                 </svg>
               </button>
@@ -186,7 +191,7 @@
             <li class="prefer-transport__item" data-transport="Автотранспорт">
               <button class="prefer-transport__button prefer-transport__button--on button" type="button">
                 <span class="prefer-transport__name visually-hidden">Общественный транспорт.</span>
-                <svg class="prefer-transport__img" width="17" height="19" viewBox="0 0 17 16" aria-hidden="true" focusable="false">
+                <svg class="prefer-transport__img" width="18" height="19" viewBox="0 0 18 21" aria-hidden="true" focusable="false">
                   <use href="img/sprite.svg#bus"></use>
                 </svg>
               </button>
@@ -194,7 +199,7 @@
             <li class="prefer-transport__item" data-transport="Велосипед">
               <button class="prefer-transport__button prefer-transport__button--off button" type="button">
                 <span class="prefer-transport__name visually-hidden">Велосипед.</span>
-                <svg class="prefer-transport__img" width="24" height="24" viewBox="0 0 17 16" aria-hidden="true" focusable="false">
+                <svg class="prefer-transport__img" width="17" height="16" viewBox="0 0 25 24" aria-hidden="true" focusable="false">
                   <use href="img/sprite.svg#bicycle"></use>
                 </svg>
               </button>
@@ -202,7 +207,7 @@
             <li class="prefer-transport__item" data-transport="Пешком">
               <button class="prefer-transport__button prefer-transport__button--on button" type="button">
                 <span class="prefer-transport__name visually-hidden">Пеший туризм.</span>
-                <svg class="prefer-transport__img" width="20" height="23" viewBox="0 0 17 16" aria-hidden="true" focusable="false">
+                <svg class="prefer-transport__img" width="21" height="19" viewBox="0 0 21 24" aria-hidden="true" focusable="false">
                   <use href="img/sprite.svg#run"></use>
                 </svg>
               </button>
@@ -258,7 +263,7 @@
             <div class="new-plan-form__step new-plan-form__step--current" id="step1">
               <div class="new-plan-form__intro new-plan-form__intro--dates">
                 <h3 class="new-plan-form__title">
-                  <span class="new-plan-form__step-num">Шаг 1. </span> Даты пребывания
+                  <span class="new-plan-form__step-num">Шаг 1.</span> Даты пребывания
                 </h3>
                 <p class="new-plan-form__text  new-plan-form__text--dates">Укажите предпочтительное количество попутчиков, которых вы&nbsp;хотели&nbsp;бы позвать в&nbsp;поездку, и&nbsp;ее&nbsp;предполагаемую длительность.</p>
               </div>
@@ -587,7 +592,7 @@
             <div class="new-plan-form__step" id="step2">
               <div class="new-plan-form__intro new-plan-form__intro--route">
                 <h3 class="new-plan-form__title">
-                  <span class="new-plan-form__step-num">Шаг 2. </span> Маршрут
+                  <span class="new-plan-form__step-num">Шаг 2.</span> Маршрут
                 </h3>
                 <p class="new-plan-form__text">Укажите страны, которые вы хотели&nbsp;бы посетить. <br class="new-plan-form__text--br">Это может быть одна или сразу несколько.</p>
               </div>
@@ -822,7 +827,7 @@
             <div class="new-plan-form__step" id="step3">
               <div class="new-plan-form__intro new-plan-form__intro--leisure">
                 <h3 class="new-plan-form__title">
-                  <span class="new-plan-form__step-num">Шаг 3. </span> Развлечения
+                  <span class="new-plan-form__step-num">Шаг 3.</span> Развлечения
                 </h3>
                 <p class="new-plan-form__text new-plan-form__text--leisure">Наконец, расскажите о&nbsp;своих планах времяпровождения. Можно писать в&nbsp;свободной форме и&nbsp;ставить тэги.</p>
               </div>
@@ -862,6 +867,7 @@
             srcset="img/logo-full-dark.svg">
           <img class="page-footer__logo-img page-footer__logo-img--dark"
             src="img/logo-text-dark.svg"
+            loading="lazy"
             alt="Погнали." width="96" height="22">
         </picture>
       </a>
